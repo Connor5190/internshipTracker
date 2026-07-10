@@ -70,6 +70,7 @@ Faire
 Figma
 Flexport
 Fortinet
+Garmin | https://careers.garmin.com/jobs?keywords=intern
 General Motors | https://search-careers.gm.com/en/jobs/?search=intern
 Genuine Parts Company | https://jobs.genpt.com/search-jobs/intern
 Georgia-Pacific | https://jobs.kochcareers.com/georgia-pacific/search-jobs/intern
@@ -129,6 +130,7 @@ Optiver | https://boards.greenhouse.io/optiver
 Oracle | https://careers.oracle.com/jobs/#en/sites/jobsearch/jobs?keyword=intern
 Palantir
 Palo Alto Networks | https://jobs.smartrecruiters.com/PaloAltoNetworks
+Peloton
 Perplexity
 Pinterest
 Plaid
@@ -165,6 +167,7 @@ SpaceX
 Splunk | https://jobs.jobvite.com/splunk/search?q=intern
 Spotify
 State Farm | https://www.statefarm.com/careers/career-areas/internships
+Strava
 Stripe
 Susquehanna (SIG) | https://sig.com/careers/
 Tailscale
