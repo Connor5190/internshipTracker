@@ -40,6 +40,7 @@ Cigna | https://cigna.wd5.myworkdayjobs.com/cignacareers
 Cisco | https://jobs.cisco.com/jobs/SearchJobs/intern
 Citadel | https://www.citadel.com/careers/students/
 Citibank | https://jobs.citi.com/search-jobs/intern
+ClassPass
 Cloudflare
 Cohere
 Coinbase
@@ -56,6 +57,7 @@ Delta Air Lines | https://delta.avature.net/careers/SearchJobs/intern
 Discord
 Docker
 DoorDash | https://boards.greenhouse.io/doordashusa
+DraftKings | https://careers.draftkings.com/
 DRW | https://drw.com/careers
 Duolingo
 Elastic
@@ -67,9 +69,12 @@ Expedia Group | https://careers.expediagroup.com/jobs/?query=intern
 ExxonMobil | https://jobs.exxonmobil.com/search/?q=intern
 EY | https://careers.ey.com/ey/search/?q=intern
 Faire
+FanDuel
 Figma
+Fitbit | https://www.google.com/about/careers/applications/jobs/results?q=fitbit
 Flexport
 Fortinet
+Future
 Garmin | https://careers.garmin.com/jobs?keywords=intern
 General Motors | https://search-careers.gm.com/en/jobs/?search=intern
 Genuine Parts Company | https://jobs.genpt.com/search-jobs/intern
@@ -108,11 +113,13 @@ McKinsey & Company | https://jobs.mckinsey.com/
 Meta | https://www.metacareers.com/jobsearch/?q=intern
 Micron | https://micron.wd1.myworkdayjobs.com/External
 Microsoft | https://jobs.careers.microsoft.com/global/en/search?q=intern
+Mindbody
 Mistral AI | https://jobs.lever.co/mistral
 MITRE | https://mitre.wd5.myworkdayjobs.com/MITRE
 Modal
 MongoDB
 Morgan Stanley | https://morganstanley.eightfold.ai/careers?query=intern
+MyFitnessPal
 NASA JPL | https://citjpl.wd5.myworkdayjobs.com/Jobs
 NCR Voyix | https://www.ncrvoyix.com/company/careers
 Netflix | https://explore.jobs.netflix.net/careers?query=intern
@@ -128,6 +135,7 @@ Okta
 OpenAI
 Optiver | https://boards.greenhouse.io/optiver
 Oracle | https://careers.oracle.com/jobs/#en/sites/jobsearch/jobs?keyword=intern
+Oura
 Palantir
 Palo Alto Networks | https://jobs.smartrecruiters.com/PaloAltoNetworks
 Peloton
@@ -179,10 +187,13 @@ The Coca-Cola Company | https://coke.wd1.myworkdayjobs.com/coca-cola-careers
 The Home Depot | https://careers.homedepot.com/job-search-results/?keyword=intern
 Thumbtack
 Together AI
+Tonal
+Trainerize | https://www.trainerize.com/careers.aspx
 Truist | https://careers.truist.com/us/en/search-results?keywords=intern
 Twilio
 Two Sigma | https://careers.twosigma.com/careers/OpenRoles
 Uber
+Underdog Fantasy
 Unity | https://unity.com/careers
 UPS | https://www.jobs-ups.com/search-jobs/intern
 Valve | https://www.valvesoftware.com/en/jobs/
@@ -203,3 +214,4 @@ Yelp | https://www.yelp.careers/us/en/search-results?keywords=intern
 Zapier
 Zillow | https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External
 Zscaler
+Zwift
