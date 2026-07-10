@@ -1,0 +1,202 @@
+# One company per line. Optionally add a careers-page URL after a pipe:
+#   Company Name | https://company.com/careers
+1Password
+Accenture | https://www.accenture.com/us-en/careers/jobsearch?jk=intern
+Adobe | https://careers.adobe.com/us/en/search-results?keywords=intern
+Affirm
+Aflac | https://careers.aflac.com/us/en/search-results?keywords=intern
+Airbnb
+Amazon | https://www.amazon.jobs/en/search?base_query=intern
+AMD | https://careers.amd.com/careers-home/jobs?keywords=intern
+Anduril Industries
+Anheuser-Busch | https://anheuserbusch.wd1.myworkdayjobs.com/ABInBev
+Anthropic
+Apple | https://jobs.apple.com/en-us/search?search=intern
+ARM | https://careers.arm.com/search-jobs/intern
+Asana
+AT&T | https://www.att.jobs/summer-internships#id-anchor-hiring-process
+Atlassian
+AWS | https://www.amazon.jobs/en/search?base_query=aws%20intern
+Bain & Company | https://www.bain.com/careers/find-a-role/
+Bank of America | https://campus.bankofamerica.com/
+Betterment
+Block
+Bloomberg | https://bloomberg.avature.net/careers/SearchJobs/intern
+Boeing | https://jobs.boeing.com/internships
+Booz Allen Hamilton | https://bah.wd1.myworkdayjobs.com/BAH_Jobs
+Boston Consulting Group | https://careers.bcg.com/students
+Brex
+Broadcom | https://broadcom.wd1.myworkdayjobs.com/External_Career
+Canva
+Capital One | https://www.capitalonecareers.com/search-jobs/intern
+Cardlytics | https://www.cardlytics.com/careers/
+Caterpillar | https://cat.wd5.myworkdayjobs.com/CaterpillarCareers
+Character.AI | https://character.ai/careers
+Chevron | https://chevron.wd5.myworkdayjobs.com/University
+Chick-fil-A | https://careers.chick-fil-a.com/corporate/jobs
+Chime
+Chronosphere | https://chronosphere.io/careers/
+Cigna | https://cigna.wd5.myworkdayjobs.com/cignacareers
+Cisco | https://jobs.cisco.com/jobs/SearchJobs/intern
+Citadel | https://www.citadel.com/careers/students/
+Citibank | https://jobs.citi.com/search-jobs/intern
+Cloudflare
+Cohere
+Coinbase
+Collins Aerospace | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
+Comcast | https://comcast.wd5.myworkdayjobs.com/Comcast_Careers
+Confluent
+Cox Automotive | https://jobs.coxenterprises.com/en/jobs/?search=intern
+CrowdStrike | https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
+Cursor (Anysphere) | https://jobs.ashbyhq.com/cursor
+Databricks
+Datadog
+Deloitte | https://apply.deloitte.com/careers/SearchJobs/intern
+Delta Air Lines | https://delta.avature.net/careers/SearchJobs/intern
+Discord
+Docker
+DoorDash | https://boards.greenhouse.io/doordashusa
+DRW | https://drw.com/careers
+Duolingo
+Elastic
+EPAM | https://careers.epam.com/en/jobs
+Epic Games
+Equifax | https://equifax.wd5.myworkdayjobs.com/External
+Etsy | https://careers.etsy.com/
+Expedia Group | https://careers.expediagroup.com/jobs/?query=intern
+ExxonMobil | https://jobs.exxonmobil.com/search/?q=intern
+EY | https://careers.ey.com/ey/search/?q=intern
+Faire
+Figma
+Flexport
+Fortinet
+General Motors | https://search-careers.gm.com/en/jobs/?search=intern
+Genuine Parts Company | https://jobs.genpt.com/search-jobs/intern
+Georgia-Pacific | https://jobs.kochcareers.com/georgia-pacific/search-jobs/intern
+GitHub | https://www.github.careers/careers-home/jobs?keywords=intern
+GitLab
+Global Payments | https://jobs.globalpayments.com/en/search-jobs/intern
+Goldman Sachs | https://higher.gs.com/campus
+Google | https://www.google.com/about/careers/applications/jobs/results?q=intern
+Grammarly | https://www.grammarly.com/jobs
+Guggenheim Partners | https://guggenheimpartners.wd1.myworkdayjobs.com/Guggenheim
+Gulfstream Aerospace | https://careers.gulfstream.com/search/?q=intern
+HashiCorp | https://www.ibm.com/careers/search?q=hashicorp
+Honeywell | https://careers.honeywell.com/us/en/students
+Hudson River Trading | https://www.hudsonrivertrading.com/careers/
+Hugging Face | https://apply.workable.com/huggingface/
+IBM | https://www.ibm.com/careers/search?field_keyword_08%5B0%5D=Early%20Professional
+IMC Trading | https://www.imc.com/eu/careers/
+Instacart
+Intel | https://intel.wd1.myworkdayjobs.com/External
+Intuit | https://jobs.intuit.com/search-jobs/intern
+Jane Street
+JPMorgan Chase | https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=intern
+Jump Trading
+KPMG | https://uskpmgats.avature.net/careers
+L3Harris | https://careers.l3harris.com/global/en/students-and-grads
+Linear
+LinkedIn
+Lockheed Martin | https://www.lockheedmartinjobs.com/search-jobs/intern
+Lyft
+Mailchimp | https://jobs.intuit.com/search-jobs/mailchimp
+Manhattan Associates | https://manh.wd5.myworkdayjobs.com/Campus
+Marqeta
+McKesson | https://mckesson.wd3.myworkdayjobs.com/External_Careers
+McKinsey & Company | https://jobs.mckinsey.com/
+Meta | https://www.metacareers.com/jobsearch/?q=intern
+Micron | https://micron.wd1.myworkdayjobs.com/External
+Microsoft | https://jobs.careers.microsoft.com/global/en/search?q=intern
+Mistral AI | https://jobs.lever.co/mistral
+MITRE | https://mitre.wd5.myworkdayjobs.com/MITRE
+Modal
+MongoDB
+Morgan Stanley | https://morganstanley.eightfold.ai/careers?query=intern
+NASA JPL | https://citjpl.wd5.myworkdayjobs.com/Jobs
+NCR Voyix | https://www.ncrvoyix.com/company/careers
+Netflix | https://explore.jobs.netflix.net/careers?query=intern
+Nextdoor
+Nirmata
+Norfolk Southern | https://jobs.nscorp.com/search-jobs/intern
+Northrop Grumman | https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site
+Notion
+Nucor | https://nucor.wd1.myworkdayjobs.com/nucor
+Nutanix | https://careers.nutanix.com/en/jobs/
+NVIDIA | https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+Okta
+OpenAI
+Optiver | https://boards.greenhouse.io/optiver
+Oracle | https://careers.oracle.com/jobs/#en/sites/jobsearch/jobs?keyword=intern
+Palantir
+Palo Alto Networks | https://jobs.smartrecruiters.com/PaloAltoNetworks
+Perplexity
+Pinterest
+Plaid
+PlanetScale
+PrizePicks
+Procter & Gamble | https://www.pgcareers.com/students
+Qualcomm | https://careers.qualcomm.com/careers?query=intern
+Ramp
+Rapid7 | https://jobs.jobvite.com/rapid7/search?q=intern
+Reddit
+Replit
+Retool | https://retool.com/careers
+Riot Games
+Rippling | https://www.rippling.com/careers/open-roles
+Robinhood
+Roblox
+RTX (Raytheon) | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
+Runway
+Salesforce | https://salesforce.wd12.myworkdayjobs.com/External_Career_Site
+Saviynt
+Scale AI
+Seale & Associates | https://www.sealeassociates.com/careers
+Select Medical | https://selectmedical.wd5.myworkdayjobs.com/SelectMedical
+Semgrep
+SentinelOne | https://boards.greenhouse.io/sentinellabs
+ServiceNow
+Skipify | https://www.skipify.com/careers
+SLB | https://careers.slb.com/early-careers
+Snap Inc. | https://careers.snap.com/jobs
+Snowflake
+Snyk | https://jobs.ashbyhq.com/snyk
+Southern Company | https://jobs.southerncompany.com/search-jobs/intern
+SpaceX
+Splunk | https://jobs.jobvite.com/splunk/search?q=intern
+Spotify
+State Farm | https://www.statefarm.com/careers/career-areas/internships
+Stripe
+Susquehanna (SIG) | https://sig.com/careers/
+Tailscale
+Target | https://target.wd5.myworkdayjobs.com/targetcareers
+Temporal
+Tesla | https://www.tesla.com/careers/search/?keyword=intern
+Texas Instruments | https://careers.ti.com/students-and-graduates/
+The Coca-Cola Company | https://coke.wd1.myworkdayjobs.com/coca-cola-careers
+The Home Depot | https://careers.homedepot.com/job-search-results/?keyword=intern
+Thumbtack
+Together AI
+Truist | https://careers.truist.com/us/en/search-results?keywords=intern
+Twilio
+Two Sigma | https://careers.twosigma.com/careers/OpenRoles
+Uber
+Unity | https://unity.com/careers
+UPS | https://www.jobs-ups.com/search-jobs/intern
+Valve | https://www.valvesoftware.com/en/jobs/
+Vanta
+Vercel
+Verizon | https://verizon.wd12.myworkdayjobs.com/verizon-careers
+Walmart | https://walmart.wd504.myworkdayjobs.com/WalmartExternal
+Warner Bros. Discovery | https://careers.wbd.com/global/en/search-results?keywords=intern
+Warp
+Wealthfront
+Wells Fargo | https://www.wellsfargojobs.com/en/university-programs/
+Western Digital
+Whoop
+Wiz | https://jobs.ashbyhq.com/wiz
+xAI
+Yahoo | https://www.yahooinc.com/careers/
+Yelp | https://www.yelp.careers/us/en/search-results?keywords=intern
+Zapier
+Zillow | https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External
+Zscaler

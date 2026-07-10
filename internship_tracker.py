@@ -1,0 +1,817 @@
+#!/usr/bin/env python3
+"""Internship Tracker.
+
+Given a list of companies, searches their career sites for internship roles
+matching any of the target keywords (default: summer OR 2027) and reports what
+it finds.
+
+It works by probing the public job-board APIs of the major applicant tracking
+systems (Greenhouse, Lever, Ashby, SmartRecruiters, Workable) using slugs
+derived from the company name. If a careers-page URL is provided for a company
+instead, that page is fetched and scanned directly.
+"""
+
+from __future__ import annotations
+
+import argparse
+import html
+import json
+import re
+import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from dataclasses import dataclass, field
+
+import requests
+from bs4 import BeautifulSoup
+from rich.console import Console
+from rich.table import Table
+
+TIMEOUT = 15
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36",
+    "Accept": "application/json, text/html;q=0.9, */*;q=0.8",
+}
+
+# "Summer Analyst/Associate" is what banks call their internships.
+INTERN_RE = re.compile(
+    r"\bintern(ship)?s?\b|\bco[- ]?op\b|\bsummer\s+(analyst|associate)s?\b",
+    re.IGNORECASE,
+)
+
+console = Console()
+
+
+@dataclass
+class Role:
+    title: str
+    url: str
+    location: str = ""
+    matched_in: str = "title"  # "title" or "description"
+    snippet: str = ""
+
+
+@dataclass
+class CompanyResult:
+    company: str
+    source: str = ""  # which ATS / URL the data came from
+    total_intern_roles: int = 0
+    matches: list[Role] = field(default_factory=list)
+    error: str = ""
+
+
+def slugify_candidates(name: str) -> list[str]:
+    """Possible ATS slugs for a company name, most likely first."""
+    base = re.sub(r"[^a-z0-9 ]", "", name.lower()).strip()
+    joined = base.replace(" ", "")
+    hyphen = base.replace(" ", "-")
+    candidates = [joined, hyphen]
+    # e.g. "Jane Street Capital" -> "janestreet"
+    words = base.split()
+    if len(words) > 2:
+        candidates.append("".join(words[:2]))
+    seen: set[str] = set()
+    return [c for c in candidates if c and not (c in seen or seen.add(c))]
+
+
+def get_json(session: requests.Session, url: str, **kwargs) -> dict | list | None:
+    try:
+        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS, **kwargs)
+        if resp.status_code != 200:
+            return None
+        return resp.json()
+    except (requests.RequestException, ValueError):
+        return None
+
+
+def strip_html(text: str) -> str:
+    soup = BeautifulSoup(html.unescape(text or ""), "html.parser")
+    for tag in soup(["script", "style"]):
+        tag.decompose()
+    return soup.get_text(" ")
+
+
+# ---------------------------------------------------------------------------
+# ATS providers. Each returns (postings, source_label) or None if the company
+# isn't on that platform. Postings are dicts: title, url, location, text.
+# ---------------------------------------------------------------------------
+
+def fetch_greenhouse(session: requests.Session, slug: str):
+    data = get_json(
+        session, f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
+    )
+    if not isinstance(data, dict) or "jobs" not in data:
+        return None
+    postings = []
+    for job in data["jobs"]:
+        postings.append(
+            {
+                "title": job.get("title", ""),
+                "url": job.get("absolute_url", ""),
+                "location": (job.get("location") or {}).get("name", ""),
+                "text": "",
+                "_detail": f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{job.get('id')}",
+            }
+        )
+    return postings, f"Greenhouse ({slug})"
+
+
+def fetch_greenhouse_detail(session: requests.Session, posting: dict) -> str:
+    data = get_json(session, posting.get("_detail", ""))
+    if isinstance(data, dict):
+        return strip_html(data.get("content", ""))
+    return ""
+
+
+def fetch_lever(session: requests.Session, slug: str):
+    data = get_json(session, f"https://api.lever.co/v0/postings/{slug}?mode=json")
+    if not isinstance(data, list):
+        return None
+    postings = []
+    for job in data:
+        postings.append(
+            {
+                "title": job.get("text", ""),
+                "url": job.get("hostedUrl", ""),
+                "location": (job.get("categories") or {}).get("location", "") or "",
+                "text": job.get("descriptionPlain", "") or "",
+            }
+        )
+    return postings, f"Lever ({slug})"
+
+
+def fetch_ashby(session: requests.Session, slug: str):
+    data = get_json(session, f"https://api.ashbyhq.com/posting-api/job-board/{slug}")
+    if not isinstance(data, dict) or "jobs" not in data:
+        return None
+    postings = []
+    for job in data["jobs"]:
+        postings.append(
+            {
+                "title": job.get("title", ""),
+                "url": job.get("jobUrl", "") or job.get("applyUrl", ""),
+                "location": job.get("location", "") or "",
+                "text": strip_html(job.get("descriptionHtml", "")),
+            }
+        )
+    return postings, f"Ashby ({slug})"
+
+
+def fetch_smartrecruiters(session: requests.Session, slug: str):
+    postings = []
+    offset = 0
+    while True:
+        data = get_json(
+            session,
+            f"https://api.smartrecruiters.com/v1/companies/{slug}/postings"
+            f"?limit=100&offset={offset}",
+        )
+        if not isinstance(data, dict) or "content" not in data:
+            return None if offset == 0 else (postings, f"SmartRecruiters ({slug})")
+        for job in data["content"]:
+            postings.append(
+                {
+                    "title": job.get("name", ""),
+                    "url": f"https://jobs.smartrecruiters.com/{slug}/{job.get('id')}",
+                    "location": (job.get("location") or {}).get("city", "") or "",
+                    "text": "",
+                }
+            )
+        offset += 100
+        if offset >= data.get("totalFound", 0) or offset >= 1000:
+            break
+    return postings, f"SmartRecruiters ({slug})"
+
+
+def fetch_workable(session: requests.Session, slug: str):
+    try:
+        resp = session.post(
+            f"https://apply.workable.com/api/v3/accounts/{slug}/jobs",
+            json={"query": "", "location": [], "department": [], "worktype": []},
+            timeout=TIMEOUT,
+            headers=HEADERS,
+        )
+        if resp.status_code != 200:
+            return None
+        data = resp.json()
+    except (requests.RequestException, ValueError):
+        return None
+    if not isinstance(data, dict) or "results" not in data:
+        return None
+    postings = []
+    for job in data["results"]:
+        loc = job.get("location") or {}
+        postings.append(
+            {
+                "title": job.get("title", ""),
+                "url": f"https://apply.workable.com/{slug}/j/{job.get('shortcode')}/",
+                "location": loc.get("city", "") or loc.get("country", "") or "",
+                "text": "",
+            }
+        )
+    return postings, f"Workable ({slug})"
+
+
+ATS_FETCHERS = [
+    fetch_greenhouse,
+    fetch_lever,
+    fetch_ashby,
+    fetch_smartrecruiters,
+    fetch_workable,
+]
+
+
+# ---------------------------------------------------------------------------
+# Company-specific fetchers for big employers that don't use the ATSes above.
+# ---------------------------------------------------------------------------
+
+MAX_DETAIL_FETCHES = 30  # cap per-job description requests per company
+
+
+def fetch_workday(session: requests.Session, host: str, site: str):
+    """Workday job boards, e.g. nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite.
+    Searches for 'intern' (relevance-sorted), so a few pages is enough."""
+    tenant = host.split(".")[0]
+    base = f"https://{host}/wday/cxs/{tenant}/{site}"
+    postings = []
+    offset = 0
+    while offset < 100:
+        try:
+            resp = session.post(
+                f"{base}/jobs",
+                json={"appliedFacets": {}, "limit": 20, "offset": offset,
+                      "searchText": "intern"},
+                timeout=TIMEOUT, headers=HEADERS,
+            )
+            if resp.status_code != 200:
+                return None if offset == 0 else (postings, f"Workday ({tenant})")
+            data = resp.json()
+        except (requests.RequestException, ValueError):
+            return None if offset == 0 else (postings, f"Workday ({tenant})")
+        jobs = data.get("jobPostings", [])
+        if not jobs:
+            break
+        for j in jobs:
+            path = j.get("externalPath", "")
+            postings.append({
+                "title": j.get("title", ""),
+                "url": f"https://{host}/en-US/{site}{path}",
+                "location": j.get("locationsText", "") or "",
+                "text": "",
+                "_detail": f"{base}{path}",
+                "_detail_kind": "workday",
+            })
+        offset += 20
+        if offset >= data.get("total", 0):
+            break
+    return postings, f"Workday ({tenant})"
+
+
+def fetch_amazon(session: requests.Session):
+    postings = []
+    offset = 0
+    while offset < 500:
+        data = get_json(
+            session,
+            "https://www.amazon.jobs/en/search.json"
+            f"?base_query=intern&result_limit=100&offset={offset}",
+        )
+        if not isinstance(data, dict) or "jobs" not in data:
+            return None if offset == 0 else (postings, "amazon.jobs")
+        for j in data["jobs"]:
+            postings.append({
+                "title": j.get("title", ""),
+                "url": "https://www.amazon.jobs" + (j.get("job_path") or ""),
+                "location": j.get("city", "") or j.get("location", "") or "",
+                "text": " ".join(
+                    strip_html(j.get(k) or "")
+                    for k in ("description", "basic_qualifications",
+                              "preferred_qualifications")
+                ),
+            })
+        offset += 100
+        if offset >= data.get("hits", 0):
+            break
+    return postings, "amazon.jobs"
+
+
+def fetch_google(session: requests.Session):
+    """Google careers search results are server-rendered."""
+    postings = []
+    seen: set[str] = set()
+    for page in range(1, 6):
+        try:
+            resp = session.get(
+                "https://www.google.com/about/careers/applications/jobs/results"
+                f"?q=intern&page={page}",
+                timeout=TIMEOUT, headers=HEADERS,
+            )
+            if resp.status_code != 200:
+                break
+        except requests.RequestException:
+            break
+        soup = BeautifulSoup(resp.text, "html.parser")
+        links = soup.select("a[href*='jobs/results/']")
+        new = 0
+        for a in links:
+            href = (a.get("href") or "").split("?")[0]
+            if not href or href in seen:
+                continue
+            h3 = a.find("h3") or (a.find_parent() and a.find_parent().find("h3"))
+            title = (h3.get_text(strip=True) if h3 else a.get_text(strip=True))
+            if not title:
+                continue
+            seen.add(href)
+            new += 1
+            url = ("https://www.google.com/about/careers/applications/" + href
+                   if not href.startswith("http") else href)
+            postings.append({
+                "title": title, "url": url, "location": "", "text": "",
+                "_detail": url, "_detail_kind": "page",
+            })
+        if new == 0:
+            break
+    return (postings, "google.com/about/careers") if postings else None
+
+
+def fetch_apple(session: requests.Session):
+    """Apple's search page embeds results as hydration JSON."""
+    postings = []
+    for page in range(1, 4):
+        try:
+            resp = session.get(
+                f"https://jobs.apple.com/en-us/search?search=intern&page={page}",
+                timeout=TIMEOUT, headers=HEADERS,
+            )
+            if resp.status_code != 200:
+                break
+        except requests.RequestException:
+            break
+        m = re.search(
+            r"window\.__staticRouterHydrationData\s*=\s*JSON\.parse\((.+?)\);?\s*</script>",
+            resp.text, re.DOTALL,
+        )
+        if not m:
+            break
+        try:
+            data = json.loads(json.loads(m.group(1)))
+        except ValueError:
+            break
+
+        def walk(obj):
+            if isinstance(obj, dict):
+                if "postingTitle" in obj and "positionId" in obj:
+                    yield obj
+                else:
+                    for v in obj.values():
+                        yield from walk(v)
+            elif isinstance(obj, list):
+                for v in obj:
+                    yield from walk(v)
+
+        found = list(walk(data))
+        if not found:
+            break
+        for j in found:
+            postings.append({
+                "title": j.get("postingTitle", ""),
+                "url": f"https://jobs.apple.com/en-us/details/{j.get('positionId')}",
+                "location": (j.get("locations") or [{}])[0].get("name", "")
+                if isinstance(j.get("locations"), list) else "",
+                "text": strip_html(
+                    " ".join(str(j.get(k) or "") for k in
+                             ("jobSummary", "description", "minimumQualifications"))
+                ),
+            })
+    return (postings, "jobs.apple.com") if postings else None
+
+
+def fetch_oracle_cloud(session: requests.Session, host: str, site: str,
+                       label: str, keywords: list[str]):
+    """Oracle Recruiting Cloud (e.g. JPMorgan Chase)."""
+    postings, seen = [], set()
+    for kw in keywords:
+        for offset in range(0, 300, 100):
+            url = (
+                f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+                f"?onlyData=true&expand=requisitionList.secondaryLocations"
+                f'&finder=findReqs;siteNumber={site},keyword="{kw}",'
+                f"facetsList=LOCATIONS,limit=100,offset={offset},"
+                f"sortBy=POSTING_DATES_DESC"
+            )
+            data = get_json(session, url)
+            if not isinstance(data, dict) or not data.get("items"):
+                break
+            reqs = data["items"][0].get("requisitionList", [])
+            if not reqs:
+                break
+            for j in reqs:
+                rid = j.get("Id")
+                if rid in seen:
+                    continue
+                seen.add(rid)
+                postings.append({
+                    "title": j.get("Title", ""),
+                    "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/"
+                           f"{site}/job/{rid}",
+                    "location": j.get("PrimaryLocation", "") or "",
+                    "text": strip_html(j.get("ShortDescriptionStr", "") or ""),
+                })
+    return (postings, label) if postings else None
+
+
+def fetch_radancy(session: requests.Session, base: str, label: str):
+    """Radancy-powered job sites (e.g. lockheedmartinjobs.com)."""
+    postings, seen = [], set()
+    for page in range(1, 6):
+        try:
+            resp = session.get(
+                f"{base}/search-jobs/results?ActiveFacetID=0&CurrentPage={page}"
+                "&RecordsPerPage=100&Distance=50&RadiusUnitType=0&Keywords=intern"
+                "&ShowRadius=False&IsPagination=False&FacetType=0"
+                "&SearchResultsModuleName=Search+Results"
+                "&SearchFiltersModuleName=Search+Filters"
+                "&SortCriteria=0&SortDirection=0&SearchType=5&ResultsType=0",
+                timeout=TIMEOUT,
+                headers={**HEADERS, "Accept": "application/json",
+                         "X-Requested-With": "XMLHttpRequest"},
+            )
+            data = resp.json()
+        except (requests.RequestException, ValueError):
+            return None if page == 1 else (postings, label)
+        soup = BeautifulSoup(data.get("results", ""), "html.parser")
+        links = soup.select("a[href*='/job/']")
+        new = 0
+        for a in links:
+            href = a.get("href") or ""
+            if href in seen:
+                continue
+            seen.add(href)
+            new += 1
+            h2 = a.find("h2")
+            title = h2.get_text(strip=True) if h2 else a.get_text(" ", strip=True)
+            url = href if href.startswith("http") else base + href
+            postings.append({
+                "title": title, "url": url, "location": "", "text": "",
+                "_detail": url, "_detail_kind": "page",
+            })
+        if new == 0:
+            break
+    return (postings, label) if postings else None
+
+
+def fetch_atlassian(session: requests.Session):
+    """Atlassian publishes all listings as JSON at a public endpoint."""
+    data = get_json(session, "https://www.atlassian.com/endpoint/careers/listings")
+    if not isinstance(data, list):
+        return None
+    postings = []
+    for job in data:
+        portal = job.get("portalJobPost") or {}
+        postings.append({
+            "title": job.get("title", ""),
+            "url": portal.get("portalUrl", "")
+                   or "https://www.atlassian.com/company/careers/all-jobs",
+            "location": "; ".join(job.get("locations") or []),
+            "text": strip_html(
+                " ".join(str(job.get(k) or "") for k in
+                         ("overview", "responsibilities", "qualifications"))
+            ),
+        })
+    return (postings, "atlassian.com careers API") if postings else None
+
+
+def _wd(host, site):
+    return lambda s: fetch_workday(s, host, site)
+
+
+# Company name (lowercased) -> fetcher(session) -> (postings, source) | None
+KNOWN_COMPANIES = {
+    "nvidia": _wd("nvidia.wd5.myworkdayjobs.com", "NVIDIAExternalCareerSite"),
+    "salesforce": _wd("salesforce.wd12.myworkdayjobs.com", "External_Career_Site"),
+    "capital one": _wd("capitalone.wd12.myworkdayjobs.com", "Capital_One"),
+    "the home depot": _wd("homedepot.wd5.myworkdayjobs.com", "CareerDepot"),
+    "home depot": _wd("homedepot.wd5.myworkdayjobs.com", "CareerDepot"),
+    "ncr voyix": _wd("ncr.wd1.myworkdayjobs.com", "ext_us"),
+    "amazon": fetch_amazon,
+    "google": fetch_google,
+    "apple": fetch_apple,
+    "jpmorgan chase": lambda s: fetch_oracle_cloud(
+        s, "jpmc.fa.oraclecloud.com", "CX_1001", "jpmorganchase.com",
+        ["internship", "summer analyst", "summer", "2027"]),
+    "jpmorgan": lambda s: fetch_oracle_cloud(
+        s, "jpmc.fa.oraclecloud.com", "CX_1001", "jpmorganchase.com",
+        ["internship", "summer analyst", "summer", "2027"]),
+    "lockheed martin": lambda s: fetch_radancy(
+        s, "https://www.lockheedmartinjobs.com", "lockheedmartinjobs.com"),
+    "atlassian": fetch_atlassian,
+    "fortinet": lambda s: fetch_oracle_cloud(
+        s, "edel.fa.us2.oraclecloud.com", "CX_2001", "fortinet.com",
+        ["intern", "internship"]),
+}
+
+# Companies whose career sites block automated access.
+BLOCKED_COMPANIES = {
+    "microsoft": "Microsoft's careers site requires a browser — check "
+                 "https://jobs.careers.microsoft.com/global/en/search?q=intern",
+    "meta": "Meta's careers site blocks automated access — check "
+            "https://www.metacareers.com/jobs",
+    "goldman sachs": "Goldman's careers site blocks automated access — check "
+                     "https://higher.gs.com/campus",
+    "bloomberg": "Bloomberg's careers site blocks automated access — check "
+                 "https://careers.bloomberg.com/job/search?qf=internships",
+    "delta air lines": "Delta's careers site blocks automated access — check "
+                       "https://delta.avature.net/careers",
+    "citadel": "Citadel's careers site blocks automated access — check "
+               "https://www.citadel.com/careers/students/",
+    "tesla": "Tesla's careers site blocks automated access — check "
+             "https://www.tesla.com/careers/search/?keyword=intern",
+    "bain & company": "Bain's careers site blocks automated access — check "
+                      "https://www.bain.com/careers/find-a-role/",
+    "nutanix": "Nutanix's careers site blocks automated access — check "
+               "https://careers.nutanix.com/en/jobs/",
+    "epam": "EPAM's careers site blocks automated access — check "
+            "https://www.epam.com/careers/job-listings",
+}
+
+# Recognize Workday careers URLs so we can query the job-board API instead of
+# scraping the JS-rendered page, e.g.
+# https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
+WORKDAY_URL_RE = re.compile(
+    r"https?://(?P<host>[\w-]+\.wd\d+\.myworkdayjobs\.com)"
+    r"/(?:[a-z]{2}-[A-Z]{2}/)?(?P<site>[^/?#]+)"
+)
+
+# Likewise for hosted ATS board URLs: pull the slug out and hit the JSON API.
+ATS_URL_ROUTES = [
+    (re.compile(r"https?://(?:boards|job-boards)\.greenhouse\.io/([\w-]+)"),
+     fetch_greenhouse),
+    (re.compile(r"https?://jobs\.lever\.co/([\w-]+)"), fetch_lever),
+    (re.compile(r"https?://jobs\.ashbyhq\.com/([\w-]+)"), fetch_ashby),
+    (re.compile(r"https?://(?:jobs|careers)\.smartrecruiters\.com/([\w-]+)"),
+     fetch_smartrecruiters),
+]
+
+
+# ---------------------------------------------------------------------------
+# Matching
+# ---------------------------------------------------------------------------
+
+def parse_term_keywords(term: str) -> list[str]:
+    """Split a search term into OR keywords (comma- or space-separated)."""
+    if "," in term:
+        parts = [p.strip() for p in term.split(",")]
+    else:
+        parts = term.split()
+    return [p for p in parts if p]
+
+
+def term_patterns(term: str) -> list[re.Pattern]:
+    """One pattern per keyword; a posting matches if ANY keyword hits."""
+    pats = []
+    for kw in parse_term_keywords(term):
+        pats.append(re.compile(rf"\b{re.escape(kw)}\b", re.IGNORECASE))
+    return pats
+
+
+def term_label(term: str) -> str:
+    keywords = parse_term_keywords(term)
+    if len(keywords) <= 1:
+        return term
+    return " or ".join(f'"{k}"' for k in keywords)
+
+
+# Eligibility phrasing like "must graduate before Summer 2027" is not a role
+# for that term, so ignore matches preceded by such wording.
+ELIGIBILITY_RE = re.compile(
+    r"(graduat\w*|degree)\s+(on\s+or\s+)?(before|by|prior to|after|between|no later than)\s*$",
+    re.IGNORECASE,
+)
+
+
+def find_match(text: str, patterns: list[re.Pattern]) -> re.Match | None:
+    for p in patterns:
+        for m in p.finditer(text):
+            preceding = text[max(0, m.start() - 60) : m.start()]
+            if not ELIGIBILITY_RE.search(preceding.strip()):
+                return m
+    return None
+
+
+def snippet_around(text: str, m: re.Match, radius: int = 70) -> str:
+    start = max(0, m.start() - radius)
+    return re.sub(r"\s+", " ", text[start : m.end() + radius]).strip()
+
+
+def scan_company(company: str, url: str | None, term: str,
+                 check_descriptions: bool) -> CompanyResult:
+    session = requests.Session()
+    result = CompanyResult(company=company)
+    patterns = term_patterns(term)
+    blocked_msg = BLOCKED_COMPANIES.get(company.lower())
+
+    postings = None
+
+    # Dedicated fetcher for companies we have special handling for.
+    known = KNOWN_COMPANIES.get(company.lower())
+    if known:
+        fetched = known(session)
+        if fetched and fetched[0]:
+            postings, result.source = fetched
+
+    # A Workday careers URL: query its job-board API rather than scraping the
+    # JS-rendered page (which contains no postings).
+    if postings is None and url:
+        wd = WORKDAY_URL_RE.match(url)
+        if wd:
+            fetched = fetch_workday(session, wd.group("host"), wd.group("site"))
+            if fetched and fetched[0]:
+                postings, result.source = fetched
+
+    # A hosted ATS board URL: same idea, use the board's JSON API.
+    if postings is None and url:
+        for pattern, fetcher in ATS_URL_ROUTES:
+            m = pattern.match(url)
+            if m:
+                fetched = fetcher(session, m.group(1))
+                if fetched and fetched[0]:
+                    postings, result.source = fetched
+                break
+
+    # Any other careers URL: fetch the page and scan its text.
+    if postings is None and url:
+        page_result = scan_custom_page(session, company, url, patterns)
+        if page_result.error and blocked_msg:
+            page_result.error = blocked_msg
+        return page_result
+
+    if postings is None:
+        for fetcher in ATS_FETCHERS:
+            for slug in slugify_candidates(company):
+                fetched = fetcher(session, slug)
+                if fetched and fetched[0]:
+                    postings, result.source = fetched
+                    break
+            if postings is not None:
+                break
+
+    if postings is None:
+        result.error = blocked_msg or (
+            "no public job board found (Greenhouse/Lever/Ashby/"
+            "SmartRecruiters/Workable) — add a careers URL for this company")
+        return result
+
+    intern_postings = [p for p in postings if INTERN_RE.search(p["title"])]
+    result.total_intern_roles = len(intern_postings)
+
+    for p in intern_postings:
+        if find_match(p["title"], patterns):
+            result.matches.append(
+                Role(p["title"], p["url"], p["location"], "title")
+            )
+            continue
+        text = p["text"]
+        if not text and check_descriptions and "_detail" in p:
+            text = fetch_greenhouse_detail(session, p)
+        if text:
+            m = find_match(text, patterns)
+            if m:
+                result.matches.append(
+                    Role(p["title"], p["url"], p["location"], "description",
+                         snippet_around(text, m))
+                )
+    return result
+
+
+def scan_custom_page(session: requests.Session, company: str, url: str,
+                     patterns: list[re.Pattern]) -> CompanyResult:
+    result = CompanyResult(company=company, source=url)
+    try:
+        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
+        resp.raise_for_status()
+    except requests.RequestException as exc:
+        result.error = f"failed to fetch {url}: {exc}"
+        return result
+
+    text = strip_html(resp.text)
+    intern_hits = len(INTERN_RE.findall(text))
+    result.total_intern_roles = intern_hits
+    if intern_hits:
+        m = find_match(text, patterns)
+        if m:
+            snippet = snippet_around(text, m, 80)
+            result.matches.append(
+                Role(f"page mentions it: “…{snippet}…”", url, "", "page")
+            )
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Input / output
+# ---------------------------------------------------------------------------
+
+def load_companies(path: str) -> list[tuple[str, str | None]]:
+    """Each line: 'Company Name' or 'Company Name | https://careers.url'."""
+    companies = []
+    with open(path) as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "|" in line:
+                name, url = (part.strip() for part in line.split("|", 1))
+                companies.append((name, url or None))
+            else:
+                companies.append((line, None))
+    return companies
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(
+        description="Search company career sites for internship roles."
+    )
+    parser.add_argument("companies_file", help="text file with one company per line")
+    parser.add_argument("--term", default="summer 2027",
+                        help="keywords to match, any one counts "
+                             "(default: summer OR 2027)")
+    parser.add_argument("--workers", type=int, default=8,
+                        help="parallel lookups (default: 8)")
+    parser.add_argument("--no-descriptions", action="store_true",
+                        help="only match against job titles (faster)")
+    parser.add_argument("--json", dest="json_out", action="store_true",
+                        help="print results as JSON instead of a table")
+    args = parser.parse_args()
+
+    companies = load_companies(args.companies_file)
+    if not companies:
+        console.print("[red]No companies found in file.[/red]")
+        return 1
+
+    term_desc = term_label(args.term)
+    results: list[CompanyResult] = []
+    with console.status(f"Scanning {len(companies)} companies for {term_desc}…"):
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            futures = {
+                pool.submit(scan_company, name, url, args.term,
+                            not args.no_descriptions): name
+                for name, url in companies
+            }
+            for future in as_completed(futures):
+                results.append(future.result())
+
+    order = {name: i for i, (name, _) in enumerate(companies)}
+    results.sort(key=lambda r: order[r.company])
+
+    if args.json_out:
+        print(json.dumps([
+            {
+                "company": r.company,
+                "source": r.source,
+                "intern_roles_found": r.total_intern_roles,
+                "matches": [vars(m) for m in r.matches],
+                "error": r.error,
+            }
+            for r in results
+        ], indent=2))
+        return 0
+
+    table = Table(title=f"Internship roles matching {term_desc}", show_lines=True)
+    table.add_column("Company", style="bold")
+    table.add_column("Status")
+    table.add_column("Matching roles", overflow="fold")
+
+    for r in results:
+        if r.error:
+            status = "[yellow]couldn't scan[/yellow]"
+            detail = f"[dim]{r.error}[/dim]"
+        elif r.matches:
+            status = f"[green]{len(r.matches)} match(es)[/green]"
+            detail = "\n".join(
+                f"• {m.title}"
+                + (f" [dim]({m.location})[/dim]" if m.location else "")
+                + f"\n  [link={m.url}]{m.url}[/link]"
+                + (f"\n  [dim]“…{m.snippet}…”[/dim]" if m.snippet else "")
+                for m in r.matches
+            )
+        elif r.total_intern_roles:
+            status = "[red]no match[/red]"
+            detail = (f"[dim]{r.total_intern_roles} intern role(s) live on "
+                      f"{r.source}, none mention {term_desc}[/dim]")
+        else:
+            status = "[red]no match[/red]"
+            detail = f"[dim]no intern roles found on {r.source}[/dim]"
+        table.add_row(r.company, status, detail)
+
+    console.print(table)
+
+    hits = sum(len(r.matches) for r in results)
+    console.print(
+        f"\n[bold]{hits}[/bold] matching role(s) across "
+        f"[bold]{sum(1 for r in results if r.matches)}[/bold] of "
+        f"{len(results)} companies."
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
