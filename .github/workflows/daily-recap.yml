@@ -1,0 +1,37 @@
+name: Daily Internship Recap
+
+on:
+  schedule:
+    - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
+  workflow_dispatch: {}
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan companies
+        run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
+
+      - name: Build recap
+        run: python3 scripts/format_recap.py scan_result.json > recap.html
+
+      - name: Email recap
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.mail.me.com
+          server_port: 587
+          username: ${{ secrets.ICLOUD_EMAIL }}
+          password: ${{ secrets.ICLOUD_APP_PASSWORD }}
+          subject: "Internship Tracker Daily Recap"
+          to: ${{ secrets.ICLOUD_EMAIL }}
+          from: ${{ secrets.ICLOUD_EMAIL }}
+          html_body: file://recap.html
