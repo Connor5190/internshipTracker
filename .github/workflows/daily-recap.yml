@@ -32,6 +32,6 @@ jobs:
           username: ${{ secrets.ICLOUD_EMAIL }}
           password: ${{ secrets.ICLOUD_APP_PASSWORD }}
           subject: "Internship Tracker Daily Recap"
-          to: ${{ secrets.ICLOUD_EMAIL }}
+          to: ${{ secrets.ICLOUD_EMAIL }},chill5@friars.providence.edu
           from: ${{ secrets.ICLOUD_EMAIL }}
           html_body: file://recap.html
