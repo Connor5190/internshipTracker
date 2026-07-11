@@ -228,26 +228,28 @@ ATS_FETCHERS = [
 MAX_DETAIL_FETCHES = 30  # cap per-job description requests per company
 
 
-def fetch_workday(session: requests.Session, host: str, site: str):
-    """Workday job boards, e.g. nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite.
-    Searches for 'intern' (relevance-sorted), so a few pages is enough."""
-    tenant = host.split(".")[0]
-    base = f"https://{host}/wday/cxs/{tenant}/{site}"
+def _workday_search(session: requests.Session, base: str, host: str, site: str,
+                    applied_facets: dict, search_text: str):
+    """One paginated Workday search. Returns (postings, facets) where facets is
+    the raw facet-definitions list from the first page (or None on failure)."""
     postings = []
+    facets = None
     offset = 0
     while offset < 100:
         try:
             resp = session.post(
                 f"{base}/jobs",
-                json={"appliedFacets": {}, "limit": 20, "offset": offset,
-                      "searchText": "intern"},
+                json={"appliedFacets": applied_facets, "limit": 20,
+                      "offset": offset, "searchText": search_text},
                 timeout=TIMEOUT, headers=HEADERS,
             )
             if resp.status_code != 200:
-                return None if offset == 0 else (postings, f"Workday ({tenant})")
+                break
             data = resp.json()
         except (requests.RequestException, ValueError):
-            return None if offset == 0 else (postings, f"Workday ({tenant})")
+            break
+        if facets is None:
+            facets = data.get("facets")
         jobs = data.get("jobPostings", [])
         if not jobs:
             break
@@ -264,6 +266,48 @@ def fetch_workday(session: requests.Session, host: str, site: str):
         offset += 20
         if offset >= data.get("total", 0):
             break
+    return postings, facets
+
+
+def _find_intern_facet_id(facets: list | None) -> str | None:
+    """Look for a 'workerSubType'-style facet whose value is literally
+    'Intern'/'Internship', e.g. Capital One's Workday board tags roles this
+    way independent of job title wording."""
+    for facet in facets or []:
+        if facet.get("facetParameter") != "workerSubType":
+            continue
+        for value in facet.get("values", []):
+            if re.fullmatch(r"intern(ship)?s?", value.get("descriptor", ""), re.IGNORECASE):
+                return value.get("id")
+    return None
+
+
+def fetch_workday(session: requests.Session, host: str, site: str):
+    """Workday job boards, e.g. nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite.
+    Runs a text search for 'intern' (relevance-sorted, catches most roles),
+    plus if the tenant tags an explicit 'Intern' worker sub-type facet, a
+    second pass filtered on that facet to catch roles the title wouldn't
+    otherwise match."""
+    tenant = host.split(".")[0]
+    base = f"https://{host}/wday/cxs/{tenant}/{site}"
+
+    postings, facets = _workday_search(session, base, host, site, {}, "intern")
+    if not postings and facets is None:
+        return None  # first request itself failed; not a valid Workday board
+
+    intern_facet_id = _find_intern_facet_id(facets)
+    if intern_facet_id:
+        facet_postings, _ = _workday_search(
+            session, base, host, site,
+            {"workerSubType": [intern_facet_id]}, "",
+        )
+        seen = {p["url"] for p in postings}
+        for p in facet_postings:
+            p["is_intern_tagged"] = True
+            if p["url"] not in seen:
+                postings.append(p)
+                seen.add(p["url"])
+
     return postings, f"Workday ({tenant})"
 
 
@@ -661,7 +705,10 @@ def scan_company(company: str, url: str | None, term: str,
             "SmartRecruiters/Workable) — add a careers URL for this company")
         return result
 
-    intern_postings = [p for p in postings if INTERN_RE.search(p["title"])]
+    intern_postings = [
+        p for p in postings
+        if p.get("is_intern_tagged") or INTERN_RE.search(p["title"])
+    ]
     result.total_intern_roles = len(intern_postings)
 
     for p in intern_postings:
