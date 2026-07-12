@@ -5,6 +5,9 @@ on:
     - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   recap:
     runs-on: ubuntu-latest
@@ -21,8 +24,11 @@ jobs:
       - name: Scan companies
         run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
 
+      - name: Update seen-postings ledger
+        run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json scan_result_enriched.json
+
       - name: Build recap
-        run: python3 scripts/format_recap.py scan_result.json > recap.html
+        run: python3 scripts/format_recap.py scan_result_enriched.json > recap.html
 
       - name: Email recap
         uses: dawidd6/action-send-mail@v3
@@ -35,3 +41,11 @@ jobs:
           to: ${{ secrets.ICLOUD_EMAIL }},chill5@friars.providence.edu
           from: ${{ secrets.ICLOUD_EMAIL }}
           html_body: file://recap.html
+
+      - name: Commit updated ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .state/seen_postings.json
+          git diff --staged --quiet || git commit -m "Update seen-postings ledger [skip ci]"
+          git push
