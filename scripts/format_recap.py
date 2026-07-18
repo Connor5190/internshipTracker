@@ -38,7 +38,7 @@ def build_html(results: list[dict]) -> str:
             parts.append("<br>".join(_role_line(m) for m in r["matches"]))
             parts.append("</p>")
 
-    parts.append("<h3>\U0001F195 New in the last 7 days</h3>")
+    parts.append("<h1>\U0001F195 New in the last 7 days</h1>")
     new_by_company = [
         (r["company"], [m for m in r["matches"] if m.get("is_new")]) for r in matched
     ]
@@ -51,7 +51,7 @@ def build_html(results: list[dict]) -> str:
             parts.append("<br>".join(_role_line(m) for m in ms))
             parts.append("</p>")
 
-    parts.append("<h3>////////////////////////////////////</h3>")
+    parts.append("<h3>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</h3>")
     parts.append("<h1>All current matches</h1>")
     if not matched:
         parts.append("<p>No matching roles found today.</p>")
