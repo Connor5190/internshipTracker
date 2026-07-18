@@ -9,9 +9,16 @@ it. For sources that don't expose a date, falls back to a ledger file
 (posting URL -> {first_seen, company, title}) that records the first time
 our own scans saw each posting. The ledger is pruned of postings that are
 both no longer live and older than RETENTION_DAYS, so it doesn't grow
-forever. Writes the updated ledger back to disk and an enriched copy of the
-scan results (each match gets `first_seen` and `is_new`) to the given
-output path.
+forever.
+
+Also tracks, per company, the first date it ever had a matching role at
+all (a separate signal from "new posting" -- a company can post fresh
+roles regularly without it being their first-ever match), annotating each
+company result with `first_match`.
+
+Writes the updated postings ledger and companies ledger back to disk, and
+an enriched copy of the scan results (each match gets `first_seen` and
+`is_new`; each company gets `first_match`) to the given output path.
 """
 
 from __future__ import annotations
@@ -25,13 +32,14 @@ RETENTION_DAYS = 45
 
 
 def main() -> int:
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print(
-            "usage: update_ledger.py <scan_result.json> <ledger.json> <enriched_out.json>",
+            "usage: update_ledger.py <scan_result.json> <postings_ledger.json> "
+            "<companies_ledger.json> <enriched_out.json>",
             file=sys.stderr,
         )
         return 1
-    scan_path, ledger_path, out_path = sys.argv[1:4]
+    scan_path, ledger_path, companies_path, out_path = sys.argv[1:5]
 
     with open(scan_path) as f:
         results = json.load(f)
@@ -42,10 +50,24 @@ def main() -> int:
     except FileNotFoundError:
         ledger = {}
 
+    try:
+        with open(companies_path) as f:
+            companies_seen = json.load(f)
+    except FileNotFoundError:
+        companies_seen = {}
+
     today = date.today()
     seen_today: set[str] = set()
 
     for company in results:
+        if company["matches"]:
+            name = company["company"]
+            company["first_match"] = name not in companies_seen
+            if name not in companies_seen:
+                companies_seen[name] = today.isoformat()
+        else:
+            company["first_match"] = False
+
         for m in company["matches"]:
             url = m["url"]
 
@@ -83,6 +105,10 @@ def main() -> int:
 
     with open(ledger_path, "w") as f:
         json.dump(ledger, f, indent=2, sort_keys=True)
+        f.write("\n")
+
+    with open(companies_path, "w") as f:
+        json.dump(companies_seen, f, indent=2, sort_keys=True)
         f.write("\n")
 
     with open(out_path, "w") as f:

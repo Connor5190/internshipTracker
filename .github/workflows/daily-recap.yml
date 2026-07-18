@@ -25,7 +25,7 @@ jobs:
         run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
 
       - name: Update seen-postings ledger
-        run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json scan_result_enriched.json
+        run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json
 
       - name: Build recap
         run: python3 scripts/format_recap.py scan_result_enriched.json > recap.html
@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .state/seen_postings.json
+          git add .state/seen_postings.json .state/companies_seen.json
           git diff --staged --quiet || git commit -m "Update seen-postings ledger [skip ci]"
           git push

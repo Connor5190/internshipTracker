@@ -22,6 +22,7 @@ def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
     total_roles = sum(len(r["matches"]) for r in results)
     new_count = sum(1 for r in results for m in r["matches"] if m.get("is_new"))
+    first_match_companies = [r for r in matched if r.get("first_match")]
 
     parts = [
         f"<h2>Internship Tracker Daily Recap &mdash; {date.today().isoformat()}</h2>",
@@ -29,6 +30,13 @@ def build_html(results: list[dict]) -> str:
         f"<b>{total}</b> companies scanned &mdash; <b>{new_count}</b> new in the last "
         f"7 days. <b>{len(failed)}</b> couldn't be scanned.</p>",
     ]
+
+    if first_match_companies:
+        parts.append("<h3>\U0001F389 First roles ever seen from these companies</h3>")
+        for r in first_match_companies:
+            parts.append(f"<p><b>{html.escape(r['company'])}</b><br>")
+            parts.append("<br>".join(_role_line(m) for m in r["matches"]))
+            parts.append("</p>")
 
     parts.append("<h3>\U0001F195 New in the last 7 days</h3>")
     new_by_company = [
@@ -43,7 +51,8 @@ def build_html(results: list[dict]) -> str:
             parts.append("<br>".join(_role_line(m) for m in ms))
             parts.append("</p>")
 
-    parts.append("<h3>All current matches</h3>")
+    parts.append("<h3>////////////////////////////////////</h3>")
+    parts.append("<h1>All current matches</h1>")
     if not matched:
         parts.append("<p>No matching roles found today.</p>")
     else:
