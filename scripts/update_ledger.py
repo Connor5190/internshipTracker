@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Track when each posting was first seen, and annotate today's scan results
-with that history so the recap can call out what's new.
+"""Determine which postings are new within the last week, and annotate
+today's scan results with that so the recap can call it out.
 
-Reads scan_result.json (internship_tracker.py --json output) and a ledger
-file mapping posting URL -> {first_seen, company, title}. Postings not
-already in the ledger are recorded as first seen today. The ledger is
-pruned of postings that are both no longer live and older than
-RETENTION_DAYS, so it doesn't grow forever. Writes the updated ledger back
-to disk and an enriched copy of the scan results (each match gets
-`first_seen` and `is_new`) to the given output path.
+Where the source ATS exposes its own posting date (Greenhouse, Workday,
+Lever, Ashby, Workable all do), that's used directly -- it reflects when the
+employer actually posted the role, not just when we happened to first scan
+it. For sources that don't expose a date, falls back to a ledger file
+(posting URL -> {first_seen, company, title}) that records the first time
+our own scans saw each posting. The ledger is pruned of postings that are
+both no longer live and older than RETENTION_DAYS, so it doesn't grow
+forever. Writes the updated ledger back to disk and an enriched copy of the
+scan results (each match gets `first_seen` and `is_new`) to the given
+output path.
 """
 
 from __future__ import annotations
@@ -45,6 +48,20 @@ def main() -> int:
     for company in results:
         for m in company["matches"]:
             url = m["url"]
+
+            posted = m.get("posted_date") or ""
+            if posted:
+                try:
+                    posted_date = date.fromisoformat(posted)
+                except ValueError:
+                    posted = ""
+            if posted:
+                # The ATS told us the real posting date -- trust it, and
+                # don't bother tracking this one in the ledger.
+                m["first_seen"] = posted
+                m["is_new"] = (today - posted_date).days < NEW_WINDOW_DAYS
+                continue
+
             seen_today.add(url)
             entry = ledger.get(url)
             if entry is None:

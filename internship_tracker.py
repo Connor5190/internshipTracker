@@ -20,6 +20,7 @@ import re
 import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
+from datetime import date, datetime, timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -49,6 +50,7 @@ class Role:
     location: str = ""
     matched_in: str = "title"  # "title" or "description"
     snippet: str = ""
+    posted_date: str = ""  # ISO date the ATS says this was posted, if known
 
 
 @dataclass
@@ -93,8 +95,31 @@ def strip_html(text: str) -> str:
 
 # ---------------------------------------------------------------------------
 # ATS providers. Each returns (postings, source_label) or None if the company
-# isn't on that platform. Postings are dicts: title, url, location, text.
+# isn't on that platform. Postings are dicts: title, url, location, text, and
+# (where the ATS exposes it) posted_date, an ISO date string of when the
+# posting actually went live -- used to tell genuinely new roles from ones
+# we simply haven't scanned before.
 # ---------------------------------------------------------------------------
+
+def _iso_date_from_timestamp(text: str | None) -> str:
+    """Parse an ISO-ish datetime string (Greenhouse/Ashby/Workable style)
+    down to just the date. Returns '' if unparseable."""
+    if not text:
+        return ""
+    try:
+        return datetime.fromisoformat(text.replace("Z", "+00:00")).date().isoformat()
+    except ValueError:
+        return ""
+
+
+def _iso_date_from_epoch_ms(ms) -> str:
+    """Parse a Lever-style epoch-milliseconds timestamp. Returns '' if
+    unparseable."""
+    try:
+        return datetime.fromtimestamp(int(ms) / 1000).date().isoformat()
+    except (TypeError, ValueError, OSError):
+        return ""
+
 
 def fetch_greenhouse(session: requests.Session, slug: str):
     data = get_json(
@@ -110,6 +135,7 @@ def fetch_greenhouse(session: requests.Session, slug: str):
                 "url": job.get("absolute_url", ""),
                 "location": (job.get("location") or {}).get("name", ""),
                 "text": "",
+                "posted_date": _iso_date_from_timestamp(job.get("first_published")),
                 "_detail": f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{job.get('id')}",
             }
         )
@@ -135,6 +161,7 @@ def fetch_lever(session: requests.Session, slug: str):
                 "url": job.get("hostedUrl", ""),
                 "location": (job.get("categories") or {}).get("location", "") or "",
                 "text": job.get("descriptionPlain", "") or "",
+                "posted_date": _iso_date_from_epoch_ms(job.get("createdAt")),
             }
         )
     return postings, f"Lever ({slug})"
@@ -152,6 +179,7 @@ def fetch_ashby(session: requests.Session, slug: str):
                 "url": job.get("jobUrl", "") or job.get("applyUrl", ""),
                 "location": job.get("location", "") or "",
                 "text": strip_html(job.get("descriptionHtml", "")),
+                "posted_date": _iso_date_from_timestamp(job.get("publishedAt")),
             }
         )
     return postings, f"Ashby ({slug})"
@@ -207,6 +235,7 @@ def fetch_workable(session: requests.Session, slug: str):
                 "url": f"https://apply.workable.com/{slug}/j/{job.get('shortcode')}/",
                 "location": loc.get("city", "") or loc.get("country", "") or "",
                 "text": "",
+                "posted_date": _iso_date_from_timestamp(job.get("published")),
             }
         )
     return postings, f"Workable ({slug})"
@@ -226,6 +255,28 @@ ATS_FETCHERS = [
 # ---------------------------------------------------------------------------
 
 MAX_DETAIL_FETCHES = 30  # cap per-job description requests per company
+
+
+WORKDAY_POSTED_RE = re.compile(r"posted\s+(today|yesterday|(\d+)\+?\s+days?\s+ago)", re.IGNORECASE)
+
+
+def _iso_date_from_workday_posted_on(text: str | None) -> str:
+    """Workday gives relative strings like 'Posted Today', 'Posted Yesterday',
+    'Posted 7 Days Ago', or 'Posted 30+ Days Ago'. Convert to an approximate
+    ISO date. Returns '' if unparseable."""
+    m = WORKDAY_POSTED_RE.search(text or "")
+    if not m:
+        return ""
+    label, days = m.group(1).lower(), m.group(2)
+    if label == "today":
+        days_ago = 0
+    elif label == "yesterday":
+        days_ago = 1
+    elif days:
+        days_ago = int(days)
+    else:
+        return ""
+    return (date.today() - timedelta(days=days_ago)).isoformat()
 
 
 def _workday_search(session: requests.Session, base: str, host: str, site: str,
@@ -260,6 +311,7 @@ def _workday_search(session: requests.Session, base: str, host: str, site: str,
                 "url": f"https://{host}/en-US/{site}{path}",
                 "location": j.get("locationsText", "") or "",
                 "text": "",
+                "posted_date": _iso_date_from_workday_posted_on(j.get("postedOn")),
                 "_detail": f"{base}{path}",
                 "_detail_kind": "workday",
             })
@@ -460,6 +512,7 @@ def fetch_oracle_cloud(session: requests.Session, host: str, site: str,
                            f"{site}/job/{rid}",
                     "location": j.get("PrimaryLocation", "") or "",
                     "text": strip_html(j.get("ShortDescriptionStr", "") or ""),
+                    "posted_date": _iso_date_from_timestamp(j.get("PostedDate")),
                 })
     return (postings, label) if postings else None
 
@@ -712,9 +765,11 @@ def scan_company(company: str, url: str | None, term: str,
     result.total_intern_roles = len(intern_postings)
 
     for p in intern_postings:
+        posted_date = p.get("posted_date", "")
         if find_match(p["title"], patterns):
             result.matches.append(
-                Role(p["title"], p["url"], p["location"], "title")
+                Role(p["title"], p["url"], p["location"], "title",
+                     posted_date=posted_date)
             )
             continue
         text = p["text"]
@@ -725,7 +780,7 @@ def scan_company(company: str, url: str | None, term: str,
             if m:
                 result.matches.append(
                     Role(p["title"], p["url"], p["location"], "description",
-                         snippet_around(text, m))
+                         snippet_around(text, m), posted_date=posted_date)
                 )
     return result
 
