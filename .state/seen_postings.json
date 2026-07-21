@@ -1,4 +1,9 @@
 {
+  "https://apply.deloitte.com/careers/SearchJobs/intern": {
+    "company": "Deloitte",
+    "first_seen": "2026-07-21",
+    "title": "page mentions it: \u201c\u2026Audit & Assurance Intern \u2013 Financial Statement Audit \u2013 Summer 2027 Deloitte US\u2026\u201d"
+  },
   "https://boards.greenhouse.io/andurilindustries/jobs/5148079007?gh_jid=5148079007": {
     "company": "Anduril Industries",
     "first_seen": "2026-07-12",
@@ -354,6 +359,11 @@
     "first_seen": "2026-07-12",
     "title": "AI Builder Intern"
   },
+  "https://jobs.apple.com/en-us/details/200598147": {
+    "company": "Apple",
+    "first_seen": "2026-07-21",
+    "title": "Intern Opportunities at Apple (General) - October 2026 to September 2027"
+  },
   "https://jobs.ashbyhq.com/notion/5b15697c-fa91-4511-9482-c98a6ff29f90": {
     "company": "Notion",
     "first_seen": "2026-07-12",
@@ -408,6 +418,11 @@
     "company": "Western Digital",
     "first_seen": "2026-07-17",
     "title": "Software Engineering Co-Op - Winter 2027"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000138727213": {
+    "company": "Western Digital",
+    "first_seen": "2026-07-21",
+    "title": "Summer 2027 - Software Engineering Internship"
   },
   "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210690282": {
     "company": "JPMorgan Chase",
