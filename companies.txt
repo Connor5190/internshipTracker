@@ -31,13 +31,13 @@ Canva | https://www.canva.com/careers/
 Capital One | https://www.capitalonecareers.com/search-jobs/intern
 Cardlytics | https://www.cardlytics.com/careers/
 Caterpillar | https://cat.wd5.myworkdayjobs.com/CaterpillarCareers
-Character.AI | https://character.ai/careers
+Character.AI | https://jobs.ashbyhq.com/character
 Chevron | https://chevron.wd5.myworkdayjobs.com/University
 Chick-fil-A | https://careers.chick-fil-a.com/corporate/jobs
 Chime | https://www.chime.com/careers
-Chronosphere | https://chronosphere.io/careers/
+Chronosphere | https://jobs.ashbyhq.com/chronospherejobs
 Cigna | https://cigna.wd5.myworkdayjobs.com/cignacareers
-Cisco | https://jobs.cisco.com/jobs/SearchJobs/intern
+Cisco | https://careers.cisco.com/global/en/search-results?keywords=intern
 Citadel | https://www.citadel.com/careers/students/
 Citibank | https://jobs.citi.com/search-jobs/intern
 ClassPass | https://classpass.com/careers
@@ -85,7 +85,7 @@ Global Payments | https://jobs.globalpayments.com/en/search-jobs/intern
 Goldman Sachs | https://higher.gs.com/campus
 Google | https://www.google.com/about/careers/applications/jobs/results?q=intern
 Grammarly | https://www.grammarly.com/jobs
-Guggenheim Partners | https://guggenheimpartners.wd1.myworkdayjobs.com/Guggenheim
+Guggenheim Partners | https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Partners
 Gulfstream Aerospace | https://careers.gulfstream.com/search/?q=intern
 HashiCorp | https://www.ibm.com/careers/search?q=hashicorp
 Honeywell | https://careers.honeywell.com/us/en/students
@@ -147,7 +147,7 @@ PrizePicks | https://www.prizepicks.com/careers
 Procter & Gamble | https://www.pgcareers.com/students
 Qualcomm | https://careers.qualcomm.com/careers?query=intern
 Ramp | https://ramp.com/careers
-Rapid7 | https://jobs.jobvite.com/rapid7/search?q=intern
+Rapid7 | https://www.rapid7.com/careers/open-positions/
 Reddit | https://redditinc.com/careers?search=intern
 Replit | https://replit.com/careers
 Retool | https://retool.com/careers
@@ -165,14 +165,14 @@ Select Medical | https://selectmedical.wd5.myworkdayjobs.com/SelectMedical
 Semgrep | https://semgrep.dev/careers
 SentinelOne | https://boards.greenhouse.io/sentinellabs
 ServiceNow | https://careers.servicenow.com/jobs?query=intern
-Skipify | https://www.skipify.com/careers
+Skipify | https://ats.rippling.com/skipify-jobs/jobs
 SLB | https://careers.slb.com/early-careers
 Snap Inc. | https://careers.snap.com/jobs
 Snowflake | https://careers.snowflake.com/us/en/search-results?keywords=intern
 Snyk | https://jobs.ashbyhq.com/snyk
 Southern Company | https://jobs.southerncompany.com/search-jobs/intern
 SpaceX | https://www.spacex.com/careers/
-Splunk | https://jobs.jobvite.com/splunk/search?q=intern
+Splunk | https://careers.cisco.com/global/en/splunk
 Spotify | https://www.lifeatspotify.com/jobs?query=intern
 State Farm | https://www.statefarm.com/careers/career-areas/internships
 Strava | https://www.strava.com/careers
@@ -195,7 +195,7 @@ Two Sigma | https://careers.twosigma.com/careers/OpenRoles
 Uber | https://www.uber.com/us/en/careers/list/?query=intern
 Underdog Fantasy | https://underdogfantasy.com/careers
 Unity | https://unity.com/careers
-UPS | https://www.jobs-ups.com/search-jobs/intern
+UPS | https://www.jobs-ups.com/global/en/search-results?keywords=intern
 Valve | https://www.valvesoftware.com/en/jobs/
 Vanta | https://www.vanta.com/careers
 Vercel | https://vercel.com/careers

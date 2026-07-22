@@ -371,14 +371,28 @@ def fetch_workday(session: requests.Session, host: str, site: str):
     return postings, f"Workday ({tenant})"
 
 
-def fetch_amazon(session: requests.Session):
+def fetch_splunk(session: requests.Session):
+    """Splunk was acquired by Cisco and its old Jobvite board is dead;
+    postings now live on Cisco's Workday tenant, tagged with an "Apprentice
+    & Intern" jobFamilyGroup facet. Filter by that facet plus a "Splunk"
+    text search to get just the Splunk-branded roles."""
+    host, site = "cisco.wd5.myworkdayjobs.com", "Cisco_Careers"
+    base = f"https://{host}/wday/cxs/cisco/{site}"
+    postings, _ = _workday_search(
+        session, base, host, site,
+        {"jobFamilyGroup": ["2101eee3ea96010675b0a474fc015c29"]}, "Splunk",
+    )
+    return (postings, "Workday (cisco, Splunk-filtered)") if postings else None
+
+
+def fetch_amazon(session: requests.Session, base_query: str = "intern"):
     postings = []
     offset = 0
     while offset < 500:
         data = get_json(
             session,
             "https://www.amazon.jobs/en/search.json"
-            f"?base_query=intern&result_limit=100&offset={offset}",
+            f"?base_query={base_query.replace(' ', '+')}&result_limit=100&offset={offset}",
         )
         if not isinstance(data, dict) or "jobs" not in data:
             return None if offset == 0 else (postings, "amazon.jobs")
@@ -399,7 +413,7 @@ def fetch_amazon(session: requests.Session):
     return postings, "amazon.jobs"
 
 
-def fetch_google(session: requests.Session):
+def fetch_google(session: requests.Session, query: str = "intern"):
     """Google careers search results are server-rendered."""
     postings = []
     seen: set[str] = set()
@@ -407,7 +421,7 @@ def fetch_google(session: requests.Session):
         try:
             resp = session.get(
                 "https://www.google.com/about/careers/applications/jobs/results"
-                f"?q=intern&page={page}",
+                f"?q={query}&page={page}",
                 timeout=TIMEOUT, headers=HEADERS,
             )
             if resp.status_code != 200:
@@ -421,8 +435,11 @@ def fetch_google(session: requests.Session):
             href = (a.get("href") or "").split("?")[0]
             if not href or href in seen:
                 continue
-            h3 = a.find("h3") or (a.find_parent() and a.find_parent().find("h3"))
-            title = (h3.get_text(strip=True) if h3 else a.get_text(strip=True))
+            aria = a.get("aria-label", "") or ""
+            title = re.sub(r"^Learn more about\s+", "", aria).strip()
+            if not title:
+                h3 = a.find("h3") or (a.find_parent() and a.find_parent().find("h3"))
+                title = (h3.get_text(strip=True) if h3 else a.get_text(strip=True))
             if not title:
                 continue
             seen.add(href)
@@ -586,6 +603,150 @@ def fetch_atlassian(session: requests.Session):
     return (postings, "atlassian.com careers API") if postings else None
 
 
+def _extract_balanced_json_value(text: str, key_marker: str) -> str | None:
+    """Find `key_marker` (e.g. '"someKey"') in text and return the raw text
+    of its JSON object value, by counting braces (string-literal-aware) from
+    the first '{' after the marker to its matching close. Used to pull a
+    specific value out of a much larger, possibly non-JSON-parseable blob
+    (e.g. a JS object literal) without needing to parse the whole thing."""
+    idx = text.find(key_marker)
+    if idx == -1:
+        return None
+    brace_start = text.find("{", idx)
+    if brace_start == -1:
+        return None
+    depth = 0
+    in_string = False
+    escape = False
+    for i in range(brace_start, len(text)):
+        c = text[i]
+        if in_string:
+            if escape:
+                escape = False
+            elif c == "\\":
+                escape = True
+            elif c == '"':
+                in_string = False
+        else:
+            if c == '"':
+                in_string = True
+            elif c == "{":
+                depth += 1
+            elif c == "}":
+                depth -= 1
+                if depth == 0:
+                    return text[brace_start : i + 1]
+    return None
+
+
+def fetch_phenom_people(session: requests.Session, url: str):
+    """Phenom People career sites (e.g. Adobe, Cisco, Truist, UPS, Warner
+    Bros. Discovery, Yelp) render job search results client-side -- but the
+    initial page load embeds the already-filtered results as a JSON blob
+    (`eagerLoadRefineSearch`) in a <script> tag, since it's what the page
+    hydrates from. No extra API calls needed, and no need to guess a
+    per-company endpoint -- just don't strip that blob away like plain
+    visible-text scraping would. Detected by content (this key showing up
+    in the page), not URL shape, since each company uses its own domain.
+    Returns None if the page doesn't have this blob at all (not a Phenom
+    site, or blocked), so callers can fall back to other methods."""
+    postings = []
+    seen_ids: set[str] = set()
+    offset = 0
+    sep = "&" if "?" in url else "?"
+    found_blob = False
+    while offset < 300:
+        page_url = url if offset == 0 else f"{url}{sep}from={offset}"
+        try:
+            resp = session.get(page_url, timeout=TIMEOUT, headers=HEADERS)
+            if resp.status_code != 200:
+                break
+        except requests.RequestException:
+            break
+        blob = _extract_balanced_json_value(resp.text, '"eagerLoadRefineSearch"')
+        if not blob:
+            break
+        found_blob = True
+        try:
+            data = json.loads(blob)
+        except ValueError:
+            break
+        jobs = (data.get("data") or {}).get("jobs", [])
+        if not jobs:
+            break
+        for j in jobs:
+            job_id = j.get("jobId") or j.get("reqId") or j.get("applyUrl", "")
+            if job_id in seen_ids:
+                continue
+            seen_ids.add(job_id)
+            postings.append({
+                "title": j.get("title", ""),
+                "url": j.get("applyUrl", "") or url,
+                "location": j.get("location", "") or j.get("cityStateCountry", ""),
+                "text": j.get("descriptionTeaser", "") or "",
+                "posted_date": _iso_date_from_timestamp(j.get("postedDate")),
+            })
+        offset += len(jobs)
+        if offset >= data.get("totalHits", 0):
+            break
+    if not found_blob:
+        return None
+    domain = re.sub(r"^https?://(?:www\.)?", "", url).split("/")[0]
+    return postings, f"Phenom People ({domain})"
+
+
+def fetch_icims_jibe(session: requests.Session, url: str):
+    """iCIMS 'Jibe'/Career Site Platform career sites (e.g. AMD,
+    Chick-fil-A, Garmin, GitHub) expose a same-origin JSON API at /api/jobs
+    that the page's own JS calls -- confirmed by trying it against the
+    given URL's origin, not by URL shape (every company hosts this at
+    their own careers.<company>.com domain). Returns None if that endpoint
+    doesn't exist there. Tries both "intern" and "internship" as keywords
+    since the search is tokenized/substring-based and some tenants only
+    match one (e.g. Garmin: 0 results for "intern", 49 for "internship")."""
+    m = re.match(r"(https?://[^/]+)", url)
+    if not m:
+        return None
+    origin = m.group(1)
+
+    postings = []
+    seen_ids: set[str] = set()
+    confirmed = False
+    for keyword in ("intern", "internship"):
+        page = 1
+        total_count = None
+        while page <= 30:
+            api_url = f"{origin}/api/jobs?keywords={keyword}&page={page}"
+            data = get_json(session, api_url)
+            if not isinstance(data, dict) or "jobs" not in data:
+                break
+            confirmed = True
+            if total_count is None:
+                total_count = data.get("totalCount", 0)
+            jobs = data["jobs"]
+            if not jobs:
+                break
+            for j in jobs:
+                d = j.get("data") or {}
+                job_id = d.get("req_id") or d.get("slug") or d.get("apply_url", "")
+                if job_id in seen_ids:
+                    continue
+                seen_ids.add(job_id)
+                postings.append({
+                    "title": d.get("title", ""),
+                    "url": d.get("apply_url", "") or url,
+                    "location": d.get("full_location", "") or d.get("short_location", ""),
+                    "text": d.get("description", "") or "",
+                    "posted_date": _iso_date_from_timestamp(d.get("posted_date")),
+                })
+            page += 1
+            if len(seen_ids) >= total_count:
+                break
+    if not confirmed:
+        return None
+    return postings, f"iCIMS Jibe ({origin})"
+
+
 UBER_SITEMAP_URL = "https://jobs.uber.com/en/jobs/sitemap.xml"
 UBER_POSTED_RE = re.compile(r"Posted on\s+([A-Za-z]+ \d{1,2},\s*\d{4})")
 UBER_LOCATION_RE = re.compile(r"Location\s+(.*?)\s+Team\b")
@@ -661,6 +822,58 @@ def fetch_uber(session: requests.Session):
     return fetch_uber_full(session)
 
 
+AFLAC_SITEMAP_URL = "https://careers.aflac.com/sitemap.xml"
+AFLAC_LOCATION_RE = re.compile(r"The Location:\s*(.*?)\s*The Division:")
+
+
+def _fetch_aflac_job_detail(session: requests.Session, url: str) -> dict | None:
+    try:
+        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
+        if resp.status_code != 200:
+            return None
+    except requests.RequestException:
+        return None
+    soup = BeautifulSoup(resp.text, "html.parser")
+    h1 = soup.find("h1")
+    title = h1.get_text(strip=True) if h1 else ""
+    if not title:
+        return None
+    for tag in soup(["script", "style"]):
+        tag.decompose()
+    visible = re.sub(r"\s+", " ", soup.get_text(" ")).strip()
+    loc_m = AFLAC_LOCATION_RE.search(visible)
+    return {
+        "title": title,
+        "url": url,
+        "location": loc_m.group(1) if loc_m else "",
+        "text": visible,
+    }
+
+
+def fetch_aflac_sitemap(session: requests.Session):
+    """Aflac's SAP SuccessFactors/Job2Web career site is client-rendered,
+    but individual job pages are server-rendered and the sitemap is tiny
+    (~24 jobs), so unlike Uber this is cheap enough to run on every scan."""
+    try:
+        resp = session.get(AFLAC_SITEMAP_URL, timeout=TIMEOUT, headers=HEADERS)
+        if resp.status_code != 200:
+            return None
+    except requests.RequestException:
+        return None
+    urls = re.findall(r"<loc>(.*?)</loc>", resp.text)
+    if not urls:
+        return None
+
+    postings = []
+    with ThreadPoolExecutor(max_workers=10) as pool:
+        futures = [pool.submit(_fetch_aflac_job_detail, session, u) for u in urls]
+        for future in as_completed(futures):
+            job = future.result()
+            if job:
+                postings.append(job)
+    return (postings, "Aflac careers (sitemap scan)") if postings else None
+
+
 def _wd(host, site):
     return lambda s: fetch_workday(s, host, site)
 
@@ -674,6 +887,7 @@ KNOWN_COMPANIES = {
     "home depot": _wd("homedepot.wd5.myworkdayjobs.com", "CareerDepot"),
     "ncr voyix": _wd("ncr.wd1.myworkdayjobs.com", "ext_us"),
     "amazon": fetch_amazon,
+    "aws": lambda s: fetch_amazon(s, base_query="aws intern"),
     "google": fetch_google,
     "apple": fetch_apple,
     "jpmorgan chase": lambda s: fetch_oracle_cloud(
@@ -689,6 +903,24 @@ KNOWN_COMPANIES = {
         s, "edel.fa.us2.oraclecloud.com", "CX_2001", "fortinet.com",
         ["intern", "internship"]),
     "uber": fetch_uber,
+    "accenture": _wd("accenture.wd103.myworkdayjobs.com", "AccentureCareers"),
+    "cardlytics": _wd("cardlytics.wd5.myworkdayjobs.com", "CardlyticsExternalCareerSite"),
+    "rapid7": _wd("mymoose.wd1.myworkdayjobs.com", "careers"),
+    "trainerize": _wd("abcfinancial.wd5.myworkdayjobs.com", "ABCFinancialServices"),
+    "unity": _wd("unitytech.wd1.myworkdayjobs.com", "Unity"),
+    "oracle": lambda s: fetch_oracle_cloud(
+        s, "eeho.fa.us2.oraclecloud.com", "CX_45001", "oracle.com",
+        ["intern", "internship"]),
+    "texas instruments": lambda s: fetch_oracle_cloud(
+        s, "edbz.fa.us2.oraclecloud.com", "CX", "ti.com",
+        ["intern", "internship"]),
+    "splunk": fetch_splunk,
+    "aflac": fetch_aflac_sitemap,
+    "fitbit": lambda s: fetch_google(s, query="fitbit"),
+    "honeywell": lambda s: fetch_oracle_cloud(
+        s, "ibqbjb.fa.ocs.oraclecloud.com", "CX_1", "honeywell.com",
+        ["intern", "internship"]),
+    "grammarly": lambda s: fetch_ashby(s, "Superhuman Platform Inc"),
 }
 
 # Companies whose career sites block automated access.
@@ -821,6 +1053,28 @@ def scan_company(company: str, url: str | None, term: str,
                 if fetched and fetched[0]:
                     postings, result.source = fetched
                 break
+
+    # A Phenom People career site: detected by content (the page embeds a
+    # specific JSON blob), not URL shape, since each company uses its own
+    # custom domain. Try this before guessing other ATS slugs or falling
+    # back to flat-text scraping -- it's cheap (a few requests, no per-site
+    # guessing) and gives real structured results when it applies.
+    if postings is None and url and not url_is_recognized_ats:
+        fetched = fetch_phenom_people(session, url)
+        if fetched is not None:
+            url_is_recognized_ats = True  # confirmed Phenom, even if 0 postings
+            if fetched[0]:
+                postings, result.source = fetched
+
+    # Same idea for iCIMS "Jibe"/Career Site Platform sites: a same-origin
+    # /api/jobs endpoint the page's own JS calls, confirmed by content
+    # rather than URL shape.
+    if postings is None and url and not url_is_recognized_ats:
+        fetched = fetch_icims_jibe(session, url)
+        if fetched is not None:
+            url_is_recognized_ats = True
+            if fetched[0]:
+                postings, result.source = fetched
 
     # No dedicated fetcher and no recognized-ATS URL: try auto-detecting the
     # company's ATS by guessing its slug. We still do this even when a plain
