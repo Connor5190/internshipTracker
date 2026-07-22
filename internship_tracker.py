@@ -42,6 +42,14 @@ INTERN_RE = re.compile(
 
 console = Console()
 
+# Companies whose only real coverage requires an expensive, many-request
+# scan (e.g. fetching hundreds of individual job pages because the company
+# has no public search API). Off by default -- enabled via --heavy-scan,
+# meant to be run periodically rather than on every daily scan. See
+# fetch_uber_full() for why Uber needs this.
+HEAVY_SCAN_ONLY_COMPANIES = ["Uber"]
+HEAVY_SCAN_ENABLED = False
+
 
 @dataclass
 class Role:
@@ -578,6 +586,81 @@ def fetch_atlassian(session: requests.Session):
     return (postings, "atlassian.com careers API") if postings else None
 
 
+UBER_SITEMAP_URL = "https://jobs.uber.com/en/jobs/sitemap.xml"
+UBER_POSTED_RE = re.compile(r"Posted on\s+([A-Za-z]+ \d{1,2},\s*\d{4})")
+UBER_LOCATION_RE = re.compile(r"Location\s+(.*?)\s+Team\b")
+
+
+def _fetch_uber_job_detail(session: requests.Session, url: str) -> dict | None:
+    try:
+        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
+        if resp.status_code != 200:
+            return None
+    except requests.RequestException:
+        return None
+    soup = BeautifulSoup(resp.text, "html.parser")
+    h1 = soup.find("h1")
+    title = h1.get_text(strip=True) if h1 else ""
+    if not title:
+        return None
+    for tag in soup(["script", "style"]):
+        tag.decompose()
+    visible = re.sub(r"\s+", " ", soup.get_text(" ")).strip()
+
+    loc_m = UBER_LOCATION_RE.search(visible)
+    posted_date = ""
+    posted_m = UBER_POSTED_RE.search(visible)
+    if posted_m:
+        for fmt in ("%b %d, %Y", "%B %d, %Y"):
+            try:
+                posted_date = datetime.strptime(posted_m.group(1), fmt).date().isoformat()
+                break
+            except ValueError:
+                continue
+
+    return {
+        "title": title,
+        "url": url,
+        "location": loc_m.group(1) if loc_m else "",
+        "text": visible,
+        "posted_date": posted_date,
+    }
+
+
+def fetch_uber_full(session: requests.Session):
+    """Uber's careers site (jobs.uber.com) is a client-rendered Next.js app
+    -- the listing page just says "Loading jobs..." until JavaScript runs,
+    and no public search/list API could be found. Individual job pages
+    ARE server-rendered, though, and a sitemap lists every current
+    posting, so this fetches the sitemap then every job page directly.
+    That's a few hundred requests -- too expensive to run on every daily
+    scan, hence gated behind HEAVY_SCAN_ENABLED (see --heavy-scan)."""
+    try:
+        resp = session.get(UBER_SITEMAP_URL, timeout=TIMEOUT, headers=HEADERS)
+        if resp.status_code != 200:
+            return None
+    except requests.RequestException:
+        return None
+    urls = re.findall(r"<loc>(.*?)</loc>", resp.text)
+    if not urls:
+        return None
+
+    postings = []
+    with ThreadPoolExecutor(max_workers=15) as pool:
+        futures = [pool.submit(_fetch_uber_job_detail, session, u) for u in urls]
+        for future in as_completed(futures):
+            job = future.result()
+            if job:
+                postings.append(job)
+    return (postings, "Uber careers (full sitemap scan)") if postings else None
+
+
+def fetch_uber(session: requests.Session):
+    if not HEAVY_SCAN_ENABLED:
+        return None
+    return fetch_uber_full(session)
+
+
 def _wd(host, site):
     return lambda s: fetch_workday(s, host, site)
 
@@ -605,6 +688,7 @@ KNOWN_COMPANIES = {
     "fortinet": lambda s: fetch_oracle_cloud(
         s, "edel.fa.us2.oraclecloud.com", "CX_2001", "fortinet.com",
         ["intern", "internship"]),
+    "uber": fetch_uber,
 }
 
 # Companies whose career sites block automated access.
@@ -877,7 +961,14 @@ def main() -> int:
                         help="only match against job titles (faster)")
     parser.add_argument("--json", dest="json_out", action="store_true",
                         help="print results as JSON instead of a table")
+    parser.add_argument("--heavy-scan", action="store_true",
+                        help="also run expensive, many-request scans for "
+                             f"companies that need them ({', '.join(HEAVY_SCAN_ONLY_COMPANIES)}) "
+                             "-- meant to be run periodically, not on every scan")
     args = parser.parse_args()
+
+    global HEAVY_SCAN_ENABLED
+    HEAVY_SCAN_ENABLED = args.heavy_scan
 
     companies = load_companies(args.companies_file)
     if not companies:
