@@ -803,8 +803,16 @@ def scan_company(company: str, url: str | None, term: str,
 
     if custom_page_result:
         result.total_intern_roles += custom_page_result.total_intern_roles
+        had_real_matches = bool(result.matches)
         existing_urls = {m.url for m in result.matches}
         for m in custom_page_result.matches:
+            # A generic "page mentions it" hit (matched_in == "page") has no
+            # real title/URL of its own -- it's only useful as a last
+            # resort when we have nothing else. When we already have real
+            # ATS matches, it's pure noise (often just nav links or cookie
+            # banners), so only add it here if we had no matches at all.
+            if m.matched_in == "page" and had_real_matches:
+                continue
             if m.url not in existing_urls:
                 result.matches.append(m)
                 existing_urls.add(m.url)
