@@ -822,11 +822,8 @@ def fetch_uber(session: requests.Session):
     return fetch_uber_full(session)
 
 
-AFLAC_SITEMAP_URL = "https://careers.aflac.com/sitemap.xml"
-AFLAC_LOCATION_RE = re.compile(r"The Location:\s*(.*?)\s*The Division:")
-
-
-def _fetch_aflac_job_detail(session: requests.Session, url: str) -> dict | None:
+def _fetch_sitemap_job_page(session: requests.Session, url: str,
+                           location_re: re.Pattern | None) -> dict | None:
     try:
         resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
         if resp.status_code != 200:
@@ -841,21 +838,24 @@ def _fetch_aflac_job_detail(session: requests.Session, url: str) -> dict | None:
     for tag in soup(["script", "style"]):
         tag.decompose()
     visible = re.sub(r"\s+", " ", soup.get_text(" ")).strip()
-    loc_m = AFLAC_LOCATION_RE.search(visible)
-    return {
-        "title": title,
-        "url": url,
-        "location": loc_m.group(1) if loc_m else "",
-        "text": visible,
-    }
+    location = ""
+    if location_re:
+        loc_m = location_re.search(visible)
+        location = loc_m.group(1) if loc_m else ""
+    return {"title": title, "url": url, "location": location, "text": visible}
 
 
-def fetch_aflac_sitemap(session: requests.Session):
-    """Aflac's SAP SuccessFactors/Job2Web career site is client-rendered,
-    but individual job pages are server-rendered and the sitemap is tiny
-    (~24 jobs), so unlike Uber this is cheap enough to run on every scan."""
+def fetch_sitemap_job_pages(session: requests.Session, sitemap_url: str, label: str,
+                            location_re: re.Pattern | None = None, max_workers: int = 10):
+    """For career sites that are client-rendered on the listing page but
+    publish a job sitemap AND server-render individual job detail pages
+    (e.g. Aflac's and Norfolk Southern's SAP SuccessFactors/Job2Web sites).
+    Only reasonable to call this for sites with a small-ish sitemap (a few
+    dozen jobs) -- for anything with hundreds of postings, the per-job
+    request cost adds up fast (see Uber's HEAVY_SCAN_ENABLED-gated fetcher
+    for that case instead)."""
     try:
-        resp = session.get(AFLAC_SITEMAP_URL, timeout=TIMEOUT, headers=HEADERS)
+        resp = session.get(sitemap_url, timeout=TIMEOUT, headers=HEADERS)
         if resp.status_code != 200:
             return None
     except requests.RequestException:
@@ -865,13 +865,16 @@ def fetch_aflac_sitemap(session: requests.Session):
         return None
 
     postings = []
-    with ThreadPoolExecutor(max_workers=10) as pool:
-        futures = [pool.submit(_fetch_aflac_job_detail, session, u) for u in urls]
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = [
+            pool.submit(_fetch_sitemap_job_page, session, u, location_re)
+            for u in urls
+        ]
         for future in as_completed(futures):
             job = future.result()
             if job:
                 postings.append(job)
-    return (postings, "Aflac careers (sitemap scan)") if postings else None
+    return (postings, label) if postings else None
 
 
 def _wd(host, site):
@@ -915,7 +918,11 @@ KNOWN_COMPANIES = {
         s, "edbz.fa.us2.oraclecloud.com", "CX", "ti.com",
         ["intern", "internship"]),
     "splunk": fetch_splunk,
-    "aflac": fetch_aflac_sitemap,
+    "aflac": lambda s: fetch_sitemap_job_pages(
+        s, "https://careers.aflac.com/sitemap.xml", "Aflac careers (sitemap scan)",
+        location_re=re.compile(r"The Location:\s*(.*?)\s*The Division:")),
+    "norfolk southern": lambda s: fetch_sitemap_job_pages(
+        s, "https://jobs.nscorp.com/sitemap.xml", "Norfolk Southern careers (sitemap scan)"),
     "fitbit": lambda s: fetch_google(s, query="fitbit"),
     "honeywell": lambda s: fetch_oracle_cloud(
         s, "ibqbjb.fa.ocs.oraclecloud.com", "CX_1", "honeywell.com",
