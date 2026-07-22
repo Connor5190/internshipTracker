@@ -708,6 +708,7 @@ def scan_company(company: str, url: str | None, term: str,
     blocked_msg = BLOCKED_COMPANIES.get(company.lower())
 
     postings = None
+    url_is_recognized_ats = False
 
     # Dedicated fetcher for companies we have special handling for.
     known = KNOWN_COMPANIES.get(company.lower())
@@ -721,28 +722,28 @@ def scan_company(company: str, url: str | None, term: str,
     if postings is None and url:
         wd = WORKDAY_URL_RE.match(url)
         if wd:
+            url_is_recognized_ats = True
             fetched = fetch_workday(session, wd.group("host"), wd.group("site"))
             if fetched and fetched[0]:
                 postings, result.source = fetched
 
     # A hosted ATS board URL: same idea, use the board's JSON API.
-    if postings is None and url:
+    if postings is None and url and not url_is_recognized_ats:
         for pattern, fetcher in ATS_URL_ROUTES:
             m = pattern.match(url)
             if m:
+                url_is_recognized_ats = True
                 fetched = fetcher(session, m.group(1))
                 if fetched and fetched[0]:
                     postings, result.source = fetched
                 break
 
-    # Any other careers URL: fetch the page and scan its text.
-    if postings is None and url:
-        page_result = scan_custom_page(session, company, url, patterns)
-        if page_result.error and blocked_msg:
-            page_result.error = blocked_msg
-        return page_result
-
-    if postings is None:
+    # No dedicated fetcher and no recognized-ATS URL: try auto-detecting the
+    # company's ATS by guessing its slug. We still do this even when a plain
+    # (non-ATS) careers URL was given, since that URL is usually the
+    # company's own marketing/careers page rather than proof they aren't
+    # also on a public ATS board.
+    if postings is None and not url_is_recognized_ats:
         for fetcher in ATS_FETCHERS:
             for slug in slugify_candidates(company):
                 fetched = fetcher(session, slug)
@@ -751,6 +752,23 @@ def scan_company(company: str, url: str | None, term: str,
                     break
             if postings is not None:
                 break
+
+    # Scan the given URL as a plain page in two cases:
+    #  - We still have no postings at all (whether or not the URL matched a
+    #    recognized ATS pattern -- e.g. its API returned zero current
+    #    openings). This is the last resort, same as before.
+    #  - We DO have postings, but the URL is a separate, non-ATS page (the
+    #    company's own careers site) -- scan it too and merge in anything
+    #    new, since some companies also list roles only there. If the URL
+    #    IS the same ATS we already queried, re-scraping it as text adds
+    #    nothing, so skip it.
+    custom_page_result = None
+    if url and (postings is None or not url_is_recognized_ats):
+        custom_page_result = scan_custom_page(session, company, url, patterns)
+        if postings is None:
+            if custom_page_result.error and blocked_msg:
+                custom_page_result.error = blocked_msg
+            return custom_page_result
 
     if postings is None:
         result.error = blocked_msg or (
@@ -782,6 +800,15 @@ def scan_company(company: str, url: str | None, term: str,
                     Role(p["title"], p["url"], p["location"], "description",
                          snippet_around(text, m), posted_date=posted_date)
                 )
+
+    if custom_page_result:
+        result.total_intern_roles += custom_page_result.total_intern_roles
+        existing_urls = {m.url for m in result.matches}
+        for m in custom_page_result.matches:
+            if m.url not in existing_urls:
+                result.matches.append(m)
+                existing_urls.add(m.url)
+
     return result
 
 
