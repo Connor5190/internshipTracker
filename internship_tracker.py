@@ -950,6 +950,8 @@ BLOCKED_COMPANIES = {
                "https://careers.nutanix.com/en/jobs/",
     "epam": "EPAM's careers site blocks automated access — check "
             "https://www.epam.com/careers/job-listings",
+    "fidelity investments": "Fidelity's careers site blocks automated access — check "
+                            "https://jobs.fidelity.com/en/",
 }
 
 # Recognize Workday careers URLs so we can query the job-board API instead of
