@@ -964,11 +964,11 @@ WORKDAY_URL_RE = re.compile(
 
 # Likewise for hosted ATS board URLs: pull the slug out and hit the JSON API.
 ATS_URL_ROUTES = [
-    (re.compile(r"https?://(?:boards|job-boards)\.greenhouse\.io/([\w.-]+)"),
+    (re.compile(r"https?://(?:boards|job-boards)\.greenhouse\.io/([\w.%-]+)"),
      fetch_greenhouse),
-    (re.compile(r"https?://jobs\.lever\.co/([\w.-]+)"), fetch_lever),
-    (re.compile(r"https?://jobs\.ashbyhq\.com/([\w.-]+)"), fetch_ashby),
-    (re.compile(r"https?://(?:jobs|careers)\.smartrecruiters\.com/([\w.-]+)"),
+    (re.compile(r"https?://jobs\.lever\.co/([\w.%-]+)"), fetch_lever),
+    (re.compile(r"https?://jobs\.ashbyhq\.com/([\w.%-]+)"), fetch_ashby),
+    (re.compile(r"https?://(?:jobs|careers)\.smartrecruiters\.com/([\w.%-]+)"),
      fetch_smartrecruiters),
 ]
 
