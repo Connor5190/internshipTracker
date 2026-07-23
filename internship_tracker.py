@@ -42,13 +42,18 @@ INTERN_RE = re.compile(
 
 console = Console()
 
-# Companies whose only real coverage requires an expensive, many-request
-# scan (e.g. fetching hundreds of individual job pages because the company
-# has no public search API). Off by default -- enabled via --heavy-scan,
-# meant to be run periodically rather than on every daily scan. See
-# fetch_uber_full() for why Uber needs this.
-HEAVY_SCAN_ONLY_COMPANIES = ["Uber"]
-HEAVY_SCAN_ENABLED = False
+# Postings whose title contains any of these are skipped entirely, even if
+# they'd otherwise match --term (e.g. a "Summer 2026" posting also mentions
+# "summer" and would otherwise match a "summer 2027" search).
+EXCLUDE_TITLE_TERMS = ["2026"]
+EXCLUDE_TITLE_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(t) for t in EXCLUDE_TITLE_TERMS) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def title_excluded(title: str) -> bool:
+    return bool(EXCLUDE_TITLE_RE.search(title))
 
 
 @dataclass
@@ -793,9 +798,8 @@ def fetch_uber_full(session: requests.Session):
     -- the listing page just says "Loading jobs..." until JavaScript runs,
     and no public search/list API could be found. Individual job pages
     ARE server-rendered, though, and a sitemap lists every current
-    posting, so this fetches the sitemap then every job page directly.
-    That's a few hundred requests -- too expensive to run on every daily
-    scan, hence gated behind HEAVY_SCAN_ENABLED (see --heavy-scan)."""
+    posting, so this fetches the sitemap then every job page directly
+    (a few hundred requests, ~1-2 minutes)."""
     try:
         resp = session.get(UBER_SITEMAP_URL, timeout=TIMEOUT, headers=HEADERS)
         if resp.status_code != 200:
@@ -814,12 +818,6 @@ def fetch_uber_full(session: requests.Session):
             if job:
                 postings.append(job)
     return (postings, "Uber careers (full sitemap scan)") if postings else None
-
-
-def fetch_uber(session: requests.Session):
-    if not HEAVY_SCAN_ENABLED:
-        return None
-    return fetch_uber_full(session)
 
 
 def _fetch_sitemap_job_page(session: requests.Session, url: str,
@@ -852,8 +850,8 @@ def fetch_sitemap_job_pages(session: requests.Session, sitemap_url: str, label: 
     (e.g. Aflac's and Norfolk Southern's SAP SuccessFactors/Job2Web sites).
     Only reasonable to call this for sites with a small-ish sitemap (a few
     dozen jobs) -- for anything with hundreds of postings, the per-job
-    request cost adds up fast (see Uber's HEAVY_SCAN_ENABLED-gated fetcher
-    for that case instead)."""
+    request cost adds up fast (see fetch_uber_full for that case, which
+    parallelizes across ~15 workers to keep a few hundred requests fast)."""
     try:
         resp = session.get(sitemap_url, timeout=TIMEOUT, headers=HEADERS)
         if resp.status_code != 200:
@@ -905,7 +903,7 @@ KNOWN_COMPANIES = {
     "fortinet": lambda s: fetch_oracle_cloud(
         s, "edel.fa.us2.oraclecloud.com", "CX_2001", "fortinet.com",
         ["intern", "internship"]),
-    "uber": fetch_uber,
+    "uber": fetch_uber_full,
     "accenture": _wd("accenture.wd103.myworkdayjobs.com", "AccentureCareers"),
     "cardlytics": _wd("cardlytics.wd5.myworkdayjobs.com", "CardlyticsExternalCareerSite"),
     "rapid7": _wd("mymoose.wd1.myworkdayjobs.com", "careers"),
@@ -1013,8 +1011,15 @@ def find_match(text: str, patterns: list[re.Pattern]) -> re.Match | None:
     for p in patterns:
         for m in p.finditer(text):
             preceding = text[max(0, m.start() - 60) : m.start()]
-            if not ELIGIBILITY_RE.search(preceding.strip()):
-                return m
+            if ELIGIBILITY_RE.search(preceding.strip()):
+                continue
+            # Skip matches next to an excluded term (e.g. "2026") -- mainly
+            # matters for the generic custom-page fallback, which has no
+            # discrete posting title to check the way scan_company does.
+            nearby = text[max(0, m.start() - 80) : m.end() + 80]
+            if title_excluded(nearby):
+                continue
+            return m
     return None
 
 
@@ -1128,6 +1133,8 @@ def scan_company(company: str, url: str | None, term: str,
     result.total_intern_roles = len(intern_postings)
 
     for p in intern_postings:
+        if title_excluded(p["title"]):
+            continue
         posted_date = p.get("posted_date", "")
         if find_match(p["title"], patterns):
             result.matches.append(
@@ -1222,14 +1229,7 @@ def main() -> int:
                         help="only match against job titles (faster)")
     parser.add_argument("--json", dest="json_out", action="store_true",
                         help="print results as JSON instead of a table")
-    parser.add_argument("--heavy-scan", action="store_true",
-                        help="also run expensive, many-request scans for "
-                             f"companies that need them ({', '.join(HEAVY_SCAN_ONLY_COMPANIES)}) "
-                             "-- meant to be run periodically, not on every scan")
     args = parser.parse_args()
-
-    global HEAVY_SCAN_ENABLED
-    HEAVY_SCAN_ENABLED = args.heavy_scan
 
     companies = load_companies(args.companies_file)
     if not companies:

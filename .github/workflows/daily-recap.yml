@@ -2,14 +2,8 @@ name: Daily Internship Recap
 
 on:
   schedule:
-    - cron: "0 9 * * 1"      # 5:00 AM America/New_York, Mondays only -- includes the heavy Uber scan
-    - cron: "0 11 * * 0,2-6" # 7:00 AM America/New_York, every other day -- normal scan
-  workflow_dispatch:
-    inputs:
-      heavy_scan:
-        description: "Run the periodic heavy scan (e.g. Uber) on this manual run"
-        type: boolean
-        default: false
+    - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -27,28 +21,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Determine scan mode
-        id: mode
-        run: |
-          if [ "${{ github.event.schedule }}" = "0 9 * * 1" ] || [ "${{ github.event.inputs.heavy_scan }}" = "true" ]; then
-            echo "heavy=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "heavy=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Scan companies
-        run: |
-          extra_args=""
-          if [ "${{ steps.mode.outputs.heavy }}" = "true" ]; then
-            extra_args="--heavy-scan"
-          fi
-          python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 $extra_args > scan_result.json
+        run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
 
       - name: Update seen-postings ledger
         run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json
 
       - name: Build recap
-        run: python3 scripts/format_recap.py scan_result_enriched.json "${{ steps.mode.outputs.heavy }}" > recap.html
+        run: python3 scripts/format_recap.py scan_result_enriched.json > recap.html
 
       - name: Email recap
         uses: dawidd6/action-send-mail@v3

@@ -8,11 +8,6 @@ import json
 import sys
 from datetime import date
 
-# Keep in sync with HEAVY_SCAN_ONLY_COMPANIES in internship_tracker.py --
-# companies whose real coverage requires the expensive --heavy-scan pass,
-# which only runs periodically (currently: Mondays), not on every scan.
-HEAVY_SCAN_ONLY_COMPANIES = ["Uber"]
-
 
 def _role_line(m: dict) -> str:
     loc = f" &mdash; {html.escape(m['location'])}" if m.get("location") else ""
@@ -21,7 +16,7 @@ def _role_line(m: dict) -> str:
     )
 
 
-def build_html(results: list[dict], heavy_scan: bool = False) -> str:
+def build_html(results: list[dict]) -> str:
     total = len(results)
     matched = [r for r in results if r["matches"]]
     failed = [r for r in results if r["error"]]
@@ -31,25 +26,10 @@ def build_html(results: list[dict], heavy_scan: bool = False) -> str:
 
     parts = [
         f"<h2>Internship Tracker Daily Recap &mdash; {date.today().isoformat()}</h2>",
-    ]
-
-    if heavy_scan:
-        parts.append(
-            "<p><i>✅ Today's run included the periodic deep scan for "
-            f"{', '.join(HEAVY_SCAN_ONLY_COMPANIES)}.</i></p>"
-        )
-    elif HEAVY_SCAN_ONLY_COMPANIES:
-        parts.append(
-            "<p><i>ℹ️ Today's run skipped the expensive periodic deep "
-            f"scan, so {', '.join(HEAVY_SCAN_ONLY_COMPANIES)} may be missing roles "
-            "that don't show up in a normal scan (runs periodically instead).</i></p>"
-        )
-
-    parts.append(
         f"<p><b>{total_roles}</b> matching role(s) across <b>{len(matched)}</b> of "
         f"<b>{total}</b> companies scanned &mdash; <b>{new_count}</b> new in the last "
-        f"7 days. <b>{len(failed)}</b> couldn't be scanned.</p>"
-    )
+        f"7 days. <b>{len(failed)}</b> couldn't be scanned.</p>",
+    ]
 
     if first_match_companies:
         parts.append("<h3>\U0001F389 First roles ever seen from these companies</h3>")
@@ -98,14 +78,12 @@ def build_html(results: list[dict], heavy_scan: bool = False) -> str:
 
 
 def main() -> int:
-    if len(sys.argv) not in (2, 3):
-        print("usage: format_recap.py <scan_result.json> [heavy_scan:true|false]",
-              file=sys.stderr)
+    if len(sys.argv) != 2:
+        print("usage: format_recap.py <scan_result.json>", file=sys.stderr)
         return 1
     with open(sys.argv[1]) as f:
         results = json.load(f)
-    heavy_scan = len(sys.argv) == 3 and sys.argv[2].lower() == "true"
-    print(build_html(results, heavy_scan))
+    print(build_html(results))
     return 0
 
 
