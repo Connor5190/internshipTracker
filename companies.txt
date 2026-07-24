@@ -52,6 +52,7 @@ Capcom | https://jobs.jobvite.com/capcomusa
 Capital One | https://www.capitalonecareers.com/search-jobs/intern
 Cardlytics | https://www.cardlytics.com/careers/
 Carta | https://job-boards.greenhouse.io/carta
+Cash App | https://block.xyz/careers/jobs?businessUnits[]=cashapp
 Catapult Sports | https://www.catapult.com/careers
 Caterpillar | https://cat.wd5.myworkdayjobs.com/CaterpillarCareers
 Cboe Global Markets | https://careers.cboe.com/us/en/search-results?keywords=intern
@@ -64,6 +65,7 @@ Chick-fil-A | https://careers.chick-fil-a.com/corporate/jobs
 Chime | https://www.chime.com/careers
 Chronosphere | https://jobs.ashbyhq.com/chronospherejobs
 Cigna | https://cigna.wd5.myworkdayjobs.com/cignacareers
+Circle | https://careers.circle.com/us/en
 Cisco | https://careers.cisco.com/global/en/search-results?keywords=intern
 Citadel | https://www.citadel.com/careers/students/
 Citibank | https://jobs.citi.com/search-jobs/intern
@@ -158,6 +160,7 @@ JetBrains | https://jobs.lever.co/jetbrains
 John Deere | https://jobs.deere.com/
 JPMorgan Chase | https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=intern
 Jump Trading | https://www.jumptrading.com/careers/
+Kalshi | https://www.kalshi.com/careers
 Klarna | https://www.klarna.com/careers/
 Konami | https://www.konami.com/games/us/en/jobs/
 KPMG | https://uskpmgats.avature.net/careers
@@ -230,6 +233,7 @@ Pinterest | https://www.pinterestcareers.com/jobs?q=intern
 Plaid | https://plaid.com/careers/?search=intern
 PlanetScale | https://planetscale.com/careers
 Point72 | https://job-boards.greenhouse.io/point72
+Polymarket | https://careers.polymarket.com/
 Porsche | https://www.porsche.com/usa/aboutporsche/jobs/
 PrizePicks | https://www.prizepicks.com/careers
 Procter & Gamble | https://www.pgcareers.com/students
@@ -240,6 +244,7 @@ Rapid7 | https://www.rapid7.com/careers/open-positions/
 Reddit | https://redditinc.com/careers?search=intern
 Replit | https://replit.com/careers
 Retool | https://retool.com/careers
+Revolut | https://www.revolut.com/careers/
 Riot Games | https://www.riotgames.com/en/student-internships
 Rippling | https://www.rippling.com/careers/open-roles
 Robinhood | https://robinhood.com/us/en/careers/early-talent/
@@ -335,6 +340,7 @@ Western Digital | https://www.westerndigital.com/careers
 WhatNot | https://jobs.whatnot.com/
 Whoop | https://www.whoop.com/careers/
 Windsurf | https://jobs.ashbyhq.com/cognition
+Wise | https://wise.jobs/jobs
 Wiz | https://jobs.ashbyhq.com/wiz
 Wolverine Trading | https://www.wolve.com/careers
 Workday | https://workday.wd5.myworkdayjobs.com/Workday
@@ -344,6 +350,7 @@ XTX Markets | https://job-boards.greenhouse.io/xtxmarketstechnologies
 Yahoo | https://www.yahooinc.com/careers/
 Yelp | https://www.yelp.careers/us/en/search-results?keywords=intern
 Zapier | https://zapier.com/jobs
+Zelle | https://earlywarning.wd5.myworkdayjobs.com/earlywarningcareers
 Zelus Analytics | https://zelusanalytics.com/careers
 Zillow | https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External
 Zoox | https://jobs.lever.co/zoox
