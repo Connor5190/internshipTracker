@@ -12,9 +12,9 @@ jobs:
   recap:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -31,7 +31,7 @@ jobs:
         run: python3 scripts/format_recap.py scan_result_enriched.json > recap.html
 
       - name: Email recap
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v18
         with:
           server_address: smtp.mail.me.com
           server_port: 587
