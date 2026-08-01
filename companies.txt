@@ -2,6 +2,8 @@
 #   Company Name | https://company.com/careers
 1Password | https://jobs.1password.com
 2K Games | https://job-boards.greenhouse.io/2k
+A24
+Abridge | https://www.abridge.com/careers
 Accenture | https://www.accenture.com/us-en/careers/jobsearch?jk=intern
 Activision | https://careers.activision.com/
 Addepar | https://job-boards.greenhouse.io/addepar1
@@ -16,6 +18,7 @@ Anduril Industries | https://www.anduril.com/careers
 Anheuser-Busch | https://anheuserbusch.wd1.myworkdayjobs.com/ABInBev
 Anthropic | https://www.anthropic.com/careers
 Apple | https://jobs.apple.com/en-us/search?search=intern
+Applied Compute | https://jobs.ashbyhq.com/Applied%20Compute
 Applied Intuition | https://www.appliedintuition.com/careers
 AQR Capital Management | https://job-boards.greenhouse.io/aqr
 Arc'teryx | https://jobs.lever.co/arcteryx.com
@@ -29,6 +32,7 @@ Bain & Company | https://www.bain.com/careers/find-a-role/
 Balyasny Asset Management | https://www.bamfunds.com/careers
 Bandai Namco | https://job-boards.greenhouse.io/bandainamco
 Bank of America | https://campus.bankofamerica.com/
+Baseten | https://www.baseten.co/resources/careers/
 Belvedere Trading | https://jobs.lever.co/belvederetrading
 bet365 | https://www.bet365careers.com/
 Betterment | https://www.betterment.com/careers
@@ -40,12 +44,14 @@ Blue Origin | https://jobs.lever.co/blueorigin
 Boeing | https://jobs.boeing.com/internships
 Booz Allen Hamilton | https://bah.wd1.myworkdayjobs.com/BAH_Jobs
 Boston Consulting Group | https://careers.bcg.com/students
+Braintrust | https://www.braintrust.dev/careers
 Brex | https://www.brex.com/careers
 Bridgewater Associates | https://job-boards.greenhouse.io/bridgewater89
 Broadcom | https://broadcom.wd1.myworkdayjobs.com/External_Career
 Bumble | https://jobs.lever.co/bumbleinc
 Bungie | https://job-boards.greenhouse.io/bungie
 ByteDance | https://joinbytedance.com/
+Cadence | https://www.cadence.com/en_US/home/company/careers.html
 Calendly | https://job-boards.greenhouse.io/calendly
 Canva | https://www.canva.com/careers/
 Capcom | https://jobs.jobvite.com/capcomusa
@@ -58,6 +64,7 @@ Caterpillar | https://cat.wd5.myworkdayjobs.com/CaterpillarCareers
 Cboe Global Markets | https://careers.cboe.com/us/en/search-results?keywords=intern
 CD Projekt Red | https://careers.smartrecruiters.com/CDPROJEKTRED
 Cerebras Systems | https://jobs.ashbyhq.com/cerebras
+Chai Discovery | https://www.chaidiscovery.com/careers
 Character.AI | https://jobs.ashbyhq.com/character
 Charles Schwab | https://www.schwabjobs.com/search-jobs
 Chevron | https://chevron.wd5.myworkdayjobs.com/University
@@ -70,8 +77,11 @@ Cisco | https://careers.cisco.com/global/en/search-results?keywords=intern
 Citadel | https://www.citadel.com/careers/students/
 Citibank | https://jobs.citi.com/search-jobs/intern
 ClassPass | https://classpass.com/careers
+Clay | https://www.clay.com/careers
+Cloudera | https://cloudera.wd5.myworkdayjobs.com/External_Career
 Cloudflare | https://www.cloudflare.com/careers
 CME Group | https://cmegroup.wd1.myworkdayjobs.com/cme_careers
+Cognition | https://cognition.com/careers
 Cohere | https://cohere.com/careers
 Coinbase | https://www.coinbase.com/careers
 Collins Aerospace | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
@@ -86,6 +96,9 @@ D.E. Shaw | https://www.deshaw.com/careers
 Da Vinci Trading | https://boards.greenhouse.io/davinciderivatives
 Databricks | https://www.databricks.com/company/careers
 Datadog | https://careers.datadoghq.com
+Decagon | https://decagon.ai/careers
+DeepMind | https://deepmind.google/about/careers/
+Dell Technologies | https://jobs.dell.com/
 Deloitte | https://apply.deloitte.com/careers/SearchJobs/intern
 Discord | https://discord.com/careers
 Docker | https://www.docker.com/careers
@@ -101,14 +114,17 @@ EPAM | https://careers.epam.com/en/jobs
 Epic Games | https://www.epicgames.com/site/en-US/careers
 Equifax | https://equifax.wd5.myworkdayjobs.com/External
 Etsy | https://careers.etsy.com/
+Exa | https://exa.ai/careers
 Expedia Group | https://careers.expediagroup.com/jobs/?query=intern
 ExxonMobil | https://jobs.exxonmobil.com/search/?q=intern
 EY | https://careers.ey.com/ey/search/?q=intern
 FactSet | https://factset.wd108.myworkdayjobs.com/FactSetCareers
 Faire | https://www.faire.com/careers
+Fal | https://fal.ai/careers
 FanDuel | https://www.fanduel.com/careers
 Fidelity Investments | https://jobs.fidelity.com/en/
 Figma | https://www.figma.com/careers
+Fireworks AI | https://fireworks.ai/careers
 FIS | https://fis.wd5.myworkdayjobs.com/en-US/SearchJobs
 Fiserv | https://fiserv.wd5.myworkdayjobs.com/EXT
 Fitbit | https://www.google.com/about/careers/applications/jobs/results?q=fitbit
@@ -118,6 +134,7 @@ Flock Safety | https://jobs.ashbyhq.com/Flock%20Safety
 Flow Traders | https://www.flowtraders.com/careers
 Fortinet | https://www.fortinet.com/corporate/careers/careers
 Future | https://www.future.co/careers
+Gamma | https://careers.gamma.app/
 Garmin | https://careers.garmin.com/jobs?keywords=intern
 General Motors | https://search-careers.gm.com/en/jobs/?search=intern
 Geneva Trading | https://job-boards.greenhouse.io/genevatrading
@@ -132,6 +149,7 @@ GoFundMe | https://www.gofundme.com/careers
 Goldman Sachs | https://higher.gs.com/campus
 Google | https://www.google.com/about/careers/applications/jobs/results?q=intern
 Grammarly | https://www.grammarly.com/jobs
+Granola | https://www.granola.ai/jobs
 Greenlight | https://jobs.lever.co/greenlight
 Groq | https://groq.com/careers-at-groq
 Guggenheim Partners | https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Partners
@@ -142,6 +160,7 @@ Headlands Technologies | https://job-boards.greenhouse.io/headlandstechnologiesl
 Honda | https://careers.honda.com/us/en
 Honeywell | https://careers.honeywell.com/us/en/students
 HoYoverse | https://careers.smartrecruiters.com/hoyoverse
+HPE | https://careers.hpe.com
 Hudl | https://www.hudl.com/careers
 Hudson River Trading | https://www.hudsonrivertrading.com/careers/
 Hugging Face | https://apply.workable.com/huggingface/
@@ -166,11 +185,15 @@ Konami | https://www.konami.com/games/us/en/jobs/
 KPMG | https://uskpmgats.avature.net/careers
 L3Harris | https://careers.l3harris.com/global/en/students-and-grads
 Lambda | https://jobs.ashbyhq.com/lambda
+LangChain | https://www.langchain.com/careers
+Legora | https://legora.com/careers
 LEK Consulting | https://www.lek.com/careers
 Linear | https://linear.app/careers
 LinkedIn | https://careers.linkedin.com/pathways-programs/internships
+Linux Foundation | https://careers.linuxfoundation.org/jobs
 Lockheed Martin | https://www.lockheedmartinjobs.com/search-jobs/intern
 Lockton | https://careers.lockton.com/
+Lovable | https://lovable.dev/careers
 Luma AI | https://lumalabs.ai/careers
 Lyft | https://www.lyft.com/careers?search=intern
 Mailchimp | https://jobs.intuit.com/search-jobs/mailchimp
@@ -180,10 +203,12 @@ Marqeta | https://www.marqeta.com/company/careers?search=intern
 Mastercard | https://mastercard.wd1.myworkdayjobs.com/CorporateCareers
 McKesson | https://mckesson.wd3.myworkdayjobs.com/External_Careers
 McKinsey & Company | https://jobs.mckinsey.com/
+Mercor | https://www.mercor.com/careers/
 Mercury | https://mercury.com/jobs
 Meta | https://www.metacareers.com/jobsearch/?q=intern
 Micron | https://micron.wd1.myworkdayjobs.com/External
 Microsoft | https://jobs.careers.microsoft.com/global/en/search?q=intern
+Midjourney | https://www.midjourney.com/careers
 Millennium | https://www.mlp.com/careers/students/
 Mindbody | https://www.playlist.com/careers
 Mistral AI | https://jobs.lever.co/mistral
@@ -196,7 +221,9 @@ MSCI | https://careers.msci.com/job-search
 MyFitnessPal | https://job-boards.greenhouse.io/myfitnesspal
 NASA JPL | https://citjpl.wd5.myworkdayjobs.com/Jobs
 Nasdaq | https://nasdaq.wd1.myworkdayjobs.com/US_External_Career_Site
+NAVER | https://recruit.navercorp.com/
 NCR Voyix | https://www.ncrvoyix.com/company/careers
+NetApp | https://jobs.netapp.com
 NetEase Games | https://job-boards.greenhouse.io/neteasegames
 Netflix | https://explore.jobs.netflix.net/careers?query=intern
 New York Life | https://careers.newyorklife.com/careers
@@ -206,6 +233,7 @@ Nirmata | https://nirmata.com/careers/
 Norfolk Southern | https://jobs.nscorp.com/search-jobs/intern
 Northrop Grumman | https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site
 Notion | https://www.notion.com/careers?q=intern
+Nous | https://nousresearch.com/careers
 Nucor | https://nucor.wd1.myworkdayjobs.com/nucor
 Nuro | https://job-boards.greenhouse.io/nuro
 Nutanix | https://careers.nutanix.com/en/jobs/
@@ -217,17 +245,21 @@ Oliver Wyman | https://mmc.phenompeople.com/global/en/oliver-wyman-search?keywor
 OnePay | https://jobs.ashbyhq.com/oneapp
 OneTrust | https://www.onetrust.com/careers/
 OpenAI | https://openai.com/careers/search/?q=intern
+OpenClaw
+OpenEvidence | https://open-evidence.com/careers/
 Optiver | https://boards.greenhouse.io/optiver
 Oracle | https://careers.oracle.com/jobs/#en/sites/jobsearch/jobs?keyword=intern
 Oura | https://ouraring.com/careers
 Palantir | https://www.palantir.com/careers/?keyword=intern
 Palo Alto Networks | https://jobs.smartrecruiters.com/PaloAltoNetworks
+Parallel | https://parallel.ai/careers
 PayPal | https://paypal.wd1.myworkdayjobs.com/jobs
 PDT Partners | https://www.pdtpartners.com/careers
 Peloton | https://careers.onepeloton.com/en/all-jobs/?keywords=intern
 Perplexity | https://www.perplexity.ai/hub/careers?q=intern
 PFF | https://www.pff.com/jobs
 Physical Intelligence | https://jobs.ashbyhq.com/physicalintelligence
+Pierre
 PIMCO | https://www.pimco.com/us/en/about-us/careers
 Pinterest | https://www.pinterestcareers.com/jobs?q=intern
 Plaid | https://plaid.com/careers/?search=intern
@@ -241,7 +273,9 @@ Qualcomm | https://careers.qualcomm.com/careers?query=intern
 Radix Trading | https://job-boards.greenhouse.io/radixuniversity
 Ramp | https://ramp.com/careers
 Rapid7 | https://www.rapid7.com/careers/open-positions/
+Red Hat | https://www.redhat.com/en/jobs
 Reddit | https://redditinc.com/careers?search=intern
+Reflection | https://reflection.ai/careers
 Replit | https://replit.com/careers
 Retool | https://retool.com/careers
 Revolut | https://www.revolut.com/careers/
@@ -249,9 +283,12 @@ Riot Games | https://www.riotgames.com/en/student-internships
 Rippling | https://www.rippling.com/careers/open-roles
 Robinhood | https://robinhood.com/us/en/careers/early-talent/
 Roblox | https://careers.roblox.com/jobs?query=intern
+Rogo | https://rogo.ai/careers
 RTX (Raytheon) | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
 Runway | https://runwayml.com/careers
 S&P Global | https://spgi.wd5.myworkdayjobs.com/SPGI_Careers
+Safe Superintelligence Inc. | https://ssi.inc/
+Sail
 Salesforce | https://salesforce.wd12.myworkdayjobs.com/External_Career_Site
 Salesloft | https://job-boards.greenhouse.io/salesloft
 Samsara | https://www.samsara.com/company/careers
@@ -267,7 +304,9 @@ Semgrep | https://semgrep.dev/careers
 SentinelOne | https://boards.greenhouse.io/sentinellabs
 ServiceNow | https://careers.servicenow.com/jobs?query=intern
 Shopify | https://www.shopify.com/careers
+Siemens | https://jobs.siemens.com
 Sierra | https://jobs.ashbyhq.com/sierra
+SK Telecom | https://careers.sktelecom.com
 Skipify | https://ats.rippling.com/skipify-jobs/jobs
 Slack | https://careers.salesforce.com/en/jobs/?search=Slack
 SLB | https://careers.slb.com/early-careers
@@ -290,6 +329,8 @@ Statsbomb | https://job-boards.greenhouse.io/hudl
 Stord | https://stord.wd503.myworkdayjobs.com/Stord_External_Career
 Strava | https://www.strava.com/careers
 Stripe | https://stripe.com/jobs/search?query=intern
+Substack | https://substack.com/careers
+Suno | https://suno.com/careers
 Supabase | https://jobs.ashbyhq.com/supabase
 Supercell | https://jobs.ashbyhq.com/supercell
 Susquehanna (SIG) | https://sig.com/careers/
@@ -304,12 +345,15 @@ Texas Instruments | https://careers.ti.com/students-and-graduates/
 The Coca-Cola Company | https://coke.wd1.myworkdayjobs.com/coca-cola-careers
 The Home Depot | https://careers.homedepot.com/job-search-results/?keyword=intern
 The Trade Desk | https://www.thetradedesk.com/us/careers
+Thinking Machines | https://thinkingmachines.ai/careers
 Thumbtack | https://www.thumbtack.com/careers/
 Together AI | https://www.together.ai/careers
 Tonal | https://www.tonal.com/careers/
 Tower Research Capital | https://job-boards.greenhouse.io/towerresearchcapital
 Trainerize | https://www.trainerize.com/careers.aspx
+TrendAI | https://trendmicro.wd3.myworkdayjobs.com/External
 Truist | https://careers.truist.com/us/en/search-results?keywords=intern
+Turbopuffer | https://turbopuffer.com/careers
 Twilio | https://www.twilio.com/en-us/company/jobs
 Twitch | https://www.twitch.tv/jobs
 Two Sigma | https://careers.twosigma.com/careers/OpenRoles
@@ -341,10 +385,12 @@ WhatNot | https://jobs.whatnot.com/
 Whoop | https://www.whoop.com/careers/
 Windsurf | https://jobs.ashbyhq.com/cognition
 Wise | https://wise.jobs/jobs
+Wispr Flow | https://wisprflow.ai/careers
 Wiz | https://jobs.ashbyhq.com/wiz
 Wolverine Trading | https://www.wolve.com/careers
 Workday | https://workday.wd5.myworkdayjobs.com/Workday
 World Labs | https://job-boards.greenhouse.io/worldlabs
+Writer | https://writer.com/company/careers/
 xAI | https://x.ai/careers
 XTX Markets | https://job-boards.greenhouse.io/xtxmarketstechnologies
 Yahoo | https://www.yahooinc.com/careers/
