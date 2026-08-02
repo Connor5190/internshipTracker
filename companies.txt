@@ -19,13 +19,13 @@ Amazon | https://www.amazon.jobs/en/search?base_query=intern
 Ambience Healthcare | https://www.ambiencehealthcare.com/careers
 AMD | https://careers.amd.com/careers-home/jobs?keywords=intern
 Anduril Industries | https://www.anduril.com/careers
-Anheuser-Busch | https://anheuserbusch.wd1.myworkdayjobs.com/ABInBev
+Anheuser-Busch | https://abinbev.wd1.myworkdayjobs.com/usa
 Anthropic | https://www.anthropic.com/careers
 Anyscale | https://www.anyscale.com/careers
 Apollo.io | https://www.apollo.io/careers
 Apple | https://jobs.apple.com/en-us/search?search=intern
 Applied Compute | https://jobs.ashbyhq.com/Applied%20Compute
-Applied Intuition | https://www.appliedintuition.com/careers
+Applied Intuition | https://jobs.ashbyhq.com/applied
 AQR Capital Management | https://job-boards.greenhouse.io/aqr
 Arc'teryx | https://jobs.lever.co/arcteryx.com
 Arista Networks | https://careers.smartrecruiters.com/aristanetworks
@@ -186,7 +186,7 @@ Hume AI | https://job-boards.greenhouse.io/humeai
 IBM | https://www.ibm.com/careers/search?field_keyword_08%5B0%5D=Early%20Professional
 ICE | https://careers.ice.com/jobs
 Imbue | https://imbue.com/careers
-IMC Trading | https://www.imc.com/eu/careers/
+IMC Trading | https://job-boards.greenhouse.io/imc
 Inflection AI | https://job-boards.greenhouse.io/inflectionai
 Instacart | https://www.instacart.careers/?s=intern
 Intel | https://intel.wd1.myworkdayjobs.com/External
@@ -196,7 +196,7 @@ Invesco | https://invesco.wd1.myworkdayjobs.com/IVZ
 Isomorphic Labs | https://job-boards.greenhouse.io/isomorphiclabs
 Jane Street | https://www.janestreet.com/join-jane-street/open-roles/?keyword=intern
 Jasper | https://www.jasper.ai/careers
-JetBrains | https://jobs.lever.co/jetbrains
+JetBrains | https://job-boards.greenhouse.io/jetbrains
 John Deere | https://jobs.deere.com/
 JPMorgan Chase | https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=intern
 Jump Trading | https://www.jumptrading.com/careers/
@@ -235,7 +235,7 @@ Microsoft | https://jobs.careers.microsoft.com/global/en/search?q=intern
 Midjourney | https://www.midjourney.com/careers
 Millennium | https://www.mlp.com/careers/students/
 Mindbody | https://www.playlist.com/careers
-Mistral AI | https://jobs.lever.co/mistral
+Mistral AI | https://mistral.ai/careers/
 MITRE | https://mitre.wd5.myworkdayjobs.com/MITRE
 Modal | https://modal.com/careers
 MongoDB | https://www.mongodb.com/company/careers/students-and-graduates
@@ -258,7 +258,7 @@ Norfolk Southern | https://jobs.nscorp.com/search-jobs/intern
 Northrop Grumman | https://ngc.wd1.myworkdayjobs.com/Northrop_Grumman_External_Site
 Notion | https://www.notion.com/careers?q=intern
 Nous | https://nousresearch.com/careers
-Nucor | https://nucor.wd1.myworkdayjobs.com/nucor
+Nucor | https://jobs.nucor.com/go/Interns_/9426300/
 Nuro | https://job-boards.greenhouse.io/nuro
 Nutanix | https://careers.nutanix.com/en/jobs/
 NVIDIA | https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite
@@ -329,7 +329,7 @@ Scale AI | https://scale.com/careers
 Schonfeld Strategic Advisors | https://job-boards.greenhouse.io/schonfeld
 Seale & Associates | https://www.sealeassociates.com/careers
 Sega | https://careers.sega.com/jobs/
-Select Medical | https://selectmedical.wd5.myworkdayjobs.com/SelectMedical
+Select Medical | https://jobs-selectmedicalcorp.icims.com/
 Semgrep | https://semgrep.dev/careers
 SentinelOne | https://boards.greenhouse.io/sentinellabs
 ServiceNow | https://careers.servicenow.com/jobs?query=intern
