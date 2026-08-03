@@ -2,11 +2,11 @@
 #   Company Name | https://company.com/careers
 1Password | https://jobs.1password.com
 2K Games | https://job-boards.greenhouse.io/2k
-A24
 Abridge | https://www.abridge.com/careers
 Accenture | https://www.accenture.com/us-en/careers/jobsearch?jk=intern
 Activision | https://careers.activision.com/
 Ada | https://job-boards.greenhouse.io/ada18
+ADP | https://jobs.adp.com/en/early-careers/
 Addepar | https://job-boards.greenhouse.io/addepar1
 Adobe | https://careers.adobe.com/us/en/search-results?keywords=intern
 Affirm | https://www.affirm.com/careers

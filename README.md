@@ -1,6 +1,6 @@
 # Internship Tracker
 
-Scans ~215 companies' career sites for internship roles matching **summer** or
+Scans ~445 companies' career sites for internship roles matching **summer** or
 **2027** (either one counts, postings mentioning **2026** are excluded), and
 emails a daily recap of what's new.
 
@@ -42,8 +42,11 @@ are used — the plain page only **supplements** the structured result (in case
 some roles are listed only on the company's own site), it never replaces a
 working ATS-based scan.
 
-A handful of companies (Bain, Citadel, Meta, Tesla) actively block automated
-access and are reported as "couldn't scan" with a note to check manually.
+A handful of companies (Microsoft, Meta, Goldman Sachs, Bloomberg, Delta Air
+Lines, Citadel, Tesla, Bain & Company, Nutanix, EPAM, Fidelity Investments,
+Akamai) actively block automated access and are reported as "couldn't scan"
+with a note to check manually — see `BLOCKED_COMPANIES` in
+`internship_tracker.py`.
 
 ## Setup
 
