@@ -31,7 +31,10 @@ from datetime import date
 AGE_CHIPS = [(0, "c0"), (2, "c1"), (6, "c2"), (13, "c3"), (10**9, "c4")]
 
 STYLE = """
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
 body{margin:0;padding:0;background:#f6f7f9}
 .wrap{max-width:640px;margin:0 auto;padding:20px 16px 32px;
 font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
@@ -39,6 +42,7 @@ color:#1a1f26;background:#ffffff}
 .hd{font-size:20px;font-weight:700;letter-spacing:-.01em;margin:0}
 .dt{font-size:13px;color:#7b838d;margin:2px 0 16px}
 .stat{font-size:26px;font-weight:700;line-height:1.1}
+.hot{color:#b42318}
 .statl{font-size:11px;color:#7b838d;text-transform:uppercase;letter-spacing:.06em}
 .sec{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
 color:#5b6673;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid #e8eaed}
@@ -64,8 +68,11 @@ font-size:11px;line-height:1.6;color:#6b7480}
 body{background:#15181c}
 .wrap{background:#1c2026;color:#e6e9ed}
 .hd,.co,.stat{color:#f0f2f5}
+.hot{color:#ff7a6b}
 .sec{color:#9aa3ad;border-bottom-color:#2c323a}
 .cod{color:#9aa3ad}
+.ft{border-top-color:#2c323a}
+.none{color:#9aa3ad}
 a.t{color:#7aa8ff}
 a.d{color:#6d9bf5}
 .c0{background:#4a1d1d;color:#ff9b90}
@@ -231,17 +238,20 @@ def build_html(results: list[dict]) -> str:
         f'{len(role_companies)} of {len(results)} companies have matches</div>'
     )
 
+    # The highlight colour goes on a class, not inline: an inline style wins
+    # over the dark-mode media query, which would leave this number in dark
+    # red on a dark background.
     cells = [
-        (len(today), "new today", "#b42318" if today else None),
-        (len(week), "earlier this wk", None),
-        (total_roles, "open total", None),
+        (len(today), "new today", bool(today)),
+        (len(week), "earlier this wk", False),
+        (total_roles, "open total", False),
     ]
     p.append('<table cellpadding="0" cellspacing="0" role="presentation"><tr>')
-    for value, label, colour in cells:
-        style = f' style="color:{colour}"' if colour else ""
+    for value, label, hot in cells:
+        cls = "stat hot" if hot else "stat"
         p.append(
             f'<td style="padding-right:26px">'
-            f'<div class="stat"{style}>{value}</div>'
+            f'<div class="{cls}">{value}</div>'
             f'<div class="statl">{label}</div></td>'
         )
     p.append("</tr></table>")
