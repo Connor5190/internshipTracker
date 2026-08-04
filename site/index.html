@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Internship Tracker</title>
+<style>
+:root{
+  --bg:#f6f7f9; --card:#fff; --fg:#1a1f26; --fg2:#5b6673; --muted:#7b838d;
+  --line:#e8eaed; --line2:#f0f1f4; --link:#1552d8; --hot:#b42318;
+  --field:#fff; --tick:#1552d8; --shadow:0 1px 3px rgba(16,24,40,.06);
+  --c0bg:#fee2e2; --c0fg:#b42318; --c1bg:#ffedd5; --c1fg:#c4320a;
+  --c2bg:#fef3c7; --c2fg:#a15c07; --c3bg:#eef2f6; --c3fg:#5b6673;
+  --c4bg:#f4f5f7; --c4fg:#8a929c; --warnbg:#fff8e6; --warnfg:#8a5a06;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#15181c; --card:#1c2026; --fg:#e6e9ed; --fg2:#9aa3ad; --muted:#858e99;
+    --line:#2c323a; --line2:#242930; --link:#7aa8ff; --hot:#ff7a6b;
+    --field:#22272e; --tick:#4d8bff; --shadow:none;
+    --c0bg:#4a1d1d; --c0fg:#ff9b90; --c1bg:#4a2c17; --c1fg:#ffb384;
+    --c2bg:#43350f; --c2fg:#ecc253; --c3bg:#2b3138; --c3fg:#a3acb7;
+    --c4bg:#24292f; --c4fg:#8a929c; --warnbg:#332a12; --warnfg:#e8c47a;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 64px;background:var(--card);
+  min-height:100vh;box-shadow:var(--shadow)}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{padding:22px 0 0}
+h1{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:0}
+.sub{font-size:13px;color:var(--muted);margin:3px 0 0}
+.stats{display:flex;gap:26px;margin:16px 0 0;flex-wrap:wrap}
+.stat b{display:block;font-size:25px;font-weight:700;line-height:1.1}
+.stat.hot b{color:var(--hot)}
+.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.bar{position:sticky;top:0;z-index:5;background:var(--card);padding:14px 0 10px;
+  margin-top:14px;border-bottom:1px solid var(--line)}
+.bar input{width:100%;padding:10px 12px;font:inherit;font-size:15px;color:var(--fg);
+  background:var(--field);border:1px solid var(--line);border-radius:9px;outline:none}
+.bar input:focus{border-color:var(--tick)}
+.bar input::placeholder{color:var(--muted)}
+
+.sec{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--fg2);margin:26px 0 8px;padding-bottom:6px;border-bottom:2px solid var(--line)}
+.co{font-size:13px;font-weight:700;color:var(--fg2);margin:14px 0 2px}
+
+.row{display:flex;align-items:flex-start;gap:2px;padding:1px 0;border-radius:8px}
+.row:hover{background:var(--line2)}
+label.box{flex:none;padding:7px 9px 7px 3px;cursor:pointer;display:flex;align-items:center}
+input[type=checkbox]{width:19px;height:19px;margin:0;accent-color:var(--tick);cursor:pointer}
+.body{flex:1;min-width:0;padding:5px 0 6px}
+.body a{font-size:15px;line-height:1.35;font-weight:500;overflow-wrap:anywhere}
+.meta{font-size:12px;color:var(--muted);margin-top:1px;display:flex;gap:7px;
+  align-items:center;flex-wrap:wrap}
+.chip{display:inline-block;padding:1px 6px;border-radius:9px;font-size:11px;font-weight:700}
+.c0{background:var(--c0bg);color:var(--c0fg)} .c1{background:var(--c1bg);color:var(--c1fg)}
+.c2{background:var(--c2bg);color:var(--c2fg)} .c3{background:var(--c3bg);color:var(--c3fg)}
+.c4{background:var(--c4bg);color:var(--c4fg)}
+
+.done .body a{color:var(--muted);font-weight:400}
+.meta b{color:var(--fg2);font-weight:700}
+.gone{font-style:italic}
+.none{font-size:14px;color:var(--muted);margin:8px 0 0}
+
+.banner{margin:14px 0 0;padding:10px 12px;border-radius:9px;font-size:13px;
+  line-height:1.45;background:var(--warnbg);color:var(--warnfg)}
+.banner code{font-size:12px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:20;
+  background:#1a1f26;color:#fff;padding:9px 15px;border-radius:20px;font-size:13px;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;pointer-events:none;
+  transition:opacity .2s}
+.toast.on{opacity:1}
+footer{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:11.5px;line-height:1.65;color:var(--muted)}
+footer b{color:var(--fg2)}
+.err{margin:3px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Internship Tracker</h1>
+    <div class="sub" id="sub">Loading…</div>
+    <div class="stats" id="stats"></div>
+    <div id="banner"></div>
+  </header>
+  <div class="bar"><input id="q" type="search" placeholder="Filter by company, role, or location…" autocomplete="off" spellcheck="false"></div>
+  <main id="app"></main>
+  <footer id="foot"></footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="config.js"></script>
+<script>
+"use strict";
+
+/* ------------------------------------------------------------------ store
+ * Applied state is shared, unauthenticated, and lives in a Firebase
+ * Realtime Database reached over its plain REST API -- no SDK, so there is
+ * no bundle to version-pin and the only configuration is one URL. Live
+ * updates come from RTDB's own EventSource stream, so a box ticked on a
+ * phone lands on a laptop that already has the page open.
+ *
+ * With no URL configured the same interface is backed by localStorage, so
+ * the page is never broken -- just not shared, which the banner says out loud.
+ */
+var Store = (function () {
+  var raw = (window.TRACKER_CONFIG && window.TRACKER_CONFIG.databaseURL || "").trim();
+  var db = raw.replace(/\/+$/, "");
+  var ok = /^https:\/\/[\w.-]+\.(firebaseio\.com|firebasedatabase\.app)$/.test(db);
+  var KEY = "internship-tracker-applied";
+  var onChange = null;
+
+  function localRead() {
+    try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+  }
+  function localWrite(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  if (!ok) {
+    return {
+      shared: false,
+      configured: false,
+      load: function () { return Promise.resolve(localRead()); },
+      set: function (id, entry) { var s = localRead(); s[id] = entry; localWrite(s); return Promise.resolve(); },
+      remove: function (id) { var s = localRead(); delete s[id]; localWrite(s); return Promise.resolve(); },
+      subscribe: function (cb) {
+        onChange = cb;
+        // Keeps two tabs in the same browser honest, at least.
+        window.addEventListener("storage", function (e) {
+          if (e.key === KEY) cb(localRead());
+        });
+      }
+    };
+  }
+
+  var url = function (path) { return db + "/applied" + path + ".json"; };
+
+  function load() {
+    return fetch(url(""), { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (d) { return d || {}; });
+  }
+
+  function subscribe(cb) {
+    onChange = cb;
+    var connected = false;
+    var es;
+    try { es = new EventSource(url("")); } catch (e) { return poll(cb); }
+
+    function handle(isPatch) {
+      return function (ev) {
+        var msg;
+        try { msg = JSON.parse(ev.data); } catch (e) { return; }
+        if (!msg) return;
+        connected = true;
+        var path = msg.path || "/";
+        var data = msg.data;
+        if (path === "/") {
+          if (isPatch) cb(null, data || {});      // merge
+          else cb(data || {});                    // replace
+          return;
+        }
+        var seg = path.replace(/^\//, "").split("/");
+        if (seg.length !== 1) { load().then(cb).catch(function () {}); return; }
+        var patch = {}; patch[seg[0]] = data;     // null data deletes
+        cb(null, patch);
+      };
+    }
+    es.addEventListener("put", handle(false));
+    es.addEventListener("patch", handle(true));
+    es.addEventListener("cancel", function () { es.close(); poll(cb); });
+    es.addEventListener("auth_revoked", function () { es.close(); poll(cb); });
+    es.onerror = function () {
+      // EventSource retries on its own once it has connected; a stream that
+      // never connected at all (bad URL, rules denying read) never will.
+      if (!connected) { es.close(); poll(cb); }
+    };
+  }
+
+  function poll(cb) {
+    setInterval(function () { load().then(cb).catch(function () {}); }, 60000);
+  }
+
+  return {
+    shared: true,
+    configured: true,
+    load: load,
+    subscribe: subscribe,
+    set: function (id, entry) {
+      return fetch(url("/" + id), {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry)
+      }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); });
+    },
+    remove: function (id) {
+      return fetch(url("/" + id), { method: "DELETE" })
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); });
+    }
+  };
+})();
+
+/* ------------------------------------------------------------------ state */
+var data = null;          // roles.json
+var applied = {};         // id -> {at, company, title, url}
+var query = "";
+
+var $ = function (id) { return document.getElementById(id); };
+
+function esc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/* Ages are recomputed here rather than baked in at build time: the page can
+ * sit open for days, and a tab left running since Monday shouldn't still be
+ * calling Monday's postings "today". */
+function todayISO() {
+  var d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") +
+         "-" + String(d.getDate()).padStart(2, "0");
+}
+function daysSince(iso) {
+  if (!iso) return null;
+  var p = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  if (!p) return null;
+  var then = new Date(+p[1], +p[2] - 1, +p[3]);
+  var now = new Date(); now.setHours(0, 0, 0, 0);
+  var d = Math.round((now - then) / 86400000);
+  return d < 0 ? 0 : d;   // ledger rows written pre-timezone-fix can sit ahead
+}
+function chip(role) {
+  var d = daysSince(role.first_seen);
+  if (d === null) return "";
+  var t = d === 0 ? "today" : d === 1 ? "1d" : d < 14 ? d + "d"
+        : d < 60 ? Math.floor(d / 7) + "w" : Math.floor(d / 30) + "mo";
+  if (!role.exact) t = "~" + t;
+  var cls = d <= 0 ? "c0" : d <= 2 ? "c1" : d <= 6 ? "c2" : d <= 13 ? "c3" : "c4";
+  return '<b class="chip ' + cls + '">' + esc(t) + "</b>";
+}
+
+function matches(role) {
+  if (!query) return true;
+  return (role.company + " " + role.title + " " + (role.location || ""))
+    .toLowerCase().indexOf(query) !== -1;
+}
+
+/* ------------------------------------------------------------------ render */
+function rowHTML(role, done) {
+  var d = done ? " done" : "";
+  var gone = done && !role.live ? ' <i class="gone">no longer listed</i>' : "";
+  var bits = [];
+  // Applied rows are a flat list, not grouped under a company heading like
+  // the active ones, so each has to name its own employer.
+  if (done) bits.push("<b>" + esc(role.company) + "</b>");
+  else { var c = chip(role); if (c) bits.push(c); }
+  if (role.location) bits.push(esc(role.location));
+  if (done && role.at) bits.push("applied " + esc(whenApplied(role.at)));
+  return '<div class="row' + d + '">' +
+    '<label class="box"><input type="checkbox" data-id="' + esc(role.id) + '"' +
+      (done ? " checked" : "") + ' aria-label="Applied to ' + esc(role.title) +
+      ' at ' + esc(role.company) + '"></label>' +
+    '<div class="body">' +
+      '<a href="' + esc(role.url) + '" target="_blank" rel="noopener">' +
+        esc(role.title) + "</a>" + gone +
+      '<div class="meta">' + bits.join("<span>·</span>") + "</div>" +
+    "</div></div>";
+}
+
+function whenApplied(ts) {
+  var d = Math.round((Date.now() - ts) / 86400000);
+  if (d <= 0) return "today";
+  if (d === 1) return "yesterday";
+  if (d < 30) return d + "d ago";
+  return new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+
+function groupHTML(roles, byAge, done) {
+  var groups = {};
+  roles.forEach(function (r) { (groups[r.company] = groups[r.company] || []).push(r); });
+  var names = Object.keys(groups);
+  names.sort(function (a, b) {
+    if (byAge) {
+      var ka = Math.min.apply(null, groups[a].map(function (r) {
+        var d = daysSince(r.first_seen); return d === null ? 1e9 : d; }));
+      var kb = Math.min.apply(null, groups[b].map(function (r) {
+        var d = daysSince(r.first_seen); return d === null ? 1e9 : d; }));
+      if (ka !== kb) return ka - kb;
+    }
+    return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
+  });
+  return names.map(function (n) {
+    var rs = groups[n].slice().sort(function (a, b) {
+      var da = daysSince(a.first_seen), dbb = daysSince(b.first_seen);
+      return (da === null ? 1e9 : da) - (dbb === null ? 1e9 : dbb);
+    });
+    return '<div class="co">' + esc(n) + "</div>" +
+      rs.map(function (r) { return rowHTML(r, done); }).join("");
+  }).join("");
+}
+
+function render() {
+  if (!data) return;
+
+  var active = [], today = [], week = [], rest = [];
+  data.roles.forEach(function (r) {
+    if (applied[r.id]) return;
+    active.push(r);
+    if (!matches(r)) return;
+    var d = daysSince(r.first_seen);
+    if (d === 0) today.push(r);
+    else if (d !== null && d < 7) week.push(r);
+    else rest.push(r);
+  });
+
+  // An applied role is rendered from the *stored* copy, not the scan, so a
+  // posting that has since come down still shows up as something you applied
+  // to rather than silently vanishing from your own history.
+  var byId = {};
+  data.roles.forEach(function (r) { byId[r.id] = r; });
+  var done = Object.keys(applied).map(function (id) {
+    var e = applied[id] || {};
+    var live = byId[id];
+    return {
+      id: id, at: e.at || 0, live: !!live,
+      company: e.company || (live && live.company) || "—",
+      title: e.title || (live && live.title) || "(role)",
+      url: e.url || (live && live.url) || "#",
+      location: live ? live.location : "",
+      first_seen: live ? live.first_seen : "", exact: live ? live.exact : false
+    };
+  }).filter(matches).sort(function (a, b) { return b.at - a.at; });
+
+  var todayCount = active.filter(function (r) { return daysSince(r.first_seen) === 0; }).length;
+  var weekCount = active.filter(function (r) {
+    var d = daysSince(r.first_seen); return d !== null && d > 0 && d < 7; }).length;
+
+  $("stats").innerHTML = [
+    [todayCount, "new today", todayCount > 0],
+    [weekCount, "earlier this wk", false],
+    [active.length, "left to apply", false],
+    [Object.keys(applied).length, "applied", false]
+  ].map(function (s) {
+    return '<div class="stat' + (s[2] ? " hot" : "") + '"><b>' + s[0] +
+      "</b><span>" + s[1] + "</span></div>";
+  }).join("");
+
+  var h = [];
+  h.push('<div class="sec">🔥 Posted today</div>');
+  h.push(today.length ? groupHTML(today, true, false)
+                      : '<div class="none">Nothing new today.</div>');
+  if (week.length) {
+    h.push('<div class="sec">🆕 Earlier this week</div>');
+    h.push(groupHTML(week, true, false));
+  }
+  if (rest.length) {
+    h.push('<div class="sec">Still open · ' + rest.length + "</div>");
+    h.push(groupHTML(rest, false, false));
+  }
+  if (query && !today.length && !week.length && !rest.length && !done.length) {
+    h.push('<div class="none">Nothing matches “' + esc(query) + '”.</div>');
+  }
+  if (done.length) {
+    h.push('<div class="sec">✅ Applied · ' + done.length + "</div>");
+    h.push(done.map(function (r) { return rowHTML(r, true); }).join(""));
+  }
+  $("app").innerHTML = h.join("");
+}
+
+function toast(msg) {
+  var t = $("toast");
+  t.textContent = msg;
+  t.classList.add("on");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(function () { t.classList.remove("on"); }, 2600);
+}
+
+/* ------------------------------------------------------------------ events */
+document.addEventListener("change", function (ev) {
+  var box = ev.target;
+  if (!box.matches || !box.matches('input[type=checkbox][data-id]')) return;
+  var id = box.getAttribute("data-id");
+  var wasApplied = !!applied[id];
+  var role = null;
+  data.roles.forEach(function (r) { if (r.id === id) role = r; });
+
+  if (wasApplied) {
+    var prev = applied[id];
+    delete applied[id];
+    render();
+    Store.remove(id).catch(function () {
+      applied[id] = prev; render(); toast("Couldn't save — check your connection");
+    });
+  } else {
+    var entry = {
+      at: Date.now(),
+      company: role ? role.company : "",
+      title: role ? role.title : "",
+      url: role ? role.url : ""
+    };
+    applied[id] = entry;
+    render();
+    Store.set(id, entry).catch(function () {
+      delete applied[id]; render(); toast("Couldn't save — check your connection");
+    });
+  }
+});
+
+$("q").addEventListener("input", function (e) {
+  query = e.target.value.trim().toLowerCase();
+  render();
+});
+
+/* ------------------------------------------------------------------- boot */
+function banner() {
+  if (Store.configured) return;
+  $("banner").innerHTML = '<div class="banner"><b>This browser only.</b> ' +
+    "Applied ticks aren't shared yet — they're saved locally and won't follow " +
+    "you to another device. Add your Firebase Realtime Database URL to " +
+    "<code>site/config.js</code> to turn on sync.</div>";
+}
+
+function footer() {
+  var f = [];
+  if (data.manual && data.manual.length) {
+    f.push("<b>Check by hand · " + data.manual.length + "</b><br>" +
+      "No structured job list on these sites, so their page text is all the " +
+      "scanner can see:<br>" +
+      data.manual.map(function (m) {
+        return '<a href="' + esc(m.url) + '" target="_blank" rel="noopener">' +
+          esc(m.company) + "</a>";
+      }).join(" &nbsp;·&nbsp; ") + "<br><br>");
+  }
+  var hid = [];
+  if (data.hidden && data.hidden.old) hid.push(data.hidden.old + " older than 3 months");
+  if (data.hidden && data.hidden.india) hid.push(data.hidden.india + " listed only in India");
+  if (hid.length) f.push("Hidden: " + hid.join(", ") + ".<br><br>");
+  f.push("Ages are the employer's posting date where the job board exposes one. " +
+    "A <b>~</b> means that board doesn't, so the date shown is when this scanner " +
+    "first saw the role — it may be older.");
+  if (data.errors && data.errors.length) {
+    f.push("<br><br><b>" + data.errors.length + " couldn't be scanned</b>");
+    data.errors.forEach(function (e) {
+      var r = e.error.length > 110 ? e.error.slice(0, 108).trim() + "…" : e.error;
+      f.push('<div class="err">' + esc(e.company) + " — " + esc(r) + "</div>");
+    });
+  }
+  if (data.blocked && data.blocked.length) {
+    f.push("<br><br><b>" + data.blocked.length + " block scrapers</b> (expected, " +
+      "check by hand): " + esc(data.blocked.join(", ")));
+  }
+  $("foot").innerHTML = f.join("");
+}
+
+banner();
+
+fetch("roles.json", { cache: "no-store" })
+  .then(function (r) {
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
+  })
+  .then(function (d) {
+    data = d;
+    var when = new Date(d.generated_at);
+    $("sub").textContent =
+      when.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" }) +
+      " · " + d.companies_matched + " of " + d.companies_scanned + " companies have matches";
+    footer();
+    render();
+    return Store.load();
+  })
+  .then(function (state) {
+    applied = state || {};
+    render();
+    Store.subscribe(function (replace, merge) {
+      if (merge) {
+        Object.keys(merge).forEach(function (k) {
+          if (merge[k] === null) delete applied[k]; else applied[k] = merge[k];
+        });
+      } else {
+        applied = replace || {};
+      }
+      render();
+    });
+  })
+  .catch(function (e) {
+    if (!data) {
+      $("sub").textContent = "Couldn't load the latest scan.";
+      $("app").innerHTML = '<div class="none">No <code>roles.json</code> yet — ' +
+        "it's written by the daily scan. Run the <b>Daily Internship Recap</b> " +
+        "workflow from the Actions tab to publish one.</div>";
+    } else {
+      toast("Couldn't load applied state");
+    }
+  });
+</script>
+</body>
+</html>

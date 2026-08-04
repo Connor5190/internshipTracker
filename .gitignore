@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 .claude/
+
+# Built fresh by each scan and uploaded straight to Pages -- committing it
+# would just be a daily 100 KB churn commit against generated data.
+site/roles.json
