@@ -46,10 +46,10 @@ color:#1a1f26;background:#ffffff}
 .statl{font-size:11px;color:#7b838d;text-transform:uppercase;letter-spacing:.06em}
 .sec{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;
 color:#5b6673;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid #e8eaed}
-.co{font-size:13px;font-weight:700;color:#1a1f26;margin:14px 0 5px}
-.cod{font-size:12px;font-weight:700;color:#5b6673;margin:11px 0 3px}
-a.t{font-size:16px;line-height:1.35;color:#1552d8;text-decoration:none;font-weight:500}
-a.d{font-size:14px;line-height:1.4;color:#2d6ae0;text-decoration:none}
+.co{font-size:15px;font-weight:700;color:#1a1f26;margin:15px 0 5px}
+.cod{font-size:14px;font-weight:700;color:#5b6673;margin:12px 0 3px}
+a.t{font-size:15px;line-height:1.35;color:#1552d8;text-decoration:none;font-weight:500}
+a.d{font-size:13px;line-height:1.4;color:#2d6ae0;text-decoration:none}
 i{font-style:normal;font-size:12px;color:#7b838d}
 .m{display:block;margin:2px 0 9px}
 .r{margin:0 0 5px}
@@ -94,7 +94,10 @@ def _age_days(m: dict) -> int | None:
         days = (date.today() - date.fromisoformat(raw)).days
     except ValueError:
         return None
-    return days if days >= 0 else None
+    # A date can land in the future: the scanner runs on a UTC clock, so a
+    # run late in the US evening stamps tomorrow's date. Treat that as
+    # brand new rather than dropping the age from the row entirely.
+    return max(days, 0)
 
 
 def _age_key(m: dict) -> int:
