@@ -17,8 +17,10 @@ roles regularly without it being their first-ever match), annotating each
 company result with `first_match`.
 
 Writes the updated postings ledger and companies ledger back to disk, and
-an enriched copy of the scan results (each match gets `first_seen` and
-`is_new`; each company gets `first_match`) to the given output path.
+an enriched copy of the scan results (each match gets `first_seen`,
+`is_new`, `is_today`, and `date_is_posted` -- the last saying whether
+`first_seen` is the employer's real posting date or just when our scans
+first saw it; each company gets `first_match`) to the given output path.
 """
 
 from __future__ import annotations
@@ -82,6 +84,8 @@ def main() -> int:
                 # don't bother tracking this one in the ledger.
                 m["first_seen"] = posted
                 m["is_new"] = (today - posted_date).days < NEW_WINDOW_DAYS
+                m["is_today"] = posted_date == today
+                m["date_is_posted"] = True
                 continue
 
             seen_today.add(url)
@@ -94,7 +98,10 @@ def main() -> int:
                 }
                 ledger[url] = entry
             m["first_seen"] = entry["first_seen"]
-            m["is_new"] = (today - date.fromisoformat(entry["first_seen"])).days < NEW_WINDOW_DAYS
+            first_seen = date.fromisoformat(entry["first_seen"])
+            m["is_new"] = (today - first_seen).days < NEW_WINDOW_DAYS
+            m["is_today"] = first_seen == today
+            m["date_is_posted"] = False
 
     cutoff = today - timedelta(days=RETENTION_DAYS)
     ledger = {

@@ -102,11 +102,15 @@ configured in the workflow. Requires two repo secrets:
 
 The recap (built by `scripts/format_recap.py`) is organized into:
 
-- **🎉 First roles ever seen from these companies** — a company's very first
-  match since tracking began
-- **🆕 New in the last 7 days** — postings whose real posting date (pulled
-  from the ATS where available) or first-seen date is within the last week
+- **🔥 Roles posted today** — postings whose real posting date (pulled from
+  the ATS where available) is today, or that our scans saw for the first
+  time today
+- **🆕 New in the last 7 days** — same signal, widened to the last week
 - **All current matches** — everything currently matching, with `[NEW]` tags
+
+Every role, in every section, is annotated with its age — `(posted 5 days
+ago)` where the ATS exposed a real posting date, or `(first seen 5 days
+ago)` where it didn't and we're going off when our own scans first saw it.
 - **Couldn't scan** — companies that failed, with the reason
 
 Two small ledger files persist state across runs and are committed back to
@@ -114,8 +118,9 @@ the repo automatically after each scan:
 
 - `.state/seen_postings.json` — first-seen date per posting URL, used for
   "new" tracking when the source ATS doesn't expose its own posting date
-- `.state/companies_seen.json` — which companies have ever had a match, used
-  for the "first roles ever seen" section
+- `.state/companies_seen.json` — the date each company first ever had a
+  match. No longer rendered in the recap, but still recorded, since it's
+  history that can't be reconstructed after the fact
 
 You can trigger a run manually from the Actions tab or with
 `gh workflow run daily-recap.yml`.

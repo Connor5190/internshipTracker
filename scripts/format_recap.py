@@ -9,10 +9,37 @@ import sys
 from datetime import date
 
 
+def _age_label(m: dict) -> str:
+    """How old this posting is, worded honestly about what we actually know.
+
+    `first_seen` is the employer's real posting date when the ATS exposed
+    one, and otherwise just the first date our own scans saw the posting --
+    so say "posted" only in the former case.
+    """
+    raw = m.get("first_seen")
+    if not raw:
+        return ""
+    try:
+        days = (date.today() - date.fromisoformat(raw)).days
+    except ValueError:
+        return ""
+    if days < 0:
+        return ""
+    if days == 0:
+        when = "today"
+    elif days == 1:
+        when = "yesterday"
+    else:
+        when = f"{days} days ago"
+    verb = "posted" if m.get("date_is_posted") else "first seen"
+    return f' <span style="color:#888">({verb} {when})</span>'
+
+
 def _role_line(m: dict) -> str:
     loc = f" &mdash; {html.escape(m['location'])}" if m.get("location") else ""
     return (
-        f"&bull; <a href=\"{html.escape(m['url'])}\">{html.escape(m['title'])}</a>{loc}"
+        f"&bull; <a href=\"{html.escape(m['url'])}\">{html.escape(m['title'])}</a>"
+        f"{loc}{_age_label(m)}"
     )
 
 
@@ -22,20 +49,27 @@ def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
     total_roles = sum(len(r["matches"]) for r in results)
     new_count = sum(1 for r in results for m in r["matches"] if m.get("is_new"))
-    first_match_companies = [r for r in matched if r.get("first_match")]
+    today_count = sum(1 for r in results for m in r["matches"] if m.get("is_today"))
 
     parts = [
         f"<h2>Internship Tracker Daily Recap &mdash; {date.today().isoformat()}</h2>",
         f"<p><b>{total_roles}</b> matching role(s) across <b>{len(matched)}</b> of "
-        f"<b>{total}</b> companies scanned &mdash; <b>{new_count}</b> new in the last "
-        f"7 days. <b>{len(failed)}</b> couldn't be scanned.</p>",
+        f"<b>{total}</b> companies scanned &mdash; <b>{today_count}</b> posted today, "
+        f"<b>{new_count}</b> new in the last 7 days. <b>{len(failed)}</b> couldn't be "
+        f"scanned.</p>",
     ]
 
-    if first_match_companies:
-        parts.append("<h3>\U0001F389 First roles ever seen from these companies</h3>")
-        for r in first_match_companies:
-            parts.append(f"<p><b>{html.escape(r['company'])}</b><br>")
-            parts.append("<br>".join(_role_line(m) for m in r["matches"]))
+    parts.append("<h1>\U0001F525 Roles posted today</h1>")
+    today_by_company = [
+        (r["company"], [m for m in r["matches"] if m.get("is_today")]) for r in matched
+    ]
+    today_by_company = [(c, ms) for c, ms in today_by_company if ms]
+    if not today_by_company:
+        parts.append("<p>Nothing posted today.</p>")
+    else:
+        for company, ms in today_by_company:
+            parts.append(f"<p><b>{html.escape(company)}</b><br>")
+            parts.append("<br>".join(_role_line(m) for m in ms))
             parts.append("</p>")
 
     parts.append("<h1>\U0001F195 New in the last 7 days</h1>")
