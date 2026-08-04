@@ -159,8 +159,11 @@ You can trigger a run manually from the Actions tab or with
 <https://connor5190.github.io/internshipTracker/>
 
 The same scan, as a page you can tick things off on. Every active role gets a
-checkbox; ticking it moves the role out of the list and into an **Applied**
-section at the bottom. Unticking puts it back.
+checkbox. Ticking one leaves it where it is — greyed out but still under its
+company, still carrying its age chip, so you don't lose your place in a list
+you're working down — and adds a copy to the **Applied** section at the
+bottom. Both copies have a checkbox and both write the same key, so unticking
+either one clears the pair.
 
 The board and the email are two views of one scan, so the filtering lives in
 one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
