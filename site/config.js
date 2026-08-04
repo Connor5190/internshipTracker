@@ -18,5 +18,5 @@
 // Left blank, the page still works: it falls back to storing state in this
 // browser only, and says so in a banner.
 window.TRACKER_CONFIG = {
-  databaseURL: "",
+  databaseURL: "https://internship-tracker-b0a79-default-rtdb.firebaseio.com/",
 };
