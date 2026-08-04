@@ -100,18 +100,33 @@ configured in the workflow. Requires two repo secrets:
 - `ICLOUD_APP_PASSWORD` — an [app-specific password](https://appleid.apple.com)
   for that account
 
-The recap (built by `scripts/format_recap.py`) is organized into:
+The subject line carries the headline number (`🔥 27 new today · 283 open`)
+so a quiet day can be dismissed straight from the inbox.
 
-- **🔥 Roles posted today** — postings whose real posting date (pulled from
-  the ATS where available) is today, or that our scans saw for the first
-  time today
-- **🆕 New in the last 7 days** — same signal, widened to the last week
-- **All current matches** — everything currently matching, with `[NEW]` tags
+The recap itself (built by `scripts/format_recap.py`) is built for skimming
+on a phone. **Every role appears exactly once**, in the freshest bucket it
+qualifies for:
 
-Every role, in every section, is annotated with its age — `(posted 5 days
-ago)` where the ATS exposed a real posting date, or `(first seen 5 days
-ago)` where it didn't and we're going off when our own scans first saw it.
-- **Couldn't scan** — companies that failed, with the reason
+- **🔥 Posted today** — newest first, roomy, at the top
+- **🆕 Earlier this week** — the rest of the last 7 days
+- **Still open** — the older backlog, as a dense one-line-per-role reference
+  sorted alphabetically by company
+- **Check by hand** — companies whose site has no structured job list, so
+  all the scanner can say is "this page mentions your keywords". Listed as
+  bare links rather than dumping the matched snippet
+- **Footer** — sites that block scrapers are collapsed to a name list, since
+  they fail identically every day; anything else that broke is spelled out,
+  so a genuinely new failure stands out
+
+Each role carries a colour-coded age chip (red today → grey for old). A `~`
+prefix (`~3w`) means the job board doesn't publish a posting date, so the
+age is measured from when this scanner first saw the role and may understate
+how old it really is.
+
+Two earlier layout choices were measured and dropped: re-listing roles under
+several headings inflated a 300-role scan to ~400 lines, and the resulting
+108 KB email exceeded Gmail's ~102 KB limit, which silently truncated the
+bottom of the message behind a "[Message clipped]" link.
 
 Two small ledger files persist state across runs and are committed back to
 the repo automatically after each scan:

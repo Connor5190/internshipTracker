@@ -28,7 +28,14 @@ jobs:
         run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json
 
       - name: Build recap
-        run: python3 scripts/format_recap.py scan_result_enriched.json > recap.html
+        id: recap
+        run: |
+          python3 scripts/format_recap.py scan_result_enriched.json > recap.html
+          {
+            echo "subject<<EOF"
+            python3 scripts/format_recap.py scan_result_enriched.json --subject
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Email recap
         uses: dawidd6/action-send-mail@v18
@@ -37,7 +44,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.ICLOUD_EMAIL }}
           password: ${{ secrets.ICLOUD_APP_PASSWORD }}
-          subject: "Internship Tracker Daily Recap"
+          subject: ${{ steps.recap.outputs.subject }}
           to: ${{ secrets.ICLOUD_EMAIL }},chill5@friars.providence.edu
           from: ${{ secrets.ICLOUD_EMAIL }}
           html_body: file://recap.html
