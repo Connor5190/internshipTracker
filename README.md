@@ -153,3 +153,58 @@ the repo automatically after each scan:
 
 You can trigger a run manually from the Actions tab or with
 `gh workflow run daily-recap.yml`.
+
+## Applied board
+
+<https://connor5190.github.io/internshipTracker/>
+
+The same scan, as a page you can tick things off on. Every active role gets a
+checkbox; ticking it moves the role out of the list and into an **Applied**
+section at the bottom. Unticking puts it back.
+
+The board and the email are two views of one scan, so the filtering lives in
+one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
+hidden from the email (older than `MAX_AGE_DAYS`, or listed only in India) is
+hidden from the board too.
+
+What differs is what gets sent. The email bakes in ages and buckets because
+it's read once, the morning it arrives. `site/roles.json` ships raw
+`first_seen` dates and the page recomputes ages in the browser — a tab left
+open since Monday shouldn't still be calling Monday's postings "today".
+
+`site/` is published by the same workflow that sends the email, via
+`actions/deploy-pages`, so the board refreshes every morning at 7am with the
+recap. `site/roles.json` is generated, not committed.
+
+### Applied state
+
+There is no sign-in: anyone with the URL can tick a box, which is the point —
+it should work from a phone on the train without a login. State lives in a
+Firebase Realtime Database, reached over its plain REST API. No SDK, so
+there's no bundle to version-pin and the only configuration is one URL, and
+live updates arrive over RTDB's own `EventSource` stream, so a box ticked on
+a phone lands on a laptop that already has the page open.
+
+Roles are keyed by a hash of their posting URL (the same key the ledger uses),
+so a tick survives a re-scan. Each applied role stores its own title, company
+and URL alongside the tick, so a posting that later comes off the board still
+shows up in your history as something you applied to, marked *no longer
+listed*, rather than silently vanishing.
+
+**One-time setup:**
+
+1. [console.firebase.google.com](https://console.firebase.google.com) → add a
+   project (Analytics not needed)
+2. Build → Realtime Database → Create Database → start in **test mode**
+3. Rules tab → replace with:
+   ```json
+   {"rules": {"applied": {".read": true, ".write": true}}}
+   ```
+4. Copy the URL at the top of the Data tab (`https://…firebaseio.com`) into
+   `databaseURL` in `site/config.js`, and push
+
+That URL is meant to be public — it grants access to nothing but the `applied`
+list. Don't widen the rules to the database root.
+
+Until it's filled in the board still works, but falls back to `localStorage`
+— state stays in one browser, and a banner on the page says so.

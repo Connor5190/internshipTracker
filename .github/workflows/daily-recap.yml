@@ -7,10 +7,21 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# Pages rejects concurrent deployments; a manual run kicked off while the
+# 7am one is still going would otherwise fail at the last step.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   recap:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
@@ -49,6 +60,9 @@ jobs:
           from: ${{ secrets.ICLOUD_EMAIL }}
           html_body: file://recap.html
 
+      # Ahead of the Pages deploy: the ledger is the one piece of state that
+      # can't be reconstructed after the fact, so a flaky deploy must not be
+      # able to cost us a day of first-seen dates.
       - name: Commit updated ledger
         run: |
           git config user.name "github-actions[bot]"
@@ -56,3 +70,16 @@ jobs:
           git add .state/seen_postings.json .state/companies_seen.json
           git diff --staged --quiet || git commit -m "Update seen-postings ledger [skip ci]"
           git push
+
+      - name: Build applied board
+        run: python3 scripts/build_site.py scan_result_enriched.json site/roles.json
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Deploy applied board
+        id: deployment
+        uses: actions/deploy-pages@v5
