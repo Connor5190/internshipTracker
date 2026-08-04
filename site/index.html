@@ -260,19 +260,24 @@ function matches(role) {
 }
 
 /* ------------------------------------------------------------------ render */
-function rowHTML(role, done) {
-  var d = done ? " done" : "";
-  var gone = done && !role.live ? ' <i class="gone">no longer listed</i>' : "";
+/* A ticked role is rendered twice: it stays put in its own section, ticked,
+ * so you don't lose your place in a list you're working down -- and it gets
+ * a copy in Applied at the bottom. Both copies carry a checkbox, and both
+ * write to the same `applied[id]`, so unticking either one clears the pair.
+ *
+ * `copy` says which of the two this is. The in-place one keeps the age chip
+ * and sits under a company heading; the Applied one is a flat list, so it
+ * names its own employer and shows when you applied instead. */
+function rowHTML(role, checked, copy) {
+  var gone = copy && !role.live ? ' <i class="gone">no longer listed</i>' : "";
   var bits = [];
-  // Applied rows are a flat list, not grouped under a company heading like
-  // the active ones, so each has to name its own employer.
-  if (done) bits.push("<b>" + esc(role.company) + "</b>");
+  if (copy) bits.push("<b>" + esc(role.company) + "</b>");
   else { var c = chip(role); if (c) bits.push(c); }
   if (role.location) bits.push(esc(role.location));
-  if (done && role.at) bits.push("applied " + esc(whenApplied(role.at)));
-  return '<div class="row' + d + '">' +
+  if (copy && role.at) bits.push("applied " + esc(whenApplied(role.at)));
+  return '<div class="row' + (checked ? " done" : "") + '">' +
     '<label class="box"><input type="checkbox" data-id="' + esc(role.id) + '"' +
-      (done ? " checked" : "") + ' aria-label="Applied to ' + esc(role.title) +
+      (checked ? " checked" : "") + ' aria-label="Applied to ' + esc(role.title) +
       ' at ' + esc(role.company) + '"></label>' +
     '<div class="body">' +
       '<a href="' + esc(role.url) + '" target="_blank" rel="noopener">' +
@@ -289,7 +294,7 @@ function whenApplied(ts) {
   return new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
-function groupHTML(roles, byAge, done) {
+function groupHTML(roles, byAge) {
   var groups = {};
   roles.forEach(function (r) { (groups[r.company] = groups[r.company] || []).push(r); });
   var names = Object.keys(groups);
@@ -309,17 +314,26 @@ function groupHTML(roles, byAge, done) {
       return (da === null ? 1e9 : da) - (dbb === null ? 1e9 : dbb);
     });
     return '<div class="co">' + esc(n) + "</div>" +
-      rs.map(function (r) { return rowHTML(r, done); }).join("");
+      rs.map(function (r) { return rowHTML(r, !!applied[r.id], false); }).join("");
   }).join("");
 }
 
 function render() {
   if (!data) return;
 
-  var active = [], today = [], week = [], rest = [];
+  // Ticking a role no longer removes it from its section -- it stays where
+  // it was, ticked, and gains a copy in Applied. So the buckets hold every
+  // role the search matches, applied or not.
+  var today = [], week = [], rest = [], left = 0, todayLeft = 0, weekLeft = 0;
   data.roles.forEach(function (r) {
-    if (applied[r.id]) return;
-    active.push(r);
+    // The stat tiles count what's still to do, so they ignore both the
+    // search box and anything already ticked.
+    if (!applied[r.id]) {
+      left++;
+      var n = daysSince(r.first_seen);
+      if (n === 0) todayLeft++;
+      else if (n !== null && n < 7) weekLeft++;
+    }
     if (!matches(r)) return;
     var d = daysSince(r.first_seen);
     if (d === 0) today.push(r);
@@ -345,14 +359,10 @@ function render() {
     };
   }).filter(matches).sort(function (a, b) { return b.at - a.at; });
 
-  var todayCount = active.filter(function (r) { return daysSince(r.first_seen) === 0; }).length;
-  var weekCount = active.filter(function (r) {
-    var d = daysSince(r.first_seen); return d !== null && d > 0 && d < 7; }).length;
-
   $("stats").innerHTML = [
-    [todayCount, "new today", todayCount > 0],
-    [weekCount, "earlier this wk", false],
-    [active.length, "left to apply", false],
+    [todayLeft, "new today", todayLeft > 0],
+    [weekLeft, "earlier this wk", false],
+    [left, "left to apply", false],
     [Object.keys(applied).length, "applied", false]
   ].map(function (s) {
     return '<div class="stat' + (s[2] ? " hot" : "") + '"><b>' + s[0] +
@@ -361,22 +371,22 @@ function render() {
 
   var h = [];
   h.push('<div class="sec">🔥 Posted today</div>');
-  h.push(today.length ? groupHTML(today, true, false)
+  h.push(today.length ? groupHTML(today, true)
                       : '<div class="none">Nothing new today.</div>');
   if (week.length) {
     h.push('<div class="sec">🆕 Earlier this week</div>');
-    h.push(groupHTML(week, true, false));
+    h.push(groupHTML(week, true));
   }
   if (rest.length) {
     h.push('<div class="sec">Still open · ' + rest.length + "</div>");
-    h.push(groupHTML(rest, false, false));
+    h.push(groupHTML(rest, false));
   }
   if (query && !today.length && !week.length && !rest.length && !done.length) {
     h.push('<div class="none">Nothing matches “' + esc(query) + '”.</div>');
   }
   if (done.length) {
     h.push('<div class="sec">✅ Applied · ' + done.length + "</div>");
-    h.push(done.map(function (r) { return rowHTML(r, true); }).join(""));
+    h.push(done.map(function (r) { return rowHTML(r, true, true); }).join(""));
   }
   $("app").innerHTML = h.join("");
 }
