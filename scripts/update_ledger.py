@@ -27,10 +27,20 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 
 NEW_WINDOW_DAYS = 7
 RETENTION_DAYS = 45
+
+# CI runs on a UTC clock, so anything triggered after 8pm Eastern would
+# otherwise be stamped with tomorrow's date and read as "posted today" a day
+# early. Dates are the reader's local ones.
+TZ = ZoneInfo("America/New_York")
+
+
+def today_local() -> date:
+    return datetime.now(TZ).date()
 
 
 def main() -> int:
@@ -58,7 +68,7 @@ def main() -> int:
     except FileNotFoundError:
         companies_seen = {}
 
-    today = date.today()
+    today = today_local()
     seen_today: set[str] = set()
 
     for company in results:

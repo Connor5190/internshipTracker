@@ -123,6 +123,20 @@ prefix (`~3w`) means the job board doesn't publish a posting date, so the
 age is measured from when this scanner first saw the role and may understate
 how old it really is.
 
+Two kinds of role are counted but not shown, with the tally noted in the
+footer so nothing vanishes silently:
+
+- **Older than 3 months** (`MAX_AGE_DAYS`) — almost always a stale listing
+  still sitting on a board.
+- **Listed only in India** (`INDIA_RE`) — matched on country or major city
+  name. A role spanning Bangalore *and* London is still shown; only ones
+  where every listed location is Indian are dropped. Word boundaries keep
+  "Indiana" and "Indianapolis" from matching.
+
+Dates use **America/New_York**, not the runner's UTC clock — otherwise a run
+triggered after 8pm Eastern is stamped with tomorrow's date and roles read as
+"posted today" a day early.
+
 Two earlier layout choices were measured and dropped: re-listing roles under
 several headings inflated a 300-role scan to ~400 lines, and the resulting
 108 KB email exceeded Gmail's ~102 KB limit, which silently truncated the

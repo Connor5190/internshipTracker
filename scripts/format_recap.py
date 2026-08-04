@@ -22,8 +22,42 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import sys
-from datetime import date
+from datetime import date, datetime
+from typing import NamedTuple
+from zoneinfo import ZoneInfo
+
+# Match update_ledger.py: CI runs on a UTC clock, but the dates a reader sees
+# should be their own.
+TZ = ZoneInfo("America/New_York")
+
+# Roles this old are almost always stale listings still sitting on a board.
+MAX_AGE_DAYS = 90
+
+# A role is dropped only when *every* location it lists is in India -- one
+# that spans Bangalore and London is still worth seeing. Word boundaries stop
+# fragments matching (e.g. "Pune" inside a longer word).
+INDIA_RE = re.compile(
+    r"\b(india|bangalore|bengaluru|hyderabad|mumbai|navi mumbai|new delhi|delhi"
+    r"|gurgaon|gurugram|noida|pune|chennai|kolkata|ahmedabad|jaipur|chandigarh"
+    r"|coimbatore|kochi|thiruvananthapuram|trivandrum|indore|vadodara|nagpur"
+    r"|mysore|mysuru|visakhapatnam|bhubaneswar|gandhinagar|thane)\b",
+    re.IGNORECASE,
+)
+
+
+def today_local() -> date:
+    return datetime.now(TZ).date()
+
+
+def _india_only(m: dict) -> bool:
+    loc = (m.get("location") or "").strip()
+    if not loc:
+        return False
+    parts = [p.strip() for p in re.split(r"[;/|]", loc) if p.strip()]
+    # Boards that only say "5 Locations" tell us nothing -- keep those.
+    return bool(parts) and all(INDIA_RE.search(p) for p in parts)
 
 # Age chips are styled by CSS class rather than inline: with a few hundred
 # roles an inline style on every row costs ~15 KB on its own.
@@ -91,12 +125,11 @@ def _age_days(m: dict) -> int | None:
     if not raw:
         return None
     try:
-        days = (date.today() - date.fromisoformat(raw)).days
+        days = (today_local() - date.fromisoformat(raw)).days
     except ValueError:
         return None
-    # A date can land in the future: the scanner runs on a UTC clock, so a
-    # run late in the US evening stamps tomorrow's date. Treat that as
-    # brand new rather than dropping the age from the row entirely.
+    # Ledger entries written before the timezone fix can still sit a day in
+    # the future; treat those as brand new rather than dropping the age.
     return max(days, 0)
 
 
@@ -194,7 +227,16 @@ def _render(
     return out
 
 
-def _buckets(results: list[dict]):
+class Split(NamedTuple):
+    today: list[tuple[str, dict]]
+    week: list[tuple[str, dict]]
+    rest: list[tuple[str, dict]]
+    pages: list[tuple[str, dict]]
+    hidden_old: int
+    hidden_india: int
+
+
+def _buckets(results: list[dict]) -> Split:
     """Split matches into today / this week / older, plus page-level hits.
 
     A `matched_in == "page"` hit isn't a role -- it means the careers site
@@ -202,42 +244,55 @@ def _buckets(results: list[dict]):
     search terms. Its "title" is a 190-character snippet dump, so it's kept
     out of the role sections entirely and listed separately as a nudge to go
     look manually.
+
+    Roles past MAX_AGE_DAYS, and roles listed only in India, are counted but
+    not shown. Filtering here rather than at render time keeps the stat row
+    and the subject line agreeing with the body.
     """
     today, week, rest, pages = [], [], [], []
+    hidden_old = hidden_india = 0
     for r in results:
         for m in r["matches"]:
             if m.get("matched_in") == "page":
                 pages.append((r["company"], m))
-            elif m.get("is_today"):
+                continue
+            if _india_only(m):
+                hidden_india += 1
+                continue
+            days = _age_days(m)
+            if days is not None and days > MAX_AGE_DAYS:
+                hidden_old += 1
+                continue
+            if m.get("is_today"):
                 today.append((r["company"], m))
             elif m.get("is_new"):
                 week.append((r["company"], m))
             else:
                 rest.append((r["company"], m))
-    return today, week, rest, pages
+    return Split(today, week, rest, pages, hidden_old, hidden_india)
 
 
 def build_subject(results: list[dict]) -> str:
     """Inbox-line triage: the count you care about, before opening anything."""
-    today, week, rest, _ = _buckets(results)
-    total = len(today) + len(week) + len(rest)
-    if today:
-        return f"\U0001F525 {len(today)} new today · {total} open — Internship Tracker"
-    if week:
-        return f"{len(week)} new this week · {total} open — Internship Tracker"
+    s = _buckets(results)
+    total = len(s.today) + len(s.week) + len(s.rest)
+    if s.today:
+        return f"\U0001F525 {len(s.today)} new today · {total} open — Internship Tracker"
+    if s.week:
+        return f"{len(s.week)} new this week · {total} open — Internship Tracker"
     return f"Nothing new · {total} open — Internship Tracker"
 
 
 def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
-    today, week, rest, pages = _buckets(results)
+    today, week, rest, pages, hidden_old, hidden_india = _buckets(results)
     total_roles = len(today) + len(week) + len(rest)
     role_companies = {c for c, _ in today + week + rest}
 
     p = [STYLE, '<div class="wrap">']
     p.append('<div class="hd">Internship Tracker</div>')
     p.append(
-        f'<div class="dt">{date.today().strftime("%A, %B %-d, %Y")} &middot; '
+        f'<div class="dt">{today_local().strftime("%A, %B %-d, %Y")} &middot; '
         f'{len(role_companies)} of {len(results)} companies have matches</div>'
     )
 
@@ -289,6 +344,13 @@ def build_html(results: list[dict]) -> str:
         p.append(f'<div class="r">{links}</div>')
 
     p.append('<div class="ft">')
+    if hidden_old or hidden_india:
+        bits = []
+        if hidden_old:
+            bits.append(f"{hidden_old} older than 3 months")
+        if hidden_india:
+            bits.append(f"{hidden_india} listed only in India")
+        p.append(f"Hidden: {', '.join(bits)}.<br><br>")
     p.append(
         "Ages are the employer's posting date where the job board exposes one. "
         "A <b>~</b> means that board doesn't, so the date shown is when this "
