@@ -185,6 +185,15 @@ bottom. Both copies have a checkbox and both write the same key, so unticking
 either one clears the pair. **Hide applied** drops the ticked ones out of the
 main table without touching the Applied list.
 
+A second checkbox, **Ignore**, is for roles you've looked at and don't want.
+Ignoring one removes it from the table and discounts it from every "still to
+do" number, so the tiles describe work you actually intend to do. They come
+back with **Show ignored**, which carries the count so you always know how
+many are tucked away — struck through and dimmed, with the checkbox ready to
+un-ignore. Applied and ignored are independent, so a role you applied to and
+later thought better of can be both; the Applied copy at the bottom has no
+Ignore box, since it's a record of a decision already made.
+
 The layout follows [internship-radar-2027.yuxhuang.com](https://internship-radar-2027.yuxhuang.com/):
 a briefing masthead with the week's count set large, stat tiles, then a dense
 ranked table. Georgia carries the numbers and company names, Arial everything
@@ -240,13 +249,18 @@ listed*, rather than silently vanishing.
 2. Build → Realtime Database → Create Database → start in **test mode**
 3. Rules tab → replace with:
    ```json
-   {"rules": {"applied": {".read": true, ".write": true}}}
+   {"rules": {
+     "applied": {".read": true, ".write": true},
+     "ignored": {".read": true, ".write": true}
+   }}
    ```
 4. Copy the URL at the top of the Data tab (`https://…firebaseio.com`) into
    `databaseURL` in `site/config.js`, and push
 
-That URL is meant to be public — it grants access to nothing but the `applied`
-list. Don't widen the rules to the database root.
+That URL is meant to be public — it grants access to nothing but those two
+lists. Don't widen the rules to the database root: Firebase's "test mode"
+default is root-open, which lets anyone with the URL write anywhere in the
+database rather than just to these two keys.
 
 Until it's filled in the board still works, but falls back to `localStorage`
 — state stays in one browser, and a banner on the page says so.
