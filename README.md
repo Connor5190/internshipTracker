@@ -175,9 +175,21 @@ it's read once, the morning it arrives. `site/roles.json` ships raw
 `first_seen` dates and the page recomputes ages in the browser — a tab left
 open since Monday shouldn't still be calling Monday's postings "today".
 
-`site/` is published by the same workflow that sends the email, via
-`actions/deploy-pages`, so the board refreshes every morning at 7am with the
-recap. `site/roles.json` is generated, not committed.
+`.github/workflows/update-board.yml` scans and publishes `site/` via
+`actions/deploy-pages`, on its own schedule — **6:30 AM and 6:30 PM
+America/New_York**. Twice a day keeps the board under ~12 hours stale: the
+morning run lands just before the 7am recap, so clicking through from the
+email hits fresh data, and the evening run picks up the day's later postings.
+`site/roles.json` is generated, not committed.
+
+Both workflows scan independently and both write `.state/seen_postings.json`,
+so each pushes the ledger with a rebase-and-retry rather than a bare `git
+push` — the 30-minute offset makes a collision unlikely (a full run takes
+about 2 minutes), but a lost race would cost first-seen dates that can't be
+reconstructed. The board deploy runs *after* that commit for the same reason.
+
+Trigger it by hand from the Actions tab or with
+`gh workflow run update-board.yml`.
 
 ### Applied state
 

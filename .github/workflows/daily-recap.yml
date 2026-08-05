@@ -7,21 +7,10 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-# Pages rejects concurrent deployments; a manual run kicked off while the
-# 7am one is still going would otherwise fail at the last step.
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
   recap:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
@@ -60,26 +49,22 @@ jobs:
           from: ${{ secrets.ICLOUD_EMAIL }}
           html_body: file://recap.html
 
-      # Ahead of the Pages deploy: the ledger is the one piece of state that
-      # can't be reconstructed after the fact, so a flaky deploy must not be
-      # able to cost us a day of first-seen dates.
       - name: Commit updated ledger
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .state/seen_postings.json .state/companies_seen.json
-          git diff --staged --quiet || git commit -m "Update seen-postings ledger [skip ci]"
+          if git diff --staged --quiet; then
+            echo "Ledger unchanged."
+            exit 0
+          fi
+          git commit -m "Update seen-postings ledger [skip ci]"
+          # update-board.yml writes this same ledger, so a push can lose a
+          # race with it. Rebase and retry rather than dropping the run's
+          # first-seen dates, which can't be reconstructed after the fact.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push lost a race — rebasing (attempt $attempt)…"
+            git pull --rebase
+          done
           git push
-
-      - name: Build applied board
-        run: python3 scripts/build_site.py scan_result_enriched.json site/roles.json
-
-      - uses: actions/configure-pages@v6
-
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-
-      - name: Deploy applied board
-        id: deployment
-        uses: actions/deploy-pages@v5

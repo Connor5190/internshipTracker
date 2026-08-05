@@ -1,0 +1,83 @@
+name: Update Applied Board
+
+# Twice a day, so the board is never more than ~12 hours stale -- once just
+# before the 7am recap goes out (so clicking through from the email lands on
+# fresh data) and once in the evening to pick up the day's later postings.
+#
+# The 30-minute offset from daily-recap.yml's 11:00 keeps the two runs from
+# overlapping. A full scan takes about 2 minutes, so that's a wide margin --
+# but both workflows commit the same ledger, so the push below retries on a
+# race regardless.
+on:
+  schedule:
+    - cron: "30 10,22 * * *"  # 6:30 AM / 6:30 PM America/New_York (EDT, UTC-4)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Pages rejects concurrent deployments; the evening run and a manual one
+# kicked off alongside it would otherwise fail at the last step.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  board:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan companies
+        run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
+
+      - name: Update seen-postings ledger
+        run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json
+
+      # Ahead of the deploy: the ledger is the one piece of state that can't
+      # be reconstructed after the fact, so a flaky deploy must not be able to
+      # cost a run's first-seen dates.
+      - name: Commit updated ledger
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .state/seen_postings.json .state/companies_seen.json
+          if git diff --staged --quiet; then
+            echo "Ledger unchanged."
+            exit 0
+          fi
+          git commit -m "Update seen-postings ledger [skip ci]"
+          # daily-recap.yml writes this same ledger, so a push can lose a race
+          # with it. Rebase and retry rather than dropping the run's
+          # first-seen dates.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push lost a race — rebasing (attempt $attempt)…"
+            git pull --rebase
+          done
+          git push
+
+      - name: Build applied board
+        run: python3 scripts/build_site.py scan_result_enriched.json site/roles.json
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+      - name: Deploy applied board
+        id: deployment
+        uses: actions/deploy-pages@v5
