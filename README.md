@@ -103,53 +103,62 @@ configured in the workflow. Requires two repo secrets:
 The subject line carries the headline number (`🔥 27 new today · 283 open`)
 so a quiet day can be dismissed straight from the inbox.
 
-The recap itself (built by `scripts/format_recap.py`) is built for skimming
-on a phone. **Every role appears exactly once**, in the freshest bucket it
-qualifies for:
+The recap (built by `scripts/format_recap.py`) is **a digest of what's new**,
+not the full list. It carries only the last 7 days:
 
 - **🔥 Posted today** — newest first, roomy, at the top
 - **🆕 Earlier this week** — the rest of the last 7 days
-- **Still open** — the older backlog, as a dense one-line-per-role reference
-  sorted alphabetically by company
 - **Check by hand** — companies whose site has no structured job list, so
   all the scanner can say is "this page mentions your keywords". Listed as
   bare links rather than dumping the matched snippet
-- **Footer** — sites that block scrapers are collapsed to a name list, since
-  they fail identically every day; anything else that broke is spelled out,
-  so a genuinely new failure stands out
+- **Footer** — the backlog count with a link to the board; then sites that
+  block scrapers, collapsed to a name list since they fail identically every
+  day; anything else that broke is spelled out, so a genuinely new failure
+  stands out
+
+The older backlog is counted, not listed. It barely changes day to day, so
+re-sending it every morning only trains you to skim past the part that *is*
+new — and the board holds it in a form you can sort, search and tick off.
+Dropping it took a 300-role recap from ~35 KB to ~10 KB, comfortably clear of
+Gmail's ~102 KB clipping threshold even on a heavy day. The subject line and
+the stat row still count every open role, so the total never silently shrinks.
 
 Each role carries a colour-coded age chip (red today → grey for old). A `~`
 prefix (`~3w`) means the job board doesn't publish a posting date, so the
 age is measured from when this scanner first saw the role and may understate
 how old it really is.
 
-Two kinds of role are counted but not shown, with the tally noted in the
-footer so nothing vanishes silently:
+**The email drops nothing.** Not for age, not for location — every role the
+scan finds in the last 7 days is in it. Location is judged, but only so the
+board can offer it as a switch; see below.
 
-- **Older than 3 months** (`MAX_AGE_DAYS`) — almost always a stale listing
-  still sitting on a board.
-- **Listed only outside the US** (`_non_us_only`) — on a recent scan this was
-  113 of 239 roles, so it's the filter that does the most work.
+## Judging location
 
-  A place is read as foreign only when it names a non-US country or a major
-  foreign city (`NON_US_RE`) **and** carries no US signal — a US state name,
-  a two-letter state code beside a comma or ZIP (`US_ABBR_RE`), or a known US
-  city (`US_CITY_RE`). Anything else — an unrecognised place, `5 Locations`,
-  `Flexible - Any SpaceX Site` — is kept.
+`_non_us_only` decides whether every place a role lists is confidently
+outside the US. On a recent scan that was 113 of 239 roles. Nothing acts on
+it automatically: `build_site.py` attaches it to each role as a `non_us`
+flag, and the board turns it into an **Only USA** toggle. A filter nobody
+can see is a filter nobody can correct.
 
-  The asymmetry is deliberate. Showing a foreign role is a minor annoyance;
-  dropping a US one means never seeing it. So ambiguity always resolves
-  towards keeping: `London, KY` and `Cambridge, MA` stay, and a role spanning
-  Bangalore *and* Seattle stays, because only roles where **every** listed
-  place is confidently foreign are dropped.
+A place reads as foreign only when it names a non-US country or a major
+foreign city (`NON_US_RE`) **and** carries no US signal — a US state name, a
+two-letter state code beside a comma or ZIP (`US_ABBR_RE`), or a known US
+city (`US_CITY_RE`). Anything else — an unrecognised place, `5 Locations`,
+`Flexible - Any SpaceX Site` — reads as US.
 
-  The residual risk is a bare foreign city that also exists in the US —
-  `London`, `Dublin`, `Bristol`, `Melbourne` are all read as foreign when
-  they arrive with no country or state. On the scan this was built against
-  every one of those was genuinely foreign (Jump Trading's London and Bristol
-  desks, Amazon's Dublin hub, an Amazon role literally titled *Amazon
-  International*). If a US one ever gets caught, delete that city from
-  `NON_US_RE` — the qualified form (`Dublin, OH`) is already safe.
+The asymmetry is deliberate. Hiding a US role is worse than showing a
+foreign one, so ambiguity always resolves towards keeping: `London, KY` and
+`Cambridge, MA` stay, and a role spanning Bangalore *and* Seattle stays,
+because only roles where **every** listed place is confidently foreign are
+flagged.
+
+The residual risk is a bare foreign city that also exists in the US —
+`London`, `Dublin`, `Bristol`, `Melbourne` all read as foreign when they
+arrive with no country or state. On the scan this was built against, every
+one was genuinely foreign (Jump Trading's London and Bristol desks, Amazon's
+Dublin hub, an Amazon role literally titled *Amazon International*). If a US
+one ever gets caught, delete that city from `NON_US_RE` — the qualified form
+(`Dublin, OH`) is already safe.
 
 Dates use **America/New_York**, not the runner's UTC clock — otherwise a run
 triggered after 8pm Eastern is stamped with tomorrow's date and roles read as
@@ -219,10 +228,20 @@ functional, on warm paper (`#f4f0e7`) rather than white — both faces are
 web-safe, so there's no webfont for the page to wait on. Dark mode is a warm
 inversion of the same palette.
 
-The board and the email are two views of one scan, so the filtering lives in
-one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
-hidden from the email (older than `MAX_AGE_DAYS`, or listed only outside the
-US) is hidden from the board too.
+The board and the email are two views of one scan, sharing
+`format_recap._buckets` so they agree on what a role is and which week it
+landed in.
+
+**Neither drops anything.** Not for age — an old listing still sitting on a
+board is still a job you can apply to, and newest-first sorting plus the
+grey oldest band let stale ones sink without hiding them. Not for location
+either: **Only USA** is a checkbox, on by default, labelled with what it's
+costing you (`Only USA (113 elsewhere)`) so the trade-off is visible before
+you decide. It's a per-device view preference, so it lives in
+`localStorage`, not in the shared Firebase state.
+
+They differ on scope. The email is a digest of the last 7 days; the board is
+the full standing list, backlog included, because that's what you work down.
 
 What differs is what gets sent. The email bakes in ages and buckets because
 it's read once, the morning it arrives. `site/roles.json` ships raw

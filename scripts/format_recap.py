@@ -32,8 +32,9 @@ from zoneinfo import ZoneInfo
 # should be their own.
 TZ = ZoneInfo("America/New_York")
 
-# Roles this old are almost always stale listings still sitting on a board.
-MAX_AGE_DAYS = 90
+# The email carries only what's new; the backlog lives here, where it can be
+# sorted, searched and ticked off.
+BOARD_URL = "https://connor5190.github.io/internshipTracker/"
 
 # Roles are dropped only when *every* place they list is confidently outside
 # the US. The asymmetry is deliberate: showing a foreign role is a minor
@@ -316,8 +317,6 @@ class Split(NamedTuple):
     week: list[tuple[str, dict]]
     rest: list[tuple[str, dict]]
     pages: list[tuple[str, dict]]
-    hidden_old: int
-    hidden_non_us: int
 
 
 def _buckets(results: list[dict]) -> Split:
@@ -329,23 +328,17 @@ def _buckets(results: list[dict]) -> Split:
     out of the role sections entirely and listed separately as a nudge to go
     look manually.
 
-    Roles past MAX_AGE_DAYS, and roles listed only outside the US, are counted but
-    not shown. Filtering here rather than at render time keeps the stat row
-    and the subject line agreeing with the body.
+    Nothing is dropped here. Age isn't a reason -- an old listing still on a
+    board is still a job you could apply to -- and neither is location: the
+    email shows every role it finds, and the board makes "only USA" a switch
+    the reader flips, using the per-role flag `build_site.py` attaches with
+    `_non_us_only`. A filter nobody can see is a filter nobody can correct.
     """
     today, week, rest, pages = [], [], [], []
-    hidden_old = hidden_non_us = 0
     for r in results:
         for m in r["matches"]:
             if m.get("matched_in") == "page":
                 pages.append((r["company"], m))
-                continue
-            if _non_us_only(m):
-                hidden_non_us += 1
-                continue
-            days = _age_days(m)
-            if days is not None and days > MAX_AGE_DAYS:
-                hidden_old += 1
                 continue
             if m.get("is_today"):
                 today.append((r["company"], m))
@@ -353,7 +346,7 @@ def _buckets(results: list[dict]) -> Split:
                 week.append((r["company"], m))
             else:
                 rest.append((r["company"], m))
-    return Split(today, week, rest, pages, hidden_old, hidden_non_us)
+    return Split(today, week, rest, pages)
 
 
 def build_subject(results: list[dict]) -> str:
@@ -369,7 +362,7 @@ def build_subject(results: list[dict]) -> str:
 
 def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
-    today, week, rest, pages, hidden_old, hidden_non_us = _buckets(results)
+    today, week, rest, pages = _buckets(results)
     total_roles = len(today) + len(week) + len(rest)
     role_companies = {c for c, _ in today + week + rest}
 
@@ -408,10 +401,10 @@ def build_html(results: list[dict]) -> str:
         p.append('<div class="sec">\U0001F195 Earlier this week</div>')
         p += _render(week, by_age=True, dense=False)
 
-    if rest:
-        p.append(f'<div class="sec">Still open &middot; {len(rest)}</div>')
-        p += _render(rest, by_age=False, dense=True)
-
+    # The older backlog is deliberately not listed. It changes little day to
+    # day, so re-sending it every morning trains you to skim past the part
+    # that *is* new -- and it's what the board is for. The count and the link
+    # go in the footer instead.
     if not total_roles:
         p.append('<div class="none">No matching roles found today.</div>')
 
@@ -428,13 +421,12 @@ def build_html(results: list[dict]) -> str:
         p.append(f'<div class="r">{links}</div>')
 
     p.append('<div class="ft">')
-    if hidden_old or hidden_non_us:
-        bits = []
-        if hidden_old:
-            bits.append(f"{hidden_old} older than 3 months")
-        if hidden_non_us:
-            bits.append(f"{hidden_non_us} listed only outside the US")
-        p.append(f"Hidden: {', '.join(bits)}.<br><br>")
+    if rest:
+        p.append(
+            f'<b>{len(rest)} more still open</b> from earlier &mdash; '
+            f'<a class="d" href="{BOARD_URL}">see the full board</a>, where you '
+            "can tick them off as you apply.<br><br>"
+        )
     p.append(
         "Ages are the employer's posting date where the job board exposes one. "
         "A <b>~</b> means that board doesn't, so the date shown is when this "

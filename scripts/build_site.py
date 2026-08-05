@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
 """Turn the enriched scan into the JSON the GitHub Pages board reads.
 
-The board and the daily email are two views of one scan, so the filtering
-lives in exactly one place: this reuses `format_recap._buckets`, which means
-a role hidden from the email (older than MAX_AGE_DAYS, or listed only
-outside the US) is hidden from the board too, and the two can't drift apart.
+The board and the daily email are two views of one scan, sharing
+`format_recap._buckets` so they agree on what a role is and which week it
+landed in.
 
-What differs is what gets sent. The email bakes in ages and buckets because
-it's read once, the morning it arrives. The board can be left open for days,
-so it ships `first_seen` and lets the page recompute ages and buckets from
-the reader's own clock -- a tab open since Monday shouldn't still be calling
-Monday's postings "today".
+Neither drops anything. Not for age -- an old listing still on a board is
+still a job, and the board sorts and colours by age well enough that stale
+ones sink on their own. Not for location either: each role carries a
+`non_us` flag and the board turns it into an "Only USA" switch, so the
+reader can see what the filter costs and turn it off. The email shows
+everything.
+
+They differ on scope. The email is a digest of what's new, so it renders
+only today and this week and links here for the rest; the board is the full
+standing list, backlog included, because that's what you work down.
+
+They also differ on what gets sent. The email bakes in ages and buckets
+because it's read once, the morning it arrives. The board can be left open
+for days, so it ships `first_seen` and lets the page recompute ages and
+buckets from the reader's own clock -- a tab open since Monday shouldn't
+still be calling Monday's postings "today".
 
 Each role carries a stable `id` (a hash of its URL, the same key the ledger
 uses) so the applied-checkbox state can be stored against something that
@@ -61,11 +71,15 @@ def role_payload(company: str, m: dict) -> dict:
         # role, not when the employer posted it -- the page renders that
         # distinction as a `~` so an estimate never reads as fact.
         "exact": bool(m.get("date_is_posted")),
+        # Every place it lists is confidently outside the US. Shipped as a
+        # flag rather than acted on here, so "only USA" is a switch the
+        # reader can flip and see the consequences of, not a silent drop.
+        "non_us": fr._non_us_only(m),
     }
 
 
 def build(results: list[dict]) -> dict:
-    today, week, rest, pages, hidden_old, hidden_non_us = fr._buckets(results)
+    today, week, rest, pages = fr._buckets(results)
 
     roles = [role_payload(c, m) for c, m in today + week + rest]
     roles.sort(key=lambda r: (r["first_seen"] or "0000-00-00"), reverse=True)
@@ -91,7 +105,6 @@ def build(results: list[dict]) -> dict:
             ({"company": c, "url": m["url"]} for c, m in pages),
             key=lambda d: d["company"].lower(),
         ),
-        "hidden": {"old": hidden_old, "non_us": hidden_non_us},
         "blocked": sorted(blocked),
         "errors": sorted(broken, key=lambda d: d["company"].lower()),
     }
