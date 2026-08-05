@@ -42,7 +42,13 @@ a{color:inherit;text-decoration:none}
   padding:22px 0 14px;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
 .wordmark{font:400 27px/1 var(--serif);letter-spacing:-.01em;margin-top:5px}
 .wordmark b{color:var(--cobalt);font-weight:400}
-.checked{font-size:12.5px;color:var(--secondary);text-align:right}
+.mastright{text-align:right}
+.checked{font-size:12.5px;color:var(--secondary)}
+.triggers{display:flex;gap:8px;justify-content:flex-end;margin-top:9px;flex-wrap:wrap}
+.btn{font:700 12px var(--sans);color:var(--ink);background:var(--raised);
+  border:1px solid var(--rule);border-radius:3px;padding:8px 12px;cursor:pointer}
+.btn:hover:not(:disabled){border-color:var(--cobalt);color:var(--cobalt)}
+.btn:disabled{opacity:.55;cursor:default}
 
 /* ------------------------------------------------------------- hero */
 .hero{display:flex;align-items:flex-start;gap:44px;padding:34px 0 30px;
@@ -180,7 +186,13 @@ footer a:hover{text-decoration:underline}
       <span class="eyebrow">Personal internship desk</span>
       <div class="wordmark">Internship Tracker <b>2027</b></div>
     </div>
-    <div class="checked" id="checked">Loading…</div>
+    <div class="mastright">
+      <div class="checked" id="checked">Loading…</div>
+      <div class="triggers" id="triggers" hidden>
+        <button class="btn" id="rescan" type="button">Re-scan now</button>
+        <button class="btn" id="sendmail" type="button">Email me the recap</button>
+      </div>
+    </div>
   </div>
 
   <div class="hero">
@@ -657,27 +669,116 @@ function footer() {
   $("foot").innerHTML = f.join("");
 }
 
+/* --------------------------------------------------------------- triggers
+ * The board can start the two workflows itself, through the Worker in
+ * `worker/` -- which exists so the GitHub token never reaches the browser.
+ * Unconfigured, the buttons simply aren't shown.
+ */
+var TRIGGER = (window.TRACKER_CONFIG && window.TRACKER_CONFIG.triggerURL || "")
+  .trim().replace(/\/+$/, "");
+
+function watchRun(btn, workflow, since, idle, done) {
+  var started = Date.now();
+  (function tick() {
+    // A scan is ~2 minutes; well past that, stop holding the button hostage
+    // rather than spin forever on a run that's wedged.
+    if (Date.now() - started > 10 * 60000) {
+      btn.disabled = false; btn.textContent = idle;
+      toast("Still running — check the Actions tab");
+      return;
+    }
+    fetch(TRIGGER + "/status?workflow=" + encodeURIComponent(workflow) +
+          "&since=" + since, { cache: "no-store" })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        var run = d && d.run;
+        if (run && run.status === "completed") {
+          btn.disabled = false; btn.textContent = idle;
+          if (run.conclusion === "success") done();
+          else toast("That run failed — see the Actions tab");
+          return;
+        }
+        setTimeout(tick, 8000);
+      })
+      .catch(function () { setTimeout(tick, 12000); });
+  })();
+}
+
+function wireTrigger(id, workflow, busy, done) {
+  var btn = $(id);
+  btn.addEventListener("click", function () {
+    var idle = btn.textContent;
+    btn.disabled = true; btn.textContent = "Starting…";
+    fetch(TRIGGER + "/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ workflow: workflow })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        // "already running" is not a failure -- someone (or the schedule)
+        // beat us to it, so just watch that one instead of starting a second.
+        if (d && (d.ok || d.reason === "running")) {
+          btn.textContent = busy;
+          watchRun(btn, workflow, d.dispatchedAt || 0, idle, done);
+          return;
+        }
+        btn.disabled = false; btn.textContent = idle;
+        if (d && d.reason === "cooldown") {
+          toast("Just ran — try again in " + Math.ceil(d.retryAfter / 60) + " min");
+        } else {
+          toast("Couldn't start it — " + ((d && d.reason) || "unknown error"));
+        }
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = idle;
+        toast("Couldn't reach the trigger service");
+      });
+  });
+}
+
+/* ------------------------------------------------------------------- boot */
+function loadRoles() {
+  // Cache-busted: after a re-scan the point is to get past the Pages CDN and
+  // see the file the run just published.
+  return fetch("roles.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      data = d;
+      var when = new Date(d.generated_at);
+      $("briefday").textContent =
+        when.toLocaleDateString(undefined, { weekday: "long" }) + "'s briefing";
+      $("checked").innerHTML = "Roles checked at " +
+        when.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) +
+        "<br>" + d.companies_matched + " of " + d.companies_scanned +
+        " companies have matches";
+      footer();
+      render();
+    });
+}
+
 banner();
 // The markup ships checked; a stored "off" has to be reflected before the
 // first render, or the box and the list would disagree.
 $("usonly").checked = usOnly;
 
-fetch("roles.json", { cache: "no-store" })
-  .then(function (r) {
-    if (!r.ok) throw new Error("HTTP " + r.status);
-    return r.json();
-  })
-  .then(function (d) {
-    data = d;
-    var when = new Date(d.generated_at);
-    $("briefday").textContent =
-      when.toLocaleDateString(undefined, { weekday: "long" }) + "'s briefing";
-    $("checked").innerHTML = "Roles checked at " +
-      when.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }) +
-      "<br>" + d.companies_matched + " of " + d.companies_scanned +
-      " companies have matches";
-    footer();
-    render();
+if (TRIGGER) {
+  $("triggers").hidden = false;
+  wireTrigger("rescan", "update-board.yml", "Scanning…", function () {
+    loadRoles()
+      .then(function () { toast("Board updated"); })
+      .catch(function () { toast("Scan finished — reload to see it"); });
+  });
+  wireTrigger("sendmail", "daily-recap.yml", "Sending…", function () {
+    toast("Recap sent — check your inbox");
+  });
+}
+
+loadRoles()
+  .then(function () {
     return Promise.all([Applied.load(), Ignored.load()]);
   })
   .then(function (states) {

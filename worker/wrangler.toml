@@ -1,0 +1,12 @@
+name = "internship-tracker-trigger"
+main = "trigger.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Only the board may call this. Widen it and any page anywhere could start
+# your workflows from a visitor's browser.
+ALLOWED_ORIGIN = "https://connor5190.github.io"
+
+# GITHUB_TOKEN is a secret, not a var -- set it with:
+#   wrangler secret put GITHUB_TOKEN
+# Never put it in this file; it is committed to a public repository.

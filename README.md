@@ -264,6 +264,45 @@ reconstructed. The board deploy runs *after* that commit for the same reason.
 Trigger it by hand from the Actions tab or with
 `gh workflow run update-board.yml`.
 
+### Run it from the board
+
+Two buttons in the masthead — **Re-scan now** (runs `update-board.yml`, then
+reloads the table in place when it finishes) and **Email me the recap** (runs
+`daily-recap.yml`). Both show progress and report the outcome; a failed run
+says so rather than silently doing nothing.
+
+Starting a workflow needs an authenticated GitHub API call, which a static
+public page cannot make safely. A token in the page would be readable by
+anyone — and wouldn't survive anyway, since GitHub scans public repositories
+for its own tokens and revokes them. So `worker/trigger.js` does it instead:
+a Cloudflare Worker holding the token in a secret, which the page calls.
+
+It is still an unauthenticated endpoint, matching the rest of the board, so
+two limits keep it dull for anyone who finds it:
+
+- **Only those two workflows** can be started. Anything else is rejected, so
+  it can't become a general "run arbitrary CI" button.
+- **Cooldowns** — 10 minutes for the recap (its side effect lands in an
+  inbox), 5 for a re-scan. GitHub's own run history is what enforces them,
+  so there's no KV namespace to create and a run started from the Actions
+  tab counts too.
+
+**Setup, once:**
+
+1. A [fine-grained PAT](https://github.com/settings/personal-access-tokens)
+   scoped to **this repository only**, with **Actions: Read and write**.
+   Nothing else.
+2. ```bash
+   cd worker
+   npx wrangler secret put GITHUB_TOKEN   # paste the PAT
+   npx wrangler deploy
+   ```
+3. Put the deployed URL in `triggerURL` in `site/config.js`, and push.
+
+Left blank, the buttons don't render and the rest of the board is unaffected.
+`ALLOWED_ORIGIN` in `wrangler.toml` restricts which page may call the Worker
+from a browser — leave it pointed at the board.
+
 ### Applied state
 
 There is no sign-in: anyone with the URL can tick a box, which is the point —
