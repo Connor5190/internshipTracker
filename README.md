@@ -163,6 +163,21 @@ table — `#1`, `#2`, … — sorted newest-first with a rule between each age
 band, or alphabetically by company. Search filters across company, role and
 location; `/` jumps to the box.
 
+Company names are coloured by how fresh the posting is, so recency reads off
+the page without parsing a date:
+
+| Band | Colour | |
+|---|---|---|
+| Opened today | rust | `--age0` |
+| Earlier this week (1–6 days) | ochre | `--age1` |
+| This month (7–29 days) | full-strength ink | `--age2` |
+| Older, or undated | grey, recedes | `--age3` |
+
+The name and the status dot both take their colour from a single class on the
+row, so the two can't drift apart. Every value clears 4.5:1 against its
+background in both light and dark — the company name is the largest text in
+the row, and a "subtle" tint there is the one that gets missed.
+
 Every role gets a checkbox. Ticking one leaves it where it is — greyed out
 but still in its place in the table, so you don't lose your spot in a list
 you're working down — and adds a copy to the **Applied** section at the

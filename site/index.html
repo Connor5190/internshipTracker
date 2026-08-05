@@ -14,6 +14,9 @@
   --rule:#d8d2c5; --rule-soft:#e6e1d5; --cobalt:#1948d8; --cobalt-pale:#e8edff;
   --cobalt-ink:#fff; --amber:#f2a900; --amber-ink:#3a2900;
   --green:#355231; --green-bg:#edf2e8; --rust:#a9492f; --rust-bg:#f5ded5;
+  /* Recency ramp, hottest first. Every one of these is picked to clear 4.5:1
+     on --paper, since it lands on the largest text in the row. */
+  --age0:#a9492f; --age1:#985e0c; --age2:#171713; --age3:#6f6a5e;
   --serif:Georgia,"Times New Roman",serif;
   --sans:Arial,Helvetica,sans-serif;
 }
@@ -23,6 +26,7 @@
     --rule:#34302a; --rule-soft:#26231e; --cobalt:#7d9cff; --cobalt-pale:#1e2a4d;
     --cobalt-ink:#0d1330; --amber:#f2a900; --amber-ink:#2a1e00;
     --green:#a8c79f; --green-bg:#22301f; --rust:#e0967f; --rust-bg:#3a221a;
+    --age0:#e8917a; --age1:#dfa94e; --age2:#ece7db; --age3:#8b8578;
   }
 }
 *{box-sizing:border-box}
@@ -103,9 +107,13 @@ a{color:inherit;text-decoration:none}
    so an em dash on a line of its own is just noise (hidden below). */
 .loc:empty::before{content:"—";color:var(--rule)}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;
-  vertical-align:1px}
-.d0{background:var(--rust)} .d1{background:var(--amber)}
-.d2{background:#c9a227} .d3{background:var(--rule)} .d4{background:var(--rule)}
+  vertical-align:1px;background:var(--age3)}
+/* Company name and status dot both take their colour from one class on the
+   row, so the two can never disagree about how fresh a posting is. */
+.a0 .co,.a0 .dot{color:var(--age0)} .a0 .dot{background:var(--age0)}
+.a1 .co,.a1 .dot{color:var(--age1)} .a1 .dot{background:var(--age1)}
+.a2 .co{color:var(--age2)}          .a2 .dot{background:var(--age2)}
+.a3 .co{color:var(--age3)}          .a3 .dot{background:var(--age3)}
 .acts{display:flex;align-items:center;justify-content:flex-end;gap:12px}
 .mark{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--secondary);
   cursor:pointer;user-select:none;white-space:nowrap}
@@ -344,6 +352,19 @@ function daysSince(iso) {
 }
 function ageKey(r) { var d = daysSince(r.first_seen); return d === null ? 1e9 : d; }
 
+/* Recency band, shared by the company name's colour and the status dot, and
+ * cut on the same boundaries as the dividers between age groups -- so a role
+ * under "Earlier this week" is never painted the colour of a stale one.
+ *   0 today · 1 this week · 2 this month · 3 older or undated */
+function ageBand(role) {
+  var d = daysSince(role.first_seen);
+  if (d === null) return 3;
+  if (d === 0) return 0;
+  if (d < 7) return 1;
+  if (d < 30) return 2;
+  return 3;
+}
+
 /* "~" marks a first-seen date rather than a real posting date, so an
  * estimate never reads as fact. */
 function status(role) {
@@ -354,8 +375,7 @@ function status(role) {
         : d < 60 ? "Opened " + Math.floor(d / 7) + "w ago"
         : "Opened " + Math.floor(d / 30) + "mo ago";
   if (!role.exact) t = t.replace("Opened ", "Seen ~");
-  var cls = d <= 0 ? "d0" : d <= 2 ? "d1" : d <= 6 ? "d2" : d <= 13 ? "d3" : "d4";
-  return '<span class="status"><i class="dot ' + cls + '"></i>' + esc(t) + "</span>";
+  return '<span class="status"><i class="dot"></i>' + esc(t) + "</span>";
 }
 
 function matches(role) {
@@ -393,7 +413,7 @@ function rowHTML(role, n, checked, copy) {
     : status(role);
   var tag = copy && !role.live
     ? '<span class="tag gone">No longer listed</span>' : "";
-  return '<div class="row' + (checked ? " done" : "") + '">' +
+  return '<div class="row a' + ageBand(role) + (checked ? " done" : "") + '">' +
     '<div class="rank">#' + n + "</div>" +
     '<div class="role">' +
       '<div class="co">' + esc(role.company) + "</div>" +
