@@ -128,10 +128,28 @@ footer so nothing vanishes silently:
 
 - **Older than 3 months** (`MAX_AGE_DAYS`) — almost always a stale listing
   still sitting on a board.
-- **Listed only in India** (`INDIA_RE`) — matched on country or major city
-  name. A role spanning Bangalore *and* London is still shown; only ones
-  where every listed location is Indian are dropped. Word boundaries keep
-  "Indiana" and "Indianapolis" from matching.
+- **Listed only outside the US** (`_non_us_only`) — on a recent scan this was
+  113 of 239 roles, so it's the filter that does the most work.
+
+  A place is read as foreign only when it names a non-US country or a major
+  foreign city (`NON_US_RE`) **and** carries no US signal — a US state name,
+  a two-letter state code beside a comma or ZIP (`US_ABBR_RE`), or a known US
+  city (`US_CITY_RE`). Anything else — an unrecognised place, `5 Locations`,
+  `Flexible - Any SpaceX Site` — is kept.
+
+  The asymmetry is deliberate. Showing a foreign role is a minor annoyance;
+  dropping a US one means never seeing it. So ambiguity always resolves
+  towards keeping: `London, KY` and `Cambridge, MA` stay, and a role spanning
+  Bangalore *and* Seattle stays, because only roles where **every** listed
+  place is confidently foreign are dropped.
+
+  The residual risk is a bare foreign city that also exists in the US —
+  `London`, `Dublin`, `Bristol`, `Melbourne` are all read as foreign when
+  they arrive with no country or state. On the scan this was built against
+  every one of those was genuinely foreign (Jump Trading's London and Bristol
+  desks, Amazon's Dublin hub, an Amazon role literally titled *Amazon
+  International*). If a US one ever gets caught, delete that city from
+  `NON_US_RE` — the qualified form (`Dublin, OH`) is already safe.
 
 Dates use **America/New_York**, not the runner's UTC clock — otherwise a run
 triggered after 8pm Eastern is stamped with tomorrow's date and roles read as
@@ -203,8 +221,8 @@ inversion of the same palette.
 
 The board and the email are two views of one scan, so the filtering lives in
 one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
-hidden from the email (older than `MAX_AGE_DAYS`, or listed only in India) is
-hidden from the board too.
+hidden from the email (older than `MAX_AGE_DAYS`, or listed only outside the
+US) is hidden from the board too.
 
 What differs is what gets sent. The email bakes in ages and buckets because
 it's read once, the morning it arrives. `site/roles.json` ships raw

@@ -623,7 +623,8 @@ function footer() {
   }
   var hid = [];
   if (data.hidden && data.hidden.old) hid.push(data.hidden.old + " older than 3 months");
-  if (data.hidden && data.hidden.india) hid.push(data.hidden.india + " listed only in India");
+  if (data.hidden && data.hidden.non_us)
+    hid.push(data.hidden.non_us + " listed only outside the US");
   if (hid.length) f.push("Hidden: " + hid.join(", ") + ".<br><br>");
   f.push("Dates are the employer's posting date where the job board exposes one. " +
     "<b>Seen ~</b> means that board doesn't, so the date shown is when this " +
