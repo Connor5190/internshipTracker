@@ -35,15 +35,86 @@ TZ = ZoneInfo("America/New_York")
 # Roles this old are almost always stale listings still sitting on a board.
 MAX_AGE_DAYS = 90
 
-# A role is dropped only when *every* location it lists is in India -- one
-# that spans Bangalore and London is still worth seeing. Word boundaries stop
-# fragments matching (e.g. "Pune" inside a longer word).
-INDIA_RE = re.compile(
-    r"\b(india|bangalore|bengaluru|hyderabad|mumbai|navi mumbai|new delhi|delhi"
-    r"|gurgaon|gurugram|noida|pune|chennai|kolkata|ahmedabad|jaipur|chandigarh"
-    r"|coimbatore|kochi|thiruvananthapuram|trivandrum|indore|vadodara|nagpur"
-    r"|mysore|mysuru|visakhapatnam|bhubaneswar|gandhinagar|thane)\b",
-    re.IGNORECASE,
+# Roles are dropped only when *every* place they list is confidently outside
+# the US. The asymmetry is deliberate: showing a foreign role is a minor
+# annoyance, dropping a US one means never seeing it, so anything short of
+# confident -- an unrecognised place name, "5 Locations", a city that reads
+# both ways -- is kept.
+US_RE = re.compile(
+    r"""\b(united\s+states(\s+of\s+america)?|u\.?s\.?a\.?
+    |alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware
+    |florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky
+    |louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi
+    |missouri|montana|nebraska|nevada|new\s+hampshire|new\s+jersey|new\s+mexico
+    |new\s+york|north\s+carolina|north\s+dakota|ohio|oklahoma|oregon
+    |pennsylvania|rhode\s+island|south\s+carolina|south\s+dakota|tennessee
+    |texas|utah|vermont|virginia|washington|west\s+virginia|wisconsin|wyoming
+    |district\s+of\s+columbia)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# A two-letter state only counts beside a comma, a space, or a ZIP, so
+# "Toronto, ON" can't be read as a US state and a stray "IN" or "OR" in prose
+# can't match at all.
+US_ABBR_RE = re.compile(
+    r"""(,\s*|\s)(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD
+    |MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT
+    |VT|VA|WA|WV|WI|WY|DC)\b(\s*\d{5})?""",
+    re.VERBOSE,
+)
+
+# Bare US city names, for boards that publish "Seattle" with no state.
+US_CITY_RE = re.compile(
+    r"""\b(new\s+york|nyc|chicago|seattle|bellevue|redmond|san\s+francisco
+    |san\s+jose|los\s+angeles|atlanta|austin|boston|miami|denver|dallas
+    |houston|phoenix|tempe|philadelphia|pittsburgh|detroit|minneapolis
+    |charlotte|nashville|orlando|tampa|sunnyvale|mountain\s+view|palo\s+alto
+    |santa\s+clara|cupertino|menlo\s+park|jersey\s+city|newark|greenwich
+    |stamford|hartford|columbus|cleveland|cincinnati|indianapolis|milwaukee
+    |kansas\s+city|st\.?\s+louis|salt\s+lake|portland|sacramento|san\s+diego
+    |irvine|costa\s+mesa|plano|richardson|arlington|reston|mclean|bethesda
+    |raleigh|durham|peoria|mossville|rochester|taylor|des\s+moines|ann\s+arbor
+    |boulder|provo|omaha|tucson|fremont|pleasanton|sant[ae]\s+monica)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+NON_US_RE = re.compile(
+    r"""\b(india|canada|mexico|brazil|argentina|chile|colombia|peru|uruguay
+    |costa\s+rica|united\s+kingdom|u\.?k\.?|england|scotland|wales|ireland
+    |france|germany|spain|portugal|italy|netherlands|belgium|switzerland
+    |austria|sweden|norway|denmark|finland|poland|czech(\s+republic)?|hungary
+    |romania|greece|turkey|russia|ukraine|israel|egypt|south\s+africa|nigeria
+    |kenya|morocco|saudi\s+arabia|qatar|kuwait|united\s+arab\s+emirates
+    |u\.?a\.?e\.?|china|japan|korea|taiwan|hong\s+kong|singapore|malaysia
+    |indonesia|thailand|vietnam|philippines|australia|new\s+zealand|pakistan
+    |bangladesh|sri\s+lanka|luxembourg|iceland|estonia|lithuania|latvia
+    |slovakia|slovenia|croatia|serbia|bulgaria
+    |bangalore|bengaluru|hyderabad|mumbai|new\s+delhi|delhi|gurgaon|gurugram
+    |noida|pune|chennai|kolkata|ahmedabad|jaipur|chandigarh|coimbatore|kochi
+    |thiruvananthapuram|trivandrum|indore|vadodara|nagpur|mysore|mysuru
+    |visakhapatnam|bhubaneswar|gandhinagar|thane
+    |toronto|montreal|ottawa|calgary|edmonton|winnipeg|halifax|quebec
+    |london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|belfast
+    |dublin|paris|lyon|marseille|berlin|munich|hamburg|frankfurt|cologne
+    |stuttgart|madrid|barcelona|lisbon|porto|rome|milan|turin|naples
+    |amsterdam|rotterdam|brussels|antwerp|zurich|geneva|basel|vienna
+    |stockholm|oslo|copenhagen|helsinki|warsaw|krakow|prague|budapest
+    |bucharest|athens|istanbul|moscow|kyiv|kiev|tel\s+aviv|jerusalem|haifa
+    |dubai|abu\s+dhabi|doha|riyadh|cairo|tokyo|osaka|kyoto|yokohama|nagoya
+    |seoul|busan|beijing|shanghai|shenzhen|guangzhou|hangzhou|chengdu|taipei
+    |kaohsiung|sydney|melbourne|brisbane|perth|canberra|auckland|wellington
+    |s[ao]o\s+paulo|rio\s+de\s+janeiro|brasilia|cajamar|nova\s+santa\s+rita
+    |bogot[aá]|medellin|lima|santiago|buenos\s+aires|montevideo|mexico\s+city
+    |guadalajara|monterrey|bangpa-?in|amphoe|bangkok|phuket|kojetin|brno
+    |ostrava|jakarta|surabaya|kuala\s+lumpur|manila|cebu|ho\s+chi\s+minh
+    |hanoi)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Boards that say only "5 Locations" or "Flexible" tell us nothing about the
+# country, so they are never grounds to drop a role.
+VAGUE_RE = re.compile(
+    r"^\s*(\d+\s+locations?|flexible\b.*|remote\b|multiple\b.*)\s*$", re.IGNORECASE
 )
 
 
@@ -51,13 +122,26 @@ def today_local() -> date:
     return datetime.now(TZ).date()
 
 
-def _india_only(m: dict) -> bool:
+def _place_is_non_us(part: str) -> bool:
+    """One listed place, confidently outside the US.
+
+    A part naming both -- "London, KY", "Birmingham, AL" -- is ambiguous, not
+    foreign, so it reads as US and keeps the role.
+    """
+    part = part.strip()
+    if not part or VAGUE_RE.match(part):
+        return False
+    us = bool(US_RE.search(part) or US_ABBR_RE.search(part) or US_CITY_RE.search(part))
+    return NON_US_RE.search(part) is not None and not us
+
+
+def _non_us_only(m: dict) -> bool:
     loc = (m.get("location") or "").strip()
     if not loc:
         return False
     parts = [p.strip() for p in re.split(r"[;/|]", loc) if p.strip()]
-    # Boards that only say "5 Locations" tell us nothing -- keep those.
-    return bool(parts) and all(INDIA_RE.search(p) for p in parts)
+    # A role spanning Bangalore *and* Seattle is still worth seeing.
+    return bool(parts) and all(_place_is_non_us(p) for p in parts)
 
 # Age chips are styled by CSS class rather than inline: with a few hundred
 # roles an inline style on every row costs ~15 KB on its own.
@@ -233,7 +317,7 @@ class Split(NamedTuple):
     rest: list[tuple[str, dict]]
     pages: list[tuple[str, dict]]
     hidden_old: int
-    hidden_india: int
+    hidden_non_us: int
 
 
 def _buckets(results: list[dict]) -> Split:
@@ -245,19 +329,19 @@ def _buckets(results: list[dict]) -> Split:
     out of the role sections entirely and listed separately as a nudge to go
     look manually.
 
-    Roles past MAX_AGE_DAYS, and roles listed only in India, are counted but
+    Roles past MAX_AGE_DAYS, and roles listed only outside the US, are counted but
     not shown. Filtering here rather than at render time keeps the stat row
     and the subject line agreeing with the body.
     """
     today, week, rest, pages = [], [], [], []
-    hidden_old = hidden_india = 0
+    hidden_old = hidden_non_us = 0
     for r in results:
         for m in r["matches"]:
             if m.get("matched_in") == "page":
                 pages.append((r["company"], m))
                 continue
-            if _india_only(m):
-                hidden_india += 1
+            if _non_us_only(m):
+                hidden_non_us += 1
                 continue
             days = _age_days(m)
             if days is not None and days > MAX_AGE_DAYS:
@@ -269,7 +353,7 @@ def _buckets(results: list[dict]) -> Split:
                 week.append((r["company"], m))
             else:
                 rest.append((r["company"], m))
-    return Split(today, week, rest, pages, hidden_old, hidden_india)
+    return Split(today, week, rest, pages, hidden_old, hidden_non_us)
 
 
 def build_subject(results: list[dict]) -> str:
@@ -285,7 +369,7 @@ def build_subject(results: list[dict]) -> str:
 
 def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
-    today, week, rest, pages, hidden_old, hidden_india = _buckets(results)
+    today, week, rest, pages, hidden_old, hidden_non_us = _buckets(results)
     total_roles = len(today) + len(week) + len(rest)
     role_companies = {c for c, _ in today + week + rest}
 
@@ -344,12 +428,12 @@ def build_html(results: list[dict]) -> str:
         p.append(f'<div class="r">{links}</div>')
 
     p.append('<div class="ft">')
-    if hidden_old or hidden_india:
+    if hidden_old or hidden_non_us:
         bits = []
         if hidden_old:
             bits.append(f"{hidden_old} older than 3 months")
-        if hidden_india:
-            bits.append(f"{hidden_india} listed only in India")
+        if hidden_non_us:
+            bits.append(f"{hidden_non_us} listed only outside the US")
         p.append(f"Hidden: {', '.join(bits)}.<br><br>")
     p.append(
         "Ages are the employer's posting date where the job board exposes one. "

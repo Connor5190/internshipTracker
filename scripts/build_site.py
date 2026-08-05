@@ -3,8 +3,8 @@
 
 The board and the daily email are two views of one scan, so the filtering
 lives in exactly one place: this reuses `format_recap._buckets`, which means
-a role hidden from the email (older than MAX_AGE_DAYS, or listed only in
-India) is hidden from the board too, and the two can't drift apart.
+a role hidden from the email (older than MAX_AGE_DAYS, or listed only
+outside the US) is hidden from the board too, and the two can't drift apart.
 
 What differs is what gets sent. The email bakes in ages and buckets because
 it's read once, the morning it arrives. The board can be left open for days,
@@ -65,7 +65,7 @@ def role_payload(company: str, m: dict) -> dict:
 
 
 def build(results: list[dict]) -> dict:
-    today, week, rest, pages, hidden_old, hidden_india = fr._buckets(results)
+    today, week, rest, pages, hidden_old, hidden_non_us = fr._buckets(results)
 
     roles = [role_payload(c, m) for c, m in today + week + rest]
     roles.sort(key=lambda r: (r["first_seen"] or "0000-00-00"), reverse=True)
@@ -91,7 +91,7 @@ def build(results: list[dict]) -> dict:
             ({"company": c, "url": m["url"]} for c, m in pages),
             key=lambda d: d["company"].lower(),
         ),
-        "hidden": {"old": hidden_old, "india": hidden_india},
+        "hidden": {"old": hidden_old, "non_us": hidden_non_us},
         "blocked": sorted(blocked),
         "errors": sorted(broken, key=lambda d: d["company"].lower()),
     }
