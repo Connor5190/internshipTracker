@@ -158,12 +158,24 @@ You can trigger a run manually from the Actions tab or with
 
 <https://connor5190.github.io/internshipTracker/>
 
-The same scan, as a page you can tick things off on. Every active role gets a
-checkbox. Ticking one leaves it where it is — greyed out but still under its
-company, still carrying its age chip, so you don't lose your place in a list
+The same scan, as a page you can tick things off on. Roles are one ranked
+table — `#1`, `#2`, … — sorted newest-first with a rule between each age
+band, or alphabetically by company. Search filters across company, role and
+location; `/` jumps to the box.
+
+Every role gets a checkbox. Ticking one leaves it where it is — greyed out
+but still in its place in the table, so you don't lose your spot in a list
 you're working down — and adds a copy to the **Applied** section at the
 bottom. Both copies have a checkbox and both write the same key, so unticking
-either one clears the pair.
+either one clears the pair. **Hide applied** drops the ticked ones out of the
+main table without touching the Applied list.
+
+The layout follows [internship-radar-2027.yuxhuang.com](https://internship-radar-2027.yuxhuang.com/):
+a briefing masthead with the week's count set large, stat tiles, then a dense
+ranked table. Georgia carries the numbers and company names, Arial everything
+functional, on warm paper (`#f4f0e7`) rather than white — both faces are
+web-safe, so there's no webfont for the page to wait on. Dark mode is a warm
+inversion of the same palette.
 
 The board and the email are two views of one scan, so the filtering lives in
 one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
