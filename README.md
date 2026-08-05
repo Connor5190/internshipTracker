@@ -103,31 +103,34 @@ configured in the workflow. Requires two repo secrets:
 The subject line carries the headline number (`🔥 27 new today · 283 open`)
 so a quiet day can be dismissed straight from the inbox.
 
-The recap itself (built by `scripts/format_recap.py`) is built for skimming
-on a phone. **Every role appears exactly once**, in the freshest bucket it
-qualifies for:
+The recap (built by `scripts/format_recap.py`) is **a digest of what's new**,
+not the full list. It carries only the last 7 days:
 
 - **🔥 Posted today** — newest first, roomy, at the top
 - **🆕 Earlier this week** — the rest of the last 7 days
-- **Still open** — the older backlog, as a dense one-line-per-role reference
-  sorted alphabetically by company
 - **Check by hand** — companies whose site has no structured job list, so
   all the scanner can say is "this page mentions your keywords". Listed as
   bare links rather than dumping the matched snippet
-- **Footer** — sites that block scrapers are collapsed to a name list, since
-  they fail identically every day; anything else that broke is spelled out,
-  so a genuinely new failure stands out
+- **Footer** — the backlog count with a link to the board; then sites that
+  block scrapers, collapsed to a name list since they fail identically every
+  day; anything else that broke is spelled out, so a genuinely new failure
+  stands out
+
+The older backlog is counted, not listed. It barely changes day to day, so
+re-sending it every morning only trains you to skim past the part that *is*
+new — and the board holds it in a form you can sort, search and tick off.
+Dropping it took a 300-role recap from ~35 KB to ~10 KB, comfortably clear of
+Gmail's ~102 KB clipping threshold even on a heavy day. The subject line and
+the stat row still count every open role, so the total never silently shrinks.
 
 Each role carries a colour-coded age chip (red today → grey for old). A `~`
 prefix (`~3w`) means the job board doesn't publish a posting date, so the
 age is measured from when this scanner first saw the role and may understate
 how old it really is.
 
-Two kinds of role are counted but not shown, with the tally noted in the
-footer so nothing vanishes silently:
+One kind of role is dropped outright, with the tally noted in the footer so
+nothing vanishes silently:
 
-- **Older than 3 months** (`MAX_AGE_DAYS`) — almost always a stale listing
-  still sitting on a board.
 - **Listed only outside the US** (`_non_us_only`) — on a recent scan this was
   113 of 239 roles, so it's the filter that does the most work.
 
@@ -219,10 +222,17 @@ functional, on warm paper (`#f4f0e7`) rather than white — both faces are
 web-safe, so there's no webfont for the page to wait on. Dark mode is a warm
 inversion of the same palette.
 
-The board and the email are two views of one scan, so the filtering lives in
-one place — `scripts/build_site.py` reuses `format_recap._buckets`, and a role
-hidden from the email (older than `MAX_AGE_DAYS`, or listed only outside the
-US) is hidden from the board too.
+The board and the email are two views of one scan, so what counts as a role
+at all is decided in one place — `scripts/build_site.py` reuses
+`format_recap._buckets`, and a role dropped as listed-only-outside-the-US is
+dropped from both.
+
+They deliberately differ on scope. The email is a digest of the last 7 days;
+the board is the full standing list, backlog included, because that's what
+you work down. **Nothing is dropped for age in either** — an old listing
+still sitting on a board is still a job you can apply to, and the board's
+newest-first sort and its grey oldest-band colour let stale ones sink on
+their own without hiding them.
 
 What differs is what gets sent. The email bakes in ages and buckets because
 it's read once, the morning it arrives. `site/roles.json` ships raw

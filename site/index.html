@@ -622,7 +622,6 @@ function footer() {
       }).join(" &nbsp;·&nbsp; ") + "<br><br>");
   }
   var hid = [];
-  if (data.hidden && data.hidden.old) hid.push(data.hidden.old + " older than 3 months");
   if (data.hidden && data.hidden.non_us)
     hid.push(data.hidden.non_us + " listed only outside the US");
   if (hid.length) f.push("Hidden: " + hid.join(", ") + ".<br><br>");

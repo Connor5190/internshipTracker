@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
 """Turn the enriched scan into the JSON the GitHub Pages board reads.
 
-The board and the daily email are two views of one scan, so the filtering
-lives in exactly one place: this reuses `format_recap._buckets`, which means
-a role hidden from the email (older than MAX_AGE_DAYS, or listed only
-outside the US) is hidden from the board too, and the two can't drift apart.
+The board and the daily email are two views of one scan, so what counts as a
+role at all is decided in exactly one place: this reuses
+`format_recap._buckets`, which means a role dropped as listed-only-outside-
+the-US is dropped from both, and the two can't drift apart on that.
 
-What differs is what gets sent. The email bakes in ages and buckets because
-it's read once, the morning it arrives. The board can be left open for days,
-so it ships `first_seen` and lets the page recompute ages and buckets from
-the reader's own clock -- a tab open since Monday shouldn't still be calling
-Monday's postings "today".
+They deliberately differ on scope. The email is a digest of what's new, so
+it renders only today and this week and links here for the rest; the board
+is the full standing list, backlog included, because that's what you work
+down. Nothing is dropped for age in either -- an old listing still on a
+board is still a job, and the board sorts and colours by age well enough
+that stale ones sink on their own.
+
+They also differ on what gets sent. The email bakes in ages and buckets
+because it's read once, the morning it arrives. The board can be left open
+for days, so it ships `first_seen` and lets the page recompute ages and
+buckets from the reader's own clock -- a tab open since Monday shouldn't
+still be calling Monday's postings "today".
 
 Each role carries a stable `id` (a hash of its URL, the same key the ledger
 uses) so the applied-checkbox state can be stored against something that
@@ -65,7 +72,7 @@ def role_payload(company: str, m: dict) -> dict:
 
 
 def build(results: list[dict]) -> dict:
-    today, week, rest, pages, hidden_old, hidden_non_us = fr._buckets(results)
+    today, week, rest, pages, hidden_non_us = fr._buckets(results)
 
     roles = [role_payload(c, m) for c, m in today + week + rest]
     roles.sort(key=lambda r: (r["first_seen"] or "0000-00-00"), reverse=True)
@@ -91,7 +98,7 @@ def build(results: list[dict]) -> dict:
             ({"company": c, "url": m["url"]} for c, m in pages),
             key=lambda d: d["company"].lower(),
         ),
-        "hidden": {"old": hidden_old, "non_us": hidden_non_us},
+        "hidden": {"non_us": hidden_non_us},
         "blocked": sorted(blocked),
         "errors": sorted(broken, key=lambda d: d["company"].lower()),
     }
