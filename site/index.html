@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none}
   padding:8px 13px;border-radius:2px}
 
 /* ------------------------------------------------------------ table */
-.thead,.row{display:grid;grid-template-columns:62px minmax(0,1fr) 190px 150px 172px;
+.thead,.row{display:grid;grid-template-columns:62px minmax(0,1fr) 165px 140px 252px;
   gap:16px;align-items:center}
 .thead{padding:22px 0 7px;border-bottom:1px solid var(--ink);
   font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
@@ -126,6 +126,11 @@ a{color:inherit;text-decoration:none}
   margin-top:6px}
 .row.done .co,.row.done .title{color:var(--secondary)}
 .row.done .co{font-style:italic}
+/* Only ever seen with "Show ignored" on, so it has to read as set-aside at a
+   glance without becoming unreadable -- struck name, everything else dimmed. */
+.row.ign{opacity:.55}
+.row.ign .co{text-decoration:line-through;color:var(--secondary)}
+.row.ign .apply{background:var(--secondary)}
 .gone{background:var(--rust-bg);color:var(--rust)}
 .empty{padding:26px 0;font-size:14px;color:var(--secondary)}
 
@@ -205,6 +210,8 @@ footer a:hover{text-decoration:underline}
         </select>
       </div>
       <label class="toggle"><input type="checkbox" id="hide"> Hide applied</label>
+      <label class="toggle"><input type="checkbox" id="showign">
+        <span id="ignlabel">Show ignored</span></label>
       <span class="showing" id="showing">—</span>
     </div>
   </div>
@@ -228,11 +235,11 @@ footer a:hover{text-decoration:underline}
  * With no URL configured the same interface is backed by localStorage, so
  * the page is never broken -- just not shared, which the banner says out loud.
  */
-var Store = (function () {
+function makeStore(node) {
   var raw = (window.TRACKER_CONFIG && window.TRACKER_CONFIG.databaseURL || "").trim();
   var db = raw.replace(/\/+$/, "");
   var ok = /^https:\/\/[\w.-]+\.(firebaseio\.com|firebasedatabase\.app)$/.test(db);
-  var KEY = "internship-tracker-applied";
+  var KEY = "internship-tracker-" + node;
 
   function localRead() {
     try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
@@ -256,7 +263,7 @@ var Store = (function () {
     };
   }
 
-  var url = function (path) { return db + "/applied" + path + ".json"; };
+  var url = function (path) { return db + "/" + node + path + ".json"; };
 
   function load() {
     return fetch(url(""), { cache: "no-store" })
@@ -321,14 +328,22 @@ var Store = (function () {
         .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); });
     }
   };
-})();
+}
+
+// Two independent lists under two nodes, rather than one list with a state
+// field: a role can be both (applied, then decided against) without either
+// flag having to know about the other.
+var Applied = makeStore("applied");
+var Ignored = makeStore("ignored");
 
 /* ------------------------------------------------------------------ state */
 var data = null;          // roles.json
 var applied = {};         // id -> {at, company, title, url}
+var ignored = {};         // id -> {at, company, title, url}
 var query = "";
 var sortBy = "new";
 var hideApplied = false;
+var showIgnored = false;
 
 var $ = function (id) { return document.getElementById(id); };
 
@@ -413,7 +428,9 @@ function rowHTML(role, n, checked, copy) {
     : status(role);
   var tag = copy && !role.live
     ? '<span class="tag gone">No longer listed</span>' : "";
-  return '<div class="row a' + ageBand(role) + (checked ? " done" : "") + '">' +
+  var ign = !copy && ignored[role.id];
+  return '<div class="row a' + ageBand(role) + (checked ? " done" : "") +
+      (ign ? " ign" : "") + '">' +
     '<div class="rank">#' + n + "</div>" +
     '<div class="role">' +
       '<div class="co">' + esc(role.company) + "</div>" +
@@ -423,9 +440,15 @@ function rowHTML(role, n, checked, copy) {
     '<div class="loc">' + esc(role.location) + "</div>" +
     '<div class="st">' + right + "</div>" +
     '<div class="acts">' +
-      '<label class="mark"><input type="checkbox" data-id="' + esc(role.id) + '"' +
-        (checked ? " checked" : "") + ' aria-label="Applied to ' + esc(role.title) +
-        ' at ' + esc(role.company) + '"> Applied</label>' +
+      '<label class="mark"><input type="checkbox" data-kind="applied" data-id="' +
+        esc(role.id) + '"' + (checked ? " checked" : "") + ' aria-label="Applied to ' +
+        esc(role.title) + ' at ' + esc(role.company) + '"> Applied</label>' +
+      // The Applied copy at the bottom is a record of a decision already
+      // made; offering to ignore it there would just be a way to lose it.
+      (copy ? "" :
+      '<label class="mark"><input type="checkbox" data-kind="ignored" data-id="' +
+        esc(role.id) + '"' + (ign ? " checked" : "") + ' aria-label="Not interested in ' +
+        esc(role.title) + ' at ' + esc(role.company) + '"> Ignore</label>') +
       '<a class="apply" href="' + esc(role.url) + '" target="_blank" rel="noopener">' +
         "Apply &rarr;</a>" +
     "</div></div>";
@@ -434,16 +457,18 @@ function rowHTML(role, n, checked, copy) {
 function render() {
   if (!data) return;
 
-  var shown = [], left = 0, todayLeft = 0, weekLeft = 0;
+  var shown = [], left = 0, todayLeft = 0, weekLeft = 0, ignoredCount = 0;
   data.roles.forEach(function (r) {
-    // The tiles count what's still to do, so they ignore both the search box
-    // and anything already ticked.
-    if (!applied[r.id]) {
+    // The tiles count what's still to do, so they discount the search box,
+    // anything already applied to, and anything explicitly ignored.
+    if (ignored[r.id]) ignoredCount++;
+    else if (!applied[r.id]) {
       left++;
       var n = daysSince(r.first_seen);
       if (n === 0) todayLeft++;
       else if (n !== null && n < 7) weekLeft++;
     }
+    if (ignored[r.id] && !showIgnored) return;
     if (hideApplied && applied[r.id]) return;
     if (matches(r)) shown.push(r);
   });
@@ -491,6 +516,8 @@ function render() {
       '<div class="lbl">' + t[0] + '</div><div class="num">' + t[1] + "</div></div>";
   }).join("");
   $("showing").textContent = shown.length + " of " + data.roles.length + " showing";
+  $("ignlabel").textContent = ignoredCount ? "Show ignored (" + ignoredCount + ")"
+                                           : "Show ignored";
 
   // ---- table
   var h = ['<div class="thead"><div>No.</div><div>Role</div><div>Location</div>' +
@@ -531,15 +558,20 @@ document.addEventListener("change", function (ev) {
   var box = ev.target;
   if (!box.matches || !box.matches('input[type=checkbox][data-id]')) return;
   var id = box.getAttribute("data-id");
+  var kind = box.getAttribute("data-kind");
+  var map = kind === "ignored" ? ignored : applied;
+  var store = kind === "ignored" ? Ignored : Applied;
   var role = null;
   data.roles.forEach(function (r) { if (r.id === id) role = r; });
 
-  if (applied[id]) {
-    var prev = applied[id];
-    delete applied[id];
+  // Optimistic either way: the row redraws immediately and only rolls back if
+  // the write actually fails, so a tick never waits on the network.
+  if (map[id]) {
+    var prev = map[id];
+    delete map[id];
     render();
-    Store.remove(id).catch(function () {
-      applied[id] = prev; render(); toast("Couldn't save — check your connection");
+    store.remove(id).catch(function () {
+      map[id] = prev; render(); toast("Couldn't save — check your connection");
     });
   } else {
     var entry = {
@@ -548,10 +580,10 @@ document.addEventListener("change", function (ev) {
       title: role ? role.title : "",
       url: role ? role.url : ""
     };
-    applied[id] = entry;
+    map[id] = entry;
     render();
-    Store.set(id, entry).catch(function () {
-      delete applied[id]; render(); toast("Couldn't save — check your connection");
+    store.set(id, entry).catch(function () {
+      delete map[id]; render(); toast("Couldn't save — check your connection");
     });
   }
 });
@@ -562,6 +594,7 @@ $("q").addEventListener("input", function (e) {
 });
 $("sort").addEventListener("change", function (e) { sortBy = e.target.value; render(); });
 $("hide").addEventListener("change", function (e) { hideApplied = e.target.checked; render(); });
+$("showign").addEventListener("change", function (e) { showIgnored = e.target.checked; render(); });
 
 // "/" focuses search, the way the reference board does.
 document.addEventListener("keydown", function (e) {
@@ -570,7 +603,7 @@ document.addEventListener("keydown", function (e) {
 
 /* ------------------------------------------------------------------- boot */
 function banner() {
-  if (Store.configured) return;
+  if (Applied.configured) return;
   $("banner").innerHTML = '<div class="banner"><b>This browser only.</b> ' +
     "Applied ticks aren't shared yet — they're saved locally and won't follow " +
     "you to another device. Add your Firebase Realtime Database URL to " +
@@ -627,20 +660,28 @@ fetch("roles.json", { cache: "no-store" })
       " companies have matches";
     footer();
     render();
-    return Store.load();
+    return Promise.all([Applied.load(), Ignored.load()]);
   })
-  .then(function (state) {
-    applied = state || {};
+  .then(function (states) {
+    applied = states[0] || {};
+    ignored = states[1] || {};
     render();
-    Store.subscribe(function (replace, merge) {
-      if (merge) {
-        Object.keys(merge).forEach(function (k) {
-          if (merge[k] === null) delete applied[k]; else applied[k] = merge[k];
-        });
-      } else {
-        applied = replace || {};
-      }
-      render();
+    // Same merge semantics for both lists: a whole-tree replace, or a patch
+    // where a null value means the key was deleted.
+    [[Applied, "applied"], [Ignored, "ignored"]].forEach(function (pair) {
+      pair[0].subscribe(function (replace, merge) {
+        var map = pair[1] === "ignored" ? ignored : applied;
+        if (merge) {
+          Object.keys(merge).forEach(function (k) {
+            if (merge[k] === null) delete map[k]; else map[k] = merge[k];
+          });
+        } else if (pair[1] === "ignored") {
+          ignored = replace || {};
+        } else {
+          applied = replace || {};
+        }
+        render();
+      });
     });
   })
   .catch(function (e) {
