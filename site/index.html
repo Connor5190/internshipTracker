@@ -209,6 +209,8 @@ footer a:hover{text-decoration:underline}
           <option value="co">Company A–Z</option>
         </select>
       </div>
+      <label class="toggle"><input type="checkbox" id="usonly" checked>
+        <span id="uslabel">Only USA</span></label>
       <label class="toggle"><input type="checkbox" id="hide"> Hide applied</label>
       <label class="toggle"><input type="checkbox" id="showign">
         <span id="ignlabel">Show ignored</span></label>
@@ -344,6 +346,9 @@ var query = "";
 var sortBy = "new";
 var hideApplied = false;
 var showIgnored = false;
+// A view preference, not shared state -- it belongs to the device you're
+// reading on, so it stays in localStorage rather than Firebase. Defaults on.
+var usOnly = localStorage.getItem("internship-tracker-us-only") !== "0";
 
 var $ = function (id) { return document.getElementById(id); };
 
@@ -458,7 +463,12 @@ function render() {
   if (!data) return;
 
   var shown = [], left = 0, todayLeft = 0, weekLeft = 0, ignoredCount = 0;
+  var nonUsCount = 0;
   data.roles.forEach(function (r) {
+    if (r.non_us) nonUsCount++;
+    // "Only USA" is a filter on the whole board, so it comes before the
+    // tallies -- a role you've filtered out isn't work you have left.
+    if (usOnly && r.non_us) return;
     // The tiles count what's still to do, so they discount the search box,
     // anything already applied to, and anything explicitly ignored.
     if (ignored[r.id]) ignoredCount++;
@@ -518,6 +528,10 @@ function render() {
   $("showing").textContent = shown.length + " of " + data.roles.length + " showing";
   $("ignlabel").textContent = ignoredCount ? "Show ignored (" + ignoredCount + ")"
                                            : "Show ignored";
+  // Naming the cost makes the switch honest: you can see what turning it off
+  // would give you back before you decide.
+  $("uslabel").textContent = nonUsCount ? "Only USA (" + nonUsCount + " elsewhere)"
+                                        : "Only USA";
 
   // ---- table
   var h = ['<div class="thead"><div>No.</div><div>Role</div><div>Location</div>' +
@@ -595,6 +609,11 @@ $("q").addEventListener("input", function (e) {
 $("sort").addEventListener("change", function (e) { sortBy = e.target.value; render(); });
 $("hide").addEventListener("change", function (e) { hideApplied = e.target.checked; render(); });
 $("showign").addEventListener("change", function (e) { showIgnored = e.target.checked; render(); });
+$("usonly").addEventListener("change", function (e) {
+  usOnly = e.target.checked;
+  try { localStorage.setItem("internship-tracker-us-only", usOnly ? "1" : "0"); } catch (x) {}
+  render();
+});
 
 // "/" focuses search, the way the reference board does.
 document.addEventListener("keydown", function (e) {
@@ -621,10 +640,6 @@ function footer() {
           esc(m.company) + "</a>";
       }).join(" &nbsp;·&nbsp; ") + "<br><br>");
   }
-  var hid = [];
-  if (data.hidden && data.hidden.non_us)
-    hid.push(data.hidden.non_us + " listed only outside the US");
-  if (hid.length) f.push("Hidden: " + hid.join(", ") + ".<br><br>");
   f.push("Dates are the employer's posting date where the job board exposes one. " +
     "<b>Seen ~</b> means that board doesn't, so the date shown is when this " +
     "scanner first saw the role — it may be older.");
@@ -643,6 +658,9 @@ function footer() {
 }
 
 banner();
+// The markup ships checked; a stored "off" has to be reflected before the
+// first render, or the box and the list would disagree.
+$("usonly").checked = usOnly;
 
 fetch("roles.json", { cache: "no-store" })
   .then(function (r) {

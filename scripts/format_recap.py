@@ -317,7 +317,6 @@ class Split(NamedTuple):
     week: list[tuple[str, dict]]
     rest: list[tuple[str, dict]]
     pages: list[tuple[str, dict]]
-    hidden_non_us: int
 
 
 def _buckets(results: list[dict]) -> Split:
@@ -329,23 +328,17 @@ def _buckets(results: list[dict]) -> Split:
     out of the role sections entirely and listed separately as a nudge to go
     look manually.
 
-    Roles listed only outside the US are counted but not shown. Filtering
-    here rather than at render time keeps the stat row and the subject line
-    agreeing with the body.
-
-    Age is *not* a reason to drop a role. An old listing that's still on a
-    board is still a job you could apply to, and the board sorts and colours
-    by age well enough that stale ones sink on their own.
+    Nothing is dropped here. Age isn't a reason -- an old listing still on a
+    board is still a job you could apply to -- and neither is location: the
+    email shows every role it finds, and the board makes "only USA" a switch
+    the reader flips, using the per-role flag `build_site.py` attaches with
+    `_non_us_only`. A filter nobody can see is a filter nobody can correct.
     """
     today, week, rest, pages = [], [], [], []
-    hidden_non_us = 0
     for r in results:
         for m in r["matches"]:
             if m.get("matched_in") == "page":
                 pages.append((r["company"], m))
-                continue
-            if _non_us_only(m):
-                hidden_non_us += 1
                 continue
             if m.get("is_today"):
                 today.append((r["company"], m))
@@ -353,7 +346,7 @@ def _buckets(results: list[dict]) -> Split:
                 week.append((r["company"], m))
             else:
                 rest.append((r["company"], m))
-    return Split(today, week, rest, pages, hidden_non_us)
+    return Split(today, week, rest, pages)
 
 
 def build_subject(results: list[dict]) -> str:
@@ -369,7 +362,7 @@ def build_subject(results: list[dict]) -> str:
 
 def build_html(results: list[dict]) -> str:
     failed = [r for r in results if r["error"]]
-    today, week, rest, pages, hidden_non_us = _buckets(results)
+    today, week, rest, pages = _buckets(results)
     total_roles = len(today) + len(week) + len(rest)
     role_companies = {c for c, _ in today + week + rest}
 
@@ -434,8 +427,6 @@ def build_html(results: list[dict]) -> str:
             f'<a class="d" href="{BOARD_URL}">see the full board</a>, where you '
             "can tick them off as you apply.<br><br>"
         )
-    if hidden_non_us:
-        p.append(f"Hidden: {hidden_non_us} listed only outside the US.<br><br>")
     p.append(
         "Ages are the employer's posting date where the job board exposes one. "
         "A <b>~</b> means that board doesn't, so the date shown is when this "
