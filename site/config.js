@@ -21,6 +21,12 @@
 //
 // Left blank, the page still works: it falls back to storing state in this
 // browser only, and says so in a banner.
+// Where the board's "Re-scan now" and "Email me the recap" buttons send
+// their request. This is the Cloudflare Worker in `worker/` -- it holds the
+// GitHub token so the page never has to. Left blank, both buttons are
+// hidden and everything else works as before. See README "Run it from the
+// board" for the deploy steps.
 window.TRACKER_CONFIG = {
   databaseURL: "https://internship-tracker-b0a79-default-rtdb.firebaseio.com/",
+  triggerURL: "",
 };
