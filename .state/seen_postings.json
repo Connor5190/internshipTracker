@@ -604,10 +604,30 @@
     "first_seen": "2026-08-05",
     "title": "Services - Summer Analyst, Hong Kong, 2027"
   },
+  "https://jobs.citi.com/job/irving/functions-internal-audit-summer-analyst-dallas-usa-2027/287/93639707136": {
+    "company": "Citibank",
+    "first_seen": "2026-08-06",
+    "title": "Functions - Internal Audit, Summer Analyst, Dallas - USA, 2027"
+  },
   "https://jobs.citi.com/job/mississauga/functions-internal-audit-summer-analyst-mississauga-on-2027/287/93639707120": {
     "company": "Citibank",
     "first_seen": "2026-08-05",
     "title": "Functions - Internal Audit, Summer Analyst - Mississauga, ON 2027"
+  },
+  "https://jobs.citi.com/job/new-york/functions-internal-audit-summer-analyst-new-york-usa-2027/287/98836136896": {
+    "company": "Citibank",
+    "first_seen": "2026-08-06",
+    "title": "Functions - Internal Audit, Summer Analyst, New York - USA, 2027"
+  },
+  "https://jobs.citi.com/job/shanghai/banking-commercial-banking-summer-analyst-china-apac-2027/287/98836109904": {
+    "company": "Citibank",
+    "first_seen": "2026-08-06",
+    "title": "Banking - Commercial Banking, Summer Analyst, China \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/shanghai/banking-corporate-banking-summer-analyst-china-apac-2027/287/98836109920": {
+    "company": "Citibank",
+    "first_seen": "2026-08-06",
+    "title": "Banking - Corporate Banking, Summer Analyst, China \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/shanghai/services-summer-analyst-china-2027/287/98171092400": {
     "company": "Citibank",
@@ -623,6 +643,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-05",
     "title": "Services - Summer Analyst, Singapore, 2027"
+  },
+  "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/93639707152": {
+    "company": "Citibank",
+    "first_seen": "2026-08-06",
+    "title": "Functions - Internal Audit, Summer Analyst, Tampa - USA, 2027"
   },
   "https://jobs.citi.com/search-jobs/intern": {
     "company": "Citibank",
@@ -1433,6 +1458,41 @@
     "company": "Amazon",
     "first_seen": "2026-07-24",
     "title": "Product Marketing AI Specialist Intern, Compliance, Amazon Global Selling"
+  },
+  "https://www.amazon.jobs/en/jobs/10484369/operations-logistics-internship-piemonte-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Piemonte - Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484409/operations-logistics-internship-lombardia-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Lombardia - Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484439/operations-logistics-internship-lazio-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Lazio - Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484489/operations-logistics-internship-veneto-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Veneto - Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484559/operations-logistics-internship-emilia-romagna-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Emilia Romagna- Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484579/operations-logistics-internship-friuli-venezia-giulia-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Friuli Venezia Giulia- Talent Pool"
+  },
+  "https://www.amazon.jobs/en/jobs/10484620/operations-logistics-internship-abruzzo-talent-pool": {
+    "company": "Amazon",
+    "first_seen": "2026-08-06",
+    "title": "Operations & Logistics Internship Abruzzo - Talent Pool"
   },
   "https://www.amazon.jobs/en/jobs/10485916/operations-logistics-internship-amazon-logistics": {
     "company": "Amazon",
