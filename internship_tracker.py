@@ -548,6 +548,40 @@ def fetch_oracle_cloud(session: requests.Session, host: str, site: str,
     return (postings, label) if postings else None
 
 
+RADANCY_JOB_CITY_RE = re.compile(r"/job/([^/]+)/")
+
+
+def radancy_location(link) -> str:
+    """Pull a posting's location out of a Radancy search result.
+
+    Themes disagree on the markup -- Boeing uses
+    `search-results__job-info location`, Barclays and BlackRock `job-location`,
+    Citi `sr-job-location` -- but all of them put "location" in the class name,
+    and the element sits either inside the job link or just outside it. So walk
+    outwards from the link and take the first location found, stopping if the
+    node we're looking at has grown to cover more than one posting: the shared
+    results container would otherwise hand back a neighbour's city.
+
+    Falls back to the city slug in the URL (/job/singapore/..., /job/everett/),
+    which every Radancy site has. Returning "" would be worse than a rough
+    guess here -- an empty location reads downstream as "not known to be
+    outside the US", which puts London and Singapore roles in the US bucket.
+    """
+    node = link
+    for _ in range(5):
+        if node is None or len(node.select("a[href*='/job/']")) > 1:
+            break
+        found = node.select_one("[class*=location]")
+        if found:
+            text = found.get_text(" ", strip=True)
+            if text:
+                return text
+        node = node.parent
+
+    m = RADANCY_JOB_CITY_RE.search(link.get("href") or "")
+    return m.group(1).replace("-", " ").title() if m else ""
+
+
 def fetch_radancy(session: requests.Session, base: str, label: str):
     """Radancy-powered job sites (e.g. lockheedmartinjobs.com)."""
     postings, seen = [], set()
@@ -580,7 +614,8 @@ def fetch_radancy(session: requests.Session, base: str, label: str):
             title = h2.get_text(strip=True) if h2 else a.get_text(" ", strip=True)
             url = href if href.startswith("http") else base + href
             postings.append({
-                "title": title, "url": url, "location": "", "text": "",
+                "title": title, "url": url,
+                "location": radancy_location(a), "text": "",
                 "_detail": url, "_detail_kind": "page",
             })
         if new == 0:
