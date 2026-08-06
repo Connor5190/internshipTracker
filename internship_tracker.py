@@ -21,6 +21,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from datetime import date, datetime, timedelta
+from urllib.parse import urlsplit
 
 import requests
 from bs4 import BeautifulSoup
@@ -587,6 +588,20 @@ def fetch_radancy(session: requests.Session, base: str, label: str):
     return (postings, label) if postings else None
 
 
+def fetch_radancy_site(session: requests.Session, url: str):
+    """Radancy site detected from a plain careers URL rather than a per-company
+    entry. Every Radancy deployment serves the same /search-jobs/results
+    endpoint on its own origin, so a careers URL like
+    https://jobs.boeing.com/internships -- a marketing page with no job data in
+    it -- still tells us where the real board is. Returns None when the origin
+    isn't Radancy, so callers can fall back to other methods."""
+    parts = urlsplit(url)
+    if not parts.scheme or not parts.netloc:
+        return None
+    return fetch_radancy(session, f"{parts.scheme}://{parts.netloc}",
+                         parts.netloc)
+
+
 def fetch_atlassian(session: requests.Session):
     """Atlassian publishes all listings as JSON at a public endpoint."""
     data = get_json(session, "https://www.atlassian.com/endpoint/careers/listings")
@@ -1087,6 +1102,18 @@ def scan_company(company: str, url: str | None, term: str,
     # rather than URL shape.
     if postings is None and url and not url_is_recognized_ats:
         fetched = fetch_icims_jibe(session, url)
+        if fetched is not None:
+            url_is_recognized_ats = True
+            if fetched[0]:
+                postings, result.source = fetched
+
+    # Same again for Radancy sites (jobs.boeing.com, search.jobs.barclays,
+    # careers.blackrock.com, ...). Worth trying before the slug guessing
+    # below: the careers URL we were given is often a landing page whose
+    # visible text mentions internships without listing any, which would
+    # otherwise fall through to flat-text scraping and silently find nothing.
+    if postings is None and url and not url_is_recognized_ats:
+        fetched = fetch_radancy_site(session, url)
         if fetched is not None:
             url_is_recognized_ats = True
             if fetched[0]:

@@ -1,6 +1,6 @@
 # Internship Tracker
 
-Scans ~445 companies' career sites for internship roles matching **summer** or
+Scans ~505 companies' career sites for internship roles matching **summer** or
 **2027** (either one counts, postings mentioning **2026** are excluded), and
 emails a daily recap of what's new.
 
@@ -22,10 +22,13 @@ whatever will get real, structured job data rather than scraping raw HTML:
      JSON in a `<script>` tag.
    - **iCIMS "Jibe"** — a same-origin `/api/jobs` endpoint the page's own JS
      calls.
+   - **Radancy** — a `/search-jobs/results` endpoint on the site's own
+     origin. Worth trying even when the careers URL is a marketing landing
+     page (e.g. `jobs.boeing.com/internships`), since the real board lives on
+     the same host.
 3. **Company-specific fetchers** for large employers with their own systems
    (Amazon, Google, Apple, Atlassian, JPMorgan Chase-style Oracle Recruiting
-   Cloud tenants, Radancy-powered sites, etc.) — see `KNOWN_COMPANIES` in
-   `internship_tracker.py`.
+   Cloud tenants, etc.) — see `KNOWN_COMPANIES` in `internship_tracker.py`.
 4. **Sitemap + detail-page scanning**: for career sites that are
    JavaScript-rendered on the listing page but publish a job sitemap *and*
    server-render individual job pages, the sitemap is fetched and every job
