@@ -251,8 +251,8 @@ it's read once, the morning it arrives. `site/roles.json` ships raw
 `first_seen` dates and the page recomputes ages in the browser — a tab left
 open since Monday shouldn't still be calling Monday's postings "today".
 
-Every role gets a **Résumé** button too — a one-page cut of
-`master_resume.tex` chosen for that posting. See
+Every role gets a **Generate** button too, which asks Claude for a one-page
+cut of `master_resume.tex` aimed at that posting. See
 [Tailored resumes](#tailored-resumes).
 
 `.github/workflows/update-board.yml` scans and publishes `site/` via
@@ -260,7 +260,7 @@ Every role gets a **Résumé** button too — a one-page cut of
 America/New_York**. Twice a day keeps the board under ~12 hours stale: the
 morning run lands just before the 7am recap, so clicking through from the
 email hits fresh data, and the evening run picks up the day's later postings.
-`site/roles.json` and `site/resumes/` are generated, not committed.
+`site/roles.json` and `site/master.json` are generated, not committed.
 
 Both workflows scan independently and both write `.state/seen_postings.json`,
 so each pushes the ledger with a rebase-and-retry rather than a bare `git
@@ -312,73 +312,104 @@ from a browser — leave it pointed at the board.
 
 ### Tailored resumes
 
-`master_resume.tex` is deliberately too full — every project, every
-internship, every skill, which is about 1.35 pages of a 1-page document.
-`scripts/tailor_resume.py` parses it into blocks and cuts a one-page version
-per role; **Résumé** on any row opens it.
+`master_resume.tex` is deliberately too full — every project, every internship,
+every skill, about 1.35 pages of a 1-page document. Press **Generate** on a row
+and Claude cuts it down to that one posting: reading the posting itself where
+the job board allows it, choosing what to keep, and rewriting bullets to lead
+with what this employer asked for.
 
-It never writes a word. Every bullet, date and skill is copied verbatim from
-the master — tailoring here means *selecting and ordering*, and nothing else.
-There's no model in the loop, so there's nothing to check for invention.
+It runs **once per role, when you ask for it.** The board carries hundreds of
+roles and you will apply to a handful, so generating up front would mean paying
+for hundreds of resumes to use ten. The answer is stored in the same Firebase
+the applied ticks live in, so it follows you to another device and is never
+regenerated — pressing the button again is one API call for the life of that
+role. **Regenerate** in the modal replaces it, and asks first.
 
-Two signals decide what stays:
+Roughly $0.18 a role: `claude-opus-5`, about 7K tokens in (the master plus the
+posting) and 6K out including thinking.
 
-- **Domain coverage** — posting and block are both scored over `DOMAINS` (ml,
-  infra, quant, vision, …). Terms in the posting's *title* count triple; a
-  title is three deliberate words where a company name is mostly brand noise.
-  Not cosine: cosine compares *composition*, so a two-line entry whose only
-  technical phrase is "Software Engineer Intern" scored as well against a
-  backend posting as one spending nine terms on cloud infrastructure. Blocks
-  are scored on absolute evidence instead, saturating at three terms.
-- **Shared technology** — the master's own skills line doubles as the
-  vocabulary of concrete tools, so a posting that says "Terraform" and a
-  bullet that says "Terraform" is scored directly, and weighted above theme.
+#### It cannot invent a job
 
-Both vocabularies come out of the master, so editing it re-tunes the scoring
-for free. There's no per-entry tag table to keep in sync.
+The model is shown `site/master.json` — the master parsed into **plain text**
+by [`scripts/parse_resume.py`](scripts/parse_resume.py) — and answers in plain
+text against a JSON schema. It never reads or writes LaTeX. The board escapes
+its way back to LaTeX for the `.tex` download. So the worst a bad answer can be
+is a bad sentence: not an unbalanced brace, not a broken document, not an
+injected macro.
 
-What comes out in what order is not a scoring decision. **Experience stays
-reverse-chronological** — relevance decides what gets cut, never what leads,
-and a resume with its jobs out of date order reads as one with something to
-hide. The most recent entry is never cut at all, whatever it scores; a
-missing current internship reads as a gap, not as focus. **Projects reorder
-freely**, since they carry no dates and nobody expects an order.
+`validate` in [`worker/resume.js`](worker/resume.js) then checks the answer
+against the master before it reaches the page, and a failing answer is sent
+back once with its errors and then refused:
 
-Selection runs in three passes: drop what's off-topic, trim bullets (never
-below two) and then whole entries until it fits, then pull the best of the
-dropped ones back in if the page came out thin. A tailored resume that's
-half empty reads as a thin candidate.
+- Every entry is returned by `id` and must exist in the master, in the section
+  the master puts it in, once. There is no way to express an employer, a title,
+  a date or a degree that isn't already yours.
+- Every bullet names the master bullet it came from. Rewriting is the point —
+  reword, reorder, cut detail, adopt the posting's vocabulary — but the source
+  has to exist.
+- **Every number in a rewritten bullet must appear in its source bullet.** This
+  is the fabrication that actually matters on a resume: an invented "40%" reads
+  exactly like a real one, and no amount of prompt instruction is a guarantee.
+  A rounded number is caught too — `30%` cannot become `35%`.
+- Skills must come from the master's list, and are re-emitted in the master's
+  spelling and the master's order. The list is grouped (languages, then ML,
+  then cloud); a resorted run reads as a keyword dump.
 
-Fitting is a line-count estimate, and the widths behind it were **measured,
-not guessed** — the preview is a real 8.5×11in sheet in the same font at the
-same size, so Chrome was asked where it actually wraps each of the master's
-bullets. Guessing left every resume ~15% short of the page, which costs a
-whole entry. `\usepackage{times}` and the preview's Times New Roman are
-metrically compatible, so one measurement covers both. Across a 42-role
-scan the estimate now tracks the rendered height within ±1.3%, filling
-89–97% of the page, and all 42 print to exactly one page.
+Shape is enforced the same way: at least three entries under experience,
+experience in the master's reverse-chronological order, education added
+verbatim rather than asked for, and a 40-line page budget checked with the
+same arithmetic the model is given. The preview draws the real 11-inch line
+across the sheet, so if the budget is ever wrong you see where page one ends
+instead of finding out from a two-page PDF.
 
-The preview is that same sheet scaled to the window, so **Save as PDF** isn't
-a second rendering path — it's the page you were looking at, with the toolbar
-and the board hidden and the master's own margins in `@page`. **Download
-.tex** and **Copy LaTeX** give you the LaTeX, using the master's own preamble
-and macros, so it compiles unedited and restyling the master restyles every
-tailored copy. If the estimate is ever wrong, the sheet draws a red *page 1
-ends here* rule where the page really ends, rather than letting a second
-page appear silently in the PDF.
+#### Setup
 
-Resumes are written to `site/resumes/<id>.json` and fetched only when you
-open one — `roles.json` loads on every visit to draw a table that doesn't
-need six kilobytes of LaTeX per row. Each role carries a `resume` flag, so
-the button only appears where there's something behind it.
+The Worker needs three secrets and a KV namespace on top of the
+[Run it from the board](#run-it-from-the-board) setup:
 
-Which roles get one is decided by `RESUMES_FROM` in `build_site.py` and
-nothing else: a role qualifies if it was first seen on or after that date,
-which is the same date the board bands and sorts by. A stored list would
-have been another piece of unreconstructible state to commit and race over,
-where a date needs no bookkeeping — the answer is identical however many
-times the scan runs. Move it back, or pass `--resumes all`, to cover the
-whole backlog; it's local keyword scoring, so 376 roles take about a second.
+```bash
+cd worker
+npm install
+npx wrangler kv namespace create RESUME_KV   # paste the id into wrangler.toml
+npx wrangler secret put ANTHROPIC_API_KEY
+npx wrangler secret put BOARD_KEY            # a passphrase you choose
+npx wrangler deploy
+```
+
+Add `resumes` to the Firebase rules alongside `applied` and `ignored`:
+
+```json
+{"rules": {
+  "applied": {".read": true, ".write": true},
+  "ignored": {".read": true, ".write": true},
+  "resumes": {".read": true, ".write": true}
+}}
+```
+
+**`/resume` is the one route that isn't open to anyone with the URL.** Every
+other thing this board does costs a CI minute at worst; this one costs money,
+so it needs `BOARD_KEY` — a passphrase the board asks for once per device and
+keeps in `localStorage`. Behind that is a hard cap of 40 generations a day,
+counted in KV. The cap is a backstop, not a ledger: two clicks in the same
+second can both pass it. If the KV namespace isn't bound the route refuses to
+run rather than running uncapped, because silently dropping the spend guard is
+the one failure mode worth being noisy about.
+
+Miss any of that and the button simply isn't rendered — the rest of the board
+is unaffected.
+
+#### Reading it
+
+The modal is a real 8.5×11in sheet scaled to the window, so **Save as PDF**
+isn't a second rendering path: it's the page you were looking at, with the
+board hidden and the master's own margins in `@page`. **Download .tex** and
+**Copy LaTeX** rebuild the document from the master's preamble and macros, so
+it compiles unedited and restyling the master restyles every tailored copy.
+
+A generation takes a couple of minutes, because Opus 5 thinks before it
+answers. The Worker streams newline-delimited JSON rather than answering in one
+shot — progress arrives as it happens, which both tells you where it is and
+keeps a connection alive that would otherwise be cut off as hung.
 
 ### Applied state
 
@@ -404,13 +435,14 @@ listed*, rather than silently vanishing.
    ```json
    {"rules": {
      "applied": {".read": true, ".write": true},
-     "ignored": {".read": true, ".write": true}
+     "ignored": {".read": true, ".write": true},
+     "resumes": {".read": true, ".write": true}
    }}
    ```
 4. Copy the URL at the top of the Data tab (`https://…firebaseio.com`) into
    `databaseURL` in `site/config.js`, and push
 
-That URL is meant to be public — it grants access to nothing but those two
+That URL is meant to be public — it grants access to nothing but those three
 lists. Don't widen the rules to the database root: Firebase's "test mode"
 default is root-open, which lets anyone with the URL write anywhere in the
 database rather than just to these two keys.

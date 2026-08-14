@@ -1,6 +1,6 @@
 /**
- * Lets the public board start this repo's workflows without shipping a
- * GitHub token to the browser.
+ * Lets the public board start this repo's workflows -- and tailor a resume --
+ * without shipping any credential to the browser.
  *
  * The board is deliberately unauthenticated -- anyone with the URL can tick
  * a checkbox -- so this endpoint is reachable by anyone too. What it does
@@ -20,7 +20,14 @@
  *     enforces it. That means no KV namespace to create and bind, and the
  *     limit can't drift out of sync with what actually ran -- a run started
  *     from the Actions tab counts against the cooldown too.
+ *
+ * `/resume` is the exception to all of that, because its worst case is not a
+ * wasted CI minute but a bill: it calls the Claude API. So it is the one
+ * route that is *not* open to anyone with the URL -- it needs a passphrase,
+ * and it has a hard daily cap behind that. See `resume.js`.
  */
+
+import { handleResume } from "./resume.js";
 
 const REPO = "Connor5190/internshipTracker";
 const REF = "main";
@@ -36,7 +43,7 @@ const ALLOWED = {
 const headers = (origin) => ({
   "Access-Control-Allow-Origin": origin,
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
+  "Access-Control-Allow-Headers": "Content-Type, X-Board-Key",
   "Access-Control-Max-Age": "86400",
   "Cache-Control": "no-store",
 });
@@ -79,6 +86,12 @@ export default {
     }
 
     const url = new URL(request.url);
+
+    // ---- tailor a resume to one posting
+    if (url.pathname === "/resume") {
+      if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
+      return handleResume(request, env, origin, headers);
+    }
 
     // ---- how's it going?
     if (url.pathname === "/status") {

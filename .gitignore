@@ -8,6 +8,9 @@ __pycache__/
 # would just be a daily 100 KB churn commit against generated data.
 site/roles.json
 
-# Same: one tailored resume per role, re-cut from master_resume.tex on every
-# scan. Derived from a file that *is* committed, so nothing here is history.
-site/resumes/
+# Same: master_resume.tex parsed into JSON, rewritten by every scan from a
+# file that *is* committed, so nothing here is history.
+site/master.json
+
+# The Worker bundles @anthropic-ai/sdk; wrangler installs it at deploy time.
+worker/node_modules/

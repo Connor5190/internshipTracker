@@ -1,12 +1,30 @@
 name = "internship-tracker-trigger"
 main = "trigger.js"
 compatibility_date = "2025-01-01"
+# The Anthropic SDK is an npm dependency, so the bundle needs Node's built-in
+# shims available at the edge.
+compatibility_flags = ["nodejs_compat"]
 
 [vars]
 # Only the board may call this. Widen it and any page anywhere could start
 # your workflows from a visitor's browser.
 ALLOWED_ORIGIN = "https://connor5190.github.io"
 
-# GITHUB_TOKEN is a secret, not a var -- set it with:
-#   wrangler secret put GITHUB_TOKEN
-# Never put it in this file; it is committed to a public repository.
+# Where the Worker reads master.json from. Same origin as the board, but
+# spelled out because ALLOWED_ORIGIN has no path and Pages serves this
+# project under one.
+BOARD_URL = "https://connor5190.github.io/internshipTracker"
+
+# Today's generation count, for the daily cap on /resume. Create it once with
+#   npx wrangler kv namespace create RESUME_KV
+# and paste the id it prints here. Without this binding /resume refuses to
+# run rather than running uncapped.
+[[kv_namespaces]]
+binding = "RESUME_KV"
+id = "PASTE_THE_ID_FROM_WRANGLER_HERE"
+
+# Secrets are not vars -- this file is committed to a public repository.
+# Set each one with `npx wrangler secret put <NAME>`:
+#   GITHUB_TOKEN       fine-grained PAT, this repo only, Actions: read & write
+#   ANTHROPIC_API_KEY  from console.anthropic.com — /resume spends real money
+#   BOARD_KEY          a passphrase you choose; the board asks for it once

@@ -154,6 +154,17 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--rule);border-radius:2px;padding:8px 11px;cursor:pointer;
   white-space:nowrap}
 .resume:hover{border-color:var(--cobalt);color:var(--cobalt)}
+/* Nothing stored yet, so pressing this spends an API call. Dashed says
+   "this does work" without shouting; the row already has one solid button. */
+.resume.gen{border-style:dashed;color:var(--secondary)}
+.resume.gen:hover{color:var(--cobalt)}
+.sheetmeta .dim{color:var(--secondary)}
+#rnote{display:block;margin-top:2px;max-width:70ch}
+.spin{display:inline-block;width:11px;height:11px;margin-right:9px;
+  vertical-align:-1px;border:2px solid var(--rule);border-top-color:var(--cobalt);
+  border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:2.4s}}
 
 .modal{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;
   background:rgba(17,16,12,.74)}
@@ -321,8 +332,9 @@ footer a:hover{text-decoration:underline}
 <div class="modal" id="rmodal" hidden role="dialog" aria-modal="true"
      aria-label="Tailored resume">
   <div class="sheetbar">
-    <div class="sheetmeta" id="rmeta"></div>
+    <div class="sheetmeta"><span id="rmeta"></span><span id="rnote"></span></div>
     <div class="sheetacts">
+      <button class="btn" id="ragain" type="button">Regenerate</button>
       <button class="btn" id="rprint" type="button">Save as PDF</button>
       <button class="btn" id="rtex" type="button">Download .tex</button>
       <button class="btn" id="rcopy" type="button">Copy LaTeX</button>
@@ -455,6 +467,10 @@ function makeStore(node) {
 // flag having to know about the other.
 var Applied = makeStore("applied");
 var Ignored = makeStore("ignored");
+// Tailored resumes are shared for the same reason ticks are: generate one
+// on a laptop, open it on a phone. It also means each role is only ever
+// paid for once.
+var Resumes = makeStore("resumes");
 
 /* ------------------------------------------------------------------ state */
 var data = null;          // roles.json
@@ -545,7 +561,10 @@ function whenApplied(ts) {
  *
  * `copy` says which of the two this is: the Applied one shows when you
  * applied rather than how old the posting is. */
+function canTailor() { return !!(TRIGGER && master); }
+
 function rowHTML(role, n, checked, copy) {
+  var have = !!resumes[role.id];
   var right = copy
     ? '<span class="status">Applied ' + esc(whenApplied(role.at || Date.now())) + "</span>"
     : status(role);
@@ -573,12 +592,14 @@ function rowHTML(role, n, checked, copy) {
       '<label class="mark"><input type="checkbox" data-kind="ignored" data-id="' +
         esc(role.id) + '"' + (ign ? " checked" : "") + ' aria-label="Not interested in ' +
         esc(role.title) + ' at ' + esc(role.company) + '"> Ignore</label>') +
-      // Only where there's something behind it. A button that opens an error
-      // is worse than no button on a row you were never going to tailor for.
-      (role.resume ?
-      '<button class="resume" type="button" data-resume="' + esc(role.id) +
-        '" aria-label="Tailored resume for ' + esc(role.title) + ' at ' +
-        esc(role.company) + '">R&eacute;sum&eacute;</button>' : "") +
+      // Hidden entirely when tailoring isn't wired up, rather than offering
+      // a button that can only report that it isn't wired up.
+      (canTailor() ?
+      '<button class="resume' + (have ? "" : " gen") + '" type="button" ' +
+        'data-resume="' + esc(role.id) + '" aria-label="' +
+        (have ? "Tailored resume for " : "Generate a tailored resume for ") +
+        esc(role.title) + ' at ' + esc(role.company) + '">' +
+        (have ? "R&eacute;sum&eacute;" : "Generate") + "</button>" : "") +
       '<a class="apply" href="' + esc(role.url) + '" target="_blank" rel="noopener">' +
         "Apply &rarr;</a>" +
     "</div></div>";
@@ -634,10 +655,7 @@ function render() {
       title: e.title || (live && live.title) || "(role)",
       url: e.url || (live && live.url) || "#",
       location: live ? live.location : "",
-      first_seen: live ? live.first_seen : "", exact: live ? live.exact : false,
-      // Tailored resumes are cut from the current scan, so a posting that has
-      // come off the board no longer has one to open.
-      resume: !!(live && live.resume)
+      first_seen: live ? live.first_seen : "", exact: live ? live.exact : false
     };
   }).filter(matches).sort(function (a, b) { return b.at - a.at; });
 
@@ -688,57 +706,69 @@ function render() {
 }
 
 /* ------------------------------------------------------------------ resume
- * Each role's tailored resume is its own file, fetched the first time you
- * open it -- roles.json is loaded on every visit to draw a table that doesn't
- * need six kilobytes of LaTeX per row.
+ * A resume is cut from master_resume.tex to fit one posting, by Claude, the
+ * first time you press the button on that row -- and then never again. The
+ * answer is stored in the same Firebase the applied ticks live in, so it
+ * follows you to another device and costs one API call for its whole life.
+ * That is the point of doing it on demand: the board carries hundreds of
+ * roles and you will apply to a fraction of them.
  *
- * The preview is a real 8.5x11in sheet in CSS inches, scaled down to fit the
- * window. That means printing it is not a separate rendering path: the same
- * box, at the same size, with the toolbar and the board hidden. Save-as-PDF
- * gives you the page you were looking at.
+ * The model works in plain text and never sees LaTeX. Escaping back to LaTeX
+ * for the .tex download happens here, from the master's own preamble and
+ * macros, so what you download compiles unedited and restyling the master
+ * restyles every copy.
  */
-var resumeCache = {};
-var openResumeDoc = null;
+var master = null;          // master.json -- the parsed master resume
+var resumes = {};           // id -> stored resume, shared via Firebase
+var shownResume = null;     // the one the modal is currently showing
 var resumeReturnFocus = null;
+var busyResume = null;      // id currently generating, so a second click waits
 
-function loadResume(id) {
-  if (resumeCache[id]) return Promise.resolve(resumeCache[id]);
-  // Keyed on the scan, not the clock: a re-scan republishes these, but within
-  // one scan they're immutable and worth letting the CDN keep.
-  return fetch("resumes/" + encodeURIComponent(id) + ".json?v=" +
-               encodeURIComponent(data.generated_at))
-    .then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    })
-    .then(function (d) { resumeCache[id] = d; return d; });
+var KEYSTORE = "internship-tracker-board-key";
+
+/* The Worker spends an API call per generation, so unlike everything else
+ * here that endpoint is not open to whoever finds the URL. There is no login
+ * to hang this off, so it is a passphrase you type once per device. */
+function boardKey() {
+  try { return localStorage.getItem(KEYSTORE) || ""; } catch (e) { return ""; }
+}
+function askKey() {
+  var k = window.prompt(
+    "Board passphrase\n\nThis is the BOARD_KEY secret you set on the Worker. " +
+    "It is stored on this device only.");
+  if (k === null) return "";
+  k = k.trim();
+  try { localStorage.setItem(KEYSTORE, k); } catch (e) {}
+  return k;
+}
+function forgetKey() {
+  try { localStorage.removeItem(KEYSTORE); } catch (e) {}
 }
 
+/* ---- rendering the sheet */
 function resumeHTML(doc) {
-  // Everything but the section names arrives as HTML the build already
-  // escaped -- it has to, since bullets can carry links and emphasis. Section
-  // names come through as plain text, so they're escaped here.
-  var h = ['<div class="rname">' + esc(doc.name) + "</div>",
-           '<div class="rcontact">' + doc.contact + "</div>"];
+  var h = ['<div class="rname">' + esc(master.name) + "</div>",
+           '<div class="rcontact">' + master.contact_html + "</div>"];
   (doc.sections || []).forEach(function (s) {
     h.push('<div class="rsec">' + esc(s.name) + "</div>");
-    if (s.skills) {
-      h.push('<div class="rskills">' + s.skills.join(", ") + "</div>");
+    if (s.kind === "skills") {
+      h.push('<div class="rskills">' + esc(s.skills.join(", ")) + "</div>");
       return;
     }
     (s.entries || []).forEach(function (e) {
       h.push('<div class="rentry">');
       if (e.org) {
-        h.push('<div class="rline"><span><b>' + e.org + "</b></span>" +
-               (e.place ? "<span>" + e.place + "</span>" : "") + "</div>");
+        h.push('<div class="rline"><span><b>' + esc(e.org) + "</b></span>" +
+               (e.place ? "<span>" + esc(e.place) + "</span>" : "") + "</div>");
       }
       (e.subs || []).forEach(function (p) {
-        h.push('<div class="rline"><span><i>' + p[0] + "</i></span>" +
-               "<span><i>" + p[1] + "</i></span></div>");
+        h.push('<div class="rline"><span><i>' + esc(p[0]) + "</i></span>" +
+               "<span><i>" + esc(p[1]) + "</i></span></div>");
       });
-      (e.paras || []).forEach(function (p) { h.push("<div>" + p + "</div>"); });
+      (e.paras || []).forEach(function (p) { h.push("<div>" + esc(p) + "</div>"); });
       if (e.bullets && e.bullets.length) {
-        h.push('<ul class="rb"><li>' + e.bullets.join("</li><li>") + "</li></ul>");
+        h.push('<ul class="rb"><li>' +
+               e.bullets.map(esc).join("</li><li>") + "</li></ul>");
       }
       h.push("</div>");
     });
@@ -746,6 +776,109 @@ function resumeHTML(doc) {
   return h.join("");
 }
 
+/* Plain text -> LaTeX. The model only ever writes prose, so this is the one
+ * place LaTeX is constructed and the one place that has to get escaping
+ * right. Backslash goes to a sentinel first, or the braces that
+ * \textbackslash{} introduces would themselves be escaped. */
+function tex(s) {
+  return String(s == null ? "" : s)
+    .replace(/\\/g, "\u0000")
+    .replace(/([&%$#_{}])/g, "\\$1")
+    .replace(/\^/g, "\\^{}")
+    .replace(/~/g, "\\~{}")
+    .replace(/—/g, "---").replace(/–/g, "--")
+    .replace(/[‘’]/g, "'").replace(/[“”]/g, '"')
+    .replace(/\u00a0/g, " ")
+    .replace(/\u0000/g, "\\textbackslash{}");
+}
+
+function resumeTex(doc) {
+  var out = [master.preamble, "\\begin{document}", "", master.header_tex, ""];
+  (doc.sections || []).forEach(function (s) {
+    out.push("\\section{" + tex(s.name) + "}");
+    if (s.kind === "skills") {
+      if (s.open) out.push(s.open);
+      out.push(s.skills.map(tex).join(", "));
+      if (s.close) out.push(s.close);
+      out.push("");
+      return;
+    }
+    (s.entries || []).forEach(function (e, n) {
+      if (n) out.push("\\gap");
+      if (e.kind === "project") out.push("\\entrytitle{" + tex(e.org) + "}");
+      else if (e.org) out.push("\\headerrow{" + tex(e.org) + "}{" + tex(e.place) + "}");
+      (e.subs || []).forEach(function (p) {
+        out.push("\\subrow{" + tex(p[0]) + "}{" + tex(p[1]) + "}");
+      });
+      (e.paras || []).forEach(function (p) { out.push(tex(p)); });
+      if (e.bullets && e.bullets.length) {
+        out.push("\\begin{tight}");
+        e.bullets.forEach(function (b) { out.push("  \\item " + tex(b)); });
+        out.push("\\end{tight}");
+      }
+    });
+    out.push("");
+  });
+  out.push("\\end{document}");
+  return out.join("\n") + "\n";
+}
+
+function texName(doc) {
+  var slug = function (x) {
+    return String(x || "").replace(/[^A-Za-z0-9]+/g, "_")
+      .replace(/_+/g, "_").replace(/^_|_$/g, "");
+  };
+  return [slug(master.name), slug(doc.company), slug(doc.title).slice(0, 48)]
+    .filter(Boolean).join("_") + ".tex";
+}
+
+/* ---- generating */
+function generate(role, onStep) {
+  var key = boardKey() || askKey();
+  if (!key) return Promise.reject(new Error("passphrase"));
+  return fetch(TRIGGER + "/resume", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "X-Board-Key": key },
+    body: JSON.stringify({
+      id: role.id, company: role.company, title: role.title,
+      location: role.location, url: role.url
+    })
+  }).then(function (r) {
+    if (r.status === 401) { forgetKey(); throw new Error("passphrase"); }
+    if (!r.body) {
+      return r.json().then(function (d) {
+        throw new Error((d && d.reason) || "HTTP " + r.status);
+      });
+    }
+    // Newline-delimited JSON rather than one reply: Claude thinks before it
+    // answers, so a generation runs long enough that a silent connection
+    // would be cut off as hung. Progress arrives as it happens, which both
+    // tells you what is going on and keeps the socket busy.
+    var reader = r.body.getReader(), dec = new TextDecoder(), buf = "", done = null;
+    return (function pump() {
+      return reader.read().then(function (chunk) {
+        buf += dec.decode(chunk.value || new Uint8Array(), { stream: !chunk.done });
+        var lines = buf.split("\n");
+        buf = lines.pop();
+        lines.forEach(function (ln) {
+          if (!ln.trim()) return;
+          var msg;
+          try { msg = JSON.parse(ln); } catch (e) { return; }
+          if (msg.type === "progress") onStep(msg.step);
+          else if (msg.type === "done") done = msg;
+          else if (msg.type === "error") throw new Error(msg.reason);
+        });
+        if (chunk.done) {
+          if (!done) throw new Error("the generation stopped before it finished");
+          return done;
+        }
+        return pump();
+      });
+    })();
+  });
+}
+
+/* ---- the modal */
 function fitSheet() {
   var fit = $("rfit"), zoom = $("rzoom"), sheet = $("rsheet");
   zoom.style.transform = "none";
@@ -756,60 +889,118 @@ function fitSheet() {
   zoom.style.transform = "scale(" + k + ")";
   fit.style.width = w * k + "px";
   fit.style.height = h * k + "px";
-  // The build's page estimate is a line count, not a typesetter. This is the
-  // browser's own answer to the same question, so a bad estimate shows up as
-  // a mark on the page rather than as a surprise second sheet.
+  // The Worker's page budget is arithmetic on character counts. This is the
+  // browser's own answer to the same question, so an overlong resume shows
+  // up as a mark on the page rather than as a surprise second sheet.
   var page = $("rprobe").offsetHeight;
-  sheet.classList.toggle("over", page > 0 && sheet.offsetHeight > page + 1);
+  sheet.classList.toggle("over", !!shownResume && page > 0 &&
+                                 sheet.offsetHeight > page + 1);
+}
+
+function resumeActions(on) {
+  ["rprint", "rtex", "rcopy", "ragain"].forEach(function (id) {
+    $(id).disabled = !on;
+  });
+}
+
+function resumeStatus(html) {
+  shownResume = null;
+  resumeActions(false);
+  $("rsheet").classList.remove("over");
+  $("rsheet").innerHTML = '<div class="rloading">' + html + "</div>";
+  fitSheet();
+}
+
+function showResume(doc) {
+  shownResume = doc;
+  resumeActions(true);
+  $("rsheet").innerHTML = resumeHTML(doc);
+  var bits = [];
+  // Comma-joined, not "&"-joined: the emphases are themselves things like
+  // "cloud & CI/CD", and "cloud & CI/CD & data" doesn't parse on sight.
+  if (doc.emphasis && doc.emphasis.length) {
+    bits.push("leaning " + doc.emphasis.join(", "));
+  }
+  if (!doc.used_posting) bits.push("that board blocks scrapers, so: title only");
+  $("rnote").innerHTML = esc(doc.note || "") +
+    (bits.length ? ' <span class="dim">&middot; ' + esc(bits.join(" · ")) + "</span>" : "");
+  fitSheet();
 }
 
 function closeResume() {
   $("rmodal").hidden = true;
   document.body.style.overflow = "";
-  openResumeDoc = null;
+  shownResume = null;
   if (resumeReturnFocus && resumeReturnFocus.focus) resumeReturnFocus.focus();
   resumeReturnFocus = null;
 }
 
-function openResume(id, trigger) {
+function openResume(id, trigger, force) {
   var role = null;
   data.roles.forEach(function (r) { if (r.id === id) role = r; });
-  resumeReturnFocus = trigger || null;
-  openResumeDoc = null;
+  if (!role) return;
+
+  if (trigger) resumeReturnFocus = trigger;
   $("rmodal").hidden = false;
   document.body.style.overflow = "hidden";
-  $("rmeta").innerHTML = role
-    ? "<b>" + esc(role.company) + "</b>" + esc(role.title)
-    : "<b>Resume</b>";
-  $("rsheet").innerHTML = '<div class="rloading">Loading…</div>';
-  $("rfit").style.width = $("rfit").style.height = "";
-  $("rzoom").style.transform = "none";
+  $("rmeta").innerHTML = "<b>" + esc(role.company) + "</b>" + esc(role.title);
+  $("rnote").textContent = "";
   $("rclose").focus();
 
-  loadResume(id).then(function (doc) {
-    if ($("rmodal").hidden) return;          // closed while it was in flight
-    openResumeDoc = doc;
-    $("rmeta").innerHTML = "<b>" + esc(doc.company) + "</b>" + esc(doc.title) +
-      " &middot; " + doc.kept_entries + " of " + doc.total_entries +
-      " entries, " + doc.kept_skills + " of " + doc.total_skills + " skills" +
-      (doc.emphasis && doc.emphasis.length
-        ? " &middot; leaning " + esc(doc.emphasis.join(" &amp; ")) : "");
-    $("rsheet").innerHTML = resumeHTML(doc);
-    fitSheet();
-  }).catch(function () {
-    $("rsheet").innerHTML = '<div class="rloading">Couldn\'t load this ' +
-      "resume — it's written by the scan, so <b>Re-scan now</b> should " +
-      "bring it back.</div>";
+  if (resumes[id] && !force) { showResume(resumes[id]); return; }
+  if (busyResume === id) return;   // already running from an earlier click
+
+  if (!TRIGGER) {
+    resumeStatus("Tailoring needs the Cloudflare Worker — set " +
+                 "<b>triggerURL</b> in <b>site/config.js</b>.");
+    return;
+  }
+  if (!master) {
+    resumeStatus("<b>master.json</b> hasn't been published yet. Run the " +
+                 "<b>Update Applied Board</b> workflow, then reload.");
+    return;
+  }
+
+  busyResume = id;
+  resumeStatus('<span class="spin"></span>Asking Claude to read the posting…');
+  generate(role, function (step) {
+    if (!$("rmodal").hidden && busyResume === id) {
+      resumeStatus('<span class="spin"></span>' + esc(step));
+    }
+  }).then(function (msg) {
+    busyResume = null;
+    resumes[id] = msg.resume;
+    render();
+    if (!$("rmodal").hidden) showResume(msg.resume);
+    // Stored, not cached: the next device to open this role gets the same
+    // resume rather than paying for a second one.
+    Resumes.set(id, msg.resume).catch(function () {
+      toast("Generated, but couldn't save it — it'll regenerate next time");
+    });
+    if (typeof msg.remaining === "number" && msg.remaining <= 5) {
+      toast(msg.remaining + " generations left today");
+    }
+  }).catch(function (e) {
+    busyResume = null;
+    var why = (e && e.message) || "something went wrong";
+    if (why === "passphrase") {
+      resumeStatus("That passphrase wasn't right. Close this and press " +
+                   "<b>Generate</b> again to re-enter it.");
+      return;
+    }
+    resumeStatus("Couldn't generate this one — " + esc(why) + "." +
+                 '<br><br><button class="btn" data-retry="' + esc(id) +
+                 '" type="button">Try again</button>');
   });
 }
 
 function downloadTex() {
-  if (!openResumeDoc) return;
+  if (!shownResume) return;
   var url = URL.createObjectURL(
-    new Blob([openResumeDoc.tex], { type: "application/x-tex" }));
+    new Blob([resumeTex(shownResume)], { type: "application/x-tex" }));
   var a = document.createElement("a");
   a.href = url;
-  a.download = openResumeDoc.filename || "resume.tex";
+  a.download = texName(shownResume);
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -817,17 +1008,18 @@ function downloadTex() {
 }
 
 function copyTex() {
-  if (!openResumeDoc) return;
+  if (!shownResume) return;
+  var text = resumeTex(shownResume);
   var done = function () { toast("LaTeX copied — paste it into Overleaf"); };
   var fail = function () { toast("Couldn't copy — use Download .tex"); };
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(openResumeDoc.tex).then(done, fail);
+    navigator.clipboard.writeText(text).then(done, fail);
     return;
   }
-  // Safari without a secure context, and anything older: the old way still
+  // Safari outside a secure context, and anything older: the old way still
   // works, and a resume you can't copy is a resume you can't send.
   var ta = document.createElement("textarea");
-  ta.value = openResumeDoc.tex;
+  ta.value = text;
   ta.setAttribute("readonly", "");
   ta.style.position = "fixed";
   ta.style.opacity = "0";
@@ -896,11 +1088,19 @@ $("usonly").addEventListener("change", function (e) {
 document.addEventListener("click", function (ev) {
   var btn = ev.target.closest && ev.target.closest("[data-resume]");
   if (btn) { openResume(btn.getAttribute("data-resume"), btn); return; }
+  var again = ev.target.closest && ev.target.closest("[data-retry]");
+  if (again) { openResume(again.getAttribute("data-retry"), null, true); return; }
   // The backdrop is the modal element itself; anything inside it is the
   // toolbar or the sheet, and clicking those shouldn't close it.
   if (ev.target === $("rmodal")) closeResume();
 });
 $("rclose").addEventListener("click", closeResume);
+$("ragain").addEventListener("click", function () {
+  if (!shownResume) return;
+  if (!window.confirm("Generate a fresh resume for this role? " +
+                      "It replaces the stored one and costs another API call.")) return;
+  openResume(shownResume.id, null, true);
+});
 $("rprint").addEventListener("click", function () { window.print(); });
 $("rtex").addEventListener("click", downloadTex);
 $("rcopy").addEventListener("click", copyTex);
@@ -940,14 +1140,14 @@ function footer() {
   f.push("Dates are the employer's posting date where the job board exposes one. " +
     "<b>Seen ~</b> means that board doesn't, so the date shown is when this " +
     "scanner first saw the role — it may be older.");
-  if (data.resumes_from) {
-    var missing = data.roles.filter(function (r) { return !r.resume; }).length;
-    if (missing) {
-      f.push("<br><br><b>Résumé</b> opens a one-page cut of <b>master_resume." +
-        "tex</b> chosen for that posting — no button on " + missing + " older " +
-        "rows, which were already on the board before tailoring started on " +
-        esc(data.resumes_from) + ".");
-    }
+  if (canTailor()) {
+    var made = data.roles.filter(function (r) { return resumes[r.id]; }).length;
+    f.push("<br><br><b>Generate</b> asks Claude to cut a one-page resume out of " +
+      "<b>master_resume.tex</b> for that posting, reading the posting itself " +
+      "where the job board allows it. It runs once per role and is then shared " +
+      "across your devices — " + made + " of " + data.roles.length +
+      " done so far. Every entry, date and number is checked back against the " +
+      "master before it reaches the page.");
   }
   if (data.errors && data.errors.length) {
     f.push("<br><br><b>" + data.errors.length + " couldn't be scanned</b>");
@@ -1032,6 +1232,15 @@ function wireTrigger(id, workflow, busy, done) {
 }
 
 /* ------------------------------------------------------------------- boot */
+// Published by the same scan that writes roles.json. Its absence is not an
+// error -- the board works, it just can't offer to tailor anything.
+function loadMaster() {
+  return fetch("master.json?t=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { master = d; })
+    .catch(function () { master = null; });
+}
+
 function loadRoles() {
   // Cache-busted: after a re-scan the point is to get past the Pages CDN and
   // see the file the run just published.
@@ -1071,25 +1280,30 @@ if (TRIGGER) {
   });
 }
 
-loadRoles()
+Promise.all([loadRoles(), loadMaster()])
   .then(function () {
-    return Promise.all([Applied.load(), Ignored.load()]);
+    return Promise.all([Applied.load(), Ignored.load(), Resumes.load()]);
   })
   .then(function (states) {
     applied = states[0] || {};
     ignored = states[1] || {};
+    resumes = states[2] || {};
     render();
     // Same merge semantics for both lists: a whole-tree replace, or a patch
     // where a null value means the key was deleted.
-    [[Applied, "applied"], [Ignored, "ignored"]].forEach(function (pair) {
+    [[Applied, "applied"], [Ignored, "ignored"], [Resumes, "resumes"]]
+      .forEach(function (pair) {
       pair[0].subscribe(function (replace, merge) {
-        var map = pair[1] === "ignored" ? ignored : applied;
+        var map = pair[1] === "ignored" ? ignored
+                : pair[1] === "resumes" ? resumes : applied;
         if (merge) {
           Object.keys(merge).forEach(function (k) {
             if (merge[k] === null) delete map[k]; else map[k] = merge[k];
           });
         } else if (pair[1] === "ignored") {
           ignored = replace || {};
+        } else if (pair[1] === "resumes") {
+          resumes = replace || {};
         } else {
           applied = replace || {};
         }
