@@ -95,7 +95,7 @@ a{color:inherit;text-decoration:none}
   padding:8px 13px;border-radius:2px}
 
 /* ------------------------------------------------------------ table */
-.thead,.row{display:grid;grid-template-columns:62px minmax(0,1fr) 165px 140px 252px;
+.thead,.row{display:grid;grid-template-columns:62px minmax(0,1fr) 152px 132px 336px;
   gap:16px;align-items:center}
 .thead{padding:22px 0 7px;border-bottom:1px solid var(--ink);
   font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
@@ -120,7 +120,7 @@ a{color:inherit;text-decoration:none}
 .a1 .co,.a1 .dot{color:var(--age1)} .a1 .dot{background:var(--age1)}
 .a2 .co{color:var(--age2)}          .a2 .dot{background:var(--age2)}
 .a3 .co{color:var(--age3)}          .a3 .dot{background:var(--age3)}
-.acts{display:flex;align-items:center;justify-content:flex-end;gap:12px}
+.acts{display:flex;align-items:center;justify-content:flex-end;gap:10px}
 .mark{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--secondary);
   cursor:pointer;user-select:none;white-space:nowrap}
 .mark input{width:17px;height:17px;margin:0;accent-color:var(--cobalt);cursor:pointer}
@@ -146,6 +146,57 @@ a{color:inherit;text-decoration:none}
 .undated{background:transparent;color:var(--secondary);
   box-shadow:inset 0 0 0 1px var(--rule)}
 .empty{padding:26px 0;font-size:14px;color:var(--secondary)}
+
+/* ------------------------------------------------------------ resume
+ * A secondary action, so it reads as an outline against Apply's solid fill:
+ * the resume is what you bring, the posting is where you're going. */
+.resume{font:700 12.5px var(--sans);color:var(--ink);background:var(--raised);
+  border:1px solid var(--rule);border-radius:2px;padding:8px 11px;cursor:pointer;
+  white-space:nowrap}
+.resume:hover{border-color:var(--cobalt);color:var(--cobalt)}
+
+.modal{position:fixed;inset:0;z-index:30;display:flex;flex-direction:column;
+  background:rgba(17,16,12,.74)}
+.modal[hidden]{display:none}
+.sheetbar{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;
+  padding:12px 18px;background:var(--paper);border-bottom:1.5px solid var(--ink);
+  flex-wrap:wrap}
+.sheetmeta{min-width:0;font-size:12px;color:var(--secondary);line-height:1.45}
+.sheetmeta b{display:block;font:400 20px/1.15 var(--serif);color:var(--ink);
+  overflow-wrap:anywhere}
+.sheetacts{display:flex;gap:8px;flex-wrap:wrap}
+.sheetscroll{flex:1;overflow:auto;padding:22px 16px 64px}
+/* The preview is a real 8.5in sheet scaled to whatever room the window has,
+   so what you see is the page that prints, not an approximation of it. JS
+   sizes this wrapper to the scaled result -- a transform doesn't change
+   layout, so without it the scroll area would still reserve full width. */
+.sheetfit{margin:0 auto}
+.sheetzoom{width:8.5in;transform-origin:top left}
+.sheet{position:relative;width:8.5in;min-height:11in;padding:.4in .45in;
+  background:#fff;color:#141414;font:10pt/1.2 "Times New Roman",Times,serif;
+  box-shadow:0 3px 30px rgba(0,0,0,.4)}
+/* Only ever shown when the estimate was wrong and the content really did
+   run past the page. A silent second page is the one failure this whole
+   thing exists to avoid, so it says so on the sheet. */
+.sheet.over::after{content:"Page 1 ends here";position:absolute;left:0;right:0;
+  top:11in;border-top:1px dashed #b3311f;color:#b3311f;text-align:right;
+  font:700 7pt/1 Arial,Helvetica,sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;padding-top:4px}
+.rloading{padding:40px 0;text-align:center;color:#6b675e;
+  font:13px Arial,Helvetica,sans-serif}
+.rname{font-size:17pt;font-weight:700;text-align:center;line-height:1.06}
+.rcontact{text-align:center;margin-top:3pt}
+.rcontact a{color:#141414}
+.rsec{font-size:12pt;font-weight:700;margin-top:8pt;padding-bottom:1.5pt;
+  border-bottom:.75pt solid #141414}
+/* 3pt is \gap, 1pt is the tight list's topsep -- the preview matches the
+   master's own spacing, so the page you print is the page LaTeX would set. */
+.rentry{margin-top:3pt}
+.rline{display:flex;justify-content:space-between;align-items:baseline;gap:14pt}
+.rline span:last-child{flex:0 0 auto}
+.rb{margin:1pt 0 0;padding-left:1.35em}
+.rb li{margin:0}
+.rskills{font-size:9pt;line-height:1.25;text-align:justify;margin-top:2.5pt}
 
 /* --------------------------------------------------------- messages */
 .banner{margin:18px 0 0;padding:13px 16px;border-left:3px solid var(--amber);
@@ -180,8 +231,33 @@ footer a:hover{text-decoration:underline}
   .loc,.status{font-size:12.5px}
   .loc:empty{display:none}
   .checked{text-align:left}
-  .acts{grid-column:2;justify-content:flex-start;margin-top:9px}
+  .acts{grid-column:2;justify-content:flex-start;margin-top:9px;flex-wrap:wrap}
   .co{font-size:20px}
+  .sheetscroll{padding:14px 10px 48px}
+  .sheetbar{padding:10px 12px}
+}
+
+/* Printing prints the sheet and nothing else -- same geometry the master's
+   preamble asks LaTeX for, so "Save as PDF" and a real compile agree.
+ *
+ * Last in the sheet on purpose. A letter page is 816 CSS pixels wide, which
+ * is inside the 860px phone breakpoint above, so during an actual print that
+ * block matches too -- and at equal specificity the later rule wins. Sitting
+ * above it, this one lost, and the phone layout's 62px of scroller padding
+ * was enough to push every resume onto a second page. */
+@media print{
+  body>*{display:none!important}
+  .modal:not([hidden]){display:block!important;position:static;background:none}
+  .sheetbar{display:none!important}
+  /* An 11in-tall absolutely-positioned box is invisible on screen and still
+     paginates: left in, it pushed every print onto a second, blank page. */
+  #rprobe{display:none!important}
+  .sheetscroll{overflow:visible;padding:0}
+  .sheetfit{width:auto!important;height:auto!important;margin:0}
+  .sheetzoom{width:auto;transform:none!important}
+  .sheet{width:auto;min-height:0;padding:0;box-shadow:none}
+  .sheet.over::after{display:none}
+  @page{size:letter;margin:.4in .45in}
 }
 </style>
 </head>
@@ -241,6 +317,29 @@ footer a:hover{text-decoration:underline}
   <footer id="foot"></footer>
 </div>
 <div class="toast" id="toast"></div>
+
+<div class="modal" id="rmodal" hidden role="dialog" aria-modal="true"
+     aria-label="Tailored resume">
+  <div class="sheetbar">
+    <div class="sheetmeta" id="rmeta"></div>
+    <div class="sheetacts">
+      <button class="btn" id="rprint" type="button">Save as PDF</button>
+      <button class="btn" id="rtex" type="button">Download .tex</button>
+      <button class="btn" id="rcopy" type="button">Copy LaTeX</button>
+      <button class="btn" id="rclose" type="button">Close</button>
+    </div>
+  </div>
+  <div class="sheetscroll" id="rscroll">
+    <!-- Sized in CSS inches and read back in pixels, so "is this longer than
+         a page?" is answered by the browser's own units rather than by
+         assuming 96 of them to the inch. -->
+    <div id="rprobe" style="height:11in;position:absolute;visibility:hidden;
+                            pointer-events:none"></div>
+    <div class="sheetfit" id="rfit">
+      <div class="sheetzoom" id="rzoom"><div class="sheet" id="rsheet"></div></div>
+    </div>
+  </div>
+</div>
 
 <script src="config.js"></script>
 <script>
@@ -474,6 +573,12 @@ function rowHTML(role, n, checked, copy) {
       '<label class="mark"><input type="checkbox" data-kind="ignored" data-id="' +
         esc(role.id) + '"' + (ign ? " checked" : "") + ' aria-label="Not interested in ' +
         esc(role.title) + ' at ' + esc(role.company) + '"> Ignore</label>') +
+      // Only where there's something behind it. A button that opens an error
+      // is worse than no button on a row you were never going to tailor for.
+      (role.resume ?
+      '<button class="resume" type="button" data-resume="' + esc(role.id) +
+        '" aria-label="Tailored resume for ' + esc(role.title) + ' at ' +
+        esc(role.company) + '">R&eacute;sum&eacute;</button>' : "") +
       '<a class="apply" href="' + esc(role.url) + '" target="_blank" rel="noopener">' +
         "Apply &rarr;</a>" +
     "</div></div>";
@@ -529,7 +634,10 @@ function render() {
       title: e.title || (live && live.title) || "(role)",
       url: e.url || (live && live.url) || "#",
       location: live ? live.location : "",
-      first_seen: live ? live.first_seen : "", exact: live ? live.exact : false
+      first_seen: live ? live.first_seen : "", exact: live ? live.exact : false,
+      // Tailored resumes are cut from the current scan, so a posting that has
+      // come off the board no longer has one to open.
+      resume: !!(live && live.resume)
     };
   }).filter(matches).sort(function (a, b) { return b.at - a.at; });
 
@@ -577,6 +685,156 @@ function render() {
     done.forEach(function (r, i) { h.push(rowHTML(r, i + 1, true, true)); });
   }
   $("app").innerHTML = h.join("");
+}
+
+/* ------------------------------------------------------------------ resume
+ * Each role's tailored resume is its own file, fetched the first time you
+ * open it -- roles.json is loaded on every visit to draw a table that doesn't
+ * need six kilobytes of LaTeX per row.
+ *
+ * The preview is a real 8.5x11in sheet in CSS inches, scaled down to fit the
+ * window. That means printing it is not a separate rendering path: the same
+ * box, at the same size, with the toolbar and the board hidden. Save-as-PDF
+ * gives you the page you were looking at.
+ */
+var resumeCache = {};
+var openResumeDoc = null;
+var resumeReturnFocus = null;
+
+function loadResume(id) {
+  if (resumeCache[id]) return Promise.resolve(resumeCache[id]);
+  // Keyed on the scan, not the clock: a re-scan republishes these, but within
+  // one scan they're immutable and worth letting the CDN keep.
+  return fetch("resumes/" + encodeURIComponent(id) + ".json?v=" +
+               encodeURIComponent(data.generated_at))
+    .then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (d) { resumeCache[id] = d; return d; });
+}
+
+function resumeHTML(doc) {
+  // Everything but the section names arrives as HTML the build already
+  // escaped -- it has to, since bullets can carry links and emphasis. Section
+  // names come through as plain text, so they're escaped here.
+  var h = ['<div class="rname">' + esc(doc.name) + "</div>",
+           '<div class="rcontact">' + doc.contact + "</div>"];
+  (doc.sections || []).forEach(function (s) {
+    h.push('<div class="rsec">' + esc(s.name) + "</div>");
+    if (s.skills) {
+      h.push('<div class="rskills">' + s.skills.join(", ") + "</div>");
+      return;
+    }
+    (s.entries || []).forEach(function (e) {
+      h.push('<div class="rentry">');
+      if (e.org) {
+        h.push('<div class="rline"><span><b>' + e.org + "</b></span>" +
+               (e.place ? "<span>" + e.place + "</span>" : "") + "</div>");
+      }
+      (e.subs || []).forEach(function (p) {
+        h.push('<div class="rline"><span><i>' + p[0] + "</i></span>" +
+               "<span><i>" + p[1] + "</i></span></div>");
+      });
+      (e.paras || []).forEach(function (p) { h.push("<div>" + p + "</div>"); });
+      if (e.bullets && e.bullets.length) {
+        h.push('<ul class="rb"><li>' + e.bullets.join("</li><li>") + "</li></ul>");
+      }
+      h.push("</div>");
+    });
+  });
+  return h.join("");
+}
+
+function fitSheet() {
+  var fit = $("rfit"), zoom = $("rzoom"), sheet = $("rsheet");
+  zoom.style.transform = "none";
+  fit.style.width = fit.style.height = "";
+  var w = zoom.offsetWidth, h = zoom.offsetHeight;
+  if (!w) return;
+  var k = Math.min(1, ($("rscroll").clientWidth - 32) / w);
+  zoom.style.transform = "scale(" + k + ")";
+  fit.style.width = w * k + "px";
+  fit.style.height = h * k + "px";
+  // The build's page estimate is a line count, not a typesetter. This is the
+  // browser's own answer to the same question, so a bad estimate shows up as
+  // a mark on the page rather than as a surprise second sheet.
+  var page = $("rprobe").offsetHeight;
+  sheet.classList.toggle("over", page > 0 && sheet.offsetHeight > page + 1);
+}
+
+function closeResume() {
+  $("rmodal").hidden = true;
+  document.body.style.overflow = "";
+  openResumeDoc = null;
+  if (resumeReturnFocus && resumeReturnFocus.focus) resumeReturnFocus.focus();
+  resumeReturnFocus = null;
+}
+
+function openResume(id, trigger) {
+  var role = null;
+  data.roles.forEach(function (r) { if (r.id === id) role = r; });
+  resumeReturnFocus = trigger || null;
+  openResumeDoc = null;
+  $("rmodal").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("rmeta").innerHTML = role
+    ? "<b>" + esc(role.company) + "</b>" + esc(role.title)
+    : "<b>Resume</b>";
+  $("rsheet").innerHTML = '<div class="rloading">Loading…</div>';
+  $("rfit").style.width = $("rfit").style.height = "";
+  $("rzoom").style.transform = "none";
+  $("rclose").focus();
+
+  loadResume(id).then(function (doc) {
+    if ($("rmodal").hidden) return;          // closed while it was in flight
+    openResumeDoc = doc;
+    $("rmeta").innerHTML = "<b>" + esc(doc.company) + "</b>" + esc(doc.title) +
+      " &middot; " + doc.kept_entries + " of " + doc.total_entries +
+      " entries, " + doc.kept_skills + " of " + doc.total_skills + " skills" +
+      (doc.emphasis && doc.emphasis.length
+        ? " &middot; leaning " + esc(doc.emphasis.join(" &amp; ")) : "");
+    $("rsheet").innerHTML = resumeHTML(doc);
+    fitSheet();
+  }).catch(function () {
+    $("rsheet").innerHTML = '<div class="rloading">Couldn\'t load this ' +
+      "resume — it's written by the scan, so <b>Re-scan now</b> should " +
+      "bring it back.</div>";
+  });
+}
+
+function downloadTex() {
+  if (!openResumeDoc) return;
+  var url = URL.createObjectURL(
+    new Blob([openResumeDoc.tex], { type: "application/x-tex" }));
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = openResumeDoc.filename || "resume.tex";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+}
+
+function copyTex() {
+  if (!openResumeDoc) return;
+  var done = function () { toast("LaTeX copied — paste it into Overleaf"); };
+  var fail = function () { toast("Couldn't copy — use Download .tex"); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(openResumeDoc.tex).then(done, fail);
+    return;
+  }
+  // Safari without a secure context, and anything older: the old way still
+  // works, and a resume you can't copy is a resume you can't send.
+  var ta = document.createElement("textarea");
+  ta.value = openResumeDoc.tex;
+  ta.setAttribute("readonly", "");
+  ta.style.position = "fixed";
+  ta.style.opacity = "0";
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand("copy") ? done() : fail(); } catch (e) { fail(); }
+  document.body.removeChild(ta);
 }
 
 function toast(msg) {
@@ -635,8 +893,27 @@ $("usonly").addEventListener("change", function (e) {
   render();
 });
 
-// "/" focuses search, the way the reference board does.
+document.addEventListener("click", function (ev) {
+  var btn = ev.target.closest && ev.target.closest("[data-resume]");
+  if (btn) { openResume(btn.getAttribute("data-resume"), btn); return; }
+  // The backdrop is the modal element itself; anything inside it is the
+  // toolbar or the sheet, and clicking those shouldn't close it.
+  if (ev.target === $("rmodal")) closeResume();
+});
+$("rclose").addEventListener("click", closeResume);
+$("rprint").addEventListener("click", function () { window.print(); });
+$("rtex").addEventListener("click", downloadTex);
+$("rcopy").addEventListener("click", copyTex);
+window.addEventListener("resize", function () {
+  if (!$("rmodal").hidden) fitSheet();
+});
+
 document.addEventListener("keydown", function (e) {
+  if (!$("rmodal").hidden) {
+    if (e.key === "Escape") { e.preventDefault(); closeResume(); }
+    return;                      // "/" is a search shortcut, not a modal one
+  }
+  // "/" focuses search, the way the reference board does.
   if (e.key === "/" && document.activeElement !== $("q")) { e.preventDefault(); $("q").focus(); }
 });
 
@@ -663,6 +940,15 @@ function footer() {
   f.push("Dates are the employer's posting date where the job board exposes one. " +
     "<b>Seen ~</b> means that board doesn't, so the date shown is when this " +
     "scanner first saw the role — it may be older.");
+  if (data.resumes_from) {
+    var missing = data.roles.filter(function (r) { return !r.resume; }).length;
+    if (missing) {
+      f.push("<br><br><b>Résumé</b> opens a one-page cut of <b>master_resume." +
+        "tex</b> chosen for that posting — no button on " + missing + " older " +
+        "rows, which were already on the board before tailoring started on " +
+        esc(data.resumes_from) + ".");
+    }
+  }
   if (data.errors && data.errors.length) {
     f.push("<br><br><b>" + data.errors.length + " couldn't be scanned</b>");
     data.errors.forEach(function (e) {

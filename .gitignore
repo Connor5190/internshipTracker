@@ -2,7 +2,12 @@
 __pycache__/
 *.pyc
 .claude/
+.DS_Store
 
 # Built fresh by each scan and uploaded straight to Pages -- committing it
 # would just be a daily 100 KB churn commit against generated data.
 site/roles.json
+
+# Same: one tailored resume per role, re-cut from master_resume.tex on every
+# scan. Derived from a file that *is* committed, so nothing here is history.
+site/resumes/

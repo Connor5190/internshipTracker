@@ -69,8 +69,14 @@ jobs:
           done
           git push
 
+      # Also cuts a one-page resume out of master_resume.tex for every role
+      # first seen on or after build_site.RESUMES_FROM, into site/resumes/.
+      # Pure local keyword scoring -- no API key, and a few seconds even when
+      # run over the whole board with --resumes all.
       - name: Build applied board
-        run: python3 scripts/build_site.py scan_result_enriched.json site/roles.json
+        run: |
+          python3 scripts/build_site.py scan_result_enriched.json site/roles.json \
+            --master master_resume.tex --resume-dir site/resumes
 
       - uses: actions/configure-pages@v6
 

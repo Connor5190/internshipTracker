@@ -251,12 +251,16 @@ it's read once, the morning it arrives. `site/roles.json` ships raw
 `first_seen` dates and the page recomputes ages in the browser — a tab left
 open since Monday shouldn't still be calling Monday's postings "today".
 
+Every role gets a **Résumé** button too — a one-page cut of
+`master_resume.tex` chosen for that posting. See
+[Tailored resumes](#tailored-resumes).
+
 `.github/workflows/update-board.yml` scans and publishes `site/` via
 `actions/deploy-pages`, on its own schedule — **6:30 AM and 6:30 PM
 America/New_York**. Twice a day keeps the board under ~12 hours stale: the
 morning run lands just before the 7am recap, so clicking through from the
 email hits fresh data, and the evening run picks up the day's later postings.
-`site/roles.json` is generated, not committed.
+`site/roles.json` and `site/resumes/` are generated, not committed.
 
 Both workflows scan independently and both write `.state/seen_postings.json`,
 so each pushes the ledger with a rebase-and-retry rather than a bare `git
@@ -305,6 +309,76 @@ two limits keep it dull for anyone who finds it:
 Left blank, the buttons don't render and the rest of the board is unaffected.
 `ALLOWED_ORIGIN` in `wrangler.toml` restricts which page may call the Worker
 from a browser — leave it pointed at the board.
+
+### Tailored resumes
+
+`master_resume.tex` is deliberately too full — every project, every
+internship, every skill, which is about 1.35 pages of a 1-page document.
+`scripts/tailor_resume.py` parses it into blocks and cuts a one-page version
+per role; **Résumé** on any row opens it.
+
+It never writes a word. Every bullet, date and skill is copied verbatim from
+the master — tailoring here means *selecting and ordering*, and nothing else.
+There's no model in the loop, so there's nothing to check for invention.
+
+Two signals decide what stays:
+
+- **Domain coverage** — posting and block are both scored over `DOMAINS` (ml,
+  infra, quant, vision, …). Terms in the posting's *title* count triple; a
+  title is three deliberate words where a company name is mostly brand noise.
+  Not cosine: cosine compares *composition*, so a two-line entry whose only
+  technical phrase is "Software Engineer Intern" scored as well against a
+  backend posting as one spending nine terms on cloud infrastructure. Blocks
+  are scored on absolute evidence instead, saturating at three terms.
+- **Shared technology** — the master's own skills line doubles as the
+  vocabulary of concrete tools, so a posting that says "Terraform" and a
+  bullet that says "Terraform" is scored directly, and weighted above theme.
+
+Both vocabularies come out of the master, so editing it re-tunes the scoring
+for free. There's no per-entry tag table to keep in sync.
+
+What comes out in what order is not a scoring decision. **Experience stays
+reverse-chronological** — relevance decides what gets cut, never what leads,
+and a resume with its jobs out of date order reads as one with something to
+hide. The most recent entry is never cut at all, whatever it scores; a
+missing current internship reads as a gap, not as focus. **Projects reorder
+freely**, since they carry no dates and nobody expects an order.
+
+Selection runs in three passes: drop what's off-topic, trim bullets (never
+below two) and then whole entries until it fits, then pull the best of the
+dropped ones back in if the page came out thin. A tailored resume that's
+half empty reads as a thin candidate.
+
+Fitting is a line-count estimate, and the widths behind it were **measured,
+not guessed** — the preview is a real 8.5×11in sheet in the same font at the
+same size, so Chrome was asked where it actually wraps each of the master's
+bullets. Guessing left every resume ~15% short of the page, which costs a
+whole entry. `\usepackage{times}` and the preview's Times New Roman are
+metrically compatible, so one measurement covers both. Across a 42-role
+scan the estimate now tracks the rendered height within ±1.3%, filling
+89–97% of the page, and all 42 print to exactly one page.
+
+The preview is that same sheet scaled to the window, so **Save as PDF** isn't
+a second rendering path — it's the page you were looking at, with the toolbar
+and the board hidden and the master's own margins in `@page`. **Download
+.tex** and **Copy LaTeX** give you the LaTeX, using the master's own preamble
+and macros, so it compiles unedited and restyling the master restyles every
+tailored copy. If the estimate is ever wrong, the sheet draws a red *page 1
+ends here* rule where the page really ends, rather than letting a second
+page appear silently in the PDF.
+
+Resumes are written to `site/resumes/<id>.json` and fetched only when you
+open one — `roles.json` loads on every visit to draw a table that doesn't
+need six kilobytes of LaTeX per row. Each role carries a `resume` flag, so
+the button only appears where there's something behind it.
+
+Which roles get one is decided by `RESUMES_FROM` in `build_site.py` and
+nothing else: a role qualifies if it was first seen on or after that date,
+which is the same date the board bands and sorts by. A stored list would
+have been another piece of unreconstructible state to commit and race over,
+where a date needs no bookkeeping — the answer is identical however many
+times the scan runs. Move it back, or pass `--resumes all`, to cover the
+whole backlog; it's local keyword scoring, so 376 roles take about a second.
 
 ### Applied state
 

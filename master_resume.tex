@@ -1,0 +1,125 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[margin=0.45in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+\usepackage{times}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\vspace{-11pt}\rule{\textwidth}{0.7pt}]
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\newcommand{\headerrow}[2]{\textbf{#1}\hfill #2\par}
+\newcommand{\subrow}[2]{\textit{#1}\hfill \textit{#2}\par}
+\newcommand{\entrytitle}[1]{\textbf{#1}\par}
+\newcommand{\gap}{\vspace{3pt}}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{leftmargin=1.3em, topsep=1pt, itemsep=0pt, parsep=0pt,
+                partopsep=0pt, label=$\bullet$}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Connor McIlhinney}\\[3pt]
+  {Atlanta, Georgia | 678-575-9889 |
+  \href{mailto:connormac9@icloud.com}{connormac9@icloud.com} |
+  \href{https://linkedin.com/in/connor-mcilhinney}{linkedin.com/in/connor-mcilhinney} |
+  \href{https://connormcilhinney.com}{connormcilhinney.com}}
+\end{center}
+\vspace{-4pt}
+
+\section{EDUCATION}
+\headerrow{Georgia Institute of Technology}{Atlanta, Georgia}
+\subrow{Master of Science in Computer Science}{December 2027}
+\subrow{Bachelor of Science in Computer Science // Specializing in AI \& Media}{December 2026}
+Affiliations: GTSF Investments Committee -- Quant Sector, EXCEL Mentorship, Sigma Alpha Epsilon Fraternity
+
+\section{PROJECTS}
+\entrytitle{Machine Learning UFC Fight Predictor}
+\begin{tight}
+  \item Trained and compared Logistic Regression, Random Forest, and XGBoost classifiers, achieving 72\% accuracy
+  \item Built a hybrid data pipeline combining local CSV datasets with a Playwright + BeautifulSoup scraper on ufcstats.com
+  \item Deployed a live FastAPI + Docker app on Fly.io serving real-time win probabilities via serialized joblib models with ROC-AUC, log-loss, confusion matrices, and a betting simulation comparing model edge against market-implied odds
+\end{tight}
+\gap
+\entrytitle{Highlight Generator}
+\begin{tight}
+  \item Deployed and hosted with Render, enabling automated video generation and cloud-based video processing
+  \item Built a computer vision app with Python, OpenCV, YOLOv8, and PIL to detect and highlight soccer players and balls in video, with interactive user selection and real-time overlays
+\end{tight}
+\gap
+\entrytitle{Keen Arrow}
+\begin{tight}
+  \item Built a mobile app using Apple's CoreBluetooth framework to receive directional data via a LoRa gateway
+  \item Designed a LoRa-based tracking system where a transceiver-equipped arrow latches onto deer and transmits signals post-impact
+\end{tight}
+
+\section{RELEVANT EXPERIENCE}
+\headerrow{Equifax}{Alpharetta, Georgia}
+\subrow{Software Engineer Intern -- CI/CD Team}{May 2026 -- August 2026}
+\begin{tight}
+  \item Centralized Jenkins and GitHub Actions logs into BigQuery, consolidating CI/CD pipeline data across the organization into a unified, queryable data warehouse
+  \item Analyzed log data at scale using BigQuery to identify recurring failure patterns and root causes across CI/CD pipelines
+  \item Built an internal AI chatbot trained on log failure patterns to help engineers diagnose and resolve build failures in real time
+\end{tight}
+\gap
+\headerrow{Noded}{Atlanta, Georgia}
+\subrow{Software Engineer Intern}{August 2025 -- January 2026}
+\begin{tight}
+  \item Engineered Python backend services using Finnhub, Alpha Vantage, and RapidAPI to validate URLs, detect accessibility issues (e.g., redirects, paywalls, CAPTCHAs), and extract clean HTML content, improving news retrieval accuracy by 30\%
+\end{tight}
+\gap
+\headerrow{GTSF Investments Committee -- Quant Sector}{Atlanta, Georgia}
+\subrow{Quant Analyst}{August 2024 -- January 2026}
+\begin{tight}
+  \item Conducted quantitative analysis and developed data-driven models to identify investment opportunities
+  \item Presented an insider trading strategy, trained on SEC Form 4 data, leading to its adoption within GTSF's \$2.6 million portfolio
+\end{tight}
+\gap
+\headerrow{PDI Technologies}{Alpharetta, Georgia}
+\subrow{Software Engineer Intern -- Cloud Infrastructure Team}{June 2025 -- August 2025}
+\begin{tight}
+  \item Provisioned AWS infrastructure to deploy n8n, an open-source automation platform, backed by centralized PostgreSQL RDS
+  \item Containerized n8n using Docker and orchestrated deployments with Terraform for a reliable, repeatable IaC workflow
+  \item Rolled out n8n access to 2,400 employees, empowering organization-wide automation through a secure, cloud-native solution
+\end{tight}
+\gap
+\headerrow{RoboJackets -- RoboCup SSL}{Atlanta, Georgia}
+\subrow{Software Member}{August 2024 -- May 2025}
+\begin{tight}
+  \item Implemented path planning logic integrating overhead ssl-vision data into real-time robot commands
+  \item Collaborated with electrical and mechanical subteams to test and debug full-stack robot behavior ahead of competition
+\end{tight}
+\gap
+\headerrow{Canopy}{Peachtree City, Georgia}
+\subrow{Software Engineer Intern}{June 2023 -- August 2023}
+\begin{tight}
+  \item Shadowed CEO to gain insights into strategic decision-making and the development of client-focused software solutions
+  \item Collaborated with the Head of Sales to identify targeted applications for Canopy's outbound clients
+\end{tight}
+
+\section{COMMUNITY LEADERSHIP}
+\headerrow{Atlanta United (Major League Soccer)}{Atlanta, Georgia}
+\subrow{Unified Partner, Captain}{September 2023 -- Present}
+\begin{tight}
+  \item Mentored and coached Atlanta United's Special Olympics Team and competed against other MLS teams across the country
+  \item Selected to the 2026 MLS Unified All-Star Team (Charlotte, NC) for the Eastern Conference, assisting the game-winning goal
+\end{tight}
+
+\section{TECHNICAL SKILLS}
+{\small
+\justifying
+Python, Java, C++, SQL, TypeScript, JavaScript, Swift, scikit-learn, XGBoost, PyTorch, TensorFlow, pandas, NumPy, Matplotlib, joblib, Jupyter, OpenCV, YOLOv8, Ultralytics, Pillow (PIL), FastAPI, Flask, REST APIs, Node.js, Express, WebSockets, GraphQL, PostgreSQL, BigQuery, AWS (EC2, S3, Lambda), GCP, Docker, Terraform, Kubernetes, Fly.io, Render, MongoDB, Redis, Amazon RDS, Jenkins, GitHub Actions, Git, Linux, Nix/NixOS, Playwright, BeautifulSoup, Selenium, n8n, CoreBluetooth, SwiftUI, LoRa, React, Next.js, HTML/CSS, Tailwind
+\par}
+
+\end{document}
