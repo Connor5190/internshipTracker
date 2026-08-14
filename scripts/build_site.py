@@ -71,6 +71,10 @@ def role_payload(company: str, m: dict) -> dict:
         # role, not when the employer posted it -- the page renders that
         # distinction as a `~` so an estimate never reads as fact.
         "exact": bool(m.get("date_is_posted")),
+        # This role is an internship that names no cycle at all, so it's here
+        # by inference rather than because it said "Summer 2027". The page
+        # badges it, so the list can be complete without being misleading.
+        "undated": m.get("matched_in") == "undated",
         # Every place it lists is confidently outside the US. Shipped as a
         # flag rather than acted on here, so "only USA" is a switch the
         # reader can flip and see the consequences of, not a silent drop.

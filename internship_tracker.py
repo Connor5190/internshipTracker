@@ -53,8 +53,24 @@ EXCLUDE_TITLE_RE = re.compile(
 )
 
 
-def title_excluded(title: str) -> bool:
-    return bool(EXCLUDE_TITLE_RE.search(title))
+def title_excluded(title: str, target_years: tuple[str, ...] = ()) -> bool:
+    """Whether a posting title names an excluded term and nothing that
+    overrides it.
+
+    `target_years` are the year keywords actually being searched for. A title
+    that names one of them is about that year even when an excluded year also
+    appears in it -- postings routinely carry both, either as an eligibility
+    aside ("Summer 2027 Internship - Graduating Dec 2026") or as a cycle
+    spanning two years ("2027 Summer Analyst Program (Class of 2026/2027)").
+    Excluding those loses exactly the roles being searched for. A bare "Summer
+    2026" names no target year and stays excluded, which is the case the
+    exclusion list exists for: it would otherwise match on the season alone.
+    """
+    if not EXCLUDE_TITLE_RE.search(title):
+        return False
+    return not any(
+        re.search(rf"\b{re.escape(year)}\b", title) for year in target_years
+    )
 
 
 @dataclass
@@ -151,16 +167,44 @@ def fetch_greenhouse(session: requests.Session, slug: str):
                 "text": "",
                 "posted_date": _iso_date_from_timestamp(job.get("first_published")),
                 "_detail": f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs/{job.get('id')}",
+                "_detail_kind": "greenhouse",
             }
         )
     return postings, f"Greenhouse ({slug})"
 
 
-def fetch_greenhouse_detail(session: requests.Session, posting: dict) -> str:
-    data = get_json(session, posting.get("_detail", ""))
-    if isinstance(data, dict):
-        return strip_html(data.get("content", ""))
-    return ""
+def fetch_detail_text(session: requests.Session, posting: dict) -> str:
+    """A posting's full description, fetched on demand.
+
+    Where the description lives depends on which source the posting came from,
+    which is what `_detail_kind` records. Greenhouse returns JSON with the body
+    under `content`; Workday returns JSON with it nested under
+    `jobPostingInfo.jobDescription`; "page" sources (Google, Radancy) have no
+    JSON at all and need the HTML scraped. Reading every source as though it
+    were Greenhouse silently yields "" for the other two, which reads
+    downstream as "this role's description doesn't mention the term" rather
+    than "we never managed to look".
+    """
+    url = posting.get("_detail", "")
+    if not url:
+        return ""
+    kind = posting.get("_detail_kind", "greenhouse")
+
+    if kind == "page":
+        try:
+            resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
+            if resp.status_code != 200:
+                return ""
+        except requests.RequestException:
+            return ""
+        return strip_html(resp.text)
+
+    data = get_json(session, url)
+    if not isinstance(data, dict):
+        return ""
+    if kind == "workday":
+        return strip_html((data.get("jobPostingInfo") or {}).get("jobDescription", ""))
+    return strip_html(data.get("content", ""))
 
 
 def fetch_lever(session: requests.Session, slug: str):
@@ -265,10 +309,137 @@ ATS_FETCHERS = [
 
 
 # ---------------------------------------------------------------------------
+# Verifying a guessed ATS slug
+#
+# Slugs are derived from the company name, so a guess can land on a board that
+# belongs to somebody else entirely: "linkedin" on Greenhouse is a sandbox
+# called "LI Test Company" whose postings are titled "123123" and "Bug Bash
+# Job"; "parallel" is Parallel Systems, a freight-rail robotics firm, not
+# parallel.ai. A wrong board is worse than no board, because finding postings
+# stops the search -- the company's real careers page is then never used as
+# anything but a flat-text fallback.
+#
+# Greenhouse and SmartRecruiters both name the account behind a slug, so a
+# guess against them can be checked. Lever, Ashby and Workable expose no name,
+# so guesses there are taken on trust -- WRONG_GUESSED_BOARDS is where the
+# ones found to be wrong get recorded.
+# ---------------------------------------------------------------------------
+
+def _greenhouse_board_name(session: requests.Session, slug: str) -> str | None:
+    data = get_json(session, f"https://boards-api.greenhouse.io/v1/boards/{slug}")
+    return data.get("name") if isinstance(data, dict) else None
+
+
+def _smartrecruiters_board_name(session: requests.Session, slug: str) -> str | None:
+    data = get_json(
+        session,
+        f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=1",
+    )
+    if not isinstance(data, dict):
+        return None
+    for job in data.get("content") or []:
+        name = (job.get("company") or {}).get("name")
+        if name:
+            return name
+    return None
+
+
+ATS_BOARD_NAME = {
+    fetch_greenhouse: _greenhouse_board_name,
+    fetch_smartrecruiters: _smartrecruiters_board_name,
+}
+
+# Dropped before comparing a board's name to a company's: they carry no
+# identifying information, so "Stripe, Inc." and "Stripe" are the same company.
+LEGAL_SUFFIX_RE = re.compile(
+    r"\b(inc|incorporated|llc|l\.l\.c|ltd|limited|corp|corporation|plc|"
+    r"gmbh|ag|nv|bv|sa|spa|pty)\b\.?",
+    re.IGNORECASE,
+)
+
+
+def _normalize_org(name: str) -> str:
+    name = LEGAL_SUFFIX_RE.sub(" ", name or "")
+    name = name.replace("&", " and ")
+    name = re.sub(r"^\s*the\b", " ", name, flags=re.IGNORECASE)
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def board_name_matches(company: str, board_name: str) -> bool:
+    """Whether a board named `board_name` plausibly belongs to `company`.
+
+    One name has to be a prefix of the other. Boards shorten ("Old Mission"
+    for "Old Mission Capital") and they lengthen ("Chime Financial, Inc" for
+    "Chime"), so both directions are ordinary; what isn't ordinary is a name
+    that shares no leading text at all, which is how an ATS sandbox gives
+    itself away ("LI Test Company" for LinkedIn).
+
+    A prefix in either direction can still be the wrong company -- "Parallel
+    Systems" is not parallel.ai -- and no amount of name comparison separates
+    that from the Chime case, since both are the company name plus a word.
+    Those need a human to look once; WRONG_GUESSED_BOARDS is where the answer
+    goes. This check is only for what a name can settle on its own.
+    """
+    company_norm, board_norm = _normalize_org(company), _normalize_org(board_name)
+    if not company_norm or not board_norm:
+        return True  # nothing to compare against; don't reject on no evidence
+    return (company_norm.startswith(board_norm)
+            or board_norm.startswith(company_norm))
+
+
+ATS_NAME = {
+    fetch_greenhouse: "greenhouse",
+    fetch_lever: "lever",
+    fetch_ashby: "ashby",
+    fetch_smartrecruiters: "smartrecruiters",
+    fetch_workable: "workable",
+}
+
+# Guessed boards confirmed by hand to belong to somebody else. Keyed per ATS
+# rather than per company, because the right board is often on a *different*
+# ATS under the same slug: skipping Greenhouse for "parallel" is what lets the
+# Ashby board -- which really is parallel.ai -- be found instead. Blocking a
+# company outright would lose that.
+WRONG_GUESSED_BOARDS = {
+    "linkedin": (set(ATS_NAME.values()),
+                 "the 'linkedin' slug is an ATS sandbox on both Greenhouse "
+                 "('LI Test Company', postings titled '123123' and 'Bug Bash "
+                 "Job') and Lever ('Deauth Test'), and LinkedIn's real "
+                 "postings aren't on any public board"),
+    "parallel": ({"greenhouse"},
+                 "Greenhouse 'parallel' is Parallel Systems, a freight-rail "
+                 "robotics firm, not parallel.ai"),
+    "wise": ({"greenhouse"},
+             "Greenhouse 'wise' is 'Wise Workiste Field Sales', a regional "
+             "sub-board, not Wise's own job board"),
+    "metlife": ({"lever"},
+                "Lever 'metlife' holds Colombian insurance-agent postings, "
+                "not MetLife's US openings"),
+}
+
+
+# ---------------------------------------------------------------------------
 # Company-specific fetchers for big employers that don't use the ATSes above.
 # ---------------------------------------------------------------------------
 
-MAX_DETAIL_FETCHES = 30  # cap per-job description requests per company
+# Cap on per-job description requests per company. It exists to bound the cost
+# of a company with hundreds of intern reqs, but it should rarely bind: a
+# posting whose description goes unread can't be classified as undated (that
+# would assert a negative about text nobody looked at), so a cap set too low
+# quietly drops roles instead of saving time. Most companies list well under
+# this many intern roles, and the ones that exceed it are on Workday, where a
+# description is one fast JSON request.
+MAX_DETAIL_FETCHES = 60
+
+# How deep to page a single Workday search. Workday sorts results by relevance,
+# not by date, so a new posting is not reliably near the front -- Accenture,
+# Walmart and Capital One each serve 400+ results for "intern", with genuine
+# Summer 2027 roles well past the first hundred. The tenants that page this
+# deep are exactly the large employers whose postings matter most, so the cost
+# (one request per 20 results) is worth paying. `total` in the response is not
+# usable as a stop condition: those tenants report 1128-2000 while running out
+# of results earlier, so pagination stops on the first empty page instead.
+WORKDAY_MAX_RESULTS = 500
 
 
 WORKDAY_POSTED_RE = re.compile(r"posted\s+(today|yesterday|(\d+)\+?\s+days?\s+ago)", re.IGNORECASE)
@@ -300,7 +471,7 @@ def _workday_search(session: requests.Session, base: str, host: str, site: str,
     postings = []
     facets = None
     offset = 0
-    while offset < 100:
+    while offset < WORKDAY_MAX_RESULTS:
         try:
             resp = session.post(
                 f"{base}/jobs",
@@ -988,8 +1159,6 @@ BLOCKED_COMPANIES = {
                      "https://higher.gs.com/campus",
     "bloomberg": "Bloomberg's careers site blocks automated access — check "
                  "https://careers.bloomberg.com/job/search?qf=internships",
-    "delta air lines": "Delta's careers site blocks automated access — check "
-                       "https://delta.avature.net/careers",
     "citadel": "Citadel's careers site blocks automated access — check "
                "https://www.citadel.com/careers/students/",
     "tesla": "Tesla's careers site blocks automated access — check "
@@ -1038,6 +1207,22 @@ def parse_term_keywords(term: str) -> list[str]:
     return [p for p in parts if p]
 
 
+def term_years(term: str) -> tuple[str, ...]:
+    """The year keywords within a search term, e.g. ("2027",) for
+    "summer 2027". Seasons are excluded: "summer" alone doesn't say which
+    cycle a posting is for, so it can't override an excluded year."""
+    return tuple(k for k in parse_term_keywords(term) if k.isdigit())
+
+
+# Whether a posting says which cycle it is for at all. This distinguishes a
+# posting that is for some other term from one that simply never says -- the
+# latter is the common shape for rolling intern reqs ("Software Engineer,
+# Intern") and is not evidence against the term being searched for.
+DATED_RE = re.compile(
+    r"\b(?:20\d{2}|spring|summer|fall|autumn|winter)\b", re.IGNORECASE
+)
+
+
 def term_patterns(term: str) -> list[re.Pattern]:
     """One pattern per keyword; a posting matches if ANY keyword hits."""
     pats = []
@@ -1056,9 +1241,32 @@ def term_label(term: str) -> str:
 # Eligibility phrasing like "must graduate before Summer 2027" is not a role
 # for that term, so ignore matches preceded by such wording.
 ELIGIBILITY_RE = re.compile(
-    r"(graduat\w*|degree)\s+(on\s+or\s+)?(before|by|prior to|after|between|no later than)\s*$",
+    r"(graduat\w*|degree)\s+(on\s+or\s+)?"
+    r"(before|by|prior to|after|between|no later than)\s*"
+    # The season/month is optional so this fires on the year too, not just on
+    # the season: "graduate before Summer 2027" has to be caught by the
+    # "summer" keyword pass *and* the "2027" one.
+    r"(spring|summer|fall|autumn|winter|may|june|july|august|september|december)?\s*$",
     re.IGNORECASE,
 )
+
+# "2026/2027" or "2026 - 2027" is a range that *includes* the year we're
+# searching for, so an excluded year sitting next to the match is not grounds
+# to drop it (e.g. Epic Games' interships: "flexible start dates throughout
+# 2026/2027"). A bare "Summer 2026" has no separator and stays excluded.
+YEAR_RANGE_SEP = r"\s*(?:[-–—/&]|to|and|or|through)\s*"
+
+
+def _year_range_includes(nearby: str, matched: str) -> bool:
+    """True if `matched` is a year joined to an excluded year as a range."""
+    if not matched.isdigit():
+        return False
+    for term in EXCLUDE_TITLE_TERMS:
+        for a, b in ((term, matched), (matched, term)):
+            if re.search(rf"\b{re.escape(a)}{YEAR_RANGE_SEP}{re.escape(b)}\b",
+                         nearby, re.IGNORECASE):
+                return True
+    return False
 
 
 def find_match(text: str, patterns: list[re.Pattern]) -> re.Match | None:
@@ -1071,7 +1279,7 @@ def find_match(text: str, patterns: list[re.Pattern]) -> re.Match | None:
             # matters for the generic custom-page fallback, which has no
             # discrete posting title to check the way scan_company does.
             nearby = text[max(0, m.start() - 80) : m.end() + 80]
-            if title_excluded(nearby):
+            if title_excluded(nearby) and not _year_range_includes(nearby, m.group(0)):
                 continue
             return m
     return None
@@ -1083,7 +1291,8 @@ def snippet_around(text: str, m: re.Match, radius: int = 70) -> str:
 
 
 def scan_company(company: str, url: str | None, term: str,
-                 check_descriptions: bool) -> CompanyResult:
+                 check_descriptions: bool,
+                 include_undated: bool = True) -> CompanyResult:
     session = requests.Session()
     result = CompanyResult(company=company)
     patterns = term_patterns(term)
@@ -1159,9 +1368,24 @@ def scan_company(company: str, url: str | None, term: str,
     # (non-ATS) careers URL was given, since that URL is usually the
     # company's own marketing/careers page rather than proof they aren't
     # also on a public ATS board.
+    rejected_boards: list[str] = []
+    denied_ats, denied_reason = WRONG_GUESSED_BOARDS.get(
+        company.lower(), (frozenset(), ""))
     if postings is None and not url_is_recognized_ats:
         for fetcher in ATS_FETCHERS:
+            if ATS_NAME[fetcher] in denied_ats:
+                continue
             for slug in slugify_candidates(company):
+                # Where the ATS names the account behind a slug, check it
+                # belongs to this company before trusting its postings.
+                board_name_of = ATS_BOARD_NAME.get(fetcher)
+                if board_name_of:
+                    board_name = board_name_of(session, slug)
+                    if board_name is None:
+                        continue  # no such board; nothing to fetch
+                    if not board_name_matches(company, board_name):
+                        rejected_boards.append(f"{slug!r} is {board_name!r}")
+                        continue
                 fetched = fetcher(session, slug)
                 if fetched and fetched[0]:
                     postings, result.source = fetched
@@ -1178,19 +1402,40 @@ def scan_company(company: str, url: str | None, term: str,
     #    new, since some companies also list roles only there. If the URL
     #    IS the same ATS we already queried, re-scraping it as text adds
     #    nothing, so skip it.
+    # A site known to block us yields no postings no matter which route was
+    # tried, and its careers page, when it loads at all, gives only the word
+    # "intern" in nav and marketing copy. Reporting that as "no match" is
+    # indistinguishable from a company with no internships, so say plainly
+    # that this one has to be checked by hand -- previously this message only
+    # appeared when the page fetch *also* failed, which hid it for 7 of the
+    # 12 blocked companies, Microsoft and Goldman Sachs among them.
+    if postings is None and blocked_msg:
+        result.error = blocked_msg
+        return result
+
     custom_page_result = None
     if url and (postings is None or not url_is_recognized_ats):
         custom_page_result = scan_custom_page(session, company, url, patterns)
         if postings is None:
-            if custom_page_result.error and blocked_msg:
-                custom_page_result.error = blocked_msg
             return custom_page_result
 
     if postings is None:
-        result.error = blocked_msg or (
-            "no public job board found (Greenhouse/Lever/Ashby/"
-            "SmartRecruiters/Workable) — add a careers URL for this company")
+        if denied_reason:
+            result.error = (f"no usable job board — {denied_reason}; "
+                            "add a careers URL for this company")
+        elif rejected_boards:
+            result.error = (
+                "no public job board found; a guessed slug was rejected as "
+                "another company's board (" + "; ".join(rejected_boards) +
+                ") — add this company's real board URL")
+        else:
+            result.error = (
+                "no public job board found (Greenhouse/Lever/Ashby/"
+                "SmartRecruiters/Workable) — add a careers URL for this company")
         return result
+
+    target_years = term_years(term)
+    detail_fetches = 0
 
     intern_postings = [
         p for p in postings
@@ -1199,7 +1444,7 @@ def scan_company(company: str, url: str | None, term: str,
     result.total_intern_roles = len(intern_postings)
 
     for p in intern_postings:
-        if title_excluded(p["title"]):
+        if title_excluded(p["title"], target_years):
             continue
         posted_date = p.get("posted_date", "")
         if find_match(p["title"], patterns):
@@ -1209,8 +1454,16 @@ def scan_company(company: str, url: str | None, term: str,
             )
             continue
         text = p["text"]
+        # Whether a description exists that we never read. It matters below:
+        # calling a role "undated" is a claim about its description, and a
+        # description we declined to fetch supports no claim either way.
+        detail_unread = False
         if not text and check_descriptions and "_detail" in p:
-            text = fetch_greenhouse_detail(session, p)
+            if detail_fetches < MAX_DETAIL_FETCHES:
+                detail_fetches += 1
+                text = fetch_detail_text(session, p)
+            else:
+                detail_unread = True
         if text:
             m = find_match(text, patterns)
             if m:
@@ -1218,6 +1471,21 @@ def scan_company(company: str, url: str | None, term: str,
                     Role(p["title"], p["url"], p["location"], "description",
                          snippet_around(text, m), posted_date=posted_date)
                 )
+                continue
+        # An intern posting that names no cycle anywhere -- not in its title,
+        # not in whatever description we could read -- isn't evidence against
+        # the term being searched for; it's a req that just doesn't say.
+        # Stripe's "Software Engineer, Intern" is the shape: its description
+        # contains no season and no year at all. Dropping these loses roughly
+        # two of every five live intern postings, so surface them, marked
+        # apart from the ones that actually say the term.
+        if include_undated and not detail_unread \
+                and not DATED_RE.search(p["title"]) \
+                and not DATED_RE.search(text or ""):
+            result.matches.append(
+                Role(p["title"], p["url"], p["location"], "undated",
+                     posted_date=posted_date)
+            )
 
     if custom_page_result:
         result.total_intern_roles += custom_page_result.total_intern_roles
@@ -1293,6 +1561,9 @@ def main() -> int:
                         help="parallel lookups (default: 8)")
     parser.add_argument("--no-descriptions", action="store_true",
                         help="only match against job titles (faster)")
+    parser.add_argument("--no-undated", action="store_true",
+                        help="drop intern roles that name no season or year "
+                             "anywhere, instead of reporting them as undated")
     parser.add_argument("--json", dest="json_out", action="store_true",
                         help="print results as JSON instead of a table")
     args = parser.parse_args()
@@ -1308,7 +1579,8 @@ def main() -> int:
         with ThreadPoolExecutor(max_workers=args.workers) as pool:
             futures = {
                 pool.submit(scan_company, name, url, args.term,
-                            not args.no_descriptions): name
+                            not args.no_descriptions,
+                            not args.no_undated): name
                 for name, url in companies
             }
             for future in as_completed(futures):
@@ -1343,6 +1615,8 @@ def main() -> int:
             status = f"[green]{len(r.matches)} match(es)[/green]"
             detail = "\n".join(
                 f"• {m.title}"
+                + (" [dim]\\[cycle not stated][/dim]"
+                   if m.matched_in == "undated" else "")
                 + (f" [dim]({m.location})[/dim]" if m.location else "")
                 + f"\n  [link={m.url}]{m.url}[/link]"
                 + (f"\n  [dim]“…{m.snippet}…”[/dim]" if m.snippet else "")

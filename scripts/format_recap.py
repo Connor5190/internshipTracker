@@ -294,18 +294,25 @@ def _render(
             # inferred rather than one the employer published.
             exact_today = _age_days(m) == 0 and m.get("date_is_posted")
             chip = "" if (drop_exact_today and exact_today) else _chip(m)
+            # An "undated" role matched because it is an internship that names
+            # no cycle at all, not because it names the one being searched
+            # for. It belongs in the list -- an undated req posted now is
+            # overwhelmingly the coming cycle -- but it hasn't earned the same
+            # confidence as a role whose title says so, and saying which is
+            # which costs one clause.
+            note = "cycle not stated" if m.get("matched_in") == "undated" else ""
             if dense:
                 # Chip leads the row so it can never orphan onto a line of
                 # its own when a long title wraps, and so ages form a
                 # scannable left-hand column.
-                loc = _location(m, 42)
+                meta = " · ".join(x for x in (_location(m, 42), note) if x)
                 lead = f"{chip} " if chip else ""
-                tail = f" <i>{loc}</i>" if loc else ""
+                tail = f" <i>{meta}</i>" if meta else ""
                 out.append(
                     f'<div class="r">{lead}<a class="d" href="{url}">{title}</a>{tail}</div>'
                 )
             else:
-                bits = " · ".join(x for x in (chip, _location(m, 64)) if x)
+                bits = " · ".join(x for x in (chip, _location(m, 64), note) if x)
                 out.append(f'<div><a class="t" href="{url}">{title}</a></div>')
                 if bits:
                     out.append(f'<i class="m">{bits}</i>')

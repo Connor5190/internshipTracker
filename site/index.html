@@ -138,6 +138,13 @@ a{color:inherit;text-decoration:none}
 .row.ign .co{text-decoration:line-through;color:var(--secondary)}
 .row.ign .apply{background:var(--secondary)}
 .gone{background:var(--rust-bg);color:var(--rust)}
+/* An internship whose posting names no cycle anywhere. Worth listing -- an
+   undated req open now is almost certainly the coming summer -- but it hasn't
+   said so, and a reader deciding where to spend an application deserves to
+   know which roles confirmed the term and which are inference. Muted rather
+   than alarming: this is a caveat, not a problem. */
+.undated{background:transparent;color:var(--secondary);
+  box-shadow:inset 0 0 0 1px var(--rule)}
 .empty{padding:26px 0;font-size:14px;color:var(--secondary)}
 
 /* --------------------------------------------------------- messages */
@@ -444,7 +451,8 @@ function rowHTML(role, n, checked, copy) {
     ? '<span class="status">Applied ' + esc(whenApplied(role.at || Date.now())) + "</span>"
     : status(role);
   var tag = copy && !role.live
-    ? '<span class="tag gone">No longer listed</span>' : "";
+    ? '<span class="tag gone">No longer listed</span>'
+    : (role.undated ? '<span class="tag undated">Cycle not stated</span>' : "");
   var ign = !copy && ignored[role.id];
   return '<div class="row a' + ageBand(role) + (checked ? " done" : "") +
       (ign ? " ign" : "") + '">' +

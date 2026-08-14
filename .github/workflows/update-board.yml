@@ -5,7 +5,7 @@ name: Update Applied Board
 # fresh data) and once in the evening to pick up the day's later postings.
 #
 # The 30-minute offset from daily-recap.yml's 11:00 keeps the two runs from
-# overlapping. A full scan takes about 2 minutes, so that's a wide margin --
+# overlapping. A full scan takes about 3 minutes, so that's a wide margin --
 # but both workflows commit the same ledger, so the push below retries on a
 # race regardless.
 on:
