@@ -699,6 +699,21 @@
     "first_seen": "2026-08-05",
     "title": "Services - Summer Analyst, Singapore, 2027"
   },
+  "https://jobs.citi.com/job/taipei/banking-commercial-banking-summer-analyst-taiwan-apac-2027/287/99340948704": {
+    "company": "Citibank",
+    "first_seen": "2026-08-17",
+    "title": "Banking - Commercial Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/taipei/banking-corporate-banking-summer-analyst-taiwan-apac-2027/287/99340948784": {
+    "company": "Citibank",
+    "first_seen": "2026-08-17",
+    "title": "Banking - Corporate Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/taipei/banking-investment-banking-summer-analyst-taiwan-apac-2027/287/99340948944": {
+    "company": "Citibank",
+    "first_seen": "2026-08-17",
+    "title": "Banking - Investment Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
+  },
   "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/93639707152": {
     "company": "Citibank",
     "first_seen": "2026-08-06",
@@ -718,6 +733,11 @@
     "company": "Palantir",
     "first_seen": "2026-07-12",
     "title": "Forward Deployed Software Engineer, Internship"
+  },
+  "https://jobs.nucor.com/go/Interns_/9426300/": {
+    "company": "Nucor",
+    "first_seen": "2026-08-17",
+    "title": "page mentions it: \u201c\u2026Markets Analyst Intern (Summer 2027) Commodity Markets Analyst Intern (Summer 2027) Cincinnati, OH, US, 45202 The\u2026\u201d"
   },
   "https://jobs.prudential.com/": {
     "company": "Prudential Financial",
@@ -1444,6 +1464,11 @@
     "first_seen": "2026-07-14",
     "title": "Summer 2027 Intern - Software Engineer"
   },
+  "https://search-careers.gm.com/en/jobs/?search=intern": {
+    "company": "General Motors",
+    "first_seen": "2026-08-17",
+    "title": "page mentions it: \u201c\u2026Recent Graduates Warren, Michigan 2027 Summer Intern \u2013 Finance Operations Save Saved\u2026\u201d"
+  },
   "https://search.jobs.barclays/job/gurugram/2027-biic-analyst-summer-internship-india/13015/98891062960": {
     "company": "Barclays",
     "first_seen": "2026-08-07",
@@ -2009,6 +2034,26 @@
     "first_seen": "2026-08-14",
     "title": "Loss Prevention Specialist Intern 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10503471/injury-prevention-specialist-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-08-17",
+    "title": "Injury Prevention Specialist Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10503558/class-of-2028-2029-internship-software-development-engineers-amazon-international-stores": {
+    "company": "Amazon",
+    "first_seen": "2026-08-17",
+    "title": "\u3010Class of 2028 & 2029\uff0fInternship\u3011Software Development Engineers , Amazon International Stores"
+  },
+  "https://www.amazon.jobs/en/jobs/10503561/2028-graduates-non-tech-recruiter-intern-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-08-17",
+    "title": "\u30102028 Graduates\uff0fNon-Tech\u3011 Recruiter Intern, Amazon University Talent Acquisition"
+  },
+  "https://www.amazon.jobs/en/jobs/10503563/2028-graduates-non-tech-supply-chain-manager-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-08-17",
+    "title": "\u30102028 Graduates\u30fbNon-tech\u3011Supply Chain Manager Intern"
+  },
   "https://www.amazon.jobs/en/jobs/3083037/engineering-intern": {
     "company": "Amazon",
     "first_seen": "2026-07-12",
@@ -2184,15 +2229,65 @@
     "first_seen": "2026-07-23",
     "title": "page mentions it: \u201c\u2026estment Analysis New York icon Fundamental Research Analyst Intern (New York) \u2013 Summer 2027 : The D. E. Shaw group seeks talented individuals with unique perspectives\u2026\u201d"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/107087730147500742-software-engineering-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Software Engineering PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/111285665542349510-research-scientist-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Research Scientist PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/132149998191026886-data-science-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Data Science PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/133355062935069382-hardwaresilicon-engineering-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Hardware/Silicon Engineering PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/134795423167455942-research-scientist-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Research Scientist PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/73321728058499782-data-science-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Data Science PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/74922616988541638-parttime-software-engineering-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Part-Time Software Engineering PhD Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/76982475250639558-software-developer-intern-bs-summer-2027": {
     "company": "Google",
     "first_seen": "2026-07-22",
     "title": "Software Developer Intern, BS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/77684590197514950-data-science-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Data Science PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/80037545080955590-software-engineering-or-sre-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Software Engineering or SRE, PhD Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/85564713261245126-software-engineering-intern-bs-summer-2027": {
     "company": "Google",
     "first_seen": "2026-07-22",
     "title": "Software Engineering Intern, BS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/88486192428786374-parttime-research-scientist-phd-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-17",
+    "title": "Part-Time Research Scientist PhD Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/95141459539174086-software-engineering-intern-ms-summer-2027": {
     "company": "Google",
