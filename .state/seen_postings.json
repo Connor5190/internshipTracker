@@ -319,6 +319,11 @@
     "first_seen": "2026-08-22",
     "title": "Intern D, Electrical Engineer"
   },
+  "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/99756757968": {
+    "company": "L3Harris",
+    "first_seen": "2026-08-26",
+    "title": "Intern, Mechanical Engineer"
+  },
   "https://careers.l3harris.com/en/job/palm-bay/intern-software-engineer/4832/99372979856": {
     "company": "L3Harris",
     "first_seen": "2026-08-18",
@@ -759,6 +764,11 @@
     "first_seen": "2026-08-05",
     "title": "Boeing Summer 2027 Internship Program (Paid) - Sales and Marketing"
   },
+  "https://jobs.citi.com/job/chiyoda/banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99751139120": {
+    "company": "Citibank",
+    "first_seen": "2026-08-26",
+    "title": "Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027"
+  },
   "https://jobs.citi.com/job/chiyoda/corporate-banking-summer-internship-program-tokyo-japan-2027/287/98511074064": {
     "company": "Citibank",
     "first_seen": "2026-08-05",
@@ -768,6 +778,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-05",
     "title": "Investment Banking - Summer Internship Program, Tokyo - Japan, 2027"
+  },
+  "https://jobs.citi.com/job/chiyoda/markets-part-time-intern-tokyo-jpn-2027/287/99751181296": {
+    "company": "Citibank",
+    "first_seen": "2026-08-26",
+    "title": "Markets, Part-time Intern, Tokyo-JPN, 2027"
   },
   "https://jobs.citi.com/job/chiyoda/markets-summer-internship-program-boston-career-forum-in-2026-tokyo-japan-2027/287/97466251904": {
     "company": "Citibank",
@@ -799,6 +814,11 @@
     "first_seen": "2026-08-10",
     "title": "Banking - Commercial Banking - Natural Resources & Energy,  Summer Analyst, Houston - US, 2027"
   },
+  "https://jobs.citi.com/job/houston/banking-corporate-banking-summer-analyst-houston-us-2027/287/89623966960": {
+    "company": "Citibank",
+    "first_seen": "2026-08-26",
+    "title": "Banking - Corporate Banking, Summer Analyst, Houston - US, 2027"
+  },
   "https://jobs.citi.com/job/irving/functions-internal-audit-summer-analyst-dallas-usa-2027/287/93639707136": {
     "company": "Citibank",
     "first_seen": "2026-08-06",
@@ -813,6 +833,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-05",
     "title": "Functions - Internal Audit, Summer Analyst - Mississauga, ON 2027"
+  },
+  "https://jobs.citi.com/job/mumbai/services-summer-analyst-india-2027/287/99751203328": {
+    "company": "Citibank",
+    "first_seen": "2026-08-26",
+    "title": "Services \u2013 Summer Analyst, India, 2027"
   },
   "https://jobs.citi.com/job/new-york/functions-internal-audit-summer-analyst-new-york-usa-2027/287/98836136896": {
     "company": "Citibank",
@@ -2444,6 +2469,16 @@
     "first_seen": "2026-08-26",
     "title": "Financial Analyst Intern, NL/RE&E Finance team"
   },
+  "https://www.amazon.jobs/en/jobs/10515426/financial-analyst-intern-amzl": {
+    "company": "Amazon",
+    "first_seen": "2026-08-26",
+    "title": "Financial Analyst Intern, AMZL"
+  },
+  "https://www.amazon.jobs/en/jobs/10515907/phd-econ-intern-store-economics-and-science": {
+    "company": "Amazon",
+    "first_seen": "2026-08-26",
+    "title": "PhD Econ Intern, Store Economics and Science"
+  },
   "https://www.amazon.jobs/en/jobs/3083037/engineering-intern": {
     "company": "Amazon",
     "first_seen": "2026-07-12",
@@ -2734,10 +2769,20 @@
     "first_seen": "2026-07-22",
     "title": "Software Developer Intern, MS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/99925955933283014-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-26",
+    "title": "Data Center Technician Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results?q=intern": {
     "company": "Google",
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026bs search results 12 jobs matched filter_list Student Researcher, PhD, Winter/Summer 2026 corporate_fare Google place Mountain View, CA, USA ; Ann Arbor, MI, USA ;\u2026\u201d"
+  },
+  "https://www.hudsonrivertrading.com/careers/": {
+    "company": "Hudson River Trading",
+    "first_seen": "2026-08-26",
+    "title": "page mentions it: \u201c\u2026nts. Learn More Intern Spotlight: 2025 Software Engineering Summer Projects Read More \u25b8 Designing a SystemVerilog Language Server\u2026\u201d"
   },
   "https://www.ing.jobs/en/job/new-york/summer-2027-internship-audit/3121/42697921472": {
     "company": "ING",
