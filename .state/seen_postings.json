@@ -314,26 +314,6 @@
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026AI Research Scientist - Internship [2027 Summer] United States - NY Ne\u2026\u201d"
   },
-  "https://cat.wd5.myworkdayjobs.com/en-US/CaterpillarCareers/job/Qingzhou-Shandong/XMLNAME-2026-Allocation---Summer-Intern-2_R0000371727": {
-    "company": "Caterpillar",
-    "first_seen": "2026-07-13",
-    "title": "2026 Allocation - Summer Intern-2"
-  },
-  "https://cat.wd5.myworkdayjobs.com/en-US/CaterpillarCareers/job/Qingzhou-Shandong/XMLNAME-2026-Allocation---Summer-Intern-3_R0000371729": {
-    "company": "Caterpillar",
-    "first_seen": "2026-07-13",
-    "title": "2026 Allocation - Summer Intern-3"
-  },
-  "https://cat.wd5.myworkdayjobs.com/en-US/CaterpillarCareers/job/Qingzhou-Shandong/XMLNAME-2026-Allocation---Summer-Intern-4_R0000371730": {
-    "company": "Caterpillar",
-    "first_seen": "2026-07-13",
-    "title": "2026 Allocation - Summer Intern-4"
-  },
-  "https://cat.wd5.myworkdayjobs.com/en-US/CaterpillarCareers/job/Qingzhou-Shandong/XMLNAME-2026-Allocation---Summer-Intern-5_R0000371731": {
-    "company": "Caterpillar",
-    "first_seen": "2026-07-13",
-    "title": "2026 Allocation - Summer Intern-5"
-  },
   "https://chevron.wd5.myworkdayjobs.com/en-US/University/job/Houston-1400-Smith-Street/XMLNAME-2026-2027-Health--Safety-and-Environment-Intern_R000072428": {
     "company": "Chevron",
     "first_seen": "2026-07-16",
@@ -443,6 +423,16 @@
     "company": "Apple",
     "first_seen": "2026-08-20",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200679405": {
+    "company": "Apple",
+    "first_seen": "2026-08-28",
+    "title": "Display Supply Quality Engineer Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200680345": {
+    "company": "Apple",
+    "first_seen": "2026-08-28",
+    "title": "Secure Kernel Engineering Intern, Sydney"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -984,11 +974,6 @@
     "first_seen": "2026-07-17",
     "title": "2026 Machine Learning Center of Excellence Summer Associate \u2013 Time Series & Reinforcement Learning Internship \u2013 (6 months)"
   },
-  "https://manh.wd5.myworkdayjobs.com/en-US/Campus/job/Atlanta-GA/Customer-Experience-Org-Operations-Intern---Spring-2027_16960": {
-    "company": "Manhattan Associates",
-    "first_seen": "2026-07-13",
-    "title": "Customer Experience Org Operations Intern - Spring 2027"
-  },
   "https://robinhood.com/us/en/careers/early-talent/": {
     "company": "Robinhood",
     "first_seen": "2026-07-22",
@@ -1243,16 +1228,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "Reliability, Maintenance & Engineering Intern"
-  },
-  "https://www.amazon.jobs/en/jobs/10472134/sales-ops-analyst-intern-strategic-account-services": {
-    "company": "Amazon",
-    "first_seen": "2026-07-13",
-    "title": "Sales Ops Analyst Intern \uc778\ud134, Strategic Account Services"
-  },
-  "https://www.amazon.jobs/en/jobs/10472164/sales-ops-analyst-intern-new-seller-recruitment": {
-    "company": "Amazon",
-    "first_seen": "2026-07-13",
-    "title": "Sales Ops Analyst Intern, New Seller Recruitment"
   },
   "https://www.amazon.jobs/en/jobs/10478665/financial-analyst-intern-amzl": {
     "company": "Amazon",
@@ -1744,6 +1719,21 @@
     "first_seen": "2026-08-27",
     "title": "Operations & Logistics Internship - Pozna\u0144 (Sady) - Start 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10517535/asic-engineer-intern-annapurna-labs-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-08-28",
+    "title": "ASIC Engineer Intern, Annapurna Labs - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10517567/software-development-engineer-intern-annapurna-labs-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-08-28",
+    "title": "Software Development Engineer Intern, Annapurna Labs - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10517649/cloud-hardware-development-engineer-intern-annapurna-labs-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-08-28",
+    "title": "Cloud Hardware Development Engineer Intern, Annapurna Labs - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -1978,26 +1968,6 @@
     "company": "ING",
     "first_seen": "2026-08-14",
     "title": "Intern, Trading Risk Management"
-  },
-  "https://www.jumptrading.com/hr/job?gh_jid=7974391": {
-    "company": "Jump Trading",
-    "first_seen": "2026-07-13",
-    "title": "Campus FPGA Engineer (Intern)"
-  },
-  "https://www.jumptrading.com/hr/job?gh_jid=7974943": {
-    "company": "Jump Trading",
-    "first_seen": "2026-07-13",
-    "title": "Campus UI Software Engineer (Intern)"
-  },
-  "https://www.jumptrading.com/hr/job?gh_jid=7975008": {
-    "company": "Jump Trading",
-    "first_seen": "2026-07-13",
-    "title": "Campus Data Engineer (Intern)"
-  },
-  "https://www.jumptrading.com/hr/job?gh_jid=7975026": {
-    "company": "Jump Trading",
-    "first_seen": "2026-07-13",
-    "title": "Campus Software Engineer (Intern)"
   },
   "https://www.lockheedmartinjobs.com/search-jobs/intern": {
     "company": "Lockheed Martin",
