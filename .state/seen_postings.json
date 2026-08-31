@@ -139,11 +139,6 @@
     "first_seen": "2026-08-05",
     "title": "page mentions it: \u201c\u2026Bloomberg Technical Support Specialist - Financial Solutions (Start Date Jan 2027) London, United Kingdom\u2026\u201d"
   },
-  "https://boards.greenhouse.io/cloudflare/jobs/8060959?gh_jid=8060959": {
-    "company": "Cloudflare",
-    "first_seen": "2026-07-16",
-    "title": "Security Engineer Intern (Fall 2026)"
-  },
   "https://boards.greenhouse.io/optiver": {
     "company": "Optiver",
     "first_seen": "2026-07-12",
@@ -153,16 +148,6 @@
     "company": "Bank of America",
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026may apply to one office and one division per year. If you are declined for the summer program, you can reapply for the Full-Time program the following year.\u2026\u201d"
-  },
-  "https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/McLean-VA/Management-Internship-Program---Summer-2027_R244266-1": {
-    "company": "Capital One",
-    "first_seen": "2026-07-16",
-    "title": "Management Internship Program - Summer 2027"
-  },
-  "https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/McLean-VA/Product-Development-Internship-Program---Summer-2027_R246020-1": {
-    "company": "Capital One",
-    "first_seen": "2026-07-16",
-    "title": "Product Development Internship Program - Summer 2027"
   },
   "https://careers.airbnb.com": {
     "company": "Airbnb",
@@ -314,20 +299,10 @@
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026AI Research Scientist - Internship [2027 Summer] United States - NY Ne\u2026\u201d"
   },
-  "https://chevron.wd5.myworkdayjobs.com/en-US/University/job/Houston-1400-Smith-Street/XMLNAME-2026-2027-Health--Safety-and-Environment-Intern_R000072428": {
-    "company": "Chevron",
-    "first_seen": "2026-07-16",
-    "title": "2026-2027 Health, Safety and Environment Intern"
-  },
   "https://chevron.wd5.myworkdayjobs.com/en-US/University/job/Houston-Texas-United-States-of-America/XMLNAME-2026-2027-Information-Technology---Software-Engineer---Intern_R000072398-1": {
     "company": "Chevron",
     "first_seen": "2026-07-17",
     "title": "2026-2027 Information Technology - Software Engineer - Intern"
-  },
-  "https://chevron.wd5.myworkdayjobs.com/en-US/University/job/Houston-Texas-United-States-of-America/XMLNAME-2026-2027-Land-Intern_R000072418": {
-    "company": "Chevron",
-    "first_seen": "2026-07-16",
-    "title": "2026-2027 Land Intern"
   },
   "https://databricks.com/company/careers/open-positions/job?gh_jid=6883068002": {
     "company": "Databricks",
@@ -484,6 +459,16 @@
     "first_seen": "2026-08-05",
     "title": "Corporate Banking - Summer Internship Program, Tokyo - Japan, 2027"
   },
+  "https://jobs.citi.com/job/chiyoda/for-onboarding-banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99971578032": {
+    "company": "Citibank",
+    "first_seen": "2026-08-31",
+    "title": "\u3010For Onboarding\u3011 Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027"
+  },
+  "https://jobs.citi.com/job/chiyoda/for-onboarding-banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99971578048": {
+    "company": "Citibank",
+    "first_seen": "2026-08-31",
+    "title": "\u3010For Onboarding\u3011 Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027"
+  },
   "https://jobs.citi.com/job/chiyoda/investment-banking-summer-internship-program-tokyo-japan-2027/287/98511087696": {
     "company": "Citibank",
     "first_seen": "2026-08-05",
@@ -498,6 +483,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-14",
     "title": "Markets - Summer Internship Program, Boston Career Forum in 2026, Tokyo - Japan, 2027"
+  },
+  "https://jobs.citi.com/job/ciudad-de-mexico/markets-sales-and-trading-internship-mexico-city-mexico-2027/287/99971621968": {
+    "company": "Citibank",
+    "first_seen": "2026-08-31",
+    "title": "Markets \u2013 Sales and Trading, Internship, Mexico City, Mexico 2027"
   },
   "https://jobs.citi.com/job/getzville/functions-quantitative-risk-management-summer-analyst-buffalo-usa-2027/287/99807501440": {
     "company": "Citibank",
@@ -568,6 +558,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-23",
     "title": "Application Development Intern"
+  },
+  "https://jobs.citi.com/job/seoul/banking-commercial-banking-summer-analyst-korea-republic-of-apac-2027/287/99971586864": {
+    "company": "Citibank",
+    "first_seen": "2026-08-31",
+    "title": "Banking - Commercial Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/99842563360": {
     "company": "Citibank",
@@ -1069,16 +1064,6 @@
     "first_seen": "2026-08-05",
     "title": "Banking Analyst Summer Internship Program 2027 Toronto"
   },
-  "https://target.wd5.myworkdayjobs.com/en-US/targetcareers/job/1090-73rd-Ave-NE-FridleyMN-55432-3407/Current-Interns-Only--Operations-Manager--Summer-2026-DC-Intern-Posting_R0000428284": {
-    "company": "Target",
-    "first_seen": "2026-07-16",
-    "title": "Current Interns Only- Operations Manager -Summer 2026 DC Intern Posting"
-  },
-  "https://walmart.wd504.myworkdayjobs.com/en-US/WalmartExternal/job/USA-APPAREL-MERCHANDISING-NY-OFFICE-45-NY-NEW-YORK-Home-Office/Corporate-Intern--2026-Summer-Intern--Walmart-Merchandising_R-2569723": {
-    "company": "Walmart",
-    "first_seen": "2026-07-16",
-    "title": "Corporate Intern: 2026 Summer Intern: Walmart Merchandising"
-  },
   "https://www.amazon.jobs/en/jobs/10387501/quantum-signal-train-engineer-internship-amazon-center-for-quantum-computing": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -1118,11 +1103,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "Project Intern, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10405581/quality-assurance-engineer-fall-internship-2026-us": {
-    "company": "Amazon",
-    "first_seen": "2026-07-16",
-    "title": "Quality Assurance Engineer Fall Internship \u2013 2026 (US)"
   },
   "https://www.amazon.jobs/en/jobs/10418355/2027-software-dev-engineer-intern": {
     "company": "Amazon",
@@ -1804,6 +1784,11 @@
     "first_seen": "2026-08-24",
     "title": "Software Developer Intern, PhD, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/123510626377966278-software-developer-intern-bs-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-31",
+    "title": "Software Developer Intern, BS, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/132149998191026886-data-science-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-08-17",
@@ -1818,6 +1803,11 @@
     "company": "Google",
     "first_seen": "2026-08-17",
     "title": "Research Scientist PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/138960139137753798-software-developer-intern-ms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-08-31",
+    "title": "Software Developer Intern, MS, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/73321728058499782-data-science-phd-intern-2027": {
     "company": "Google",
@@ -1889,6 +1879,11 @@
     "first_seen": "2026-08-26",
     "title": "page mentions it: \u201c\u2026nts. Learn More Intern Spotlight: 2025 Software Engineering Summer Projects Read More \u25b8 Designing a SystemVerilog Language Server\u2026\u201d"
   },
+  "https://www.ing.jobs/en/job/bucharest/internship-wholesale-banking-ing-bank/3121/42543948352": {
+    "company": "ING",
+    "first_seen": "2026-08-31",
+    "title": "Internship Wholesale Banking @ING Bank"
+  },
   "https://www.ing.jobs/en/job/new-york/summer-2027-internship-audit/3121/42697921472": {
     "company": "ING",
     "first_seen": "2026-08-10",
@@ -1933,6 +1928,11 @@
     "company": "ING",
     "first_seen": "2026-08-14",
     "title": "Intern, Trading Risk Management"
+  },
+  "https://www.ing.jobs/en/job/tokyo/intern-corporate-sector-lending-japan/3121/42430779648": {
+    "company": "ING",
+    "first_seen": "2026-08-31",
+    "title": "Intern, Corporate Sector Lending Japan"
   },
   "https://www.lockheedmartinjobs.com/search-jobs/intern": {
     "company": "Lockheed Martin",
