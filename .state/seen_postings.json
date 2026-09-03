@@ -144,6 +144,11 @@
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026Start) Austin Graduate Technology Graduate Technology Software Engineer Intern (Summer 2027 - Austin) Austin Internship Technology Internship Technology Software Engi\u2026\u201d"
   },
+  "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job": {
+    "company": "Atlassian",
+    "first_seen": "2026-09-02",
+    "title": "Software Engineer Intern, 2027 Canada"
+  },
   "https://campus.bankofamerica.com/": {
     "company": "Bank of America",
     "first_seen": "2026-07-12",
@@ -499,6 +504,11 @@
     "first_seen": "2026-08-27",
     "title": "Functions - Quantitative Risk Management, Summer Analyst, Buffalo - USA, 2027"
   },
+  "https://jobs.citi.com/job/getzville/functions-risk-management-summer-analyst-buffalo-usa-2027/287/94188563568": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Functions - Risk Management, Summer Analyst, Buffalo - USA, 2027"
+  },
   "https://jobs.citi.com/job/hong-kong/markets-sales-and-trading-summer-analyst-hong-kong-2027/287/97603330976": {
     "company": "Citibank",
     "first_seen": "2026-08-05",
@@ -539,6 +549,11 @@
     "first_seen": "2026-08-27",
     "title": "Functions - Quantitative Risk Management, Summer Analyst, Irving - USA, 2027"
   },
+  "https://jobs.citi.com/job/irving/functions-risk-management-summer-analyst-irving-usa-2027/287/94188563584": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Functions - Risk Management, Summer Analyst, Irving - USA, 2027"
+  },
   "https://jobs.citi.com/job/kowloon/banking-commercial-banking-summer-analyst-hong-kong-apac-2027/287/99017365568": {
     "company": "Citibank",
     "first_seen": "2026-08-10",
@@ -548,6 +563,11 @@
     "company": "Citibank",
     "first_seen": "2026-09-01",
     "title": "Markets \u2013 Sales and Trading, Summer Analyst, London \u2013 United Kingdom, 2027"
+  },
+  "https://jobs.citi.com/job/los-angeles/banking-commercial-banking-summer-analyst-los-angeles-us-2027/287/92883072304": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Banking - Commercial Banking, Summer Analyst, Los Angeles - US, 2027"
   },
   "https://jobs.citi.com/job/mississauga/functions-internal-audit-summer-analyst-mississauga-on-2027/287/93639707120": {
     "company": "Citibank",
@@ -563,6 +583,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-06",
     "title": "Functions - Internal Audit, Summer Analyst, New York - USA, 2027"
+  },
+  "https://jobs.citi.com/job/san-francisco/banking-commercial-banking-summer-analyst-san-francisco-us-2027/287/89631582096": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Banking - Commercial Banking, Summer Analyst, San Francisco - US, 2027"
   },
   "https://jobs.citi.com/job/seef/application-development-intern/287/90508192688": {
     "company": "Citibank",
@@ -634,6 +659,11 @@
     "first_seen": "2026-08-17",
     "title": "Banking - Investment Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
   },
+  "https://jobs.citi.com/job/tampa/functions-chief-operating-office-summer-analyst-tampa-usa-2027/287/100084223904": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Functions - Chief Operating Office, Summer Analyst, Tampa - USA, 2027"
+  },
   "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/93639707152": {
     "company": "Citibank",
     "first_seen": "2026-08-06",
@@ -643,6 +673,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-27",
     "title": "Functions - Quantitative Risk Management, Summer Analyst, Tampa - USA, 2027"
+  },
+  "https://jobs.citi.com/job/tampa/functions-risk-management-summer-analyst-tampa-usa-2027/287/100084224112": {
+    "company": "Citibank",
+    "first_seen": "2026-09-02",
+    "title": "Functions - Risk Management, Summer Analyst, Tampa - USA, 2027"
   },
   "https://jobs.citizensbank.com/search-jobs": {
     "company": "Citizens Financial Group",
@@ -678,6 +713,16 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-01",
     "title": "Software Developer Intern"
+  },
+  "https://jobs.genpt.com/job/birmingham/web-developer-intern/505/100078042432": {
+    "company": "Genuine Parts Company",
+    "first_seen": "2026-09-02",
+    "title": "Web Developer Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/emerging-talent-event-summer-2027-technical-program-management-intern/27595/100076767440": {
+    "company": "Intuit",
+    "first_seen": "2026-09-02",
+    "title": "Emerging Talent Event - Summer 2027: Technical Program Management Intern"
   },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-full-stack/27595/99856180864": {
     "company": "Intuit",
@@ -1119,6 +1164,11 @@
     "first_seen": "2026-09-01",
     "title": "Global Transaction Banking Analyst Summer Internship Program 2027 New York City"
   },
+  "https://search.jobs.barclays/job/new-york/international-corporate-banking-analyst-summer-internship-program-2027-new-york-city/13015/100032500976": {
+    "company": "Barclays",
+    "first_seen": "2026-09-02",
+    "title": "International Corporate Banking Analyst Summer Internship Program 2027 New York City"
+  },
   "https://search.jobs.barclays/job/new-york/quantitative-finance-associate-summer-internship-program-2027-new-york/13015/99217260160": {
     "company": "Barclays",
     "first_seen": "2026-08-14",
@@ -1279,10 +1329,10 @@
     "first_seen": "2026-07-12",
     "title": "2027 Amazon Finance Rotation Program - Business Unit Finance Intern"
   },
-  "https://www.amazon.jobs/en/jobs/10435673/2027-amazon-operations-finance-rotational-program-summer-internship": {
+  "https://www.amazon.jobs/en/jobs/10435673/2027-amazon-operations-finance-rotational-program-summer-internship-early-career-2026": {
     "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "2027 Amazon Operations Finance Rotational Program Summer Internship"
+    "first_seen": "2026-09-02",
+    "title": "2027 Amazon Operations Finance Rotational Program Summer Internship, Early Career - 2026"
   },
   "https://www.amazon.jobs/en/jobs/10438927/design-intern-amazon-university-talent-acquisition": {
     "company": "Amazon",
@@ -1844,6 +1894,11 @@
     "first_seen": "2026-09-02",
     "title": "Operations & Logistics Internship - Okmiany (Chojn\u00f3w) - Start 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10525952/financial-analyst-intern-nl-re-e-finance-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-02",
+    "title": "Financial Analyst Intern, NL/RE&E Finance team"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -2059,6 +2114,11 @@
     "first_seen": "2026-08-31",
     "title": "Internship Wholesale Banking @ING Bank"
   },
+  "https://www.ing.jobs/en/job/frankfurt-am-main/intern-sales-ai-adoption-support-f-m-x/3121/43201371776": {
+    "company": "ING",
+    "first_seen": "2026-09-02",
+    "title": "Intern Sales \u2013 AI Adoption Support (f/m/x)"
+  },
   "https://www.ing.jobs/en/job/new-york/summer-2027-internship-audit/3121/42697921472": {
     "company": "ING",
     "first_seen": "2026-08-10",
@@ -2189,10 +2249,20 @@
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Denver"
   },
+  "https://www.schwabjobs.com/job/omaha/2027-business-operations-intern-omaha/33727/100077222304": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-02",
+    "title": "2027 Business Operations Intern - Omaha"
+  },
   "https://www.schwabjobs.com/job/omaha/2027-financial-service-and-support-intern-omaha/33727/100034999040": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Omaha"
+  },
+  "https://www.schwabjobs.com/job/orlando/2027-donor-services-and-operations-intern-orlando-only/33727/100077219136": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-02",
+    "title": "2027 Donor Services and Operations Intern - (Orlando Only)"
   },
   "https://www.schwabjobs.com/job/orlando/2027-financial-service-and-support-intern-orlando/33727/100034998976": {
     "company": "Charles Schwab",
