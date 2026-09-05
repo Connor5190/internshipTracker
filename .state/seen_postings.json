@@ -354,11 +354,6 @@
     "first_seen": "2026-08-14",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
-  "https://jobs.apple.com/en-us/details/200598147": {
-    "company": "Apple",
-    "first_seen": "2026-07-21",
-    "title": "Intern Opportunities at Apple (General) - October 2026 to September 2027"
-  },
   "https://jobs.apple.com/en-us/details/200614259": {
     "company": "Apple",
     "first_seen": "2026-09-03",
@@ -1013,11 +1008,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-14",
     "title": "Intern - Maintenance Engineer (Studying Master's Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000138727213": {
-    "company": "Western Digital",
-    "first_seen": "2026-07-21",
-    "title": "Summer 2027 - Software Engineering Internship"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000140202450": {
     "company": "Western Digital",
@@ -2429,6 +2419,16 @@
     "first_seen": "2026-08-26",
     "title": "page mentions it: \u201c\u2026nts. Learn More Intern Spotlight: 2025 Software Engineering Summer Projects Read More \u25b8 Designing a SystemVerilog Language Server\u2026\u201d"
   },
+  "https://www.ing.jobs/en/job/amsterdam/internship-at-the-transaction-services-trade-finance-services-team-of-financial-institutions/3121/43950119296": {
+    "company": "ING",
+    "first_seen": "2026-09-05",
+    "title": "Internship at the Transaction Services/Trade Finance Services team of Financial Institutions"
+  },
+  "https://www.ing.jobs/en/job/brussels/cma-ecg-intern-m-and-a/3121/43939864640": {
+    "company": "ING",
+    "first_seen": "2026-09-05",
+    "title": "CMA ECG Intern M&A"
+  },
   "https://www.ing.jobs/en/job/bucharest/internship-wholesale-banking-ing-bank/3121/42543948352": {
     "company": "ING",
     "first_seen": "2026-08-31",
@@ -2453,6 +2453,11 @@
     "company": "ING",
     "first_seen": "2026-09-04",
     "title": "INTERNSHIP - Fund & Portfolio Oversight"
+  },
+  "https://www.ing.jobs/en/job/luxembourg/internship-securities/3121/42440480384": {
+    "company": "ING",
+    "first_seen": "2026-09-05",
+    "title": "Internship - Securities"
   },
   "https://www.ing.jobs/en/job/new-york/summer-2027-internship-audit/3121/42697921472": {
     "company": "ING",
@@ -2563,6 +2568,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-04",
     "title": "2027 Technology Intern - Site Reliability Engineering"
+  },
+  "https://www.schwabjobs.com/job/austin/2027-technology-intern-software-engineering/33727/99872061168": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-05",
+    "title": "2027 Technology Intern - Software Engineering"
   },
   "https://www.schwabjobs.com/job/austin/technology-2027-intern-ai-and-cybersecurity/33727/99867643616": {
     "company": "Charles Schwab",
