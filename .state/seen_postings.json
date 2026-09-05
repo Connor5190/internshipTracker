@@ -549,6 +549,11 @@
     "first_seen": "2026-09-04",
     "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
   },
+  "https://jobs.citi.com/job/frankfurt-am-main/banking-financing-equity-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100178760848": {
+    "company": "Citibank",
+    "first_seen": "2026-09-04",
+    "title": "Banking, Financing, Equity Capital Markets Placement Analyst Internship, Frankfurt - Germany 2027"
+  },
   "https://jobs.citi.com/job/getzville/functions-quantitative-risk-management-summer-analyst-buffalo-usa-2027/287/99807501440": {
     "company": "Citibank",
     "first_seen": "2026-08-27",
@@ -669,6 +674,11 @@
     "first_seen": "2026-09-04",
     "title": "Banking, Investment Banking, Placement Analyst Internship, Paris - France 2027"
   },
+  "https://jobs.citi.com/job/paris/markets-sales-and-trading-off-cycle-internship-paris-france-2027/287/100186099504": {
+    "company": "Citibank",
+    "first_seen": "2026-09-04",
+    "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
+  },
   "https://jobs.citi.com/job/san-francisco/banking-commercial-banking-summer-analyst-san-francisco-us-2027/287/89631582096": {
     "company": "Citibank",
     "first_seen": "2026-09-02",
@@ -773,6 +783,11 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-08-05",
     "title": "page mentions it: \u201c\u2026Bank internship Gain exposure to Citizens Private Bank as a summer intern, helping to build and apply exceptional client-service skills and ingenu\u2026\u201d"
+  },
+  "https://jobs.coxenterprises.com/en/jobs/?search=intern": {
+    "company": "Cox Automotive",
+    "first_seen": "2026-09-04",
+    "title": "page mentions it: \u201c\u2026Displaying 1 of 1 matching jobs Software Engineering Intern - Summer 2027 (North Hills, NY) Save Saved North Hills, New Y\u2026\u201d"
   },
   "https://jobs.genpt.com/job/birmingham/agile-pmo-intern/505/100038375696": {
     "company": "Genuine Parts Company",
@@ -1264,6 +1279,11 @@
     "first_seen": "2026-09-01",
     "title": "Investing and Lending Summer Internship Programme 2027 London"
   },
+  "https://search.jobs.barclays/job/london/quantitative-finance-associate-off-cycle-internship-programme-2027-london/13015/100174976080": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "Quantitative Finance Associate Off Cycle Internship Programme 2027 London"
+  },
   "https://search.jobs.barclays/job/london/uk-corporate-banking-summer-internship-programme-2027-london/13015/100032501088": {
     "company": "Barclays",
     "first_seen": "2026-09-01",
@@ -1283,6 +1303,21 @@
     "company": "Barclays",
     "first_seen": "2026-09-03",
     "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Milan"
+  },
+  "https://search.jobs.barclays/job/new-york/2027-compliance-analyst-summer-internship-program-new-york/13015/100189840368": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Compliance Analyst Summer Internship Program New York"
+  },
+  "https://search.jobs.barclays/job/new-york/2027-finance-analyst-summer-internship-program-new-york/13015/100189840336": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Finance Analyst Summer Internship Program New York"
+  },
+  "https://search.jobs.barclays/job/new-york/2027-internal-audit-analyst-summer-internship-program-new-york/13015/100189840656": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Internal Audit Analyst Summer Internship Program New York"
   },
   "https://search.jobs.barclays/job/new-york/banking-associate-summer-internship-program-2027-new-york/13015/100032502176": {
     "company": "Barclays",
@@ -1393,6 +1428,41 @@
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Banking Analyst Summer Internship Program 2027 Toronto"
+  },
+  "https://search.jobs.barclays/job/whippany/2027-compliance-analyst-summer-internship-program-whippany/13015/100189840608": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Compliance Analyst Summer Internship Program Whippany"
+  },
+  "https://search.jobs.barclays/job/whippany/2027-internal-audit-analyst-summer-internship-program-whippany/13015/100189840256": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Internal Audit Analyst Summer Internship Program Whippany"
+  },
+  "https://search.jobs.barclays/job/whippany/2027-operations-analyst-summer-internship-program-whippany/13015/100189840416": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Operations Analyst Summer Internship Program Whippany"
+  },
+  "https://search.jobs.barclays/job/whippany/2027-technology-cyber-and-security-summer-internship-program-whippany/13015/100189840192": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Cyber & Security Summer Internship Program Whippany"
+  },
+  "https://search.jobs.barclays/job/whippany/2027-technology-developer-summer-internship-program-whippany/13015/100189840496": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Developer Summer Internship Program Whippany"
+  },
+  "https://search.jobs.barclays/job/wilmington/2027-risk-analyst-summer-internship-program-wilmington/13015/100189840448": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Risk Analyst Summer Internship Program Wilmington"
+  },
+  "https://search.jobs.barclays/job/wilmington/2027-technology-developer-summer-internship-program-wilmington/13015/100189840544": {
+    "company": "Barclays",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Developer Summer Internship Program Wilmington"
   },
   "https://search.jobs.barclays/job/wilmington/us-consumer-bank-analyst-summer-internship-program-2027-wilmington/13015/100032501984": {
     "company": "Barclays",
@@ -2478,6 +2548,21 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Austin"
+  },
+  "https://www.schwabjobs.com/job/austin/2027-technology-intern-business-and-project-management/33727/100173607520": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Intern - Business & Project Management"
+  },
+  "https://www.schwabjobs.com/job/austin/2027-technology-intern-data-engineering/33727/99872061056": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Intern - Data Engineering"
+  },
+  "https://www.schwabjobs.com/job/austin/2027-technology-intern-site-reliability-engineering/33727/100171224224": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-04",
+    "title": "2027 Technology Intern - Site Reliability Engineering"
   },
   "https://www.schwabjobs.com/job/austin/technology-2027-intern-ai-and-cybersecurity/33727/99867643616": {
     "company": "Charles Schwab",
