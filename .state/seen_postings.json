@@ -314,11 +314,6 @@
     "first_seen": "2026-08-18",
     "title": "Intern, Systems Engineer"
   },
-  "https://careers.newyorklife.com/careers": {
-    "company": "New York Life",
-    "first_seen": "2026-07-23",
-    "title": "page mentions it: \u201c\u2026e time for yourself and your loved ones. Enjoy reduced working hours during the summer months.\", \"title\": \"Summer Flex Time\"}], \"customContent\": {\"positionSections\":\u2026\u201d"
-  },
   "https://careers.synopsys.com/job/mississauga/digital-design-verification-engineering-internship-16-month-co-op/44408/100144992768": {
     "company": "Synopsys",
     "first_seen": "2026-09-03",
@@ -418,6 +413,11 @@
     "company": "Apple",
     "first_seen": "2026-09-07",
     "title": "PMU Design Verification Intern (m/f/d)"
+  },
+  "https://jobs.apple.com/en-us/details/200682357": {
+    "company": "Apple",
+    "first_seen": "2026-09-08",
+    "title": "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -813,6 +813,21 @@
     "company": "Citibank",
     "first_seen": "2026-09-03",
     "title": "Banking, Corporate Banking, Full Time Analyst, Zurich - Switzerland, 2027 (applicable for 2026 Citi Summer Interns Only)"
+  },
+  "https://jobs.citizensbank.com/job/johnston/corporate-finance-and-accounting-internship-2027/288/100338751392": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-08",
+    "title": "Corporate Finance & Accounting Internship 2027"
+  },
+  "https://jobs.citizensbank.com/job/johnston/property-and-procurement-internship-2027/288/100338750320": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-08",
+    "title": "Property and Procurement Internship 2027"
+  },
+  "https://jobs.citizensbank.com/job/westwood/consumer-bank-enterprise-experience-cbex-internship-2027/288/100338750272": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-08",
+    "title": "Consumer Bank Enterprise Experience (CBEX) Internship 2027"
   },
   "https://jobs.citizensbank.com/search-jobs": {
     "company": "Citizens Financial Group",
@@ -1654,11 +1669,6 @@
     "first_seen": "2026-08-14",
     "title": "Marketing AI Specialist Intern, Amazon Global Selling"
   },
-  "https://www.amazon.jobs/en/jobs/10483214/product-marketing-ai-specialist-intern-compliance-amazon-global-selling": {
-    "company": "Amazon",
-    "first_seen": "2026-07-24",
-    "title": "Product Marketing AI Specialist Intern, Compliance, Amazon Global Selling"
-  },
   "https://www.amazon.jobs/en/jobs/10484369/operations-logistics-internship-piemonte-talent-pool": {
     "company": "Amazon",
     "first_seen": "2026-08-06",
@@ -2224,6 +2234,26 @@
     "first_seen": "2026-09-04",
     "title": "Program Manager Intern, APAC Data Center Delivery Operations"
   },
+  "https://www.amazon.jobs/en/jobs/10531399/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-08",
+    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10531402/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-08",
+    "title": "Public Policy Manager Intern \u2013 Q3 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10531455/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-08",
+    "title": "Public Policy Manager Intern - Q1 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10531457/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-08",
+    "title": "Public Policy Manager Intern - Q3 2027, EU Public Policy team "
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -2359,6 +2389,16 @@
     "first_seen": "2026-08-31",
     "title": "Software Developer Intern, BS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/127840103736189638-application-engineering-intern-summer-2027-english": {
+    "company": "Google",
+    "first_seen": "2026-09-08",
+    "title": "Application Engineering Intern, Summer 2027 (English)"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/131287072689267398-research-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-08",
+    "title": "Research Intern, PhD, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/132149998191026886-data-science-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-08-17",
@@ -2438,6 +2478,11 @@
     "company": "Google",
     "first_seen": "2026-09-04",
     "title": "Data Center Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/92840449600824006-application-engineering-intern-winter-2027-english": {
+    "company": "Google",
+    "first_seen": "2026-09-08",
+    "title": "Application Engineering Intern, Winter 2027 (English)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/93078491720753862-software-engineering-phd-intern-2027": {
     "company": "Google",
@@ -2534,6 +2579,11 @@
     "first_seen": "2026-08-10",
     "title": "Summer 2027 Internship - Tech (Innovation)"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-acquisition-finance/3121/43882417408": {
+    "company": "ING",
+    "first_seen": "2026-09-08",
+    "title": "Intern, Acquisition Finance"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-asset-securitisation-global-capital-markets/3121/43435290944": {
     "company": "ING",
     "first_seen": "2026-08-24",
@@ -2543,6 +2593,11 @@
     "company": "ING",
     "first_seen": "2026-09-01",
     "title": "Intern, Corporate Sector Lending"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-loan-distribution-group-apac/3121/44275686784": {
+    "company": "ING",
+    "first_seen": "2026-09-08",
+    "title": "Intern, Loan Distribution Group APAC"
   },
   "https://www.ing.jobs/en/job/singapore/intern-trading-risk-management/3121/42889631680": {
     "company": "ING",
