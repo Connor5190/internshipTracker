@@ -319,6 +319,11 @@
     "first_seen": "2026-08-18",
     "title": "Intern, Systems Engineer"
   },
+  "https://careers.newyorklife.com/careers": {
+    "company": "New York Life",
+    "first_seen": "2026-09-09",
+    "title": "page mentions it: \u201c\u2026e time for yourself and your loved ones. Enjoy reduced working hours during the summer months.\", \"title\": \"Summer Flex Time\"}], \"customContent\": {\"positionSections\":\u2026\u201d"
+  },
   "https://careers.synopsys.com/job/mississauga/digital-design-verification-engineering-internship-16-month-co-op/44408/100144992768": {
     "company": "Synopsys",
     "first_seen": "2026-09-03",
@@ -558,6 +563,171 @@
     "company": "Boeing",
     "first_seen": "2026-09-08",
     "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Software Engineering Artificial Intelligence Intern"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-facilities-equipment-and-reliability-engineering/185/100378295456": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Facilities, Equipment & Reliability Engineering"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-industrial-engineering/185/100378295520": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Industrial Engineering"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-an/185/100378295808": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Information Digital Technology & Security (IDT&S)"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-manufacturing-engineering/185/100378295504": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Manufacturing Engineering"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-manufacturing-research-and-development-mr-and-d/185/100378295664": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Manufacturing Research & Development (MR&D)"
+  },
+  "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-tooling-engineering/185/100378295568": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Tooling Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-business-operations/185/100378295376": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Business Operations"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-core-engineering-and-research-and-technology/185/100378295616": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Core Engineering, & Research & Technology"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-corporate-communications/185/100378295280": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Corporate Communications"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-data-analytics-production-and-industrial-enginee/185/100378295360": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Data Analytics - Production & Industrial Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-fabrication-process-improvement-and-analytics/185/100378295408": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Fabrication Process Improvement & Analytics"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-facilities-equipment-and-reliability-engineering/185/100378295488": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Facilities, Equipment & Reliability Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-facilities-project-management-and-long-range-pla/185/100378295248": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Facilities Project Management & Long-Range Planning"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-finance/185/100378295472": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Finance"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-human-resources/185/100378295232": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Human Resources"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-industrial-engineering/185/100378295584": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Industrial Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-/185/100378295776": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Information Digital Technology & Security (IDT&S)"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-liaison-engineering/185/100378295200": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Liaison Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-logistics/185/100378295264": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Logistics"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-manufacturing-engineering/185/100378295536": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Manufacturing Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-program-engineering-research-and-technology/185/100378295632": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Program Engineering - Research & Technology"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-programmer-analyst-developer-idt-and-s/185/100378295824": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Programmer Analyst / Developer - IDT&S"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-structural-analysis-design-and-systems-engineeri/185/100378295760": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Structural Analysis, Design, & Systems Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-supplier-quality-assurance-and-compliance/185/100378295168": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Supplier Quality Assurance & Compliance"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-supply-chain-management/185/100378295424": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Supply Chain Management"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-tooling-engineering/185/100378295552": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Tooling Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-core-engineering-research-and-technology/185/100378295648": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Core Engineering - Research & Technology"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-design-structural-analysis-and-systems-engineeri/185/100378295600": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) \u2013 Design, Structural Analysis, & Systems Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-finance/185/100378295440": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Finance"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-/185/100378295744": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Information Digital Technology & Security (IDT&S)"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-liaison-engineering/185/100378295328": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Liaison Engineering"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-material-management-and-transportation/185/100378295296": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Material Management & Transportation"
+  },
+  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-operations-engineering-manufacturing-and-industr/185/100378295696": {
+    "company": "Boeing",
+    "first_seen": "2026-09-09",
+    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Operations Engineering - Manufacturing & Industrial Engineering"
   },
   "https://jobs.citi.com/job/chiyoda/banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99751139120": {
     "company": "Citibank",
@@ -1298,6 +1468,21 @@
     "company": "Western Digital",
     "first_seen": "2026-09-08",
     "title": "Summer 2027 Intern - Financial Analyst - Undergraduate & MBA"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000148418653": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-09",
+    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000148418712": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-09",
+    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000148418919": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-09",
+    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
   },
   "https://robinhood.com/us/en/careers/early-talent/": {
     "company": "Robinhood",
@@ -2369,10 +2554,40 @@
     "first_seen": "2026-09-08",
     "title": "Public Policy Manager Intern \u2013 Q3 2027, EU Public Policy team "
   },
+  "https://www.amazon.jobs/en/jobs/10532282/operations-engineering-field-execution-internship-spring-and-summer-2027-ca-ct-ga-tx": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Operations Engineering Field Execution Internship - Spring and Summer 2027 (CA, CT, GA, TX)"
+  },
   "https://www.amazon.jobs/en/jobs/10532290/business-strategy-execution-operations-engineering-intern-spring-and-summer-2027-bellevue-wa": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
     "title": "Business Strategy & Execution Operations Engineering Intern Spring and Summer 2027 (Bellevue, WA )"
+  },
+  "https://www.amazon.jobs/en/jobs/10533926/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10533927/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Public Policy Manager Intern \u2013 Q3 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10533938/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Public Policy Manager Intern - Q3 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10533958/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
+  },
+  "https://www.amazon.jobs/en/jobs/10533959/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-09-09",
+    "title": "Public Policy Manager Intern \u2013 Q3 2027, EU Public Policy team "
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
