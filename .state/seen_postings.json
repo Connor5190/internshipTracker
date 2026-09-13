@@ -1,9 +1,4 @@
 {
-  "https://apply.deloitte.com/careers/SearchJobs/intern": {
-    "company": "Deloitte",
-    "first_seen": "2026-07-21",
-    "title": "page mentions it: \u201c\u2026Audit & Assurance Intern \u2013 Financial Statement Audit \u2013 Summer 2027 Deloitte US\u2026\u201d"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Berkeley-Square-House-London/XMLNAME-2027-Blackstone-Credit-and-Insurance--Infrastructure-and-Asset-Based-Credit-Summer-Analyst--London-_43862": {
     "company": "Blackstone",
     "first_seen": "2026-08-05",
@@ -3539,6 +3534,11 @@
     "first_seen": "2026-09-11",
     "title": "Actuarial Analyst Intern"
   },
+  "https://www.usaajobs.com/job/san-antonio/actuarial-analyst-intern/1207/100529909792": {
+    "company": "USAA",
+    "first_seen": "2026-09-12",
+    "title": "Actuarial Analyst Intern"
+  },
   "https://www.usaajobs.com/job/san-antonio/campaign-analyst-intern/1207/100507554448": {
     "company": "USAA",
     "first_seen": "2026-09-11",
@@ -3574,10 +3574,20 @@
     "first_seen": "2026-09-11",
     "title": "Marketing Campaigns Manager Intern"
   },
+  "https://www.usaajobs.com/job/san-antonio/operations-business-process-owner-intern/1207/100529909776": {
+    "company": "USAA",
+    "first_seen": "2026-09-12",
+    "title": "Operations - Business Process Owner Intern"
+  },
   "https://www.usaajobs.com/job/san-antonio/operations-project-manager-intern/1207/100434045920": {
     "company": "USAA",
     "first_seen": "2026-09-10",
     "title": "Operations - Project Manager Intern"
+  },
+  "https://www.usaajobs.com/job/san-antonio/p-and-c-product-management-analyst-intern/1207/100529909824": {
+    "company": "USAA",
+    "first_seen": "2026-09-12",
+    "title": "P&C Product Management Analyst Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/quantitative-risk-analyst-intern/1207/100434045824": {
     "company": "USAA",
