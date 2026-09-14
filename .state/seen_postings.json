@@ -194,6 +194,41 @@
     "first_seen": "2026-09-09",
     "title": "2027 Corporate Actuarial Intern"
   },
+  "https://careers.aflac.com/job/2027-Corporate-Digital-Services-Internship-GA-31999/1429645300/": {
+    "company": "Aflac",
+    "first_seen": "2026-09-14",
+    "title": "2027 Corporate Digital Services Internship"
+  },
+  "https://careers.arm.com/job/trondheim/gpu-hardware-intern/33099/100604944160": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "GPU Hardware Intern"
+  },
+  "https://careers.arm.com/job/trondheim/gpu-modelling-intern/33099/100604944192": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "GPU Modelling Intern"
+  },
+  "https://careers.arm.com/job/trondheim/graphics-software-intern-direct3d/33099/100604944256": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "Graphics Software Intern, Direct3D"
+  },
+  "https://careers.arm.com/job/trondheim/graphics-software-intern-vulkan/33099/100604944240": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "Graphics Software Intern, Vulkan"
+  },
+  "https://careers.arm.com/job/trondheim/performance-analysis-intern/33099/100604944144": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "Performance Analysis Intern"
+  },
+  "https://careers.arm.com/job/trondheim/software-developer-intern/33099/100604944176": {
+    "company": "ARM",
+    "first_seen": "2026-09-14",
+    "title": "Software Developer Intern"
+  },
   "https://careers.blackrock.com/job/hong-kong-sar/2027-summer-internship-program-apac/45831/90599500992": {
     "company": "BlackRock",
     "first_seen": "2026-08-05",
@@ -268,6 +303,16 @@
     "company": "L3Harris",
     "first_seen": "2026-08-18",
     "title": "Intern, Info Security Systems Engineer"
+  },
+  "https://careers.l3harris.com/en/job/greenville/intern-manufacturing-engineer/4832/100605021072": {
+    "company": "L3Harris",
+    "first_seen": "2026-09-14",
+    "title": "Intern, Manufacturing Engineer"
+  },
+  "https://careers.l3harris.com/en/job/greenville/intern-manufacturing-engineer/4832/100605021088": {
+    "company": "L3Harris",
+    "first_seen": "2026-09-14",
+    "title": "Intern, Manufacturing Engineer"
   },
   "https://careers.l3harris.com/en/job/greenville/intern-software-engineer-spring-2027/4832/99372978528": {
     "company": "L3Harris",
@@ -1134,6 +1179,11 @@
     "first_seen": "2026-09-08",
     "title": "2027 Commercial Summer Intern - Global Markets, Boston, MA"
   },
+  "https://jobs.citizensbank.com/job/boston/treasury-and-balance-sheet-strategies-graduate-internship-2027/288/100613676784": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-14",
+    "title": "Treasury and Balance Sheet Strategies Graduate Internship\u00a02027"
+  },
   "https://jobs.citizensbank.com/job/chicago/2027-commercial-summer-intern-chicago-il/288/100363712400": {
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-08",
@@ -1289,10 +1339,80 @@
     "first_seen": "2026-09-02",
     "title": "Emerging Talent Event - Summer 2027: Technical Program Management Intern"
   },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-ai-science-intern/27595/100620927536": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: AI Science Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-product-marketing-intern/27595/100620927728": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: MBA Product Marketing Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-strategic-finance-intern/27595/100620927712": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: MBA Strategic Finance Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-strategy-and-operations-intern/27595/100620927760": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: MBA Strategy & Operations Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mobile-software-engineering-intern-android/27595/100620927552": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Mobile Software Engineering Intern - Android"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mobile-software-engineering-intern-ios/27595/100620927568": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Mobile Software Engineering Intern - iOS"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-ms-fraud-and-risk-intern/27595/100620927744": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: MS Fraud & Risk Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-phd-ai-research-intern/27595/100620927776": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: PhD AI Research Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-product-design-intern/27595/100620927648": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Product Design Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-product-manager-intern/27595/100620927632": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Product Manager Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-cybersecurity/27595/100620927616": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Software Engineering Intern - Cybersecurity"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-full-stack/27595/100620927520": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Software Engineering Intern - Full Stack"
+  },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-full-stack/27595/99856180864": {
     "company": "Intuit",
     "first_seen": "2026-08-28",
     "title": "Summer 2027: Software Engineering Intern - Full Stack"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-technical-program-manager-tpm-intern/27595/100620927664": {
+    "company": "Intuit",
+    "first_seen": "2026-09-14",
+    "title": "Summer 2027: Technical Program Manager (TPM) Intern"
+  },
+  "https://jobs.nscorp.com/job/Atlanta-2027-Spring-Corporate-Communications-%2B-Community-Impact-Intern-GA-30308/1429347200/": {
+    "company": "Norfolk Southern",
+    "first_seen": "2026-09-14",
+    "title": "2027 Spring Corporate Communications + Community Impact Intern"
   },
   "https://jobs.nscorp.com/job/Atlanta-2027-Summer-Internal-Audit-Intern-GA-30308/1427626900/": {
     "company": "Norfolk Southern",
@@ -1679,10 +1799,15 @@
     "first_seen": "2026-09-11",
     "title": "Summer/Fall 2027 Co-Op: Channel Integration"
   },
-  "https://robinhood.com/us/en/careers/early-talent/": {
-    "company": "Robinhood",
-    "first_seen": "2026-07-22",
-    "title": "page mentions it: \u201c\u2026out our open opportunities here. Open Roles Internships We offer 12 and 16 week summer internships across various departments and offices, including engineering, fina\u2026\u201d"
+  "https://jobs.smartrecruiters.com/westerndigital/744000149229769": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-14",
+    "title": "Intern - Technologist, Hardware Development Engineering (Studying Ph.D Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000149367234": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-14",
+    "title": "Spring 2027 Co-Op - AI Systems Strategy"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
@@ -1969,6 +2094,16 @@
     "first_seen": "2026-09-01",
     "title": "Banking Analyst Summer Internship Program 2027 Mexico City"
   },
+  "https://search.jobs.barclays/job/milan/banking-off-cycle-internship-programme-2027-milan/13015/100609870560": {
+    "company": "Barclays",
+    "first_seen": "2026-09-14",
+    "title": "Banking Off Cycle Internship Programme 2027 Milan"
+  },
+  "https://search.jobs.barclays/job/milan/capital-markets-off-cycle-internship-programme-2027-milan/13015/100609871024": {
+    "company": "Barclays",
+    "first_seen": "2026-09-14",
+    "title": "Capital Markets Off Cycle Internship Programme 2027 Milan"
+  },
   "https://search.jobs.barclays/job/milan/sales-trading-and-structuring-off-cycle-internship-programme-2027-milan/13015/100128639424": {
     "company": "Barclays",
     "first_seen": "2026-09-03",
@@ -2188,6 +2323,11 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "Product Management Intern, Amazon University Talent Acquisition "
+  },
+  "https://www.amazon.jobs/en/jobs/10403494/process-improvement-intern-aces-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-09-14",
+    "title": "Process Improvement Intern - ACES, Operations"
   },
   "https://www.amazon.jobs/en/jobs/10404485/design-intern-amazon-university-talent-acquisition": {
     "company": "Amazon",
@@ -2744,6 +2884,11 @@
     "first_seen": "2026-08-26",
     "title": "Financial Analyst Intern, NL/RE&E Finance team"
   },
+  "https://www.amazon.jobs/en/jobs/10515290/financial-analyst-intern-ops-fp-a": {
+    "company": "Amazon",
+    "first_seen": "2026-09-14",
+    "title": "Financial Analyst Intern, Ops FP&A"
+  },
   "https://www.amazon.jobs/en/jobs/10515426/financial-analyst-intern-amzl": {
     "company": "Amazon",
     "first_seen": "2026-08-26",
@@ -3014,6 +3159,11 @@
     "first_seen": "2026-09-11",
     "title": "ML Systems Software Development Engineer Intern, Annapurna Labs - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10538525/marketing-intern-amazon-global-logistics": {
+    "company": "Amazon",
+    "first_seen": "2026-09-14",
+    "title": "Marketing Intern, Amazon Global Logistics"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -3104,6 +3254,11 @@
     "first_seen": "2026-08-31",
     "title": "Software Engineering Intern, BS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/100798001798095558-user-experience-design-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "User Experience Design Intern, BS/MS, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/103632882076918470-parttime-software-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
@@ -3139,15 +3294,45 @@
     "first_seen": "2026-08-17",
     "title": "Research Scientist PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/112499004540887750-user-experience-engineer-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "User Experience Engineer Intern, BS/MS, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/112518690523488966-software-developer-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-24",
     "title": "Software Developer Intern, PhD, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/114405557703451334-customer-and-partner-solutions-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Customer and Partner Solutions Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/115313754307994310-data-center-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Data Center Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/117572151191446214-user-experience-engineer-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "User Experience Engineer Intern, PhD, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/119184035237765830-data-scientist-product-intern-ms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Data Scientist, Product Intern, MS, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/121543376737575622-software-engineering-site-reliability-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
     "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/122803627516404422-hardware-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Hardware Engineering Intern, BS/MS, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/123510626377966278-software-developer-intern-bs-summer-2027": {
     "company": "Google",
@@ -3174,15 +3359,45 @@
     "first_seen": "2026-08-17",
     "title": "Hardware/Silicon Engineering PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/134577198026629830-business-data-scientist-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Business Data Scientist Intern, PhD, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/134795423167455942-research-scientist-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-08-17",
     "title": "Research Scientist PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/135755874491605702-product-design-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Product Design Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/136529930677560006-silicon-engineering-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Silicon Engineering Intern, PhD, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/136826798817059526-security-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Security Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/137409539979780806-user-experience-research-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "User Experience Research Intern, PhD, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/138960139137753798-software-developer-intern-ms-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-31",
     "title": "Software Developer Intern, MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/139129176165622470-security-consultant-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Security Consultant Intern, BS/MS, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/142747733357142726-software-engineering-site-reliability-engineering-bsms-intern-2027": {
     "company": "Google",
@@ -3219,6 +3434,11 @@
     "first_seen": "2026-08-17",
     "title": "Software Engineering or SRE, PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/80582381009806022-technical-program-manager-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Technical Program Manager Intern, BS/MS, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/83199557986329286-software-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
@@ -3233,6 +3453,21 @@
     "company": "Google",
     "first_seen": "2026-08-17",
     "title": "Part-Time Research Scientist PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/88570332985598662-silicon-engineering-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Silicon Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/89541201752924870-user-experience-research-intern-ms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "User Experience Research Intern, MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/89965613241246406-data-scientist-research-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Data Scientist, Research Intern, PhD, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/91436104816698054-software-engineering-intern-phd-summer-2027": {
     "company": "Google",
@@ -3258,6 +3493,16 @@
     "company": "Google",
     "first_seen": "2026-08-31",
     "title": "Software Engineering Intern, MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/94308684170961606-security-consultant-intern-bsms-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Security Consultant Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/97352132356645574-hardware-engineering-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-09-14",
+    "title": "Hardware Engineering Intern, PhD, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/99925955933283014-data-center-technician-intern-2027": {
     "company": "Google",
@@ -3404,6 +3649,11 @@
     "first_seen": "2026-08-03",
     "title": "page mentions it: \u201c\u2026rime Analyst (Investigations) Remote : India \u00b7 Poland Internship Programme 2027: Software Engineer (Frontend) Office : Barcelona \u00b7 Dubai \u00b7 Krakow \u00b7 Lisb\u2026\u201d"
   },
+  "https://www.schwabjobs.com/job/austin/2027-branch-financial-consulting-intern/33727/100616641072": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-14",
+    "title": "2027 Branch Financial Consulting Intern"
+  },
   "https://www.schwabjobs.com/job/austin/2027-business-operations-intern-texas/33727/100034998896": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
@@ -3518,6 +3768,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Westlake"
+  },
+  "https://www.schwabjobs.com/job/westlake/2027-wealth-management-internship/33727/100621331872": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-14",
+    "title": "2027 Wealth Management Internship"
   },
   "https://www.sealeassociates.com/careers": {
     "company": "Seale & Associates",
