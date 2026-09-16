@@ -594,6 +594,11 @@
     "first_seen": "2026-09-15",
     "title": "Software Engineer Intern - Core OS"
   },
+  "https://jobs.apple.com/en-us/details/200683720": {
+    "company": "Apple",
+    "first_seen": "2026-09-16",
+    "title": "Instrument Hardware Develop Intern"
+  },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
     "first_seen": "2026-08-05",
@@ -939,6 +944,11 @@
     "first_seen": "2026-09-15",
     "title": "Wealth \u2013 Summer Analyst, Los Angeles\u2013 USA, 2027"
   },
+  "https://jobs.citi.com/job/bogota/banking-corporate-baking-internship-bogota-colombia-2027/287/100683557456": {
+    "company": "Citibank",
+    "first_seen": "2026-09-16",
+    "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
+  },
   "https://jobs.citi.com/job/chiyoda/banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99751139120": {
     "company": "Citibank",
     "first_seen": "2026-08-26",
@@ -993,6 +1003,11 @@
     "company": "Citibank",
     "first_seen": "2026-09-04",
     "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
+  },
+  "https://jobs.citi.com/job/frankfurt-am-main/banking-debt-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100709897024": {
+    "company": "Citibank",
+    "first_seen": "2026-09-16",
+    "title": "Banking, Debt Capital Markets, Placement Analyst Internship, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-financing-equity-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100178760848": {
     "company": "Citibank",
@@ -1158,6 +1173,11 @@
     "company": "Citibank",
     "first_seen": "2026-09-15",
     "title": "Wealth \u2013 Summer Analyst, New York \u2013 USA, 2027"
+  },
+  "https://jobs.citi.com/job/paris/banking-corporate-banking-financial-institutions-group-fig-placement-analyst-internship-paris-franc/287/100709896848": {
+    "company": "Citibank",
+    "first_seen": "2026-09-16",
+    "title": "Banking, Corporate Banking, Financial Institutions Group (FIG), Placement Analyst Internship, Paris - France 2027"
   },
   "https://jobs.citi.com/job/paris/banking-corporate-banking-placement-analyst-internship-paris-france-2027/287/100295995168": {
     "company": "Citibank",
@@ -1383,6 +1403,11 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-11",
     "title": "Data Science Undergraduate 2027 Summer Intern"
+  },
+  "https://jobs.citizensbank.com/job/johnston/internal-audit-internship-2027/288/100674381440": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-16",
+    "title": "Internal Audit Internship 2027"
   },
   "https://jobs.citizensbank.com/job/johnston/network-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082544": {
     "company": "Citizens Financial Group",
@@ -1663,11 +1688,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-14",
     "title": "Intern - AI Information Technology (Studying Master's Degree) - Urgent Need"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000134646158": {
-    "company": "Western Digital",
-    "first_seen": "2026-07-12",
-    "title": "Intern - Software Developer (Studying Bachelor Degree) - Start in January 2027"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134646208": {
     "company": "Western Digital",
@@ -3339,6 +3359,21 @@
     "first_seen": "2026-09-15",
     "title": "Internship in Operations - Rozenburg - Start 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10544261/software-developer-intern-field-innovation-security-search-and-observability-sso": {
+    "company": "Amazon",
+    "first_seen": "2026-09-16",
+    "title": "Software Developer Intern, Field Innovation, Security Search and Observability (SSO)"
+  },
+  "https://www.amazon.jobs/en/jobs/10544288/2027-area-manager-intern-amazon-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-09-16",
+    "title": "2027 Area Manager Intern, Amazon Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10544291/2027-area-manager-intern-amazon-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-09-16",
+    "title": "2027 Area Manager Intern, Amazon Operations"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -3714,6 +3749,11 @@
     "first_seen": "2026-09-03",
     "title": "ING INTERNSHIP - Finance Accounting & Reporting"
   },
+  "https://www.ing.jobs/en/job/luxembourg/internship-account-manager/3121/44762283328": {
+    "company": "ING",
+    "first_seen": "2026-09-16",
+    "title": "Internship - Account Manager"
+  },
   "https://www.ing.jobs/en/job/luxembourg/internship-business-management-and-strategy-private-banking/3121/44044583424": {
     "company": "ING",
     "first_seen": "2026-09-04",
@@ -3993,6 +4033,11 @@
     "company": "USAA",
     "first_seen": "2026-09-14",
     "title": "Associate Attorney Intern - Legal & Advice"
+  },
+  "https://www.usaajobs.com/job/san-antonio/associate-attorney-intern-legal-and-advisory-services/1207/100641665184": {
+    "company": "USAA",
+    "first_seen": "2026-09-16",
+    "title": "Associate Attorney Intern - Legal & Advisory Services"
   },
   "https://www.usaajobs.com/job/san-antonio/campaign-analyst-intern/1207/100507554448": {
     "company": "USAA",
