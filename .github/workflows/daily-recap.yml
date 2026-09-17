@@ -1,8 +1,8 @@
 name: Daily Internship Recap
 
 on:
-  schedule:
-    - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
+#   schedule:
+#     - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
   workflow_dispatch: {}
 
 permissions:
