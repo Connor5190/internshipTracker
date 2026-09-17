@@ -110,7 +110,6 @@ CME Group | https://cmegroup.wd1.myworkdayjobs.com/cme_careers
 Cognition | https://cognition.com/careers
 Cohere | https://cohere.com/careers
 Coinbase | https://www.coinbase.com/careers
-Collins Aerospace | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
 Comcast | https://comcast.wd5.myworkdayjobs.com/Comcast_Careers
 Commure | https://www.commure.com/careers
 Confluent | https://careers.confluent.io
@@ -372,7 +371,6 @@ Robin AI | https://robinai.com/careers
 Robinhood | https://robinhood.com/us/en/careers/early-talent/
 Roblox | https://careers.roblox.com/jobs?query=intern
 Rogo | https://rogo.ai/careers
-RTX (Raytheon) | https://globalhr.wd5.myworkdayjobs.com/REC_RTX_Ext_Gateway
 Runway | https://runwayml.com/careers
 S&P Global | https://spgi.wd5.myworkdayjobs.com/SPGI_Careers
 Safe Superintelligence Inc. | https://ssi.inc/
