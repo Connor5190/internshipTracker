@@ -149,6 +149,11 @@
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026Start) Austin Graduate Technology Graduate Technology Software Engineer Intern (Summer 2027 - Austin) Austin Internship Technology Internship Technology Software Engi\u2026\u201d"
   },
+  "https://campus-americas.icims.com/jobs/26268/machine-learning-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-09-21",
+    "title": "Machine Learning Intern, 2027 Summer U.S."
+  },
   "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job": {
     "company": "Atlassian",
     "first_seen": "2026-09-02",
@@ -229,10 +234,35 @@
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Program - Sales & Relationship Management - Institutional Wealth - Chicago"
   },
+  "https://careers.blackrock.com/job/hong-kong-sar/2027-summer-internship-program-apac/45831/90599500992": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Summer Internship Program - APAC"
+  },
+  "https://careers.blackrock.com/job/london/2027-client-and-product-summer-internship-program-emea/45831/97150826736": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Client and Product Summer Internship Program - EMEA"
+  },
+  "https://careers.blackrock.com/job/london/2027-off-cycle-internship-program-emea/45831/97104654800": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Off-cycle Internship Program - EMEA"
+  },
   "https://careers.blackrock.com/job/london/2027-quantitative-masters-internship-programme-investments-quantitative-investing-london/45831/100661849296": {
     "company": "BlackRock",
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Programme - Investments - Quantitative Investing - London"
+  },
+  "https://careers.blackrock.com/job/london/2027-summer-internship-program-emea/45831/97150826672": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Summer Internship Program - EMEA"
+  },
+  "https://careers.blackrock.com/job/mexico-city/2027-mexico-city-internship-program/45831/97843197600": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Mexico City Internship Program"
   },
   "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-client-and-product-functions-research-and-markets-advisory-new-york/45831/100661849632": {
     "company": "BlackRock",
@@ -263,6 +293,11 @@
     "company": "BlackRock",
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - New York"
+  },
+  "https://careers.blackrock.com/job/new-york/2027-summer-internship-program-amers/45831/90628276544": {
+    "company": "BlackRock",
+    "first_seen": "2026-09-21",
+    "title": "2027 Summer Internship Program - AMERS"
   },
   "https://careers.blackrock.com/job/san-francisco/2027-quantitative-masters-internship-program-investments-global-capital-markets-san-francisco/45831/100661849376": {
     "company": "BlackRock",
@@ -427,6 +462,11 @@
   "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/100721402256": {
     "company": "Synopsys",
     "first_seen": "2026-09-16",
+    "title": "Computational Fluid Dynamics(CFD) Internship"
+  },
+  "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/100930292816": {
+    "company": "Synopsys",
+    "first_seen": "2026-09-21",
     "title": "Computational Fluid Dynamics(CFD) Internship"
   },
   "https://careers.synopsys.com/job/villeurbanne/software-development-and-optimization-internship/44408/99869922384": {
@@ -634,6 +674,21 @@
     "first_seen": "2026-09-20",
     "title": "PhD Intern, Apple Ads (Machine Learning)"
   },
+  "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Government Operations and Sustainability"
+  },
+  "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-program-management/185/98710337328": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Program Management"
+  },
+  "https://jobs.boeing.com/job/auburn/boeing-summer-2027-internship-program-paid-environment-health-and-safety-ehs/185/98720778896": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Environment, Health, and Safety (EHS)"
+  },
   "https://jobs.boeing.com/job/berkeley/engineering-and-technology-innovation-graduate-researcher-program-advanced-materials-and-structures/185/100364523008": {
     "company": "Boeing",
     "first_seen": "2026-09-08",
@@ -654,10 +709,50 @@
     "first_seen": "2026-09-14",
     "title": "Engineering Intern - January 2027"
   },
+  "https://jobs.boeing.com/job/everett/boeing-business-internship-program-paid-summer-2027-human-resources/185/98720782048": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Business Internship Program (Paid) Summer 2027 - Human Resources"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-business-operations/185/98720778416": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Business Operations"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-communications-intern/185/98720777008": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Communications Intern"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-data-analytics-intern/185/98720782192": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Data Analytics Intern"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-facilities-engineering/185/98720782320": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Facilities Engineering"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-global-real-estate-and-facilities-and-property-management/185/98720782256": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Global Real Estate and Facilities & Property Management"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-and-s/185/98720781984": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Information Digital Technology & Security (IDT&S)"
+  },
   "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-security-and-fire-operation-s-and-fo/185/99041176112": {
     "company": "Boeing",
     "first_seen": "2026-08-10",
     "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Security & Fire Operation (S&FO)"
+  },
+  "https://jobs.boeing.com/job/everett/boeing-summer-2027-internship-program-paid-supply-chain/185/98720778608": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Supply Chain"
   },
   "https://jobs.boeing.com/job/farnborough/aerodynamics-engineering-intern-summer-2027/185/100464594160": {
     "company": "Boeing",
@@ -718,6 +813,26 @@
     "company": "Boeing",
     "first_seen": "2026-09-11",
     "title": "Research and Technology Intern- Summer 2027"
+  },
+  "https://jobs.boeing.com/job/seattle/boeing-summer-2027-internship-program-paid-methods-process-analyst/185/98720778816": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Methods Process Analyst"
+  },
+  "https://jobs.boeing.com/job/seattle/boeing-summer-2027-internship-program-paid-quality-engineering-intern/185/98720781296": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Quality Engineering Intern"
+  },
+  "https://jobs.boeing.com/job/seattle/boeing-summer-2027-internship-program-paid-quality-specialist/185/98720781184": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Quality Specialist"
+  },
+  "https://jobs.boeing.com/job/seattle/boeing-summer-2027-internship-program-paid-sales-and-marketing/185/98720777328": {
+    "company": "Boeing",
+    "first_seen": "2026-09-21",
+    "title": "Boeing Summer 2027 Internship Program (Paid) - Sales and Marketing"
   },
   "https://jobs.boeing.com/job/tukwila/boeing-engineering-and-technology-innovation-graduate-researcher-program-software-engineering-artif/185/100364523072": {
     "company": "Boeing",
@@ -1119,6 +1234,11 @@
     "first_seen": "2026-08-26",
     "title": "Services \u2013 Summer Analyst, India, 2027"
   },
+  "https://jobs.citi.com/job/new-york/functions-internal-audit-summer-analyst-new-york-usa-2027/287/98836136896": {
+    "company": "Citibank",
+    "first_seen": "2026-09-21",
+    "title": "Functions - Internal Audit, Summer Analyst, New York - USA, 2027"
+  },
   "https://jobs.citi.com/job/new-york/wealth-latam-summer-analyst-new-york-usa-2027/287/100661744992": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
@@ -1249,6 +1369,11 @@
     "first_seen": "2026-09-02",
     "title": "Functions - Chief Operating Office, Summer Analyst, Tampa - USA, 2027"
   },
+  "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/93639707152": {
+    "company": "Citibank",
+    "first_seen": "2026-09-21",
+    "title": "Functions - Internal Audit, Summer Analyst, Tampa - USA, 2027"
+  },
   "https://jobs.citi.com/job/tampa/functions-quantitative-risk-management-summer-analyst-tampa-usa-2027/287/99807501472": {
     "company": "Citibank",
     "first_seen": "2026-08-27",
@@ -1268,6 +1393,11 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-08",
     "title": "2027 Commercial Summer Intern - Atlanta, GA"
+  },
+  "https://jobs.citizensbank.com/job/baltimore/2027-investment-banking-summer-analyst-baltimore-md/288/100948023568": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-21",
+    "title": "2027 Investment Banking Summer Analyst (Baltimore, MD)"
   },
   "https://jobs.citizensbank.com/job/boston/2027-commercial-summer-intern-boston-ma/288/100363712208": {
     "company": "Citizens Financial Group",
@@ -1383,6 +1513,11 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-08",
     "title": "2027 Commercial Summer Intern - New York, NY"
+  },
+  "https://jobs.citizensbank.com/job/richmond/2027-investment-banking-summer-analyst-richmond-va/288/100948023504": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-09-21",
+    "title": "2027 Investment Banking Summer Analyst (Richmond, VA)"
   },
   "https://jobs.citizensbank.com/job/tampa/2027-commercial-summer-intern-tampa-fl/288/100363712448": {
     "company": "Citizens Financial Group",
@@ -3674,10 +3809,25 @@
     "first_seen": "2026-07-12",
     "title": "Financial Analyst Intern"
   },
+  "https://www.att.jobs/job/atlanta/at-and-t-technology-development-program-internship/117/100954809824": {
+    "company": "AT&T",
+    "first_seen": "2026-09-21",
+    "title": "AT&T Technology Development Program Internship"
+  },
+  "https://www.att.jobs/job/bothell/at-and-t-technology-development-program-internship/117/100954809888": {
+    "company": "AT&T",
+    "first_seen": "2026-09-21",
+    "title": "AT&T Technology Development Program Internship"
+  },
   "https://www.att.jobs/job/dallas/accounting-leadership-development-program-internship/117/99440502720": {
     "company": "AT&T",
     "first_seen": "2026-08-19",
     "title": "Accounting Leadership Development Program - Internship"
+  },
+  "https://www.att.jobs/job/dallas/at-and-t-technology-development-program-internship/117/100954809776": {
+    "company": "AT&T",
+    "first_seen": "2026-09-21",
+    "title": "AT&T Technology Development Program Internship"
   },
   "https://www.att.jobs/job/dallas/corporate-communications-internship/117/100122200224": {
     "company": "AT&T",
@@ -3698,6 +3848,11 @@
     "company": "AT&T",
     "first_seen": "2026-09-03",
     "title": "Transformation Supply Chain Leadership Program Internship"
+  },
+  "https://www.att.jobs/job/middletown/at-and-t-technology-development-program-internship/117/100954809904": {
+    "company": "AT&T",
+    "first_seen": "2026-09-21",
+    "title": "AT&T Technology Development Program Internship"
   },
   "https://www.deshaw.com/careers": {
     "company": "D.E. Shaw",
@@ -4209,6 +4364,11 @@
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Denver"
   },
+  "https://www.schwabjobs.com/job/lone-tree/2027-sox-compliance-intern/33727/100959818672": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-21",
+    "title": "2027 SOX Compliance Intern"
+  },
   "https://www.schwabjobs.com/job/omaha/2027-business-operations-intern-omaha/33727/100077222304": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-02",
@@ -4218,6 +4378,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
     "title": "2027 Financial Service & Support Intern - Omaha"
+  },
+  "https://www.schwabjobs.com/job/orlando/2027-business-operations-intern-orlando/33727/100944655504": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-21",
+    "title": "2027 Business Operations Intern - Orlando"
   },
   "https://www.schwabjobs.com/job/orlando/2027-donor-services-and-operations-intern-orlando-only/33727/100077219136": {
     "company": "Charles Schwab",
@@ -4307,6 +4472,11 @@
   "https://www.usaajobs.com/job/plano/life-solutions-specialist-intern/1207/100641665200": {
     "company": "USAA",
     "first_seen": "2026-09-14",
+    "title": "Life Solutions Specialist Intern"
+  },
+  "https://www.usaajobs.com/job/plano/life-solutions-specialist-intern/1207/100945025600": {
+    "company": "USAA",
+    "first_seen": "2026-09-21",
     "title": "Life Solutions Specialist Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/actuarial-analyst-intern/1207/100507554416": {
