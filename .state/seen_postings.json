@@ -219,6 +219,16 @@
     "first_seen": "2026-09-21",
     "title": "2027 Summer Actuarial Intern"
   },
+  "https://careers.arm.com/job/galway/software-engineer-intern-ce-software/33099/101024213216": {
+    "company": "ARM",
+    "first_seen": "2026-09-23",
+    "title": "Software Engineer Intern - CE Software"
+  },
+  "https://careers.arm.com/job/galway/software-intern-machine-learning/33099/101024212848": {
+    "company": "ARM",
+    "first_seen": "2026-09-23",
+    "title": "Software Intern - Machine Learning"
+  },
   "https://careers.arm.com/job/trondheim/gpu-hardware-intern/33099/100604944160": {
     "company": "ARM",
     "first_seen": "2026-09-14",
@@ -1069,6 +1079,11 @@
     "first_seen": "2026-09-16",
     "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
+  "https://jobs.citi.com/job/budapest/finance-full-time-analyst-budapest-hungary-2027-applicable-for-2026-citi-summer-interns-only/287/101029282032": {
+    "company": "Citibank",
+    "first_seen": "2026-09-23",
+    "title": "Finance, Full-Time Analyst, Budapest - Hungary, 2027 - (Applicable for 2026 Citi Summer interns only)"
+  },
   "https://jobs.citi.com/job/chiyoda/banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99751139120": {
     "company": "Citibank",
     "first_seen": "2026-08-26",
@@ -1358,6 +1373,11 @@
     "company": "Citibank",
     "first_seen": "2026-08-31",
     "title": "Banking - Commercial Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/101029267872": {
+    "company": "Citibank",
+    "first_seen": "2026-09-23",
+    "title": "Banking - Investment Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/99842563360": {
     "company": "Citibank",
@@ -2183,6 +2203,16 @@
     "company": "Western Digital",
     "first_seen": "2026-09-15",
     "title": "Intern - Industrial Engineer"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000151235109": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-23",
+    "title": "Intern - Data Analytics"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000151235689": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-23",
+    "title": "Intern - Manufacturing Engineer"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
@@ -3919,6 +3949,76 @@
     "first_seen": "2026-09-22",
     "title": "Security Engineer Internship \u2013 2027 (US)"
   },
+  "https://www.amazon.jobs/en/jobs/10557414/program-manager-intern-12-months-fy27": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Program Manager Intern (12 months) - FY27"
+  },
+  "https://www.amazon.jobs/en/jobs/10557432/account-representative-intern-6-months": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern 6 months"
+  },
+  "https://www.amazon.jobs/en/jobs/10557454/business-intelligence-intern-luxembourg": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Business Intelligence Intern Luxembourg"
+  },
+  "https://www.amazon.jobs/en/jobs/10557497/account-representative-intern-6-months": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern 6 months"
+  },
+  "https://www.amazon.jobs/en/jobs/10557513/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10557514/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10557544/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10557548/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10557553/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10557554/2027-program-manager-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "2027 Program Manager Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10557559/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10557562/2027-operations-intern-fc-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "2027 Operations Intern, FC Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10557566/2027-facilities-coordinator-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "2027 Facilities Coordinator Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10557604/account-representative-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-23",
+    "title": "Account Representative Intern, Early Career - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -4423,6 +4523,11 @@
     "company": "ING",
     "first_seen": "2026-09-22",
     "title": "Intern, Finance - Product Control"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-fm-front-office-support/3121/45086279232": {
+    "company": "ING",
+    "first_seen": "2026-09-23",
+    "title": "Intern, FM Front Office Support"
   },
   "https://www.ing.jobs/en/job/singapore/intern-fm-product-control/3121/44454603456": {
     "company": "ING",
