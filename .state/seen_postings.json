@@ -534,6 +534,11 @@
     "first_seen": "2026-09-23",
     "title": "Data Scientist Intern, 2027 Summer U.S."
   },
+  "https://job-boards.greenhouse.io/appian": {
+    "company": "Appian",
+    "first_seen": "2026-09-24",
+    "title": "page mentions it: \u201c\u2026sultant Paris, France Associate Consultant Seville, Spain Associate Consultant (2027 Graduates) Paris, France Associate Consultant (2027 Graduates) Milan, Italy Ass\u2026\u201d"
+  },
   "https://jobs.adp.com/en/early-careers/": {
     "company": "ADP",
     "first_seen": "2026-08-03",
@@ -718,6 +723,11 @@
     "company": "Apple",
     "first_seen": "2026-09-20",
     "title": "PhD Intern, Apple Ads (Machine Learning)"
+  },
+  "https://jobs.apple.com/en-us/details/200685016": {
+    "company": "Apple",
+    "first_seen": "2026-09-24",
+    "title": "Tooling Engineering Intern - iPhone"
   },
   "https://jobs.apple.com/en-us/details/200685035": {
     "company": "Apple",
@@ -1083,6 +1093,11 @@
     "company": "Citibank",
     "first_seen": "2026-09-16",
     "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
+  },
+  "https://jobs.citi.com/job/bogota/markets-sales-and-trading-internship-bogota-colombia-2027/287/101076912448": {
+    "company": "Citibank",
+    "first_seen": "2026-09-24",
+    "title": "Markets \u2013 Sales and Trading, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
   "https://jobs.citi.com/job/bogota/services-internship-bogota-colombia-2027/287/101052286016": {
     "company": "Citibank",
@@ -1788,6 +1803,11 @@
     "company": "Intuit",
     "first_seen": "2026-09-14",
     "title": "Summer 2027: Technical Program Manager (TPM) Intern"
+  },
+  "https://jobs.intuit.com/job/san-diego/mba-strategic-sourcing-intern-technology/27595/101062769088": {
+    "company": "Intuit",
+    "first_seen": "2026-09-24",
+    "title": "MBA Strategic Sourcing Intern, Technology"
   },
   "https://jobs.intuit.com/job/toronto/winter-2027-event-marketing-coordinator-co-op-4-months/27595/100738961648": {
     "company": "Intuit",
@@ -4048,6 +4068,91 @@
     "company": "Amazon",
     "first_seen": "2026-09-23",
     "title": "Process Improvement Specialist Intern - 2027  "
+  },
+  "https://www.amazon.jobs/en/jobs/10558917/operations-human-resources-partner-intern-3-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 - 12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558919/operations-human-resources-partner-intern-3-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 - 12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558931/operations-human-resources-partner-intern-3-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 - 12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558935/operations-human-resources-partner-intern-3-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558943/operations-human-resources-partner-intern-3-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558945/program-manager-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Program Manager Intern 6 Months - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10558952/operations-human-resources-partner-intern-3-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558953/operations-human-resources-partner-intern-3-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 - 12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558954/operations-human-resources-partner-intern-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558955/operations-human-resources-partner-intern-3-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558956/general-marketing-manager-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "General Marketing Manager Intern- 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10558959/operations-human-resources-partner-intern-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Operations Human Resources Partner Intern (12 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10559019/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Process Improvement Specialist Intern - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10559027/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Process Improvement Specialist Intern - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10559028/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Process Improvement Specialist Intern - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10559115/program-manager-intern-ita-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Program Manager Intern ITA 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10559132/program-manager-intern-ita-2027-mxp3-site": {
+    "company": "Amazon",
+    "first_seen": "2026-09-24",
+    "title": "Program Manager Intern ITA 2027 - MXP3 site "
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
