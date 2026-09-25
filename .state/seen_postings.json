@@ -569,11 +569,6 @@
     "first_seen": "2026-09-10",
     "title": "Expression of Interests | Career Fair Events Internship"
   },
-  "https://jobs.apple.com/en-us/details/200646124": {
-    "company": "Apple",
-    "first_seen": "2026-08-10",
-    "title": "Finance Development Program - 2027 Internship Opportunities"
-  },
   "https://jobs.apple.com/en-us/details/200676908": {
     "company": "Apple",
     "first_seen": "2026-09-17",
@@ -743,6 +738,11 @@
     "company": "Apple",
     "first_seen": "2026-09-22",
     "title": "Internship - Machine Learning (Foundation Models)"
+  },
+  "https://jobs.apple.com/en-us/details/200685852": {
+    "company": "Apple",
+    "first_seen": "2026-09-25",
+    "title": "Analog IC Design Intern"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -2278,6 +2278,11 @@
     "company": "Western Digital",
     "first_seen": "2026-09-23",
     "title": "Intern - Manufacturing Engineer"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000151754639": {
+    "company": "Western Digital",
+    "first_seen": "2026-09-25",
+    "title": "Internship - Software Development (Embedded)"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
@@ -4184,6 +4189,31 @@
     "first_seen": "2026-09-24",
     "title": "Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA)"
   },
+  "https://www.amazon.jobs/en/jobs/10560202/program-manager-intern-esp-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Program Manager Intern ESP 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10560289/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10560298/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10560310/program-manager-intern-esp-2027-bcn3": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Program Manager Intern ESP 2027 - BCN3"
+  },
+  "https://www.amazon.jobs/en/jobs/10560398/retail-vendor-manager-intern-gbr": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Retail Vendor Manager Intern GBR"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -4619,41 +4649,6 @@
     "first_seen": "2026-09-05",
     "title": "Internship - Securities"
   },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-audit/3121/42697921472": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Audit"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-coo/3121/42697920576": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship \u2013 COO"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-finance/3121/42697921152": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Finance"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-risk/3121/42697920448": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Risk"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-tech-information-security/3121/42697920320": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Tech (Information Security)"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-tech-infrastructure/3121/42697919808": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Tech (Infrastructure)"
-  },
-  "https://www.ing.jobs/en/job/new-york/summer-2027-internship-tech-innovation/3121/42697921280": {
-    "company": "ING",
-    "first_seen": "2026-08-10",
-    "title": "Summer 2027 Internship - Tech (Innovation)"
-  },
   "https://www.ing.jobs/en/job/paris/hrbp-intern-h-f-x/3121/44350719360": {
     "company": "ING",
     "first_seen": "2026-09-22",
@@ -4679,6 +4674,11 @@
     "first_seen": "2026-09-01",
     "title": "Intern, Corporate Sector Lending"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-corporates-sales/3121/45174747200": {
+    "company": "ING",
+    "first_seen": "2026-09-25",
+    "title": "Intern, Corporates Sales"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-debt-capital-markets-apac/3121/44454604608": {
     "company": "ING",
     "first_seen": "2026-09-11",
@@ -4699,10 +4699,20 @@
     "first_seen": "2026-09-11",
     "title": "Intern, FM Product Control"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-fund-finance/3121/45167336384": {
+    "company": "ING",
+    "first_seen": "2026-09-25",
+    "title": "Intern, Fund Finance"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-loan-distribution-group-apac/3121/44275686784": {
     "company": "ING",
     "first_seen": "2026-09-08",
     "title": "Intern, Loan Distribution Group APAC"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-trade-finance-product-management/3121/45174747072": {
+    "company": "ING",
+    "first_seen": "2026-09-25",
+    "title": "Intern, Trade Finance Product Management"
   },
   "https://www.ing.jobs/en/job/singapore/intern-trading-risk-management/3121/42889631680": {
     "company": "ING",
@@ -4728,11 +4738,6 @@
     "company": "MongoDB",
     "first_seen": "2026-07-22",
     "title": "page mentions it: \u201c\u2026DB mentors are truly passionate about helping you grow and develop your skills. Summer Internship Program Hear from summer interns to learn how our program fosters a\u2026\u201d"
-  },
-  "https://www.pdtpartners.com/careers": {
-    "company": "PDT Partners",
-    "first_seen": "2026-08-10",
-    "title": "page mentions it: \u201c\u2026ondon, UK Software Engineer New York, NY Summer 2027 Software Engineering Intern New York, NY Summer 202\u2026\u201d"
   },
   "https://www.schwabjobs.com/job/austin/2027-banking-and-trust-services-intern/33727/100629380320": {
     "company": "Charles Schwab",
