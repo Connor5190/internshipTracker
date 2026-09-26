@@ -154,15 +154,25 @@
     "first_seen": "2026-08-05",
     "title": "2027 Blackstone Real Estate Summer Analyst, Tokyo"
   },
-  "https://boards.greenhouse.io/optiver": {
-    "company": "Optiver",
-    "first_seen": "2026-07-12",
-    "title": "page mentions it: \u201c\u2026Start) Austin Graduate Technology Graduate Technology Software Engineer Intern (Summer 2027 - Austin) Austin Internship Technology Internship Technology Software Engi\u2026\u201d"
+  "https://campus-americas.icims.com/jobs/26267/security-engineer-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-09-25",
+    "title": "Security Engineer Intern, 2027 Summer U.S."
   },
   "https://campus-americas.icims.com/jobs/26268/machine-learning-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-21",
     "title": "Machine Learning Intern, 2027 Summer U.S."
+  },
+  "https://campus-americas.icims.com/jobs/26270/research-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-09-25",
+    "title": "Research Intern, 2027 Summer U.S."
+  },
+  "https://campus-americas.icims.com/jobs/26271/data-scientist-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-09-25",
+    "title": "Data Scientist Intern, 2027 Summer U.S."
   },
   "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job": {
     "company": "Atlassian",
@@ -1828,6 +1838,21 @@
     "company": "Intuit",
     "first_seen": "2026-09-23",
     "title": "Winter 2027: Marketing and Design Research Co-op (8 months)"
+  },
+  "https://jobs.intuit.com/job/toronto/winter-2027-software-developer-co-op-4-or-8-months/27595/101130613680": {
+    "company": "Intuit",
+    "first_seen": "2026-09-25",
+    "title": "Winter 2027: Software Developer Co-op (4 or 8 months)"
+  },
+  "https://jobs.intuit.com/job/washington-d-c/spring-2027-public-affairs-intern-global-corporate-affairs-and-public-policy/27595/101130613776": {
+    "company": "Intuit",
+    "first_seen": "2026-09-25",
+    "title": "Spring 2027: Public Affairs Intern, Global Corporate Affairs and Public Policy"
+  },
+  "https://jobs.intuit.com/job/washington-d-c/spring-2027-public-policy-intern-global-corporate-affairs-and-public-policy/27595/101130613760": {
+    "company": "Intuit",
+    "first_seen": "2026-09-25",
+    "title": "Spring 2027: Public Policy Intern, Global Corporate Affairs and Public Policy"
   },
   "https://jobs.intuit.com/search-jobs/intern": {
     "company": "Intuit",
@@ -4214,6 +4239,11 @@
     "first_seen": "2026-09-25",
     "title": "Retail Vendor Manager Intern GBR"
   },
+  "https://www.amazon.jobs/en/jobs/10560679/associate-solutions-architect-agi-tech-intern-cohort-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-25",
+    "title": "Associate Solutions Architect, AGI-Tech, Intern Cohort - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -4883,6 +4913,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-21",
     "title": "2027 Charles Schwab Corporate Risk Management Internship - Model Risk"
+  },
+  "https://www.schwabjobs.com/job/southlake/2027-model-risk-governance-and-validation-intern-southlake-only/33727/101137965680": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-09-25",
+    "title": "2027 Model Risk Governance & Validation Intern (Southlake Only)"
   },
   "https://www.schwabjobs.com/job/westlake/2027-accounting-intern/33727/100828011536": {
     "company": "Charles Schwab",
