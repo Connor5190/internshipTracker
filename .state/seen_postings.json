@@ -364,11 +364,6 @@
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - San Francisco"
   },
-  "https://careers.gulfstream.com/search/?q=intern": {
-    "company": "Gulfstream Aerospace",
-    "first_seen": "2026-08-10",
-    "title": "page mentions it: \u201c\u2026Location Date (M/d/yy) Reset Summer 2027 - IEF - Advanced Structures and Materials (ASMI) - College Associate Inter\u2026\u201d"
-  },
   "https://careers.l3harris.com/en/job/greenville/electrical-engineer-intern-fall-2027/4832/99372978384": {
     "company": "L3Harris",
     "first_seen": "2026-08-18",
@@ -778,6 +773,16 @@
     "company": "Apple",
     "first_seen": "2026-09-29",
     "title": "Design for Test Intern (m/f/d)"
+  },
+  "https://jobs.apple.com/en-us/details/200686569": {
+    "company": "Apple",
+    "first_seen": "2026-09-30",
+    "title": "Internship Computer Vision & Machine Learning Research - LLM Efficiency"
+  },
+  "https://jobs.apple.com/en-us/details/200686571": {
+    "company": "Apple",
+    "first_seen": "2026-09-30",
+    "title": "Internship Computer Vision & Machine Learning Research - LLM Efficiency"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -2153,6 +2158,11 @@
     "company": "Ubisoft",
     "first_seen": "2026-09-24",
     "title": "Strategic Marketing Research Assistant \u2013 Internship (6-month) Janvier 2027 (W/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000152722769": {
+    "company": "Ubisoft",
+    "first_seen": "2026-09-30",
+    "title": "Creator Project Manager Assistant - Internship (6 months) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
@@ -3874,6 +3884,11 @@
     "first_seen": "2026-09-18",
     "title": "Construction Manager Intern (6 months) - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10553738/construction-manager-intern-6-months-2027-h-f": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "Construction Manager Intern (6 months) - 2027 (H/F)"
+  },
   "https://www.amazon.jobs/en/jobs/10553742/hr-assistant-intern-2027-auta": {
     "company": "Amazon",
     "first_seen": "2026-09-18",
@@ -4429,6 +4444,46 @@
     "first_seen": "2026-09-29",
     "title": "2027 Applied Science Internship - United States, Undergrad Student Science Recruiting, Frontier AI & Robotics"
   },
+  "https://www.amazon.jobs/en/jobs/10564600/2027-applied-science-internship-united-states-phd-student-science-recruiting-frontier-ai-robotics-frontier-ai-robotics": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "2027 Applied Science Internship - United States, PhD Student Science Recruiting Frontier AI & Robotics, Frontier AI & Robotics"
+  },
+  "https://www.amazon.jobs/en/jobs/10564601/2027-applied-science-internship-computer-vision-united-states-phd-student-science-recruiting": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "2027 Applied Science Internship - Computer Vision - United States, PhD Student Science Recruiting"
+  },
+  "https://www.amazon.jobs/en/jobs/10564602/2027-research-science-internship-united-states-phd-student-science-recruiting": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "2027 Research Science Internship - United States, PhD Student Science Recruiting "
+  },
+  "https://www.amazon.jobs/en/jobs/10565253/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10565267/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10565312/operations-logistics-intern-2027-amazon-logistics": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "Operations & Logistics Intern - 2027, Amazon Logistics"
+  },
+  "https://www.amazon.jobs/en/jobs/10565367/whs-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "WHS Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10565421/business-analyst-intern-3-6-and-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-09-30",
+    "title": "Business Analyst Intern (3, 6 and 12 months) - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -4849,6 +4904,11 @@
     "first_seen": "2026-09-04",
     "title": "INTERNSHIP - Fund & Portfolio Oversight"
   },
+  "https://www.ing.jobs/en/job/luxembourg/internship-fund-operation-oversight/3121/45386465152": {
+    "company": "ING",
+    "first_seen": "2026-09-30",
+    "title": "Internship - Fund Operation Oversight"
+  },
   "https://www.ing.jobs/en/job/luxembourg/internship-securities/3121/42440480384": {
     "company": "ING",
     "first_seen": "2026-09-05",
@@ -4913,6 +4973,11 @@
     "company": "ING",
     "first_seen": "2026-09-08",
     "title": "Intern, Loan Distribution Group APAC"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-sustainable-solutions-group-apac/3121/45379152896": {
+    "company": "ING",
+    "first_seen": "2026-09-30",
+    "title": "Intern, Sustainable Solutions Group APAC"
   },
   "https://www.ing.jobs/en/job/singapore/intern-trade-finance-product-management/3121/45174747072": {
     "company": "ING",
