@@ -254,6 +254,11 @@
     "first_seen": "2026-09-23",
     "title": "Software Intern - Machine Learning"
   },
+  "https://careers.arm.com/job/trondheim/fpga-intern/33099/101434822768": {
+    "company": "ARM",
+    "first_seen": "2026-10-02",
+    "title": "FPGA Intern"
+  },
   "https://careers.arm.com/job/trondheim/gpu-hardware-intern/33099/100604944160": {
     "company": "ARM",
     "first_seen": "2026-09-14",
@@ -383,6 +388,11 @@
     "company": "EY",
     "first_seen": "2026-10-01",
     "title": "page mentions it: \u201c\u2026Finance - Accounting - Accounting - From February 2027 Finance - Accounting - Accounting - From February 2027\u2026\u201d"
+  },
+  "https://careers.gulfstream.com/search/?q=intern": {
+    "company": "Gulfstream Aerospace",
+    "first_seen": "2026-10-02",
+    "title": "page mentions it: \u201c\u2026nt Community Home Jobs Match Menu 444 jobs found Sorted by newest Filter & Sort Summer 2027 - MRB/Liaison Design Collegiate Intern Teams : Internships Locations : Sav\u2026\u201d"
   },
   "https://careers.l3harris.com/en/job/greenville/electrical-engineer-intern-fall-2027/4832/99372978384": {
     "company": "L3Harris",
@@ -813,6 +823,11 @@
     "company": "Apple",
     "first_seen": "2026-10-01",
     "title": "AMS Lab Validation Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200686968": {
+    "company": "Apple",
+    "first_seen": "2026-10-02",
+    "title": "Services Marketing Internship"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1919,10 +1934,20 @@
     "first_seen": "2026-10-01",
     "title": "Summer 2027: Business Data Analyst Intern, Strategy & Planning"
   },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-finance-transformation-and-analytics-intern/27595/101444103184": {
+    "company": "Intuit",
+    "first_seen": "2026-10-02",
+    "title": "Summer 2027: Finance Transformation & Analytics Intern"
+  },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-intelligent-automation-business-systems-analyst-intern/27595/101313096144": {
     "company": "Intuit",
     "first_seen": "2026-09-29",
     "title": "Summer 2027: Intelligent Automation Business Systems Analyst Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-marketing-intern-ai-tooling-for-marketing-efficiency/27595/101444103552": {
+    "company": "Intuit",
+    "first_seen": "2026-10-02",
+    "title": "Summer 2027: Marketing Intern, AI Tooling for Marketing Efficiency"
   },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-corporate-strategy-and-development-intern/27595/101313096080": {
     "company": "Intuit",
@@ -2063,6 +2088,11 @@
     "company": "Intuit",
     "first_seen": "2026-09-29",
     "title": "Summer 2027: MBA Business Operations Intern, Consumer Group"
+  },
+  "https://jobs.intuit.com/job/san-diego/summer-2027-mba-strategic-sourcing-intern-customer-success-and-sales/27595/101367735056": {
+    "company": "Intuit",
+    "first_seen": "2026-10-02",
+    "title": "Summer 2027: MBA Strategic Sourcing Intern, Customer Success & Sales"
   },
   "https://jobs.intuit.com/job/san-diego/summer-2027-mba-strategic-sourcing-intern-technology/27595/101062769088": {
     "company": "Intuit",
@@ -2253,6 +2283,16 @@
     "company": "Ubisoft",
     "first_seen": "2026-10-01",
     "title": "Reporting Data Analyst Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000153171979": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-02",
+    "title": "Customer Experience Program Manager Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000153206238": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-02",
+    "title": "Trade Marketing Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
@@ -2824,6 +2864,11 @@
     "first_seen": "2026-09-01",
     "title": "Banking Off Cycle Internship Programme 2027 Paris"
   },
+  "https://search.jobs.barclays/job/paris/capital-markets-off-cycle-internship-programme-2027-paris/13015/101434536688": {
+    "company": "Barclays",
+    "first_seen": "2026-10-02",
+    "title": "Capital Markets Off Cycle Internship Programme 2027 Paris"
+  },
   "https://search.jobs.barclays/job/paris/global-transaction-banking-off-cycle-internship-programme-2027-paris/13015/100032500304": {
     "company": "Barclays",
     "first_seen": "2026-09-01",
@@ -3288,11 +3333,6 @@
     "company": "Amazon",
     "first_seen": "2026-08-17",
     "title": "\u3010Class of 2028 & 2029\uff0fInternship\u3011Software Development Engineers , Amazon International Stores"
-  },
-  "https://www.amazon.jobs/en/jobs/10503561/2028-graduates-non-tech-recruiter-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-08-17",
-    "title": "\u30102028 Graduates\uff0fNon-Tech\u3011 Recruiter Intern, Amazon University Talent Acquisition"
   },
   "https://www.amazon.jobs/en/jobs/10503563/2028-graduates-non-tech-supply-chain-manager-intern": {
     "company": "Amazon",
@@ -4384,6 +4424,11 @@
     "first_seen": "2026-09-25",
     "title": "Program Manager Intern ESP 2027 - BCN3"
   },
+  "https://www.amazon.jobs/en/jobs/10560396/business-analyst-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Analyst Intern (6 months) - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/10560398/retail-vendor-manager-intern-gbr": {
     "company": "Amazon",
     "first_seen": "2026-09-25",
@@ -4574,10 +4619,105 @@
     "first_seen": "2026-09-30",
     "title": "Software Development Engineer Intern, AWS Database - 2027 (US)"
   },
+  "https://www.amazon.jobs/en/jobs/10566414/data-center-engineering-operations-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Engineering Operations - 2027 Internship"
+  },
   "https://www.amazon.jobs/en/jobs/10566414/data-center-engineering-operations-2027-internship-data-center-engineering-operations": {
     "company": "Amazon",
     "first_seen": "2026-10-01",
     "title": "Data Center Engineering Operations - 2027 Internship, Data Center Engineering Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10567687/business-intelligence-intern-london": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Intelligence Intern London"
+  },
+  "https://www.amazon.jobs/en/jobs/10567688/business-intelligence-engineer-intern-germany": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Intelligence Engineer Intern Germany"
+  },
+  "https://www.amazon.jobs/en/jobs/10567690/2027-applied-scientist-internship-phd-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "2027 Applied Scientist Internship \u2013 PhD, Amazon University Talent Acquisition"
+  },
+  "https://www.amazon.jobs/en/jobs/10567694/2027-applied-scientist-internship-phd-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "2027 Applied Scientist Internship \u2013 PhD, Amazon University Talent Acquisition"
+  },
+  "https://www.amazon.jobs/en/jobs/10567698/data-center-technician-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician - 2027 Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10567708/cloud-support-associate-internship-april-2027-start-support-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Cloud Support Associate Internship - April 2027 start, Support Engineering"
+  },
+  "https://www.amazon.jobs/en/jobs/10567709/business-analyst-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Analyst Intern (6 months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10567710/cloud-support-associate-internship-april-2027-start-support-engineering-support-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Cloud Support Associate Internship - April 2027 start, Support Engineering, Support Engineering"
+  },
+  "https://www.amazon.jobs/en/jobs/10567711/cloud-support-associate-internship-april-2027-start-support-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Cloud Support Associate Internship - April 2027 start, Support Engineering"
+  },
+  "https://www.amazon.jobs/en/jobs/10567712/data-center-engineering-operations-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Engineering Operations - 2027 Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10567734/business-analyst-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Analyst Intern (6 months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10567744/2027-applied-scientist-internship-phd-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "2027 Applied Scientist Internship \u2013 PhD, Amazon University Talent Acquisition"
+  },
+  "https://www.amazon.jobs/en/jobs/10567769/physical-security-specialist-intern-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "(Physical) Security Specialist Intern -  2027 Internship"
+  },
+  "https://www.amazon.jobs/en/jobs/10567770/data-center-technician-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician - 2027 Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10567780/business-analyst-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Business Analyst Intern (6 months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10567818/physical-security-specialist-intern-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "(Physical) Security Specialist Intern -  2027 Internship"
+  },
+  "https://www.amazon.jobs/en/jobs/10567838/program-manager-intern-deu-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Program Manager Intern DEU 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10567914/software-development-engineer-intern-embedded-systems-summer-2027-usa": {
+    "company": "Amazon",
+    "first_seen": "2026-10-02",
+    "title": "Software Development Engineer Intern (Embedded Systems) - Summer 2027 (USA)"
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
@@ -4679,6 +4819,11 @@
     "first_seen": "2026-09-03",
     "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/100315940037501638-financial-analyst-bsms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Financial Analyst BS/MS Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/100460871561421510-business-undergraduate-intern-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-22",
@@ -4694,6 +4839,21 @@
     "first_seen": "2026-09-14",
     "title": "User Experience Design Intern, BS/MS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/102057291577991878-data-center-facilities-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Facilities Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/103082311292986054-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/103464941339452102-associate-product-manager-bsms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Associate Product Manager BS/MS Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/103632882076918470-parttime-software-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
@@ -4704,10 +4864,20 @@
     "first_seen": "2026-08-24",
     "title": "Research Intern, PhD, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/104511401531187910-customer-growth-associate-bsms-intern-2027-multiple-languages": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Customer Growth Associate BS/MS Intern, 2027 (Multiple Languages)"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/104551723757904582-software-engineering-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-20",
     "title": "Software Engineering Intern, PhD, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/105628505345008326-new-business-sales-bsms-intern-2027-multiple-languages": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "New Business Sales BS/MS Intern, 2027 (Multiple Languages)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/107087730147500742-software-engineering-phd-intern-2027": {
     "company": "Google",
@@ -4759,6 +4929,11 @@
     "first_seen": "2026-09-14",
     "title": "Data Scientist, Product Intern, MS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/121479339848934086-hardwareelectrical-engineering-bsms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Hardware/Electrical Engineering BS/MS Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/121543376737575622-software-engineering-site-reliability-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
@@ -4774,20 +4949,30 @@
     "first_seen": "2026-08-31",
     "title": "Software Developer Intern, BS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/123907061523063494-associate-product-marketing-manager-bsms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Associate Product Marketing Manager BS/MS Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/127840103736189638-application-engineering-intern-summer-2027-english": {
     "company": "Google",
     "first_seen": "2026-09-08",
     "title": "Application Engineering Intern, Summer 2027 (English)"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/129079164220121798-associate-product-marketing-manager-bsms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Associate Product Marketing Manager BS/MS Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/129378231382876870-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/131287072689267398-research-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-08",
     "title": "Research Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/132149998191026886-data-science-phd-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-08-17",
-    "title": "Data Science PhD Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/133355062935069382-hardwaresilicon-engineering-phd-intern-2027": {
     "company": "Google",
@@ -4804,15 +4989,25 @@
     "first_seen": "2026-09-22",
     "title": "Associate Product Manager Intern, Summer 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/134795423167455942-research-scientist-phd-intern-2027": {
+  "https://www.google.com/about/careers/applications/jobs/results/135156989620560582-forward-deployed-engineering-intern-bsms-2027": {
     "company": "Google",
-    "first_seen": "2026-08-17",
-    "title": "Research Scientist PhD Intern, 2027"
+    "first_seen": "2026-10-02",
+    "title": "Forward Deployed Engineering Intern, BS/MS, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/135755874491605702-product-design-engineering-intern-bsms-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "Product Design Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/135799379289088710-data-center-facilities-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Facilities Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/136217193707643590-data-center-facilities-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Facilities Technician Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/136529930677560006-silicon-engineering-intern-phd-summer-2027": {
     "company": "Google",
@@ -4838,6 +5033,16 @@
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "Security Consultant Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/139493738358416070-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/142308488125522630-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/142747733357142726-software-engineering-site-reliability-engineering-bsms-intern-2027": {
     "company": "Google",
@@ -4869,20 +5074,35 @@
     "first_seen": "2026-09-03",
     "title": "Data Center Technician Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/80037545080955590-software-engineering-or-sre-phd-intern-2027": {
+  "https://www.google.com/about/careers/applications/jobs/results/80037545080955590-software-engineering-phd-intern-2027": {
     "company": "Google",
-    "first_seen": "2026-08-17",
-    "title": "Software Engineering or SRE, PhD Intern, 2027"
+    "first_seen": "2026-10-02",
+    "title": "Software Engineering PhD Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/80582381009806022-technical-program-manager-intern-bsms-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "Technical Program Manager Intern, BS/MS, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/82600333812867782-business-analyst-mba-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Business Analyst MBA Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/83199557986329286-software-engineering-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-09-03",
     "title": "Software Engineering BS/MS Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/84561862556820166-data-scientist-product-ms-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Scientist Product MS Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/85160271760237254-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/86701057991680710-research-intern-phd-summer-2027": {
     "company": "Google",
@@ -4929,6 +5149,16 @@
     "first_seen": "2026-08-18",
     "title": "Software Engineering PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/93230412230206150-data-center-facilities-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Facilities Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/93402210922046150-finance-mba-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Finance MBA Intern, 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/94172495052972742-software-engineering-intern-ms-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-31",
@@ -4943,6 +5173,16 @@
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "Hardware Engineering Intern, PhD, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/99330502741107398-data-center-facilities-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Data Center Facilities Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/99770582270124742-strategy-and-operations-mba-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-02",
+    "title": "Strategy and Operations MBA Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/99925955933283014-data-center-technician-intern-2027": {
     "company": "Google",
