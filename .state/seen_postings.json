@@ -64,45 +64,15 @@
     "first_seen": "2026-09-07",
     "title": "2027 Blackstone Technology & Innovations - Software Engineer Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Miami/XMLNAME-2027-Blackstone-Cybersecurity-Summer-Analyst_45023": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Blackstone Cybersecurity Summer Analyst"
-  },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Miami/XMLNAME-2027-Blackstone-Software-Engineer-Summer-Analyst_45021": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Blackstone Software Engineer Summer Analyst"
-  },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Miami/XMLNAME-2027-Blackstone-Technology-and-Innovations--Data-Engineer-Summer-Analyst_45022": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Blackstone Data Engineer Summer Analyst"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-BXPE-Summer-Analyst_44550": {
     "company": "Blackstone",
     "first_seen": "2026-09-03",
     "title": "2027 Blackstone BXPE Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-Finance---BXCI-Finance-Summer-Analyst_44866": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Blackstone Finance - BXCI Finance Summer Analyst"
-  },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-Finance---Internal-Audit-Summer-Analyst_44863": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Blackstone Finance - Internal Audit Summer Analyst"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-LaunchPad-Summer-Analyst_45456": {
     "company": "Blackstone",
     "first_seen": "2026-09-11",
     "title": "2027 Blackstone LaunchPad Summer Analyst"
-  },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Data-Science-Summer-Analyst_44862": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-21",
-    "title": "2027 Data Science Summer Analyst"
   },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Singapore/XMLNAME-2027-Blackstone-Technology---Innovations-Analyst-Intern--Singapore_45034": {
     "company": "Blackstone",
@@ -744,10 +714,20 @@
     "first_seen": "2026-10-01",
     "title": "AMS Lab Validation Intern"
   },
+  "https://jobs.apple.com/en-us/details/200686958": {
+    "company": "Apple",
+    "first_seen": "2026-10-06",
+    "title": "Internship - Software Engineering - Wireless Data Science "
+  },
   "https://jobs.apple.com/en-us/details/200686968": {
     "company": "Apple",
     "first_seen": "2026-10-02",
     "title": "Services Marketing Internship"
+  },
+  "https://jobs.apple.com/en-us/details/200687209": {
+    "company": "Apple",
+    "first_seen": "2026-10-06",
+    "title": "Internship - Software Engineering - AI-Augmented Static Code Analysis"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -2239,20 +2219,10 @@
     "first_seen": "2026-08-14",
     "title": "Internship - Software Development (Embedded)"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000134646208": {
-    "company": "Western Digital",
-    "first_seen": "2026-07-12",
-    "title": "Intern - People Development Assistant (Studying Bachelor Degree) - Start in January 2027"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000134646509": {
     "company": "Western Digital",
     "first_seen": "2026-07-12",
     "title": "Intern - Maintenance Technician (\u0e19\u0e31\u0e01\u0e28\u0e36\u0e01\u0e29\u0e32\u0e1d\u0e36\u0e01\u0e07\u0e32\u0e19 \u0e1c\u0e39\u0e49\u0e0a\u0e48\u0e27\u0e22\u0e0a\u0e48\u0e32\u0e07\u0e0b\u0e48\u0e2d\u0e21\u0e1a\u0e33\u0e23\u0e38\u0e07) Start in January 2027"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000134685979": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Intern 2, Engineering"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000135237229": {
     "company": "Western Digital",
@@ -2454,6 +2424,11 @@
     "first_seen": "2026-09-28",
     "title": "Winter 2027 Intern/Co-op Development Engineer "
   },
+  "https://jobs.smartrecruiters.com/westerndigital/744000153666512": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-06",
+    "title": "Intern - People Development Assistant"
+  },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
     "first_seen": "2026-10-05",
@@ -2549,6 +2524,11 @@
     "first_seen": "2026-09-09",
     "title": "2027 Human Resources Analyst Summer Internship Programme Glasgow"
   },
+  "https://search.jobs.barclays/job/glasgow/2027-operations-analyst-summer-internship-programme-glasgow/13015/101604347008": {
+    "company": "Barclays",
+    "first_seen": "2026-10-06",
+    "title": "2027 Operations Analyst Summer Internship Programme Glasgow"
+  },
   "https://search.jobs.barclays/job/glasgow/2027-risk-analyst-summer-internship-programme-glasgow/13015/100411084768": {
     "company": "Barclays",
     "first_seen": "2026-09-09",
@@ -2588,6 +2568,11 @@
     "company": "Barclays",
     "first_seen": "2026-09-09",
     "title": "2027 Internal Audit Analyst Summer Internship Programme Knutsford"
+  },
+  "https://search.jobs.barclays/job/knutsford/2027-operations-analyst-summer-internship-programme-knutsford/13015/101604346208": {
+    "company": "Barclays",
+    "first_seen": "2026-10-06",
+    "title": "2027 Operations Analyst Summer Internship Programme Knutsford"
   },
   "https://search.jobs.barclays/job/knutsford/2027-retail-business-and-customer-banking-summer-internship-programme-knutsford/13015/100411085744": {
     "company": "Barclays",
@@ -4074,6 +4059,11 @@
     "first_seen": "2026-09-22",
     "title": "2027 Software Dev Engineer Intern - Luxembourg"
   },
+  "https://www.amazon.jobs/en/jobs/10554717/2027-software-dev-engineer-intern-germany": {
+    "company": "Amazon",
+    "first_seen": "2026-10-06",
+    "title": "2027 Software Dev Engineer Intern - Germany"
+  },
   "https://www.amazon.jobs/en/jobs/10555788/manufacturing-test-engr-intern-advanced-manufacturing-engineering": {
     "company": "Amazon",
     "first_seen": "2026-09-22",
@@ -4649,6 +4639,26 @@
     "first_seen": "2026-10-05",
     "title": "Data Center Technician - 2027 Internship"
   },
+  "https://www.amazon.jobs/en/jobs/10570135/program-manager-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-06",
+    "title": "Program Manager Intern 6 Months - 2027 "
+  },
+  "https://www.amazon.jobs/en/jobs/10570158/retail-vendor-manager-intern-ita": {
+    "company": "Amazon",
+    "first_seen": "2026-10-06",
+    "title": "Retail Vendor Manager Intern ITA"
+  },
+  "https://www.amazon.jobs/en/jobs/10570218/data-center-engineering-operations-technician-2027-internship-dceo": {
+    "company": "Amazon",
+    "first_seen": "2026-10-06",
+    "title": "Data Center Engineering Operations Technician - 2027 Internship, DCEO"
+  },
+  "https://www.amazon.jobs/en/jobs/10570301/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
+    "company": "Amazon",
+    "first_seen": "2026-10-06",
+    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5203,6 +5213,11 @@
     "company": "ING",
     "first_seen": "2026-09-22",
     "title": "Intern, Finance - Product Control"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-financial-markets-business-management/3121/45609017984": {
+    "company": "ING",
+    "first_seen": "2026-10-06",
+    "title": "Intern, Financial Markets Business Management"
   },
   "https://www.ing.jobs/en/job/singapore/intern-fm-front-office-support/3121/45086279232": {
     "company": "ING",
