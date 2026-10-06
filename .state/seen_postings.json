@@ -104,11 +104,6 @@
     "first_seen": "2026-08-21",
     "title": "2027 Data Science Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Singapore/XMLNAME-2027-Blackstone-Real-Estate-Summer-Analyst--Singapore_40960": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-05",
-    "title": "2027 Blackstone Real Estate Summer Analyst, Singapore"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Singapore/XMLNAME-2027-Blackstone-Technology---Innovations-Analyst-Intern--Singapore_45034": {
     "company": "Blackstone",
     "first_seen": "2026-08-21",
@@ -168,6 +163,11 @@
     "company": "Atlassian",
     "first_seen": "2026-09-25",
     "title": "Data Scientist Intern, 2027 Summer U.S."
+  },
+  "https://campus-americas.icims.com/jobs/26272/data-engineer-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-10-05",
+    "title": "Data Engineer Intern, 2027 Summer U.S."
   },
   "https://campus-globalcareers-atlassian.icims.com/jobs/26275/software-engineer-intern%2c-2027-canada/job": {
     "company": "Atlassian",
@@ -464,6 +464,11 @@
     "first_seen": "2026-09-21",
     "title": "Computational Fluid Dynamics(CFD) Internship"
   },
+  "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/101580799728": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-05",
+    "title": "Computational Fluid Dynamics(CFD) Internship"
+  },
   "https://careers.synopsys.com/job/villeurbanne/software-development-and-optimization-internship/44408/99869922384": {
     "company": "Synopsys",
     "first_seen": "2026-08-28",
@@ -528,11 +533,6 @@
     "company": "Apple",
     "first_seen": "2026-09-17",
     "title": "PhD Intern, Machine Learning: MSI, Product Operations Team"
-  },
-  "https://jobs.apple.com/en-us/details/200678947": {
-    "company": "Apple",
-    "first_seen": "2026-08-20",
-    "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern"
   },
   "https://jobs.apple.com/en-us/details/200679405": {
     "company": "Apple",
@@ -1919,6 +1919,11 @@
     "first_seen": "2026-09-29",
     "title": "Summer 2027: MBA Strategic Finance Intern, Consumer Group"
   },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-strategic-finance-intern-corporate-fp-and-a/27595/101575696896": {
+    "company": "Intuit",
+    "first_seen": "2026-10-05",
+    "title": "Summer 2027: MBA Strategic Finance Intern, Corporate FP&A"
+  },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-mba-strategic-finance-intern-gbsg/27595/101319962576": {
     "company": "Intuit",
     "first_seen": "2026-09-29",
@@ -1973,6 +1978,11 @@
     "company": "Intuit",
     "first_seen": "2026-09-14",
     "title": "Summer 2027: Product Manager Intern"
+  },
+  "https://jobs.intuit.com/job/mountain-view/summer-2027-sales-intern-core-smb-emm/27595/101580723824": {
+    "company": "Intuit",
+    "first_seen": "2026-10-05",
+    "title": "Summer 2027: Sales Intern, Core SMB/EMM"
   },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-cybersecurity/27595/100620927616": {
     "company": "Intuit",
@@ -2169,6 +2179,11 @@
     "first_seen": "2026-10-01",
     "title": "Intern \u2013 Business Development Representative (German, Spanish, Italian, French, Dutch, Arabic OR Nordic Languages)"
   },
+  "https://jobs.smartrecruiters.com/servicenow/744000153476180": {
+    "company": "ServiceNow",
+    "first_seen": "2026-10-05",
+    "title": "Intern \u2013 Business Development Representative (German, Spanish, Italian, French, Dutch, Arabic OR Nordic Languages)"
+  },
   "https://jobs.smartrecruiters.com/ubisoft2/744000147274629": {
     "company": "Ubisoft",
     "first_seen": "2026-09-03",
@@ -2213,6 +2228,11 @@
     "company": "Ubisoft",
     "first_seen": "2026-10-02",
     "title": "Trade Marketing Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000153550172": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-05",
+    "title": "Creator Operations Project Manager Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
@@ -2434,6 +2454,11 @@
     "first_seen": "2026-09-28",
     "title": "Winter 2027 Intern/Co-op Development Engineer "
   },
+  "https://jobs.smartrecruiters.com/wise/744000153502789": {
+    "company": "Wise",
+    "first_seen": "2026-10-05",
+    "title": "Analytics Intern"
+  },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
     "first_seen": "2026-08-17",
@@ -2553,11 +2578,6 @@
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Quantitative Analytics Associate Off Cycle Internship 2027 Hong Kong"
-  },
-  "https://search.jobs.barclays/job/houston/banking-analyst-summer-internship-program-2027-houston/13015/89084599408": {
-    "company": "Barclays",
-    "first_seen": "2026-08-20",
-    "title": "Banking Analyst Summer Internship Program 2027 Houston"
   },
   "https://search.jobs.barclays/job/houston/banking-associate-summer-internship-program-2027-houston/13015/100032502160": {
     "company": "Barclays",
@@ -4624,6 +4644,11 @@
     "first_seen": "2026-10-02",
     "title": "Software Development Engineer Intern (Embedded Systems) - Summer 2027 (USA)"
   },
+  "https://www.amazon.jobs/en/jobs/10568636/data-center-technician-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-05",
+    "title": "Data Center Technician - 2027 Internship"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5214,6 +5239,11 @@
     "first_seen": "2026-09-25",
     "title": "Intern, Trade Finance Product Management"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-transaction-services-sales/3121/45574995328": {
+    "company": "ING",
+    "first_seen": "2026-10-05",
+    "title": "Intern, Transaction Services Sales"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-transport-and-logistics/3121/45044228672": {
     "company": "ING",
     "first_seen": "2026-09-22",
@@ -5238,6 +5268,11 @@
     "company": "PDT Partners",
     "first_seen": "2026-09-29",
     "title": "page mentions it: \u201c\u2026ondon, UK Software Engineer New York, NY Summer 2027 Software Engineering Intern New York, NY Summer 202\u2026\u201d"
+  },
+  "https://www.revolut.com/careers/": {
+    "company": "Revolut",
+    "first_seen": "2026-10-05",
+    "title": "page mentions it: \u201c\u2026to \u00b7 Portugal \u00b7 Romania \u00b7 Spain \u00b7 UAE \u00b7 UK Internship Programme 2027: Software Engineer (Java) Office : Barcelona \u00b7 Dubai \u00b7 Krakow \u00b7 Lisbon\u2026\u201d"
   },
   "https://www.schwabjobs.com/job/austin/2027-banking-and-trust-services-intern/33727/100629380320": {
     "company": "Charles Schwab",
