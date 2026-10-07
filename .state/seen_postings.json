@@ -364,6 +364,11 @@
     "first_seen": "2026-10-02",
     "title": "page mentions it: \u201c\u2026nt Community Home Jobs Match Menu 444 jobs found Sorted by newest Filter & Sort Summer 2027 - MRB/Liaison Design Collegiate Intern Teams : Internships Locations : Sav\u2026\u201d"
   },
+  "https://careers.l3harris.com/en/job/canoga-park/project-and-component-engineering-intern/4832/101647400288": {
+    "company": "L3Harris",
+    "first_seen": "2026-10-07",
+    "title": "Project & Component Engineering Intern"
+  },
   "https://careers.l3harris.com/en/job/carlsbad/intern-mechanical-engineer/4832/101618648480": {
     "company": "L3Harris",
     "first_seen": "2026-10-06",
@@ -389,11 +394,6 @@
     "first_seen": "2026-09-03",
     "title": "Intern, Structural Engineer - Fall 2027"
   },
-  "https://careers.l3harris.com/en/job/palm-bay/intern-d-electrical-engineer/4832/99454394960": {
-    "company": "L3Harris",
-    "first_seen": "2026-08-22",
-    "title": "Intern D, Electrical Engineer"
-  },
   "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648400": {
     "company": "L3Harris",
     "first_seen": "2026-10-06",
@@ -413,11 +413,6 @@
     "company": "L3Harris",
     "first_seen": "2026-08-26",
     "title": "Intern, Mechanical Engineer"
-  },
-  "https://careers.l3harris.com/en/job/united-states/intern-e-communications/4832/99454394832": {
-    "company": "L3Harris",
-    "first_seen": "2026-08-22",
-    "title": "Intern E, Communications"
   },
   "https://careers.l3harris.com/en/job/waco/intern-hr-business-partner/4832/100965892640": {
     "company": "L3Harris",
@@ -768,6 +763,21 @@
     "company": "Apple",
     "first_seen": "2026-10-06",
     "title": "Internship - Software Engineering - AI-Augmented Static Code Analysis"
+  },
+  "https://jobs.apple.com/en-us/details/200687635": {
+    "company": "Apple",
+    "first_seen": "2026-10-07",
+    "title": "Ultra Precision Injection Molding Engineer Intern \u2013 Camera Hardware"
+  },
+  "https://jobs.apple.com/en-us/details/200687726": {
+    "company": "Apple",
+    "first_seen": "2026-10-07",
+    "title": "PMU Silicon Validation Intern (m/f/d)"
+  },
+  "https://jobs.apple.com/en-us/details/200687727": {
+    "company": "Apple",
+    "first_seen": "2026-10-07",
+    "title": "PMU Digital Design Verification Intern (m/f/d)"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1128,6 +1138,11 @@
     "company": "Citibank",
     "first_seen": "2026-09-22",
     "title": "Banking, Corporate Banking, Summer Analyst, Amsterdam - The Netherlands, 2027"
+  },
+  "https://jobs.citi.com/job/belfast/chief-operating-office-summer-analyst-uk-belfast-2027/287/101650054848": {
+    "company": "Citibank",
+    "first_seen": "2026-10-07",
+    "title": "Chief Operating Office - Summer Analyst, UK - Belfast, 2027"
   },
   "https://jobs.citi.com/job/beverly-hills/wealth-summer-analyst-los-angeles-usa-2027/287/100661745152": {
     "company": "Citibank",
@@ -2264,6 +2279,11 @@
     "first_seen": "2026-10-05",
     "title": "Creator Operations Project Manager Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000154155509": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-07",
+    "title": "Business Development Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
     "first_seen": "2026-08-14",
@@ -3328,11 +3348,6 @@
     "company": "Amazon",
     "first_seen": "2026-08-18",
     "title": "AWS Demand Generation Intern"
-  },
-  "https://www.amazon.jobs/en/jobs/10506461/tax-intern-indirect-tax-compliance": {
-    "company": "Amazon",
-    "first_seen": "2026-08-19",
-    "title": "Tax intern, Indirect tax compliance"
   },
   "https://www.amazon.jobs/en/jobs/10506514/operations-logistics-internship-amazon-logistics": {
     "company": "Amazon",
@@ -4684,6 +4699,11 @@
     "first_seen": "2026-10-02",
     "title": "Software Development Engineer Intern (Embedded Systems) - Summer 2027 (USA)"
   },
+  "https://www.amazon.jobs/en/jobs/10568017/2027-software-dev-engineer-intern-netherlands": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "2027 Software Dev Engineer Intern - Netherlands"
+  },
   "https://www.amazon.jobs/en/jobs/10568636/data-center-technician-2027-internship": {
     "company": "Amazon",
     "first_seen": "2026-10-05",
@@ -4723,6 +4743,76 @@
     "company": "Amazon",
     "first_seen": "2026-10-06",
     "title": "Software Development Engineer (Embedded Systems) Intern, Amazon Leo - Summer 2027 (USA)"
+  },
+  "https://www.amazon.jobs/en/jobs/10571575/data-center-infrastructure-engineer-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Data Center Infrastructure Engineer Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10571610/process-improvement-specialist-intern-2027-eucf-learning": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Process Improvement Specialist Intern - 2027, EUCF Learning"
+  },
+  "https://www.amazon.jobs/en/jobs/10571658/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Process Improvement Specialist Intern - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10571660/operations-intern-cariacica-es-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Intern - Cariacica (ES), Amazon University Talent Acquisition "
+  },
+  "https://www.amazon.jobs/en/jobs/10571664/operations-intern-betim-mg-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Intern - Betim (MG), Amazon University Talent Acquisition "
+  },
+  "https://www.amazon.jobs/en/jobs/10571716/system-engineer-internship-2027-6-months-esc-managed-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "System Engineer internship 2027 (6 months), ESC Managed Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10571718/system-engineer-internship-2027-6-months-esc-managed-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "System Engineer internship 2027 (6 months), ESC Managed Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10571720/system-engineer-internship-2027-6-months-esc-managed-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "System Engineer internship 2027 (6 months), ESC Managed Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10571815/logistics-specialist-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Logistics Specialist - 2027 Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10571842/2027-it-support-engineering-intern-amazon-operations-technology-solutions": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "2027 IT Support Engineering Intern, Amazon Operations Technology Solutions"
+  },
+  "https://www.amazon.jobs/en/jobs/10572025/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10572026/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10572027/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10572028/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-07",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
@@ -5338,6 +5428,11 @@
     "company": "ING",
     "first_seen": "2026-08-31",
     "title": "Intern, Corporate Sector Lending Japan"
+  },
+  "https://www.ing.jobs/en/job/wan-chai/intern-commodities-food-and-agriculture-hk/3121/45658374464": {
+    "company": "ING",
+    "first_seen": "2026-10-07",
+    "title": "Intern, Commodities, Food and Agriculture HK"
   },
   "https://www.mlp.com/careers/students/": {
     "company": "Millennium",
