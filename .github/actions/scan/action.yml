@@ -1,0 +1,24 @@
+name: Scan and update ledger
+description: >
+  Scan every company in companies.txt and fold the result into the
+  seen-postings ledger, leaving scan_result_enriched.json for the recap and
+  the board. Shared so both workflows search for the same term.
+
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v7
+      with:
+        python-version: "3.12"
+
+    - name: Install dependencies
+      shell: bash
+      run: pip install -r requirements.txt
+
+    - name: Scan companies
+      shell: bash
+      run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
+
+    - name: Update seen-postings ledger
+      shell: bash
+      run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json

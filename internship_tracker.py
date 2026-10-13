@@ -116,6 +116,15 @@ def get_json(session: requests.Session, url: str, **kwargs) -> dict | list | Non
         return None
 
 
+def get_text(session: requests.Session, url: str) -> str | None:
+    """A page's raw body, or None on any failure or non-200."""
+    try:
+        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
+    except requests.RequestException:
+        return None
+    return resp.text if resp.status_code == 200 else None
+
+
 def strip_html(text: str) -> str:
     soup = BeautifulSoup(html.unescape(text or ""), "html.parser")
     for tag in soup(["script", "style"]):
@@ -191,13 +200,7 @@ def fetch_detail_text(session: requests.Session, posting: dict) -> str:
     kind = posting.get("_detail_kind", "greenhouse")
 
     if kind == "page":
-        try:
-            resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
-            if resp.status_code != 200:
-                return ""
-        except requests.RequestException:
-            return ""
-        return strip_html(resp.text)
+        return strip_html(get_text(session, url) or "")
 
     data = get_json(session, url)
     if not isinstance(data, dict):
@@ -595,17 +598,14 @@ def fetch_google(session: requests.Session, query: str = "intern"):
     postings = []
     seen: set[str] = set()
     for page in range(1, 6):
-        try:
-            resp = session.get(
-                "https://www.google.com/about/careers/applications/jobs/results"
-                f"?q={query}&page={page}",
-                timeout=TIMEOUT, headers=HEADERS,
-            )
-            if resp.status_code != 200:
-                break
-        except requests.RequestException:
+        body = get_text(
+            session,
+            "https://www.google.com/about/careers/applications/jobs/results"
+            f"?q={query}&page={page}",
+        )
+        if body is None:
             break
-        soup = BeautifulSoup(resp.text, "html.parser")
+        soup = BeautifulSoup(body, "html.parser")
         links = soup.select("a[href*='jobs/results/']")
         new = 0
         for a in links:
@@ -636,18 +636,13 @@ def fetch_apple(session: requests.Session):
     """Apple's search page embeds results as hydration JSON."""
     postings = []
     for page in range(1, 4):
-        try:
-            resp = session.get(
-                f"https://jobs.apple.com/en-us/search?search=intern&page={page}",
-                timeout=TIMEOUT, headers=HEADERS,
-            )
-            if resp.status_code != 200:
-                break
-        except requests.RequestException:
+        body = get_text(
+            session, f"https://jobs.apple.com/en-us/search?search=intern&page={page}")
+        if body is None:
             break
         m = re.search(
             r"window\.__staticRouterHydrationData\s*=\s*JSON\.parse\((.+?)\);?\s*</script>",
-            resp.text, re.DOTALL,
+            body, re.DOTALL,
         )
         if not m:
             break
@@ -883,13 +878,10 @@ def fetch_phenom_people(session: requests.Session, url: str):
     found_blob = False
     while offset < 300:
         page_url = url if offset == 0 else f"{url}{sep}from={offset}"
-        try:
-            resp = session.get(page_url, timeout=TIMEOUT, headers=HEADERS)
-            if resp.status_code != 200:
-                break
-        except requests.RequestException:
+        body = get_text(session, page_url)
+        if body is None:
             break
-        blob = _extract_balanced_json_value(resp.text, '"eagerLoadRefineSearch"')
+        blob = _extract_balanced_json_value(body, '"eagerLoadRefineSearch"')
         if not blob:
             break
         found_blob = True
@@ -973,19 +965,13 @@ def fetch_icims_jibe(session: requests.Session, url: str):
     return postings, f"iCIMS Jibe ({origin})"
 
 
-UBER_SITEMAP_URL = "https://jobs.uber.com/en/jobs/sitemap.xml"
-UBER_POSTED_RE = re.compile(r"Posted on\s+([A-Za-z]+ \d{1,2},\s*\d{4})")
-UBER_LOCATION_RE = re.compile(r"Location\s+(.*?)\s+Team\b")
-
-
-def _fetch_uber_job_detail(session: requests.Session, url: str) -> dict | None:
-    try:
-        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
-        if resp.status_code != 200:
-            return None
-    except requests.RequestException:
+def _fetch_sitemap_job_page(session: requests.Session, url: str,
+                            location_re: re.Pattern | None,
+                            posted_re: re.Pattern | None) -> dict | None:
+    body = get_text(session, url)
+    if body is None:
         return None
-    soup = BeautifulSoup(resp.text, "html.parser")
+    soup = BeautifulSoup(body, "html.parser")
     h1 = soup.find("h1")
     title = h1.get_text(strip=True) if h1 else ""
     if not title:
@@ -994,9 +980,12 @@ def _fetch_uber_job_detail(session: requests.Session, url: str) -> dict | None:
         tag.decompose()
     visible = re.sub(r"\s+", " ", soup.get_text(" ")).strip()
 
-    loc_m = UBER_LOCATION_RE.search(visible)
+    location = ""
+    if location_re:
+        loc_m = location_re.search(visible)
+        location = loc_m.group(1) if loc_m else ""
     posted_date = ""
-    posted_m = UBER_POSTED_RE.search(visible)
+    posted_m = posted_re.search(visible) if posted_re else None
     if posted_m:
         for fmt in ("%b %d, %Y", "%B %d, %Y"):
             try:
@@ -1004,89 +993,33 @@ def _fetch_uber_job_detail(session: requests.Session, url: str) -> dict | None:
                 break
             except ValueError:
                 continue
-
-    return {
-        "title": title,
-        "url": url,
-        "location": loc_m.group(1) if loc_m else "",
-        "text": visible,
-        "posted_date": posted_date,
-    }
-
-
-def fetch_uber_full(session: requests.Session):
-    """Uber's careers site (jobs.uber.com) is a client-rendered Next.js app
-    -- the listing page just says "Loading jobs..." until JavaScript runs,
-    and no public search/list API could be found. Individual job pages
-    ARE server-rendered, though, and a sitemap lists every current
-    posting, so this fetches the sitemap then every job page directly
-    (a few hundred requests, ~1-2 minutes)."""
-    try:
-        resp = session.get(UBER_SITEMAP_URL, timeout=TIMEOUT, headers=HEADERS)
-        if resp.status_code != 200:
-            return None
-    except requests.RequestException:
-        return None
-    urls = re.findall(r"<loc>(.*?)</loc>", resp.text)
-    if not urls:
-        return None
-
-    postings = []
-    with ThreadPoolExecutor(max_workers=15) as pool:
-        futures = [pool.submit(_fetch_uber_job_detail, session, u) for u in urls]
-        for future in as_completed(futures):
-            job = future.result()
-            if job:
-                postings.append(job)
-    return (postings, "Uber careers (full sitemap scan)") if postings else None
-
-
-def _fetch_sitemap_job_page(session: requests.Session, url: str,
-                           location_re: re.Pattern | None) -> dict | None:
-    try:
-        resp = session.get(url, timeout=TIMEOUT, headers=HEADERS)
-        if resp.status_code != 200:
-            return None
-    except requests.RequestException:
-        return None
-    soup = BeautifulSoup(resp.text, "html.parser")
-    h1 = soup.find("h1")
-    title = h1.get_text(strip=True) if h1 else ""
-    if not title:
-        return None
-    for tag in soup(["script", "style"]):
-        tag.decompose()
-    visible = re.sub(r"\s+", " ", soup.get_text(" ")).strip()
-    location = ""
-    if location_re:
-        loc_m = location_re.search(visible)
-        location = loc_m.group(1) if loc_m else ""
-    return {"title": title, "url": url, "location": location, "text": visible}
+    return {"title": title, "url": url, "location": location, "text": visible,
+            "posted_date": posted_date}
 
 
 def fetch_sitemap_job_pages(session: requests.Session, sitemap_url: str, label: str,
-                            location_re: re.Pattern | None = None, max_workers: int = 10):
+                            location_re: re.Pattern | None = None,
+                            posted_re: re.Pattern | None = None,
+                            max_workers: int = 10):
     """For career sites that are client-rendered on the listing page but
     publish a job sitemap AND server-render individual job detail pages
     (e.g. Aflac's and Norfolk Southern's SAP SuccessFactors/Job2Web sites).
-    Only reasonable to call this for sites with a small-ish sitemap (a few
-    dozen jobs) -- for anything with hundreds of postings, the per-job
-    request cost adds up fast (see fetch_uber_full for that case, which
-    parallelizes across ~15 workers to keep a few hundred requests fast)."""
-    try:
-        resp = session.get(sitemap_url, timeout=TIMEOUT, headers=HEADERS)
-        if resp.status_code != 200:
-            return None
-    except requests.RequestException:
+    One request per job, so the cost scales with the sitemap: fine for a few
+    dozen jobs, and for a few hundred (Uber) only with more workers.
+
+    `location_re` and `posted_re` pull those fields out of the page's visible
+    text; group 1 of `posted_re` is a date like "Jan 5, 2027"."""
+    body = get_text(session, sitemap_url)
+    if body is None:
         return None
-    urls = re.findall(r"<loc>(.*?)</loc>", resp.text)
+    urls = re.findall(r"<loc>(.*?)</loc>", body)
     if not urls:
         return None
 
     postings = []
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
         futures = [
-            pool.submit(_fetch_sitemap_job_page, session, u, location_re)
+            pool.submit(_fetch_sitemap_job_page, session, u, location_re, posted_re)
             for u in urls
         ]
         for future in as_completed(futures):
@@ -1094,6 +1027,21 @@ def fetch_sitemap_job_pages(session: requests.Session, sitemap_url: str, label: 
             if job:
                 postings.append(job)
     return (postings, label) if postings else None
+
+
+def fetch_uber(session: requests.Session):
+    """Uber's careers site (jobs.uber.com) is a client-rendered Next.js app
+    -- the listing page just says "Loading jobs..." until JavaScript runs,
+    and no public search/list API could be found. Individual job pages
+    ARE server-rendered, though, and a sitemap lists every current
+    posting, so this fetches the sitemap then every job page directly
+    (a few hundred requests, ~1-2 minutes)."""
+    return fetch_sitemap_job_pages(
+        session, "https://jobs.uber.com/en/jobs/sitemap.xml",
+        "Uber careers (full sitemap scan)",
+        location_re=re.compile(r"Location\s+(.*?)\s+Team\b"),
+        posted_re=re.compile(r"Posted on\s+([A-Za-z]+ \d{1,2},\s*\d{4})"),
+        max_workers=15)
 
 
 def _wd(host, site):
@@ -1106,7 +1054,6 @@ KNOWN_COMPANIES = {
     "salesforce": _wd("salesforce.wd12.myworkdayjobs.com", "External_Career_Site"),
     "capital one": _wd("capitalone.wd12.myworkdayjobs.com", "Capital_One"),
     "the home depot": _wd("homedepot.wd5.myworkdayjobs.com", "CareerDepot"),
-    "home depot": _wd("homedepot.wd5.myworkdayjobs.com", "CareerDepot"),
     "ncr voyix": _wd("ncr.wd1.myworkdayjobs.com", "ext_us"),
     "amazon": fetch_amazon,
     "aws": lambda s: fetch_amazon(s, base_query="aws intern"),
@@ -1115,16 +1062,13 @@ KNOWN_COMPANIES = {
     "jpmorgan chase": lambda s: fetch_oracle_cloud(
         s, "jpmc.fa.oraclecloud.com", "CX_1001", "jpmorganchase.com",
         ["internship", "summer analyst", "summer", "2027"]),
-    "jpmorgan": lambda s: fetch_oracle_cloud(
-        s, "jpmc.fa.oraclecloud.com", "CX_1001", "jpmorganchase.com",
-        ["internship", "summer analyst", "summer", "2027"]),
     "lockheed martin": lambda s: fetch_radancy(
         s, "https://www.lockheedmartinjobs.com", "lockheedmartinjobs.com"),
     "atlassian": fetch_atlassian,
     "fortinet": lambda s: fetch_oracle_cloud(
         s, "edel.fa.us2.oraclecloud.com", "CX_2001", "fortinet.com",
         ["intern", "internship"]),
-    "uber": fetch_uber_full,
+    "uber": fetch_uber,
     "accenture": _wd("accenture.wd103.myworkdayjobs.com", "AccentureCareers"),
     "cardlytics": _wd("cardlytics.wd5.myworkdayjobs.com", "CardlyticsExternalCareerSite"),
     "rapid7": _wd("mymoose.wd1.myworkdayjobs.com", "careers"),
@@ -1148,6 +1092,9 @@ KNOWN_COMPANIES = {
         ["intern", "internship"]),
     "grammarly": lambda s: fetch_ashby(s, "Superhuman Platform Inc"),
 }
+# Other names the same company goes by in companies.txt.
+KNOWN_COMPANIES["home depot"] = KNOWN_COMPANIES["the home depot"]
+KNOWN_COMPANIES["jpmorgan"] = KNOWN_COMPANIES["jpmorgan chase"]
 
 # Companies whose career sites block automated access.
 BLOCKED_COMPANIES = {
@@ -1192,6 +1139,37 @@ ATS_URL_ROUTES = [
     (re.compile(r"https?://(?:jobs|careers)\.smartrecruiters\.com/([\w.%-]+)"),
      fetch_smartrecruiters),
 ]
+
+# Vendors detected by what a careers URL serves rather than by its shape,
+# since each company hosts them on its own domain. Each returns None when the
+# site isn't theirs. Radancy is last and worth trying at all because the URL
+# we were given is often a landing page (jobs.boeing.com/internships) whose
+# text mentions internships without listing any -- left to the flat-text
+# fallback, it would silently find nothing.
+CONTENT_PROBES = [fetch_phenom_people, fetch_icims_jibe, fetch_radancy_site]
+
+
+def fetch_from_url(session: requests.Session, url: str):
+    """Structured postings for a careers URL, if it is a board we can query.
+
+    Returns (fetched, recognized). `recognized` means the URL is a known job
+    board -- by URL shape, or confirmed by a content probe -- even if that
+    board currently lists nothing; the caller then knows re-scraping the page
+    as flat text would add nothing. `fetched` is (postings, source) or None.
+    """
+    wd = WORKDAY_URL_RE.match(url)
+    if wd:
+        # Query the job-board API; the page itself is JS-rendered and empty.
+        return fetch_workday(session, wd.group("host"), wd.group("site")), True
+    for pattern, fetcher in ATS_URL_ROUTES:
+        m = pattern.match(url)
+        if m:
+            return fetcher(session, m.group(1)), True
+    for probe in CONTENT_PROBES:
+        fetched = probe(session, url)
+        if fetched is not None:
+            return fetched, True
+    return None, False
 
 
 # ---------------------------------------------------------------------------
@@ -1308,60 +1286,14 @@ def scan_company(company: str, url: str | None, term: str,
         if fetched and fetched[0]:
             postings, result.source = fetched
 
-    # A Workday careers URL: query its job-board API rather than scraping the
-    # JS-rendered page (which contains no postings).
+    # A careers URL that is itself a job board we can query -- by URL shape
+    # (Workday, Greenhouse, ...) or by what the site serves (Phenom, iCIMS,
+    # Radancy). Tried before slug guessing: it's cheap and, when it applies,
+    # it's the company's own board rather than a guess at one.
     if postings is None and url:
-        wd = WORKDAY_URL_RE.match(url)
-        if wd:
-            url_is_recognized_ats = True
-            fetched = fetch_workday(session, wd.group("host"), wd.group("site"))
-            if fetched and fetched[0]:
-                postings, result.source = fetched
-
-    # A hosted ATS board URL: same idea, use the board's JSON API.
-    if postings is None and url and not url_is_recognized_ats:
-        for pattern, fetcher in ATS_URL_ROUTES:
-            m = pattern.match(url)
-            if m:
-                url_is_recognized_ats = True
-                fetched = fetcher(session, m.group(1))
-                if fetched and fetched[0]:
-                    postings, result.source = fetched
-                break
-
-    # A Phenom People career site: detected by content (the page embeds a
-    # specific JSON blob), not URL shape, since each company uses its own
-    # custom domain. Try this before guessing other ATS slugs or falling
-    # back to flat-text scraping -- it's cheap (a few requests, no per-site
-    # guessing) and gives real structured results when it applies.
-    if postings is None and url and not url_is_recognized_ats:
-        fetched = fetch_phenom_people(session, url)
-        if fetched is not None:
-            url_is_recognized_ats = True  # confirmed Phenom, even if 0 postings
-            if fetched[0]:
-                postings, result.source = fetched
-
-    # Same idea for iCIMS "Jibe"/Career Site Platform sites: a same-origin
-    # /api/jobs endpoint the page's own JS calls, confirmed by content
-    # rather than URL shape.
-    if postings is None and url and not url_is_recognized_ats:
-        fetched = fetch_icims_jibe(session, url)
-        if fetched is not None:
-            url_is_recognized_ats = True
-            if fetched[0]:
-                postings, result.source = fetched
-
-    # Same again for Radancy sites (jobs.boeing.com, search.jobs.barclays,
-    # careers.blackrock.com, ...). Worth trying before the slug guessing
-    # below: the careers URL we were given is often a landing page whose
-    # visible text mentions internships without listing any, which would
-    # otherwise fall through to flat-text scraping and silently find nothing.
-    if postings is None and url and not url_is_recognized_ats:
-        fetched = fetch_radancy_site(session, url)
-        if fetched is not None:
-            url_is_recognized_ats = True
-            if fetched[0]:
-                postings, result.source = fetched
+        fetched, url_is_recognized_ats = fetch_from_url(session, url)
+        if fetched and fetched[0]:
+            postings, result.source = fetched
 
     # No dedicated fetcher and no recognized-ATS URL: try auto-detecting the
     # company's ATS by guessing its slug. We still do this even when a plain

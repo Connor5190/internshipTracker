@@ -1,8 +1,10 @@
 name: Daily Internship Recap
 
-on:
+# Manual only for now -- run it from the Actions tab or the board's "Email me
+# the recap" button. To put it back on a schedule, restore:
 #   schedule:
 #     - cron: "0 11 * * *"  # 7:00 AM America/New_York (EDT, UTC-4)
+on:
   workflow_dispatch: {}
 
 permissions:
@@ -14,18 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Scan companies
-        run: python3 internship_tracker.py companies.txt --term "summer 2027" --json --workers 8 > scan_result.json
-
-      - name: Update seen-postings ledger
-        run: python3 scripts/update_ledger.py scan_result.json .state/seen_postings.json .state/companies_seen.json scan_result_enriched.json
+      - uses: ./.github/actions/scan
 
       - name: Build recap
         id: recap
@@ -50,21 +41,4 @@ jobs:
           html_body: file://recap.html
 
       - name: Commit updated ledger
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .state/seen_postings.json .state/companies_seen.json
-          if git diff --staged --quiet; then
-            echo "Ledger unchanged."
-            exit 0
-          fi
-          git commit -m "Update seen-postings ledger [skip ci]"
-          # update-board.yml writes this same ledger, so a push can lose a
-          # race with it. Rebase and retry rather than dropping the run's
-          # first-seen dates, which can't be reconstructed after the fact.
-          for attempt in 1 2 3; do
-            if git push; then exit 0; fi
-            echo "Push lost a race — rebasing (attempt $attempt)…"
-            git pull --rebase
-          done
-          git push
+        run: scripts/commit_ledger.sh

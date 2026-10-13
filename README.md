@@ -1,8 +1,8 @@
 # Internship Tracker
 
-Scans ~505 companies' career sites for internship roles matching **summer** or
-**2027** (either one counts, postings mentioning **2026** are excluded), and
-emails a daily recap of what's new.
+Scans ~580 companies' career sites for internship roles matching **summer** or
+**2027** (either one counts, postings titled for **2026** are excluded),
+publishes them to a board you can tick off, and emails a recap of what's new.
 
 ## How it works
 
@@ -45,9 +45,8 @@ are used — the plain page only **supplements** the structured result (in case
 some roles are listed only on the company's own site), it never replaces a
 working ATS-based scan.
 
-A handful of companies (Microsoft, Meta, Goldman Sachs, Bloomberg, Delta Air
-Lines, Citadel, Tesla, Bain & Company, Nutanix, EPAM, Fidelity Investments,
-Akamai) actively block automated access and are reported as "couldn't scan"
+A handful of companies (Microsoft, Meta, Goldman Sachs, Bloomberg, Citadel,
+Tesla, Bain & Company, Nutanix, EPAM, Fidelity Investments, Akamai) actively block automated access and are reported as "couldn't scan"
 with a note to check manually — see `BLOCKED_COMPANIES` in
 `internship_tracker.py`.
 
@@ -74,11 +73,13 @@ Options:
 | `--term "summer 2027"` | Keywords to match, any one counts (default: `summer` OR `2027`) |
 | `--workers 8` | Number of parallel company lookups |
 | `--no-descriptions` | Match only job titles (faster, fewer API calls) |
+| `--no-undated` | Drop intern roles that name no season or year anywhere, instead of listing them as "cycle not stated" |
 | `--json` | Output machine-readable JSON instead of a table |
 
-Postings with **2026** anywhere in the title are always excluded, regardless
-of `--term`, since a lot of programs are titled things like "2026-2027 XYZ
-Intern" and would otherwise match a "summer 2027" search.
+Postings with **2026** in the title are excluded regardless of `--term`, since
+a "Summer 2026" program would otherwise match a "summer 2027" search on the
+season alone. A title that also names a searched-for year stays in —
+"Summer 2027 Internship – Graduating Dec 2026" is a 2027 role.
 
 ## companies.txt format
 
@@ -95,9 +96,10 @@ companies with no public ATS at all.
 
 ## Daily email recap
 
-`.github/workflows/daily-recap.yml` runs the scanner every day at 7:00 AM
-America/New_York and emails the results (via iCloud SMTP) to the addresses
-configured in the workflow. Requires two repo secrets:
+`.github/workflows/daily-recap.yml` runs the scanner and emails the results
+(via iCloud SMTP) to the addresses configured in the workflow. Its 7:00 AM
+America/New_York schedule is currently commented out, so it runs only when
+triggered by hand or from the board. Requires two repo secrets:
 
 - `ICLOUD_EMAIL` — the sending/receiving iCloud address
 - `ICLOUD_APP_PASSWORD` — an [app-specific password](https://appleid.apple.com)
@@ -131,37 +133,8 @@ prefix (`~3w`) means the job board doesn't publish a posting date, so the
 age is measured from when this scanner first saw the role and may understate
 how old it really is.
 
-**The email drops nothing.** Not for age, not for location — every role the
-scan finds in the last 7 days is in it. Location is judged, but only so the
-board can offer it as a switch; see below.
-
-## Judging location
-
-`_non_us_only` decides whether every place a role lists is confidently
-outside the US. On a recent scan that was 113 of 239 roles. Nothing acts on
-it automatically: `build_site.py` attaches it to each role as a `non_us`
-flag, and the board turns it into an **Only USA** toggle. A filter nobody
-can see is a filter nobody can correct.
-
-A place reads as foreign only when it names a non-US country or a major
-foreign city (`NON_US_RE`) **and** carries no US signal — a US state name, a
-two-letter state code beside a comma or ZIP (`US_ABBR_RE`), or a known US
-city (`US_CITY_RE`). Anything else — an unrecognised place, `5 Locations`,
-`Flexible - Any SpaceX Site` — reads as US.
-
-The asymmetry is deliberate. Hiding a US role is worse than showing a
-foreign one, so ambiguity always resolves towards keeping: `London, KY` and
-`Cambridge, MA` stay, and a role spanning Bangalore *and* Seattle stays,
-because only roles where **every** listed place is confidently foreign are
-flagged.
-
-The residual risk is a bare foreign city that also exists in the US —
-`London`, `Dublin`, `Bristol`, `Melbourne` all read as foreign when they
-arrive with no country or state. On the scan this was built against, every
-one was genuinely foreign (Jump Trading's London and Bristol desks, Amazon's
-Dublin hub, an Amazon role literally titled *Amazon International*). If a US
-one ever gets caught, delete that city from `NON_US_RE` — the qualified form
-(`Dublin, OH`) is already safe.
+**The email drops nothing** — every role the scan finds in the last 7 days
+is in it, wherever it's located.
 
 Dates use **America/New_York**, not the runner's UTC clock — otherwise a run
 triggered after 8pm Eastern is stamped with tomorrow's date and roles read as
@@ -232,16 +205,19 @@ web-safe, so there's no webfont for the page to wait on. Dark mode is a warm
 inversion of the same palette.
 
 The board and the email are two views of one scan, sharing
-`format_recap._buckets` so they agree on what a role is and which week it
-landed in.
+`format_recap.buckets` so they agree on what a role is and which week it
+landed in. That's also where a posting listed under two related companies
+(Amazon and AWS both search amazon.jobs) is collapsed to one row.
 
-**Neither drops anything.** Not for age — an old listing still sitting on a
-board is still a job you can apply to, and newest-first sorting plus the
-grey oldest band let stale ones sink without hiding them. Not for location
-either: **Only USA** is a checkbox, on by default, labelled with what it's
-costing you (`Only USA (113 elsewhere)`) so the trade-off is visible before
-you decide. It's a per-device view preference, so it lives in
-`localStorage`, not in the shared Firebase state.
+**Neither drops anything.** An old listing still sitting on a board is
+still a job you can apply to, so every role stays in `roles.json`. The board
+just keeps the table current: roles first seen **60+ days ago** are left out
+of the table and its counts unless you're searching, and a line at the
+bottom says how many are tucked away. Type in the search box and they come
+back, under their own "60+ days old" heading.
+
+The table draws 200 rows at a time, with a **Show more** button below, so a
+board of a few thousand roles stays responsive on a phone.
 
 They differ on scope. The email is a digest of the last 7 days; the board is
 the full standing list, backlog included, because that's what you work down.
@@ -251,22 +227,17 @@ it's read once, the morning it arrives. `site/roles.json` ships raw
 `first_seen` dates and the page recomputes ages in the browser — a tab left
 open since Monday shouldn't still be calling Monday's postings "today".
 
-Every role gets a **Generate** button too, which asks Claude for a one-page
-cut of `master_resume.tex` aimed at that posting. See
-[Tailored resumes](#tailored-resumes).
-
 `.github/workflows/update-board.yml` scans and publishes `site/` via
 `actions/deploy-pages`, on its own schedule — **6:30 AM and 6:30 PM
-America/New_York**. Twice a day keeps the board under ~12 hours stale: the
-morning run lands just before the 7am recap, so clicking through from the
-email hits fresh data, and the evening run picks up the day's later postings.
-`site/roles.json` and `site/master.json` are generated, not committed.
+America/New_York**. Twice a day keeps the board under ~12 hours stale.
+`site/roles.json` is generated, not committed.
 
-Both workflows scan independently and both write `.state/seen_postings.json`,
-so each pushes the ledger with a rebase-and-retry rather than a bare `git
-push` — the 30-minute offset makes a collision unlikely (a full run takes
-about 2 minutes), but a lost race would cost first-seen dates that can't be
-reconstructed. The board deploy runs *after* that commit for the same reason.
+Both workflows run the same scan (`.github/actions/scan`) and both write
+`.state/seen_postings.json`, so each pushes the ledger through
+`scripts/commit_ledger.sh`, which rebases and retries rather than doing a bare
+`git push` — a full run takes about 5 minutes, so overlaps are possible, and a
+lost race would cost first-seen dates that can't be reconstructed. The board
+deploy runs *after* that commit for the same reason.
 
 Trigger it by hand from the Actions tab or with
 `gh workflow run update-board.yml`.
@@ -310,107 +281,6 @@ Left blank, the buttons don't render and the rest of the board is unaffected.
 `ALLOWED_ORIGIN` in `wrangler.toml` restricts which page may call the Worker
 from a browser — leave it pointed at the board.
 
-### Tailored resumes
-
-`master_resume.tex` is deliberately too full — every project, every internship,
-every skill, about 1.35 pages of a 1-page document. Press **Generate** on a row
-and Claude cuts it down to that one posting: reading the posting itself where
-the job board allows it, choosing what to keep, and rewriting bullets to lead
-with what this employer asked for.
-
-It runs **once per role, when you ask for it.** The board carries hundreds of
-roles and you will apply to a handful, so generating up front would mean paying
-for hundreds of resumes to use ten. The answer is stored in the same Firebase
-the applied ticks live in, so it follows you to another device and is never
-regenerated — pressing the button again is one API call for the life of that
-role. **Regenerate** in the modal replaces it, and asks first.
-
-Roughly $0.18 a role: `claude-opus-5`, about 7K tokens in (the master plus the
-posting) and 6K out including thinking.
-
-#### It cannot invent a job
-
-The model is shown `site/master.json` — the master parsed into **plain text**
-by [`scripts/parse_resume.py`](scripts/parse_resume.py) — and answers in plain
-text against a JSON schema. It never reads or writes LaTeX. The board escapes
-its way back to LaTeX for the `.tex` download. So the worst a bad answer can be
-is a bad sentence: not an unbalanced brace, not a broken document, not an
-injected macro.
-
-`validate` in [`worker/resume.js`](worker/resume.js) then checks the answer
-against the master before it reaches the page, and a failing answer is sent
-back once with its errors and then refused:
-
-- Every entry is returned by `id` and must exist in the master, in the section
-  the master puts it in, once. There is no way to express an employer, a title,
-  a date or a degree that isn't already yours.
-- Every bullet names the master bullet it came from. Rewriting is the point —
-  reword, reorder, cut detail, adopt the posting's vocabulary — but the source
-  has to exist.
-- **Every number in a rewritten bullet must appear in its source bullet.** This
-  is the fabrication that actually matters on a resume: an invented "40%" reads
-  exactly like a real one, and no amount of prompt instruction is a guarantee.
-  A rounded number is caught too — `30%` cannot become `35%`.
-- Skills must come from the master's list, and are re-emitted in the master's
-  spelling and the master's order. The list is grouped (languages, then ML,
-  then cloud); a resorted run reads as a keyword dump.
-
-Shape is enforced the same way: at least three entries under experience,
-experience in the master's reverse-chronological order, education added
-verbatim rather than asked for, and a 40-line page budget checked with the
-same arithmetic the model is given. The preview draws the real 11-inch line
-across the sheet, so if the budget is ever wrong you see where page one ends
-instead of finding out from a two-page PDF.
-
-#### Setup
-
-The Worker needs three secrets and a KV namespace on top of the
-[Run it from the board](#run-it-from-the-board) setup:
-
-```bash
-cd worker
-npm install
-npx wrangler kv namespace create RESUME_KV   # paste the id into wrangler.toml
-npx wrangler secret put ANTHROPIC_API_KEY
-npx wrangler secret put BOARD_KEY            # a passphrase you choose
-npx wrangler deploy
-```
-
-Add `resumes` to the Firebase rules alongside `applied` and `ignored`:
-
-```json
-{"rules": {
-  "applied": {".read": true, ".write": true},
-  "ignored": {".read": true, ".write": true},
-  "resumes": {".read": true, ".write": true}
-}}
-```
-
-**`/resume` is the one route that isn't open to anyone with the URL.** Every
-other thing this board does costs a CI minute at worst; this one costs money,
-so it needs `BOARD_KEY` — a passphrase the board asks for once per device and
-keeps in `localStorage`. Behind that is a hard cap of 40 generations a day,
-counted in KV. The cap is a backstop, not a ledger: two clicks in the same
-second can both pass it. If the KV namespace isn't bound the route refuses to
-run rather than running uncapped, because silently dropping the spend guard is
-the one failure mode worth being noisy about.
-
-Miss any of that and the button simply isn't rendered — the rest of the board
-is unaffected.
-
-#### Reading it
-
-The modal is a real 8.5×11in sheet scaled to the window, so **Save as PDF**
-isn't a second rendering path: it's the page you were looking at, with the
-board hidden and the master's own margins in `@page`. **Download .tex** and
-**Copy LaTeX** rebuild the document from the master's preamble and macros, so
-it compiles unedited and restyling the master restyles every tailored copy.
-
-A generation takes a couple of minutes, because Opus 5 thinks before it
-answers. The Worker streams newline-delimited JSON rather than answering in one
-shot — progress arrives as it happens, which both tells you where it is and
-keeps a connection alive that would otherwise be cut off as hung.
-
 ### Applied state
 
 There is no sign-in: anyone with the URL can tick a box, which is the point —
@@ -435,14 +305,13 @@ listed*, rather than silently vanishing.
    ```json
    {"rules": {
      "applied": {".read": true, ".write": true},
-     "ignored": {".read": true, ".write": true},
-     "resumes": {".read": true, ".write": true}
+     "ignored": {".read": true, ".write": true}
    }}
    ```
 4. Copy the URL at the top of the Data tab (`https://…firebaseio.com`) into
    `databaseURL` in `site/config.js`, and push
 
-That URL is meant to be public — it grants access to nothing but those three
+That URL is meant to be public — it grants access to nothing but those two
 lists. Don't widen the rules to the database root: Firebase's "test mode"
 default is root-open, which lets anyone with the URL write anywhere in the
 database rather than just to these two keys.
