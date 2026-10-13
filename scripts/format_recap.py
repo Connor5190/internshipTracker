@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 import sys
 from datetime import date
 from typing import NamedTuple
@@ -33,6 +34,111 @@ from update_ledger import today_local
 # The email carries only what's new; the backlog lives here, where it can be
 # sorted, searched and ticked off.
 BOARD_URL = "https://connor5190.github.io/internshipTracker/"
+
+# A role is flagged non-US only when *every* place it lists is confidently
+# outside the US. The asymmetry is deliberate: showing a foreign role is a
+# minor annoyance, hiding a US one means never seeing it, so anything short of
+# confident -- an unrecognised place name, "5 Locations", a city that reads
+# both ways -- reads as US.
+US_RE = re.compile(
+    r"""\b(united\s+states(\s+of\s+america)?|u\.?s\.?a\.?
+    |alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware
+    |florida|georgia|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky
+    |louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi
+    |missouri|montana|nebraska|nevada|new\s+hampshire|new\s+jersey|new\s+mexico
+    |new\s+york|north\s+carolina|north\s+dakota|ohio|oklahoma|oregon
+    |pennsylvania|rhode\s+island|south\s+carolina|south\s+dakota|tennessee
+    |texas|utah|vermont|virginia|washington|west\s+virginia|wisconsin|wyoming
+    |district\s+of\s+columbia)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# A two-letter state only counts beside a comma, a space, or a ZIP, so
+# "Toronto, ON" can't be read as a US state and a stray "IN" or "OR" in prose
+# can't match at all.
+US_ABBR_RE = re.compile(
+    r"""(,\s*|\s)(AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD
+    |MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT
+    |VT|VA|WA|WV|WI|WY|DC)\b(\s*\d{5})?""",
+    re.VERBOSE,
+)
+
+# Bare US city names, for boards that publish "Seattle" with no state.
+US_CITY_RE = re.compile(
+    r"""\b(new\s+york|nyc|chicago|seattle|bellevue|redmond|san\s+francisco
+    |san\s+jose|los\s+angeles|atlanta|austin|boston|miami|denver|dallas
+    |houston|phoenix|tempe|philadelphia|pittsburgh|detroit|minneapolis
+    |charlotte|nashville|orlando|tampa|sunnyvale|mountain\s+view|palo\s+alto
+    |santa\s+clara|cupertino|menlo\s+park|jersey\s+city|newark|greenwich
+    |stamford|hartford|columbus|cleveland|cincinnati|indianapolis|milwaukee
+    |kansas\s+city|st\.?\s+louis|salt\s+lake|portland|sacramento|san\s+diego
+    |irvine|costa\s+mesa|plano|richardson|arlington|reston|mclean|bethesda
+    |raleigh|durham|peoria|mossville|rochester|taylor|des\s+moines|ann\s+arbor
+    |boulder|provo|omaha|tucson|fremont|pleasanton|sant[ae]\s+monica)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+NON_US_RE = re.compile(
+    r"""\b(india|canada|mexico|brazil|argentina|chile|colombia|peru|uruguay
+    |costa\s+rica|united\s+kingdom|u\.?k\.?|england|scotland|wales|ireland
+    |france|germany|spain|portugal|italy|netherlands|belgium|switzerland
+    |austria|sweden|norway|denmark|finland|poland|czech(\s+republic)?|hungary
+    |romania|greece|turkey|russia|ukraine|israel|egypt|south\s+africa|nigeria
+    |kenya|morocco|saudi\s+arabia|qatar|kuwait|united\s+arab\s+emirates
+    |u\.?a\.?e\.?|china|japan|korea|taiwan|hong\s+kong|singapore|malaysia
+    |indonesia|thailand|vietnam|philippines|australia|new\s+zealand|pakistan
+    |bangladesh|sri\s+lanka|luxembourg|iceland|estonia|lithuania|latvia
+    |slovakia|slovenia|croatia|serbia|bulgaria
+    |bangalore|bengaluru|hyderabad|mumbai|new\s+delhi|delhi|gurgaon|gurugram
+    |noida|pune|chennai|kolkata|ahmedabad|jaipur|chandigarh|coimbatore|kochi
+    |thiruvananthapuram|trivandrum|indore|vadodara|nagpur|mysore|mysuru
+    |visakhapatnam|bhubaneswar|gandhinagar|thane
+    |toronto|montreal|ottawa|calgary|edmonton|winnipeg|halifax|quebec
+    |london|manchester|birmingham|leeds|glasgow|edinburgh|bristol|belfast
+    |dublin|paris|lyon|marseille|berlin|munich|hamburg|frankfurt|cologne
+    |stuttgart|madrid|barcelona|lisbon|porto|rome|milan|turin|naples
+    |amsterdam|rotterdam|brussels|antwerp|zurich|geneva|basel|vienna
+    |stockholm|oslo|copenhagen|helsinki|warsaw|krakow|prague|budapest
+    |bucharest|athens|istanbul|moscow|kyiv|kiev|tel\s+aviv|jerusalem|haifa
+    |dubai|abu\s+dhabi|doha|riyadh|cairo|tokyo|osaka|kyoto|yokohama|nagoya
+    |seoul|busan|beijing|shanghai|shenzhen|guangzhou|hangzhou|chengdu|taipei
+    |kaohsiung|sydney|melbourne|brisbane|perth|canberra|auckland|wellington
+    |s[ao]o\s+paulo|rio\s+de\s+janeiro|brasilia|cajamar|nova\s+santa\s+rita
+    |bogot[aá]|medellin|lima|santiago|buenos\s+aires|montevideo|mexico\s+city
+    |guadalajara|monterrey|bangpa-?in|amphoe|bangkok|phuket|kojetin|brno
+    |ostrava|jakarta|surabaya|kuala\s+lumpur|manila|cebu|ho\s+chi\s+minh
+    |hanoi)\b""",
+    re.IGNORECASE | re.VERBOSE,
+)
+
+# Boards that say only "5 Locations" or "Flexible" tell us nothing about the
+# country, so they are never grounds to drop a role.
+VAGUE_RE = re.compile(
+    r"^\s*(\d+\s+locations?|flexible\b.*|remote\b|multiple\b.*)\s*$", re.IGNORECASE
+)
+
+
+def _place_is_non_us(part: str) -> bool:
+    """One listed place, confidently outside the US.
+
+    A part naming both -- "London, KY", "Birmingham, AL" -- is ambiguous, not
+    foreign, so it reads as US and keeps the role.
+    """
+    part = part.strip()
+    if not part or VAGUE_RE.match(part):
+        return False
+    us = bool(US_RE.search(part) or US_ABBR_RE.search(part) or US_CITY_RE.search(part))
+    return NON_US_RE.search(part) is not None and not us
+
+
+def non_us_only(m: dict) -> bool:
+    loc = (m.get("location") or "").strip()
+    if not loc:
+        return False
+    parts = [p.strip() for p in re.split(r"[;/|]", loc) if p.strip()]
+    # A role spanning Bangalore *and* Seattle is still worth seeing.
+    return bool(parts) and all(_place_is_non_us(p) for p in parts)
+
 
 def is_blocked(r: dict) -> bool:
     """A scan error from a site known to block scrapers -- expected, and the
@@ -236,9 +342,13 @@ def buckets(results: list[dict]) -> Split:
     out of the role sections entirely and listed separately as a nudge to go
     look manually.
 
-    Nothing is dropped here for age -- an old listing still on a board is
-    still a job you could apply to. The board tucks the oldest away behind
-    its search box, but they're still in the data it's sent.
+    Nothing is dropped here. Age isn't a reason -- an old listing still on a
+    board is still a job you could apply to; the board tucks the oldest away
+    behind its search box, but they're still in the data it's sent. Neither
+    is location: the email shows every role it finds, and the board makes
+    "only USA" a switch the reader flips, using the per-role flag
+    `build_site.py` attaches with `non_us_only`. A filter nobody can see is a
+    filter nobody can correct.
 
     One thing is dropped: a second sighting of the same posting URL. Related
     entries in companies.txt can share a board -- Amazon and AWS both search

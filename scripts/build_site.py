@@ -5,9 +5,12 @@ The board and the daily email are two views of one scan, sharing
 `format_recap.buckets` so they agree on what a role is and which week it
 landed in.
 
-Neither drops anything for age -- an old listing still on a board is still
-a job. The board hides roles first seen 60+ days ago until you search, but
-that's the page's call: every role is in roles.json.
+Neither drops anything. Not for age -- an old listing still on a board is
+still a job; the board hides roles first seen 60+ days ago until you search,
+but that's the page's call, and every role is in roles.json. Not for
+location either: each role carries a `non_us` flag and the board turns it
+into an "Only USA" switch, so the reader can see what the filter costs and
+turn it off. The email shows everything.
 
 They differ on scope. The email is a digest of what's new, so it renders
 only today and this week and links here for the rest; the board is the full
@@ -60,6 +63,10 @@ def role_payload(company: str, m: dict) -> dict:
         # by inference rather than because it said "Summer 2027". The page
         # badges it, so the list can be complete without being misleading.
         "undated": m.get("matched_in") == "undated",
+        # Every place it lists is confidently outside the US. Shipped as a
+        # flag rather than acted on here, so "only USA" is a switch the
+        # reader can flip and see the consequences of, not a silent drop.
+        "non_us": fr.non_us_only(m),
     }
 
 

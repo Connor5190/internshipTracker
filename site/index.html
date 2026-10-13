@@ -229,6 +229,8 @@ footer a:hover{text-decoration:underline}
           <option value="co">Company A–Z</option>
         </select>
       </div>
+      <label class="toggle"><input type="checkbox" id="usonly" checked>
+        <span id="uslabel">Only USA</span></label>
       <label class="toggle"><input type="checkbox" id="hide"> Hide applied</label>
       <label class="toggle"><input type="checkbox" id="showign">
         <span id="ignlabel">Show ignored</span></label>
@@ -371,6 +373,9 @@ var showIgnored = false;
 // filters puts it back.
 var PAGE = 200;
 var limit = PAGE;
+// A view preference, not shared state -- it belongs to the device you're
+// reading on, so it stays in localStorage rather than Firebase. Defaults on.
+var usOnly = localStorage.getItem("internship-tracker-us-only") !== "0";
 // Roles first seen this many days ago or more stay in the data but leave the
 // table, so it shows what's current; a search still finds them.
 var ARCHIVE_DAYS = 60;
@@ -514,7 +519,7 @@ function draw() {
   if (!data) return;
 
   var shown = [], left = 0, todayLeft = 0, weekLeft = 0, ignoredCount = 0;
-  var archived = 0;
+  var archived = 0, nonUsCount = 0;
   data.roles.forEach(function (r) {
     // Old roles sit out of the table and its tallies unless you're searching
     // -- the search box is how you reach the archive.
@@ -523,6 +528,10 @@ function draw() {
       archived++;
       if (!query) return;
     }
+    if (r.non_us) nonUsCount++;
+    // "Only USA" is a filter on the whole board, so it comes before the
+    // tallies -- a role you've filtered out isn't work you have left.
+    if (usOnly && r.non_us) return;
     // The tiles count what's still to do, so they discount the search box,
     // anything already applied to, and anything explicitly ignored.
     if (ignored[r.id]) ignoredCount++;
@@ -582,6 +591,10 @@ function draw() {
   $("showing").textContent = shown.length + " of " + data.roles.length + " showing";
   $("ignlabel").textContent = ignoredCount ? "Show ignored (" + ignoredCount + ")"
                                            : "Show ignored";
+  // Naming the cost makes the switch honest: you can see what turning it off
+  // would give you back before you decide.
+  $("uslabel").textContent = nonUsCount ? "Only USA (" + nonUsCount + " elsewhere)"
+                                        : "Only USA";
 
   // ---- table
   var h = ['<div class="thead"><div>No.</div><div>Role</div><div>Location</div>' +
@@ -672,6 +685,11 @@ $("q").addEventListener("input", function (e) {
 $("sort").addEventListener("change", function (e) { sortBy = e.target.value; refilter(); });
 $("hide").addEventListener("change", function (e) { hideApplied = e.target.checked; refilter(); });
 $("showign").addEventListener("change", function (e) { showIgnored = e.target.checked; refilter(); });
+$("usonly").addEventListener("change", function (e) {
+  usOnly = e.target.checked;
+  try { localStorage.setItem("internship-tracker-us-only", usOnly ? "1" : "0"); } catch (x) {}
+  refilter();
+});
 $("app").addEventListener("click", function (e) {
   if (e.target.id !== "more") return;
   limit += PAGE;
@@ -812,6 +830,9 @@ function loadRoles() {
 }
 
 banner();
+// The markup ships checked; a stored "off" has to be reflected before the
+// first render, or the box and the list would disagree.
+$("usonly").checked = usOnly;
 
 if (TRIGGER) {
   $("triggers").hidden = false;

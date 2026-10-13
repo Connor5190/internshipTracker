@@ -133,8 +133,37 @@ prefix (`~3w`) means the job board doesn't publish a posting date, so the
 age is measured from when this scanner first saw the role and may understate
 how old it really is.
 
-**The email drops nothing** — every role the scan finds in the last 7 days
-is in it, wherever it's located.
+**The email drops nothing.** Not for age, not for location — every role the
+scan finds in the last 7 days is in it. Location is judged, but only so the
+board can offer it as a switch; see below.
+
+## Judging location
+
+`non_us_only` decides whether every place a role lists is confidently
+outside the US. On a recent scan that was 113 of 239 roles. Nothing acts on
+it automatically: `build_site.py` attaches it to each role as a `non_us`
+flag, and the board turns it into an **Only USA** toggle. A filter nobody
+can see is a filter nobody can correct.
+
+A place reads as foreign only when it names a non-US country or a major
+foreign city (`NON_US_RE`) **and** carries no US signal — a US state name, a
+two-letter state code beside a comma or ZIP (`US_ABBR_RE`), or a known US
+city (`US_CITY_RE`). Anything else — an unrecognised place, `5 Locations`,
+`Flexible - Any SpaceX Site` — reads as US.
+
+The asymmetry is deliberate. Hiding a US role is worse than showing a
+foreign one, so ambiguity always resolves towards keeping: `London, KY` and
+`Cambridge, MA` stay, and a role spanning Bangalore *and* Seattle stays,
+because only roles where **every** listed place is confidently foreign are
+flagged.
+
+The residual risk is a bare foreign city that also exists in the US —
+`London`, `Dublin`, `Bristol`, `Melbourne` all read as foreign when they
+arrive with no country or state. On the scan this was built against, every
+one was genuinely foreign (Jump Trading's London and Bristol desks, Amazon's
+Dublin hub, an Amazon role literally titled *Amazon International*). If a US
+one ever gets caught, delete that city from `NON_US_RE` — the qualified form
+(`Dublin, OH`) is already safe.
 
 Dates use **America/New_York**, not the runner's UTC clock — otherwise a run
 triggered after 8pm Eastern is stamped with tomorrow's date and roles read as
@@ -215,6 +244,12 @@ just keeps the table current: roles first seen **60+ days ago** are left out
 of the table and its counts unless you're searching, and a line at the
 bottom says how many are tucked away. Type in the search box and they come
 back, under their own "60+ days old" heading.
+
+Location isn't a reason to drop a role either: **Only USA** is a checkbox,
+on by default, labelled with what it's costing you (`Only USA (751
+elsewhere)`) so the trade-off is visible before you decide. It's a
+per-device view preference, so it lives in `localStorage`, not in the shared
+Firebase state.
 
 The table draws 200 rows at a time, with a **Show more** button below, so a
 board of a few thousand roles stays responsive on a phone.
