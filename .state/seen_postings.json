@@ -224,6 +224,21 @@
     "first_seen": "2026-10-01",
     "title": "Intern, System IP Engineering"
   },
+  "https://careers.arm.com/job/cambridge/data-analytics-intern/33099/101898105744": {
+    "company": "ARM",
+    "first_seen": "2026-10-13",
+    "title": "Data Analytics Intern"
+  },
+  "https://careers.arm.com/job/cambridge/quality-and-compliance-intern/33099/101898108368": {
+    "company": "ARM",
+    "first_seen": "2026-10-13",
+    "title": "Quality & Compliance Intern"
+  },
+  "https://careers.arm.com/job/cambridge/quality-and-reliability-engineering-intern/33099/101898105792": {
+    "company": "ARM",
+    "first_seen": "2026-10-13",
+    "title": "Quality & Reliability Engineering Intern"
+  },
   "https://careers.arm.com/job/galway/software-engineer-intern-ce-software/33099/101024213216": {
     "company": "ARM",
     "first_seen": "2026-09-23",
@@ -268,6 +283,11 @@
     "company": "ARM",
     "first_seen": "2026-10-09",
     "title": "Project Operations Intern (Productivity Engineering)"
+  },
+  "https://careers.arm.com/job/sophia-antipolis/qa-devops-intern/33099/101899425056": {
+    "company": "ARM",
+    "first_seen": "2026-10-13",
+    "title": "QA/DevOps Intern"
   },
   "https://careers.arm.com/job/sophia-antipolis/se-chip-methodology-and-automation-intern/33099/101751692448": {
     "company": "ARM",
@@ -629,16 +649,6 @@
     "first_seen": "2026-09-17",
     "title": "PhD Intern, Machine Learning: MSI, Product Operations Team"
   },
-  "https://jobs.apple.com/en-us/details/200679405": {
-    "company": "Apple",
-    "first_seen": "2026-08-28",
-    "title": "Display Supply Quality Engineer Intern"
-  },
-  "https://jobs.apple.com/en-us/details/200680345": {
-    "company": "Apple",
-    "first_seen": "2026-08-28",
-    "title": "Secure Kernel Engineering Intern, Sydney"
-  },
   "https://jobs.apple.com/en-us/details/200681134": {
     "company": "Apple",
     "first_seen": "2026-09-09",
@@ -923,6 +933,11 @@
     "company": "Boeing",
     "first_seen": "2026-09-21",
     "title": "Boeing Summer 2027 Internship Program (Paid) \u2013 Environment, Health, and Safety (EHS)"
+  },
+  "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
+    "company": "Boeing",
+    "first_seen": "2026-10-13",
+    "title": "Engineering Internship"
   },
   "https://jobs.boeing.com/job/berkeley/engineering-and-technology-innovation-graduate-researcher-program-advanced-materials-and-structures/185/100364523008": {
     "company": "Boeing",
@@ -1879,6 +1894,11 @@
     "first_seen": "2026-09-08",
     "title": "Consumer Bank Enterprise Experience (CBEX) Internship 2027"
   },
+  "https://jobs.citizensbank.com/search-jobs": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-10-13",
+    "title": "page mentions it: \u201c\u2026Bank internship Gain exposure to Citizens Private Bank as a summer intern, helping to build and apply exceptional client-service skills and ingenu\u2026\u201d"
+  },
   "https://jobs.coxenterprises.com/en/jobs/?search=intern": {
     "company": "Cox Automotive",
     "first_seen": "2026-09-04",
@@ -2159,11 +2179,6 @@
     "first_seen": "2026-09-14",
     "title": "Summer 2027: Software Engineering Intern - Full Stack"
   },
-  "https://jobs.intuit.com/job/mountain-view/summer-2027-software-engineering-intern-full-stack/27595/99856180864": {
-    "company": "Intuit",
-    "first_seen": "2026-08-28",
-    "title": "Summer 2027: Software Engineering Intern - Full Stack"
-  },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-technical-program-manager-tpm-intern/27595/100620927664": {
     "company": "Intuit",
     "first_seen": "2026-09-14",
@@ -2419,6 +2434,11 @@
     "first_seen": "2026-10-08",
     "title": "Intern Social Media & Events Specialist, 6-month contract "
   },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000155221189": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-13",
+    "title": "Data Business Analyst Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
     "first_seen": "2026-08-14",
@@ -2513,16 +2533,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-25",
     "title": "Intern - Process Engineer"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000146120720": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-28",
-    "title": "Internship - Software Development (Embedded) "
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000146122619": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-28",
-    "title": "Intern - Manufacturing / Tooling Development Engineering"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000146883869": {
     "company": "Western Digital",
@@ -3398,11 +3408,6 @@
     "company": "Amazon",
     "first_seen": "2026-08-12",
     "title": "2027 Program/Product Manager Intern "
-  },
-  "https://www.amazon.jobs/en/jobs/10499685/2027-financial-analyst-intern": {
-    "company": "Amazon",
-    "first_seen": "2026-08-12",
-    "title": "2027 Financial Analyst Intern"
   },
   "https://www.amazon.jobs/en/jobs/10500718/operations-logistics-internship-amazon-logistics": {
     "company": "Amazon",
@@ -4439,6 +4444,11 @@
     "first_seen": "2026-09-24",
     "title": "Process Improvement Specialist Intern - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10559025/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Process Improvement Specialist Intern - 2027 "
+  },
   "https://www.amazon.jobs/en/jobs/10559027/process-improvement-specialist-intern-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-24",
@@ -4509,6 +4519,11 @@
     "first_seen": "2026-09-29",
     "title": "Solutions Architect Intern Cohort, AGS-Tech - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10561382/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Process Improvement Specialist Intern - 2027 "
+  },
   "https://www.amazon.jobs/en/jobs/10561398/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-28",
@@ -4528,6 +4543,11 @@
     "company": "Amazon",
     "first_seen": "2026-09-28",
     "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10561404/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Process Improvement Specialist Intern - 2027 "
   },
   "https://www.amazon.jobs/en/jobs/10561439/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
@@ -5034,6 +5054,11 @@
     "first_seen": "2026-10-09",
     "title": "Software Development Engineer Intern, Amazon University Talent Acquisition "
   },
+  "https://www.amazon.jobs/en/jobs/10574927/software-development-engineer-intern-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Software Development Engineer Intern, Amazon University Talent Acquisition "
+  },
   "https://www.amazon.jobs/en/jobs/10575231/operations-finance-ofrp-intern-summer-2027-amazon-finance-rotational-program-afrp": {
     "company": "Amazon",
     "first_seen": "2026-10-09",
@@ -5083,6 +5108,71 @@
     "company": "Amazon",
     "first_seen": "2026-10-12",
     "title": "ASIC Engineer Intern, Summer 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10576777/physical-security-specialist-intern-2027-internship-dub-west": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "(Physical) Security Specialist Intern - 2027 Internship, DUB West"
+  },
+  "https://www.amazon.jobs/en/jobs/10576778/logistics-specialist-data-center-2027-internship-wblp-logistics-specialist": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Logistics Specialist, Data Center - 2027 Internship, WBLP Logistics Specialist "
+  },
+  "https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Data Center Infra Engineer  - 2027 Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10576784/2027-it-support-engineering-intern-amazon-operations-technology-solutions": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "2027 IT Support Engineering Intern, Amazon Operations Technology Solutions"
+  },
+  "https://www.amazon.jobs/en/jobs/10576785/2027-business-developer-intern-amazon-payments": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "2027 Business Developer Intern, Amazon Payments"
+  },
+  "https://www.amazon.jobs/en/jobs/10576864/2027-software-dev-engineer-intern-zaf": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "2027 Software Dev Engineer Intern - ZAF"
+  },
+  "https://www.amazon.jobs/en/jobs/10576883/data-center-infra-engineer-2027-internship-logistics-team": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Data Center Infra Engineer - 2027 Internship, Logistics Team"
+  },
+  "https://www.amazon.jobs/en/jobs/10576936/marketing-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Marketing Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10576937/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10576957/data-center-infra-engineer-2027-internship-logistics-team": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Data Center Infra Engineer - 2027 Internship, Logistics Team"
+  },
+  "https://www.amazon.jobs/en/jobs/10576974/data-center-engineering-operations-technician-2027-internship-dceo": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Data Center Engineering Operations Technician - 2027 Internship, DCEO"
+  },
+  "https://www.amazon.jobs/en/jobs/10577099/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10577137/operations-human-resources-partner-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-13",
+    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
@@ -5224,6 +5314,11 @@
     "first_seen": "2026-09-03",
     "title": "Part-Time Software Engineering BS/MS Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/104489346874122950-software-engineering-intern-2027-english": {
+    "company": "Google",
+    "first_seen": "2026-10-13",
+    "title": "Software Engineering Intern, 2027 (English)"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/104496653687235270-research-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-24",
@@ -5293,6 +5388,11 @@
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "Data Center Engineering Intern, BS/MS, Summer 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/115691171337904838-forward-deployed-engineer-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-13",
+    "title": "Forward Deployed Engineer Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/117572151191446214-user-experience-engineer-intern-phd-summer-2027": {
     "company": "Google",
@@ -5427,6 +5527,11 @@
   "https://www.google.com/about/careers/applications/jobs/results/139493738358416070-data-center-technician-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-02",
+    "title": "Data Center Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/140518143893086918-data-center-technician-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-13",
     "title": "Data Center Technician Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/142308488125522630-data-center-technician-intern-2027": {
@@ -5864,21 +5969,6 @@
     "first_seen": "2026-09-21",
     "title": "2027 Workplace Services Intern"
   },
-  "https://www.schwabjobs.com/job/austin/technology-2027-intern-ai-and-cybersecurity/33727/99867643616": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-08-28",
-    "title": "Technology 2027 Intern - AI & CyberSecurity"
-  },
-  "https://www.schwabjobs.com/job/austin/technology-2027-intern-data-engineering/33727/99872061056": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-08-28",
-    "title": "Technology 2027 Intern - Data Engineering"
-  },
-  "https://www.schwabjobs.com/job/austin/technology-2027-intern-software-engineering/33727/99872061168": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-08-28",
-    "title": "Technology 2027 Intern - Software Engineering"
-  },
   "https://www.schwabjobs.com/job/chicago/2027-financial-service-and-support-intern-chicago/33727/100027798992": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-01",
@@ -5973,6 +6063,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-17",
     "title": "2027 Internal Audit Intern"
+  },
+  "https://www.schwabjobs.com/job/westlake/2027-international-client-services-intern-westlake-only/33727/101274655600": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-10-13",
+    "title": "2027 International Client Services Intern - Westlake Only"
   },
   "https://www.schwabjobs.com/job/westlake/2027-trading-solutions-intern/33727/100776298656": {
     "company": "Charles Schwab",
