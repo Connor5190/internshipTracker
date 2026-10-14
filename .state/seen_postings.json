@@ -924,6 +924,16 @@
     "first_seen": "2026-10-13",
     "title": "Intern - Full Stack Engineer"
   },
+  "https://jobs.apple.com/en-us/details/200688936": {
+    "company": "Apple",
+    "first_seen": "2026-10-14",
+    "title": "Software Engineering Intern \u2013 AI Tools for Hardware Engineering"
+  },
+  "https://jobs.apple.com/en-us/details/200689039": {
+    "company": "Apple",
+    "first_seen": "2026-10-14",
+    "title": "RF System Validation Internship"
+  },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
     "first_seen": "2026-09-21",
@@ -3589,11 +3599,6 @@
     "first_seen": "2026-09-14",
     "title": "Financial Analyst Intern, Ops FP&A"
   },
-  "https://www.amazon.jobs/en/jobs/10515426/financial-analyst-intern-amzl": {
-    "company": "Amazon",
-    "first_seen": "2026-08-26",
-    "title": "Financial Analyst Intern, AMZL"
-  },
   "https://www.amazon.jobs/en/jobs/10516696/operations-logistics-internship-wroclaw-bielany-wroclawskie-start-2027": {
     "company": "Amazon",
     "first_seen": "2026-08-27",
@@ -5199,6 +5204,21 @@
     "first_seen": "2026-10-13",
     "title": "Hardware Development Engineer Intern,  Summer 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10578305/marketing-intern-amazon-global-logistics": {
+    "company": "Amazon",
+    "first_seen": "2026-10-14",
+    "title": "Marketing Intern, Amazon Global Logistics"
+  },
+  "https://www.amazon.jobs/en/jobs/10578321/dco-tech-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-10-14",
+    "title": "DCO Tech Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10578583/amazon-robotics-software-development-engineer-intern-co-op-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-14",
+    "title": "Amazon Robotics - Software Development Engineer Intern/Co-op - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5854,6 +5874,11 @@
     "first_seen": "2026-09-25",
     "title": "Intern, Fund Finance"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-global-securities-finance-gsf-trading-financial-markets/3121/45930008896": {
+    "company": "ING",
+    "first_seen": "2026-10-14",
+    "title": "Intern, Global Securities Finance (GSF) Trading, Financial Markets"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-loan-distribution-group-apac/3121/44275686784": {
     "company": "ING",
     "first_seen": "2026-09-08",
@@ -5903,6 +5928,11 @@
     "company": "ING",
     "first_seen": "2026-10-07",
     "title": "Intern, Commodities, Food and Agriculture HK"
+  },
+  "https://www.ing.jobs/en/job/wan-chai/intern-corporate-finance-hong-kong/3121/45930008704": {
+    "company": "ING",
+    "first_seen": "2026-10-14",
+    "title": "Intern, Corporate Finance Hong Kong"
   },
   "https://www.mlp.com/careers/students/": {
     "company": "Millennium",
