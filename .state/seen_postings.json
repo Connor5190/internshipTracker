@@ -934,10 +934,20 @@
     "first_seen": "2026-10-07",
     "title": "PMU Digital Design Verification Intern (m/f/d)"
   },
+  "https://jobs.apple.com/en-us/details/200687858": {
+    "company": "Apple",
+    "first_seen": "2026-10-16",
+    "title": "Manufacturing Quality Engineering Intern, Brittles "
+  },
   "https://jobs.apple.com/en-us/details/200688136": {
     "company": "Apple",
     "first_seen": "2026-10-12",
     "title": "Internship - Modem Functional Test - Wireless Technologies & Ecosystems"
+  },
+  "https://jobs.apple.com/en-us/details/200688346": {
+    "company": "Apple",
+    "first_seen": "2026-10-16",
+    "title": "Wireless Software & AI/ML Engineer Intern - Beijing"
   },
   "https://jobs.apple.com/en-us/details/200688724": {
     "company": "Apple",
@@ -952,6 +962,16 @@
   "https://jobs.apple.com/en-us/details/200688936": {
     "company": "Apple",
     "first_seen": "2026-10-14",
+    "title": "Software Engineering Intern \u2013 AI Tools for Hardware Engineering"
+  },
+  "https://jobs.apple.com/en-us/details/200688942": {
+    "company": "Apple",
+    "first_seen": "2026-10-16",
+    "title": "Software Engineering Intern \u2013 AI Tools for Hardware Engineering"
+  },
+  "https://jobs.apple.com/en-us/details/200688946": {
+    "company": "Apple",
+    "first_seen": "2026-10-16",
     "title": "Software Engineering Intern \u2013 AI Tools for Hardware Engineering"
   },
   "https://jobs.apple.com/en-us/details/200688951": {
@@ -978,6 +998,11 @@
     "company": "Apple",
     "first_seen": "2026-10-14",
     "title": "RF System Validation Internship"
+  },
+  "https://jobs.apple.com/en-us/details/200689473": {
+    "company": "Apple",
+    "first_seen": "2026-10-16",
+    "title": "Software Engineering Intern, Apple Services Engineering"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1399,16 +1424,6 @@
     "first_seen": "2026-09-29",
     "title": "Corporate Banking - Summer Internship Program, Tokyo - Japan, 2027"
   },
-  "https://jobs.citi.com/job/chiyoda/for-onboarding-banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99971578032": {
-    "company": "Citibank",
-    "first_seen": "2026-08-31",
-    "title": "\u3010For Onboarding\u3011 Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027"
-  },
-  "https://jobs.citi.com/job/chiyoda/for-onboarding-banking-investment-banking-part-time-intern-tokyo-jpn-2027/287/99971578048": {
-    "company": "Citibank",
-    "first_seen": "2026-08-31",
-    "title": "\u3010For Onboarding\u3011 Banking - Investment Banking, Part-time Intern, Tokyo-JPN, 2027"
-  },
   "https://jobs.citi.com/job/chiyoda/for-onboarding-markets-part-time-intern-tokyo-jpn-2027/287/101944222528": {
     "company": "Citibank",
     "first_seen": "2026-10-15",
@@ -1423,11 +1438,6 @@
     "company": "Citibank",
     "first_seen": "2026-08-14",
     "title": "Markets - Summer Internship Program, Boston Career Forum in 2026, Tokyo - Japan, 2027"
-  },
-  "https://jobs.citi.com/job/ciudad-de-mexico/markets-sales-and-trading-internship-mexico-city-mexico-2027/287/99971621968": {
-    "company": "Citibank",
-    "first_seen": "2026-08-31",
-    "title": "Markets \u2013 Sales and Trading, Internship, Mexico City, Mexico 2027"
   },
   "https://jobs.citi.com/job/dallas/wealth-summer-analyst-dallas-usa-2027/287/100661745120": {
     "company": "Citibank",
@@ -2558,6 +2568,11 @@
     "company": "Ubisoft",
     "first_seen": "2026-10-15",
     "title": "Intern Social Media & Events Specialist, 6-month contract "
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000155979201": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-16",
+    "title": "Creator Strategy Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
@@ -3709,6 +3724,11 @@
     "first_seen": "2026-08-28",
     "title": "Cloud Hardware Development Engineer Intern, Annapurna Labs - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10524468/manufacturing-test-engr-intern-advanced-manufacturing-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Manufacturing Test Engr Intern, Advanced Manufacturing Engineering"
+  },
   "https://www.amazon.jobs/en/jobs/10525519/operations-logistics-internship-gliwice-start-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-02",
@@ -4694,6 +4714,21 @@
     "first_seen": "2026-09-28",
     "title": "Program Manager Intern (3 months) - FY27"
   },
+  "https://www.amazon.jobs/en/jobs/10563228/commissioning-program-analyst-intern-data-center-capacity-delivery-apjc": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Commissioning Program Analyst Intern, Data Center Capacity Delivery APJC"
+  },
+  "https://www.amazon.jobs/en/jobs/10563239/cost-management-intern-strategic-portfolio-management": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Cost Management Intern, Strategic Portfolio Management"
+  },
+  "https://www.amazon.jobs/en/jobs/10563245/program-manager-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Program Manager Intern"
+  },
   "https://www.amazon.jobs/en/jobs/10563358/associate-solutions-architect-intern-hong-kong": {
     "company": "Amazon",
     "first_seen": "2026-09-29",
@@ -5344,6 +5379,41 @@
     "first_seen": "2026-10-15",
     "title": "Business Intelligence Intern Italy"
   },
+  "https://www.amazon.jobs/en/jobs/10581248/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581249/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581250/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581251/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581252/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581253/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10581332/2027-software-dev-engineer-intern-united-kingdom": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "2027 Software Dev Engineer Intern - United Kingdom"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5458,11 +5528,6 @@
     "company": "Google",
     "first_seen": "2026-09-22",
     "title": "Business Undergraduate Intern, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/100648618540573382-software-engineering-intern-bs-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-08-31",
-    "title": "Software Engineering Intern, BS, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/100798001798095558-user-experience-design-intern-bsms-summer-2027": {
     "company": "Google",
@@ -5619,11 +5684,6 @@
     "first_seen": "2026-09-14",
     "title": "Hardware Engineering Intern, BS/MS, Summer 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/123510626377966278-software-developer-intern-bs-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-08-31",
-    "title": "Software Developer Intern, BS, Summer 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/123907061523063494-associate-product-marketing-manager-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-02",
@@ -5718,11 +5778,6 @@
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "User Experience Research Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/138960139137753798-software-developer-intern-ms-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-08-31",
-    "title": "Software Developer Intern, MS, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/139129176165622470-security-consultant-intern-bsms-summer-2027": {
     "company": "Google",
@@ -5884,11 +5939,6 @@
     "first_seen": "2026-10-02",
     "title": "Finance MBA Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/94172495052972742-software-engineering-intern-ms-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-08-31",
-    "title": "Software Engineering Intern, MS, Summer 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/94308684170961606-security-consultant-intern-bsms-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-14",
@@ -5938,11 +5988,6 @@
     "company": "ING",
     "first_seen": "2026-09-05",
     "title": "CMA ECG Intern M&A"
-  },
-  "https://www.ing.jobs/en/job/bucharest/internship-wholesale-banking-ing-bank/3121/42543948352": {
-    "company": "ING",
-    "first_seen": "2026-08-31",
-    "title": "Internship Wholesale Banking @ING Bank"
   },
   "https://www.ing.jobs/en/job/frankfurt-am-main/intern-sales-ai-adoption-support-f-m-x/3121/43201371776": {
     "company": "ING",
@@ -6079,6 +6124,11 @@
     "first_seen": "2026-10-01",
     "title": "Intern, Network Sector Coverage"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-portfolio-management/3121/46008155520": {
+    "company": "ING",
+    "first_seen": "2026-10-16",
+    "title": "Intern, Portfolio Management"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-sectors-and-sl-transaction-management/3121/45735845120": {
     "company": "ING",
     "first_seen": "2026-10-09",
@@ -6108,11 +6158,6 @@
     "company": "ING",
     "first_seen": "2026-10-09",
     "title": "Intern, Working Capital Solutions"
-  },
-  "https://www.ing.jobs/en/job/tokyo/intern-corporate-sector-lending-japan/3121/42430779648": {
-    "company": "ING",
-    "first_seen": "2026-08-31",
-    "title": "Intern, Corporate Sector Lending Japan"
   },
   "https://www.ing.jobs/en/job/wan-chai/intern-commodities-food-and-agriculture-hk/3121/45658374464": {
     "company": "ING",
