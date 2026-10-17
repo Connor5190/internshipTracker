@@ -709,11 +709,6 @@
     "first_seen": "2026-09-09",
     "title": "Technical Internship : Information Systems and Technology (Japan) "
   },
-  "https://jobs.apple.com/en-us/details/200681245": {
-    "company": "Apple",
-    "first_seen": "2026-09-01",
-    "title": "PMU Analog Layout Design Intern (m/f/d)"
-  },
   "https://jobs.apple.com/en-us/details/200681391": {
     "company": "Apple",
     "first_seen": "2026-09-19",
@@ -2044,11 +2039,6 @@
     "first_seen": "2026-09-28",
     "title": "page mentions it: \u201c\u2026Customer Experience & Operations Intern - Summer 2027 Austin, United\u2026\u201d"
   },
-  "https://jobs.genpt.com/job/birmingham/agile-pmo-intern/505/100038375696": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "Agile PMO Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/agile-pmo-intern/505/100757496160": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-17",
@@ -2058,11 +2048,6 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Agile PMO Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/cloud-developer-intern/505/100046894528": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "Cloud Developer Intern"
   },
   "https://jobs.genpt.com/job/birmingham/cloud-developer-intern/505/100757496224": {
     "company": "Genuine Parts Company",
@@ -2074,11 +2059,6 @@
     "first_seen": "2026-09-29",
     "title": "Cloud Developer Intern"
   },
-  "https://jobs.genpt.com/job/birmingham/customer-software-development-intern/505/100046894608": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "Customer Software Development Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/customer-software-development-intern/505/100757496320": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-17",
@@ -2088,11 +2068,6 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Customer Software Development Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/enterprise-intelligence-intern/505/100046894560": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "Enterprise Intelligence Intern"
   },
   "https://jobs.genpt.com/job/birmingham/enterprise-intelligence-intern/505/100757496256": {
     "company": "Genuine Parts Company",
@@ -2104,11 +2079,6 @@
     "first_seen": "2026-09-29",
     "title": "Enterprise Intelligence Intern"
   },
-  "https://jobs.genpt.com/job/birmingham/grc-cybersecurity-analyst-intern/505/100046894544": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "GRC/Cybersecurity Analyst Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/grc-cybersecurity-analyst-intern/505/100757496240": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-17",
@@ -2118,11 +2088,6 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "GRC/Cybersecurity Analyst Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/software-developer-intern/505/100046894496": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-01",
-    "title": "Software Developer Intern"
   },
   "https://jobs.genpt.com/job/birmingham/software-developer-intern/505/100757496176": {
     "company": "Genuine Parts Company",
@@ -2849,16 +2814,6 @@
     "first_seen": "2026-09-07",
     "title": "Private Bank and Wealth Management Off Cycle Internship Programme 2027 Dubai"
   },
-  "https://search.jobs.barclays/job/dublin/global-transaction-banking-summer-internship-programme-2027-dublin/13015/100032500688": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Global Transaction Banking Summer Internship Programme 2027 Dublin"
-  },
-  "https://search.jobs.barclays/job/dublin/international-corporate-banking-summer-internship-programme-2027-dublin/13015/100032501008": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "International Corporate Banking Summer Internship Programme 2027 Dublin"
-  },
   "https://search.jobs.barclays/job/frankfurt-am-main/banking-off-cycle-internship-programme-2027-frankfurt/13015/100066900064": {
     "company": "Barclays",
     "first_seen": "2026-09-02",
@@ -3139,11 +3094,6 @@
     "first_seen": "2026-09-01",
     "title": "Banking Associate Summer Internship Program 2027 New York"
   },
-  "https://search.jobs.barclays/job/new-york/global-transaction-banking-analyst-summer-internship-program-2027-new-york-city/13015/100032500256": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Global Transaction Banking Analyst Summer Internship Program 2027 New York City"
-  },
   "https://search.jobs.barclays/job/new-york/international-corporate-banking-analyst-summer-internship-program-2027-new-york-city/13015/100032500976": {
     "company": "Barclays",
     "first_seen": "2026-09-02",
@@ -3178,16 +3128,6 @@
     "company": "Barclays",
     "first_seen": "2026-10-02",
     "title": "Capital Markets Off Cycle Internship Programme 2027 Paris"
-  },
-  "https://search.jobs.barclays/job/paris/global-transaction-banking-off-cycle-internship-programme-2027-paris/13015/100032500304": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Global Transaction Banking Off Cycle Internship Programme 2027 Paris"
-  },
-  "https://search.jobs.barclays/job/paris/international-corporate-banking-off-cycle-internship-programme-2027-paris/13015/100032501520": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "International Corporate Banking Off Cycle Internship Programme 2027 Paris"
   },
   "https://search.jobs.barclays/job/paris/quantitative-analytics-associate-off-cycle-internship-programme-2027-paris/13015/100305156992": {
     "company": "Barclays",
@@ -3643,6 +3583,11 @@
     "company": "Amazon",
     "first_seen": "2026-08-19",
     "title": "Operations Internship - Andaluc\u00eda - Start 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10507775/data-center-infrastructure-engineering-intern-colocation-regional-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-17",
+    "title": "Data Center Infrastructure Engineering Intern, Colocation Regional Engineering"
   },
   "https://www.amazon.jobs/en/jobs/10507943/operations-internship-asturias-start-2027": {
     "company": "Amazon",
@@ -6249,11 +6194,6 @@
     "first_seen": "2026-09-14",
     "title": "2027 Branch Financial Consulting Intern"
   },
-  "https://www.schwabjobs.com/job/austin/2027-business-operations-intern-texas/33727/100034998896": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Business Operations Intern - Texas"
-  },
   "https://www.schwabjobs.com/job/austin/2027-corporate-risk-management-intern/33727/100500575712": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-11",
@@ -6309,26 +6249,6 @@
     "first_seen": "2026-09-21",
     "title": "2027 Workplace Services Intern"
   },
-  "https://www.schwabjobs.com/job/chicago/2027-financial-service-and-support-intern-chicago/33727/100027798992": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Chicago"
-  },
-  "https://www.schwabjobs.com/job/el-paso/2027-business-operations-intern-el-paso/33727/100030840912": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Business Operations Intern - El Paso"
-  },
-  "https://www.schwabjobs.com/job/indianapolis/2027-financial-service-and-support-intern-indianapolis/33727/100027798928": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Indianapolis"
-  },
-  "https://www.schwabjobs.com/job/lone-tree/2027-financial-service-and-support-intern-denver/33727/100027798960": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Denver"
-  },
   "https://www.schwabjobs.com/job/lone-tree/2027-sox-compliance-intern/33727/100959818672": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-21",
@@ -6339,11 +6259,6 @@
     "first_seen": "2026-09-02",
     "title": "2027 Business Operations Intern - Omaha"
   },
-  "https://www.schwabjobs.com/job/omaha/2027-financial-service-and-support-intern-omaha/33727/100034999040": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Omaha"
-  },
   "https://www.schwabjobs.com/job/orlando/2027-business-operations-intern-orlando/33727/100944655504": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-21",
@@ -6353,26 +6268,6 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-02",
     "title": "2027 Donor Services and Operations Intern - (Orlando Only)"
-  },
-  "https://www.schwabjobs.com/job/orlando/2027-financial-service-and-support-intern-orlando/33727/100034998976": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Orlando"
-  },
-  "https://www.schwabjobs.com/job/phoenix/2027-business-operations-intern-phoenix/33727/100030834032": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Business Operations Intern - Phoenix"
-  },
-  "https://www.schwabjobs.com/job/phoenix/2027-financial-service-and-support-intern-phoenix/33727/100034998992": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Phoenix"
-  },
-  "https://www.schwabjobs.com/job/richfield/2027-business-operations-intern-richfield/33727/100034998944": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Business Operations Intern - Richfield"
   },
   "https://www.schwabjobs.com/job/southlake/2027-charles-schwab-corporate-risk-management-internship-model-risk/33727/100938615120": {
     "company": "Charles Schwab",
@@ -6393,11 +6288,6 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-18",
     "title": "2027 Enterprise Finance Intern"
-  },
-  "https://www.schwabjobs.com/job/westlake/2027-financial-service-and-support-intern-westlake/33727/100034998912": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Westlake"
   },
   "https://www.schwabjobs.com/job/westlake/2027-internal-audit-intern/33727/100780867504": {
     "company": "Charles Schwab",
