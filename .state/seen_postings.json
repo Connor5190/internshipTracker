@@ -194,10 +194,20 @@
     "first_seen": "2026-09-21",
     "title": "2027 Summer Actuarial Intern"
   },
+  "https://careers.aflac.com/job/2027-Summer-Brand-Intern-GA-31999/1440847000/": {
+    "company": "Aflac",
+    "first_seen": "2026-10-16",
+    "title": "2027 Summer Brand Intern"
+  },
   "https://careers.aflac.com/job/Atlanta-2027-Summer-Internship-GA-30301/1433479300/": {
     "company": "Aflac",
     "first_seen": "2026-09-24",
     "title": "2027 Summer Internship"
+  },
+  "https://careers.aflac.com/job/New-York-City-2027-Global-Investments-%28NY%29-Sustainability-Intern-NY-10005/1440846600/": {
+    "company": "Aflac",
+    "first_seen": "2026-10-16",
+    "title": "2027 Global Investments (NY) Sustainability Intern"
   },
   "https://careers.arm.com/job/budapest/agile-project-management-intern/33099/101856114656": {
     "company": "ARM",
@@ -318,6 +328,16 @@
     "company": "ARM",
     "first_seen": "2026-10-09",
     "title": "Software Engineer Intern"
+  },
+  "https://careers.arm.com/job/sophia-antipolis/software-engineering-intern-workflow-monitoring-and-analytics/33099/102035670144": {
+    "company": "ARM",
+    "first_seen": "2026-10-16",
+    "title": "Software Engineering Intern \u2013 Workflow Monitoring and Analytics"
+  },
+  "https://careers.arm.com/job/sophia-antipolis/tools-and-flows-applications-engineering-intern/33099/102025873968": {
+    "company": "ARM",
+    "first_seen": "2026-10-16",
+    "title": "Tools & Flows Applications Engineering Intern"
   },
   "https://careers.arm.com/job/sophia-antipolis/verification-intern-solutions-engineering/33099/101751692480": {
     "company": "ARM",
@@ -559,10 +579,20 @@
     "first_seen": "2026-10-12",
     "title": "RTL Design and Verification Internship"
   },
+  "https://careers.synopsys.com/job/dublin/r-and-d-engineering-intern/44408/101997038224": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-16",
+    "title": "R&D Engineering Intern"
+  },
   "https://careers.synopsys.com/job/hsinchu/sicada-program-support-intern/44408/101023239568": {
     "company": "Synopsys",
     "first_seen": "2026-10-06",
     "title": "SiCADA Program Support Intern"
+  },
+  "https://careers.synopsys.com/job/mississauga/analog-design-internship-summer-2027/44408/102054577920": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-16",
+    "title": "Analog Design Internship - Summer 2027"
   },
   "https://careers.synopsys.com/job/mississauga/digital-design-verification-engineering-internship-16-month-co-op/44408/100144992768": {
     "company": "Synopsys",
@@ -608,6 +638,11 @@
     "company": "Synopsys",
     "first_seen": "2026-08-28",
     "title": "Software Development & Optimization Internship"
+  },
+  "https://careers.synopsys.com/job/yerevan/cad-r-and-d-engineering-intern/44408/101868933600": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-16",
+    "title": "CAD R&D Engineering Intern"
   },
   "https://careers.twosigma.com/careers/OpenRoles": {
     "company": "Two Sigma",
@@ -3008,6 +3043,11 @@
     "company": "Barclays",
     "first_seen": "2026-08-21",
     "title": "Capital Markets Summer Internship Programme 2027 London"
+  },
+  "https://search.jobs.barclays/job/london/client-data-and-engineering-group-summer-internship-programme-2027-london/13015/102040060528": {
+    "company": "Barclays",
+    "first_seen": "2026-10-16",
+    "title": "Client Data and Engineering Group Summer Internship Programme 2027 London"
   },
   "https://search.jobs.barclays/job/london/global-transaction-banking-summer-internship-programme-2027-london/13015/100032500816": {
     "company": "Barclays",
@@ -5413,6 +5453,11 @@
     "company": "Amazon",
     "first_seen": "2026-10-16",
     "title": "2027 Software Dev Engineer Intern - United Kingdom"
+  },
+  "https://www.amazon.jobs/en/jobs/10581365/data-center-technician-2027-internship-data-center-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-10-16",
+    "title": "Data Center Technician - 2027 Internship, Data Center Operations"
   },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
