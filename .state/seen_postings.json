@@ -69,11 +69,6 @@
     "first_seen": "2026-10-08",
     "title": "2027 Blackstone Global Fund Finance Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-BXPE-Summer-Analyst_44550": {
-    "company": "Blackstone",
-    "first_seen": "2026-09-03",
-    "title": "2027 Blackstone BXPE Summer Analyst"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-LaunchPad-Summer-Analyst_45456": {
     "company": "Blackstone",
     "first_seen": "2026-09-11",
@@ -258,6 +253,11 @@
     "company": "ARM",
     "first_seen": "2026-10-09",
     "title": "Software Engineering Intern"
+  },
+  "https://careers.arm.com/job/seoul/gpu-software-applications-engineer-intern-3-months/33099/102148485392": {
+    "company": "ARM",
+    "first_seen": "2026-10-19",
+    "title": "GPU Software Applications Engineer Intern (3 months)"
   },
   "https://careers.arm.com/job/sophia-antipolis/architecture-and-technology-intern/33099/101751692640": {
     "company": "ARM",
@@ -519,11 +519,6 @@
     "first_seen": "2026-09-14",
     "title": "Intern, Manufacturing Engineer"
   },
-  "https://careers.l3harris.com/en/job/greenville/intern-structural-engineer-fall-2027/4832/100124927056": {
-    "company": "L3Harris",
-    "first_seen": "2026-09-03",
-    "title": "Intern, Structural Engineer - Fall 2027"
-  },
   "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648400": {
     "company": "L3Harris",
     "first_seen": "2026-10-06",
@@ -593,11 +588,6 @@
     "company": "Synopsys",
     "first_seen": "2026-10-16",
     "title": "Analog Design Internship - Summer 2027"
-  },
-  "https://careers.synopsys.com/job/mississauga/digital-design-verification-engineering-internship-16-month-co-op/44408/100144992768": {
-    "company": "Synopsys",
-    "first_seen": "2026-09-03",
-    "title": "Digital Design Verification Engineering Internship (16-Month Co-op)"
   },
   "https://careers.synopsys.com/job/mississauga/digital-design-verification-internship-16-month-co-op/44408/100151146528": {
     "company": "Synopsys",
@@ -689,11 +679,6 @@
     "first_seen": "2026-08-14",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
-  "https://jobs.apple.com/en-us/details/200614259": {
-    "company": "Apple",
-    "first_seen": "2026-09-03",
-    "title": "Platform Engineering Intern"
-  },
   "https://jobs.apple.com/en-us/details/200617354": {
     "company": "Apple",
     "first_seen": "2026-09-10",
@@ -713,11 +698,6 @@
     "company": "Apple",
     "first_seen": "2026-09-19",
     "title": "Engineering Project Manager Intern - Shanghai or Shenzhen"
-  },
-  "https://jobs.apple.com/en-us/details/200681422": {
-    "company": "Apple",
-    "first_seen": "2026-09-03",
-    "title": "Noise & Vibration Internship"
   },
   "https://jobs.apple.com/en-us/details/200681910": {
     "company": "Apple",
@@ -979,6 +959,11 @@
     "first_seen": "2026-10-16",
     "title": "Wireless Software & AI/ML Engineer Intern - Beijing"
   },
+  "https://jobs.apple.com/en-us/details/200688443": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Manufacturing Quality Engineer Intern"
+  },
   "https://jobs.apple.com/en-us/details/200688724": {
     "company": "Apple",
     "first_seen": "2026-10-15",
@@ -1033,6 +1018,31 @@
     "company": "Apple",
     "first_seen": "2026-10-16",
     "title": "Software Engineering Intern, Apple Services Engineering"
+  },
+  "https://jobs.apple.com/en-us/details/200689711": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Internship - Software Engineering - AI-Assisted Baseband Debugging Evaluation, WTE"
+  },
+  "https://jobs.apple.com/en-us/details/200689729": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Internship - Software Engineering - On-Demand Agent Provisioning in Cellular Test"
+  },
+  "https://jobs.apple.com/en-us/details/200690074": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Global Supply Management Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200690119": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Aeon Modeling Software Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200690121": {
+    "company": "Apple",
+    "first_seen": "2026-10-19",
+    "title": "Human-Centric Modeling Internship"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1163,11 +1173,6 @@
     "company": "Boeing",
     "first_seen": "2026-09-08",
     "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Applied Mathematician Intern"
-  },
-  "https://jobs.boeing.com/job/port-melbourne/finance-intern/185/100107058256": {
-    "company": "Boeing",
-    "first_seen": "2026-09-03",
-    "title": "Finance Intern"
   },
   "https://jobs.boeing.com/job/port-melbourne/supply-chain-intern/185/100966663856": {
     "company": "Boeing",
@@ -1414,9 +1419,19 @@
     "first_seen": "2026-09-28",
     "title": "Banking, Commercial Banking, Summer Analyst, Amsterdam - The Netherlands 2027"
   },
+  "https://jobs.citi.com/job/amsterdam/banking-commercial-banking-summer-analyst-amsterdam-the-netherlands-2027/287/102161080560": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Commercial Banking, Summer Analyst, Amsterdam - The Netherlands 2027"
+  },
   "https://jobs.citi.com/job/amsterdam/banking-corporate-banking-summer-analyst-amsterdam-the-netherlands-2027/287/100996355280": {
     "company": "Citibank",
     "first_seen": "2026-09-22",
+    "title": "Banking, Corporate Banking, Summer Analyst, Amsterdam - The Netherlands, 2027"
+  },
+  "https://jobs.citi.com/job/amsterdam/banking-corporate-banking-summer-analyst-amsterdam-the-netherlands-2027/287/102161056000": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Corporate Banking, Summer Analyst, Amsterdam - The Netherlands, 2027"
   },
   "https://jobs.citi.com/job/belfast/chief-operating-office-summer-analyst-uk-belfast-2027/287/101650054848": {
@@ -1424,9 +1439,19 @@
     "first_seen": "2026-10-07",
     "title": "Chief Operating Office - Summer Analyst, UK - Belfast, 2027"
   },
+  "https://jobs.citi.com/job/belfast/chief-operating-office-summer-analyst-uk-belfast-2027/287/102161063664": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Chief Operating Office - Summer Analyst, UK - Belfast, 2027"
+  },
   "https://jobs.citi.com/job/beverly-hills/wealth-summer-analyst-los-angeles-usa-2027/287/100661745152": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Wealth \u2013 Summer Analyst, Los Angeles\u2013 USA, 2027"
+  },
+  "https://jobs.citi.com/job/beverly-hills/wealth-summer-analyst-los-angeles-usa-2027/287/102161053984": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, Los Angeles\u2013 USA, 2027"
   },
   "https://jobs.citi.com/job/bogota/banking-corporate-baking-internship-bogota-colombia-2027/287/100683557456": {
@@ -1434,9 +1459,19 @@
     "first_seen": "2026-09-16",
     "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
+  "https://jobs.citi.com/job/bogota/banking-corporate-baking-internship-bogota-colombia-2027/287/102161053584": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
+  },
   "https://jobs.citi.com/job/bogota/markets-sales-and-trading-internship-bogota-colombia-2027/287/101076912448": {
     "company": "Citibank",
     "first_seen": "2026-09-24",
+    "title": "Markets \u2013 Sales and Trading, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
+  },
+  "https://jobs.citi.com/job/bogota/markets-sales-and-trading-internship-bogota-colombia-2027/287/102161057232": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Markets \u2013 Sales and Trading, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
   "https://jobs.citi.com/job/bogota/services-internship-bogota-colombia-2027/287/101052286016": {
@@ -1444,10 +1479,20 @@
     "first_seen": "2026-09-23",
     "title": "Services \u2013 Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
+  "https://jobs.citi.com/job/bogota/services-internship-bogota-colombia-2027/287/102161057248": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Services \u2013 Internship, Bogot\u00e1 \u2013 Colombia, 2027"
+  },
   "https://jobs.citi.com/job/budapest/finance-full-time-analyst-budapest-hungary-2027-applicable-for-2026-citi-summer-interns-only/287/101029282032": {
     "company": "Citibank",
     "first_seen": "2026-09-23",
     "title": "Finance, Full-Time Analyst, Budapest - Hungary, 2027 - (Applicable for 2026 Citi Summer interns only)"
+  },
+  "https://jobs.citi.com/job/chiyoda/corporate-banking-summer-internship-program-tokyo-japan-2027/287/102161044016": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Corporate Banking - Summer Internship Program, Tokyo - Japan, 2027"
   },
   "https://jobs.citi.com/job/chiyoda/corporate-banking-summer-internship-program-tokyo-japan-2027/287/98511074064": {
     "company": "Citibank",
@@ -1459,19 +1504,39 @@
     "first_seen": "2026-10-15",
     "title": "\u3010For Onboarding\u3011Markets, Part-time Intern, Tokyo-JPN, 2027"
   },
+  "https://jobs.citi.com/job/chiyoda/investment-banking-summer-internship-program-tokyo-japan-2027/287/102161044000": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Investment Banking - Summer Internship Program, Tokyo - Japan, 2027"
+  },
   "https://jobs.citi.com/job/chiyoda/investment-banking-summer-internship-program-tokyo-japan-2027/287/98511087696": {
     "company": "Citibank",
     "first_seen": "2026-09-29",
     "title": "Investment Banking - Summer Internship Program, Tokyo - Japan, 2027"
   },
-  "https://jobs.citi.com/job/chiyoda/markets-summer-internship-program-boston-career-forum-in-2026-tokyo-japan-2027/287/97466251904": {
+  "https://jobs.citi.com/job/chiyoda/markets-summer-internship-program-boston-career-forum-in-2026-tokyo-japan-2027/287/102161042144": {
     "company": "Citibank",
-    "first_seen": "2026-08-14",
+    "first_seen": "2026-10-19",
     "title": "Markets - Summer Internship Program, Boston Career Forum in 2026, Tokyo - Japan, 2027"
+  },
+  "https://jobs.citi.com/job/city-of-taguig/technology-cyber-security-summer-analyst-internship-philippines-2027/287/102161068608": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Technology- Cyber Security, Summer Analyst (Internship), Philippines 2027"
+  },
+  "https://jobs.citi.com/job/city-of-taguig/technology-infrastructure-summer-analyst-internship-philippines-2027/287/102161068512": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Technology - Infrastructure, Summer Analyst (Internship), Philippines, 2027"
   },
   "https://jobs.citi.com/job/dallas/wealth-summer-analyst-dallas-usa-2027/287/100661745120": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Wealth \u2013 Summer Analyst, Dallas \u2013 USA, 2027"
+  },
+  "https://jobs.citi.com/job/dallas/wealth-summer-analyst-dallas-usa-2027/287/102161053936": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, Dallas \u2013 USA, 2027"
   },
   "https://jobs.citi.com/job/dublin/services-full-time-analyst-ireland-dublin-2027-2026-summer-intern-converts-only/287/100771374000": {
@@ -1479,9 +1544,19 @@
     "first_seen": "2026-09-17",
     "title": "Services - Full-Time Analyst, Ireland - Dublin, 2027 (2026 Summer Intern Converts Only)"
   },
+  "https://jobs.citi.com/job/dublin/services-full-time-analyst-ireland-dublin-2027-2026-summer-intern-converts-only/287/102161055120": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Services - Full-Time Analyst, Ireland - Dublin, 2027 (2026 Summer Intern Converts Only)"
+  },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-commercial-banking-summer-analyst-frankfurt-germany-2027/287/100661681296": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Banking, Commercial Banking, Summer Analyst, Frankfurt - Germany 2027"
+  },
+  "https://jobs.citi.com/job/frankfurt-am-main/banking-commercial-banking-summer-analyst-frankfurt-germany-2027/287/102161052496": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Commercial Banking, Summer Analyst, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-corporate-banking-placement-analyst-internship-frankfurt-germany-2027/287/100164759200": {
@@ -1489,9 +1564,19 @@
     "first_seen": "2026-09-04",
     "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
   },
+  "https://jobs.citi.com/job/frankfurt-am-main/banking-corporate-banking-placement-analyst-internship-frankfurt-germany-2027/287/102161080176": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
+  },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-debt-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100709897024": {
     "company": "Citibank",
     "first_seen": "2026-09-16",
+    "title": "Banking, Debt Capital Markets, Placement Analyst Internship, Frankfurt - Germany 2027"
+  },
+  "https://jobs.citi.com/job/frankfurt-am-main/banking-debt-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/102161080288": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Debt Capital Markets, Placement Analyst Internship, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-financing-equity-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100178760848": {
@@ -1499,30 +1584,35 @@
     "first_seen": "2026-09-04",
     "title": "Banking, Financing, Equity Capital Markets Placement Analyst Internship, Frankfurt - Germany 2027"
   },
-  "https://jobs.citi.com/job/hong-kong/services-summer-analyst-hong-kong-2027/287/98171092416": {
+  "https://jobs.citi.com/job/hong-kong/services-summer-analyst-hong-kong-2027/287/102161042688": {
     "company": "Citibank",
-    "first_seen": "2026-08-05",
+    "first_seen": "2026-10-19",
     "title": "Services - Summer Analyst, Hong Kong, 2027"
   },
-  "https://jobs.citi.com/job/hong-kong/wealth-citigold-summer-analyst-hong-kong-2027/287/99664839024": {
+  "https://jobs.citi.com/job/hong-kong/wealth-citigold-summer-analyst-hong-kong-2027/287/102161047888": {
     "company": "Citibank",
-    "first_seen": "2026-08-24",
+    "first_seen": "2026-10-19",
     "title": "Wealth - Citigold, Summer Analyst, Hong Kong, 2027"
   },
-  "https://jobs.citi.com/job/hong-kong/wealth-private-bank-summer-analyst-hong-kong-2027/287/99664839120": {
+  "https://jobs.citi.com/job/hong-kong/wealth-private-bank-summer-analyst-hong-kong-2027/287/102161047920": {
     "company": "Citibank",
-    "first_seen": "2026-08-24",
+    "first_seen": "2026-10-19",
     "title": "Wealth - Private Bank, Summer Analyst, Hong Kong, 2027"
   },
-  "https://jobs.citi.com/job/houston/banking-commercial-banking-natural-resources-and-energy-summer-analyst-houston-us-2027/287/89631582048": {
+  "https://jobs.citi.com/job/houston/banking-commercial-banking-natural-resources-and-energy-summer-analyst-houston-us-2027/287/102161038832": {
     "company": "Citibank",
-    "first_seen": "2026-08-10",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking - Natural Resources & Energy,  Summer Analyst, Houston - US, 2027"
   },
-  "https://jobs.citi.com/job/houston/banking-corporate-banking-summer-analyst-houston-us-2027/287/89623966960": {
+  "https://jobs.citi.com/job/houston/banking-corporate-banking-summer-analyst-houston-us-2027/287/102161080864": {
     "company": "Citibank",
-    "first_seen": "2026-08-26",
+    "first_seen": "2026-10-19",
     "title": "Banking - Corporate Banking, Summer Analyst, Houston - US, 2027"
+  },
+  "https://jobs.citi.com/job/irving/functions-internal-audit-summer-analyst-dallas-usa-2027/287/102161039088": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Functions - Internal Audit, Summer Analyst, Dallas - USA, 2027"
   },
   "https://jobs.citi.com/job/irving/functions-internal-audit-summer-analyst-dallas-usa-2027/287/93639707136": {
     "company": "Citibank",
@@ -1534,20 +1624,20 @@
     "first_seen": "2026-10-09",
     "title": "Long Term Internship \u2013 Investment Banking, Turkey \u2013 Istanbul, 2027"
   },
-  "https://jobs.citi.com/job/kowloon/banking-commercial-banking-summer-analyst-hong-kong-apac-2027/287/99017365568": {
+  "https://jobs.citi.com/job/istanbul/long-term-internship-investment-banking-turkey-istanbul-2027/287/102165112096": {
     "company": "Citibank",
-    "first_seen": "2026-08-10",
+    "first_seen": "2026-10-19",
+    "title": "Long Term Internship \u2013 Investment Banking, Turkey \u2013 Istanbul, 2027"
+  },
+  "https://jobs.citi.com/job/kowloon/banking-commercial-banking-summer-analyst-hong-kong-apac-2027/287/102161045376": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, Hong Kong \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/london/banking-commercial-banking-summer-analyst-london-united-kingdom-2027/287/100661681328": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
     "title": "Banking, Commercial Banking, Summer Analyst, London - United Kingdom 2027"
-  },
-  "https://jobs.citi.com/job/london/banking-corporate-banking-full-time-analyst-london-united-kingdom-2027-applicable-for-2026-london-s/287/100133501264": {
-    "company": "Citibank",
-    "first_seen": "2026-09-03",
-    "title": "Banking, Corporate Banking, Full Time Analyst, London \u2013 United Kingdom, 2027 (Applicable for 2026 London Summer Interns ONLY)"
   },
   "https://jobs.citi.com/job/london/banking-corporate-banking-summer-analyst-london-united-kingdom-2027/287/100164759232": {
     "company": "Citibank",
@@ -1559,24 +1649,29 @@
     "first_seen": "2026-09-15",
     "title": "Banking, Financing, Full Time Analyst, London - United Kingdom 2027 (Applicable for 2026 Citi Summer interns only)"
   },
+  "https://jobs.citi.com/job/london/banking-investment-banking-cee-greece-and-cyprus-summer-analyst-london-united-kingdom-2027/287/102161068368": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Investment Banking, CEE, Greece & Cyprus, Summer Analyst, London, United Kingdom 2027"
+  },
   "https://jobs.citi.com/job/london/banking-investment-banking-financial-institution-group-fig-summer-analyst-london-united-kingdom-2027/287/101406622384": {
     "company": "Citibank",
     "first_seen": "2026-10-01",
     "title": "Banking, Investment Banking - Financial Institution Group (FIG), Summer Analyst, London, United Kingdom 2027"
   },
-  "https://jobs.citi.com/job/london/banking-investment-banking-full-time-analyst-london-united-kingdom-2027-applicable-for-2026-citi-su/287/100133501280": {
+  "https://jobs.citi.com/job/london/banking-investment-banking-financial-institution-group-fig-summer-analyst-london-united-kingdom-2027/287/102161060416": {
     "company": "Citibank",
-    "first_seen": "2026-09-03",
-    "title": "Banking, Investment Banking, Full Time Analyst, London \u2013 United Kingdom 2027 - (Applicable for 2026 Citi Summer interns only)"
-  },
-  "https://jobs.citi.com/job/london/banking-investment-banking-full-time-associate-london-united-kingdom-2027-applicable-for-2026-citi-/287/100133501296": {
-    "company": "Citibank",
-    "first_seen": "2026-09-03",
-    "title": "Banking, Investment Banking, Full Time Associate, London \u2013 United Kingdom 2027 (Applicable for 2026 Citi Summer interns only)"
+    "first_seen": "2026-10-19",
+    "title": "Banking, Investment Banking - Financial Institution Group (FIG), Summer Analyst, London, United Kingdom 2027"
   },
   "https://jobs.citi.com/job/london/banking-investment-banking-real-estate-summer-analyst-london-united-kingdom-2027/287/101406622800": {
     "company": "Citibank",
     "first_seen": "2026-10-01",
+    "title": "Banking, Investment Banking, Real Estate, Summer Analyst, London, United Kingdom 2027"
+  },
+  "https://jobs.citi.com/job/london/banking-investment-banking-real-estate-summer-analyst-london-united-kingdom-2027/287/102161060528": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Investment Banking, Real Estate, Summer Analyst, London, United Kingdom 2027"
   },
   "https://jobs.citi.com/job/london/banking-investment-banking-summer-analyst-london-united-kingdom-2027/287/100315643136": {
@@ -1594,9 +1689,14 @@
     "first_seen": "2026-10-09",
     "title": "Client - Citi Research, Summer Analyst, London - United Kingdom, 2027"
   },
-  "https://jobs.citi.com/job/london/markets-sales-and-trading-summer-analyst-london-united-kingdom-2027/287/100035343072": {
+  "https://jobs.citi.com/job/london/client-citi-research-summer-analyst-london-united-kingdom-2027/287/102161055920": {
     "company": "Citibank",
-    "first_seen": "2026-09-01",
+    "first_seen": "2026-10-19",
+    "title": "Client - Citi Research, Summer Analyst, London - United Kingdom, 2027"
+  },
+  "https://jobs.citi.com/job/london/markets-sales-and-trading-summer-analyst-london-united-kingdom-2027/287/102161046400": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Markets \u2013 Sales and Trading, Summer Analyst, London \u2013 United Kingdom, 2027"
   },
   "https://jobs.citi.com/job/london/services-full-time-analyst-uk-london-2027-2026-summer-intern-converts-only/287/100771374032": {
@@ -1604,9 +1704,19 @@
     "first_seen": "2026-09-17",
     "title": "Services - Full-Time Analyst, UK - London, 2027 (2026 Summer Intern Converts Only)"
   },
+  "https://jobs.citi.com/job/london/services-full-time-analyst-uk-london-2027-2026-summer-intern-converts-only/287/102161054944": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Services - Full-Time Analyst, UK - London, 2027 (2026 Summer Intern Converts Only)"
+  },
   "https://jobs.citi.com/job/miami/wealth-latam-summer-analyst-miami-usa-2027/287/100661744944": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Wealth - LATAM, Summer Analyst, Miami - USA, 2027"
+  },
+  "https://jobs.citi.com/job/miami/wealth-latam-summer-analyst-miami-usa-2027/287/102161053952": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Wealth - LATAM, Summer Analyst, Miami - USA, 2027"
   },
   "https://jobs.citi.com/job/miami/wealth-summer-analyst-miami-usa-2027/287/100661745168": {
@@ -1614,9 +1724,19 @@
     "first_seen": "2026-09-15",
     "title": "Wealth \u2013 Summer Analyst, Miami\u2013 USA, 2027"
   },
+  "https://jobs.citi.com/job/miami/wealth-summer-analyst-miami-usa-2027/287/102161054080": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Wealth \u2013 Summer Analyst, Miami\u2013 USA, 2027"
+  },
   "https://jobs.citi.com/job/milano/banking-commercial-banking-summer-analyst-milan-italy-2027/287/100661681344": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Banking, Commercial Banking, Summer Analyst, Milan - Italy 2027"
+  },
+  "https://jobs.citi.com/job/milano/banking-commercial-banking-summer-analyst-milan-italy-2027/287/102161052288": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Commercial Banking, Summer Analyst, Milan - Italy 2027"
   },
   "https://jobs.citi.com/job/milano/banking-corporate-banking-relationship-analyst-placement-analyst-internship-milan-italy-2027/287/100164759216": {
@@ -1627,6 +1747,11 @@
   "https://jobs.citi.com/job/milano/banking-investment-banking-placement-analyst-internship-milan-italy-2027/287/100479480752": {
     "company": "Citibank",
     "first_seen": "2026-09-11",
+    "title": "Banking, Investment Banking, Placement Analyst Internship, Milan - Italy 2027"
+  },
+  "https://jobs.citi.com/job/milano/banking-investment-banking-placement-analyst-internship-milan-italy-2027/287/102161080256": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Investment Banking, Placement Analyst Internship, Milan - Italy 2027"
   },
   "https://jobs.citi.com/job/mississauga/functions-internal-audit-summer-analyst-mississauga-on-2027/287/93639707120": {
@@ -1649,6 +1774,11 @@
     "first_seen": "2026-09-29",
     "title": "Functions - Finance, Summer Associate, New York - USA, 2027"
   },
+  "https://jobs.citi.com/job/new-york/functions-finance-summer-associate-new-york-usa-2027/287/102161060608": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Functions - Finance, Summer Associate, New York - USA, 2027"
+  },
   "https://jobs.citi.com/job/new-york/functions-internal-audit-summer-analyst-new-york-usa-2027/287/98836136896": {
     "company": "Citibank",
     "first_seen": "2026-09-21",
@@ -1659,9 +1789,19 @@
     "first_seen": "2026-09-15",
     "title": "Wealth - LATAM, Summer Analyst, New York - USA, 2027"
   },
+  "https://jobs.citi.com/job/new-york/wealth-latam-summer-analyst-new-york-usa-2027/287/102161053664": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Wealth - LATAM, Summer Analyst, New York - USA, 2027"
+  },
   "https://jobs.citi.com/job/new-york/wealth-summer-analyst-new-york-usa-2027/287/100661745184": {
     "company": "Citibank",
     "first_seen": "2026-09-15",
+    "title": "Wealth \u2013 Summer Analyst, New York \u2013 USA, 2027"
+  },
+  "https://jobs.citi.com/job/new-york/wealth-summer-analyst-new-york-usa-2027/287/102161053776": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, New York \u2013 USA, 2027"
   },
   "https://jobs.citi.com/job/paris/banking-corporate-banking-financial-institutions-group-fig-placement-analyst-internship-paris-franc/287/100709896848": {
@@ -1669,9 +1809,19 @@
     "first_seen": "2026-09-16",
     "title": "Banking, Corporate Banking, Financial Institutions Group (FIG), Placement Analyst Internship, Paris - France 2027"
   },
+  "https://jobs.citi.com/job/paris/banking-corporate-banking-financial-institutions-group-fig-placement-analyst-internship-paris-franc/287/102161080304": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Corporate Banking, Financial Institutions Group (FIG), Placement Analyst Internship, Paris - France 2027"
+  },
   "https://jobs.citi.com/job/paris/banking-corporate-banking-placement-analyst-internship-paris-france-2027/287/100295995168": {
     "company": "Citibank",
     "first_seen": "2026-09-07",
+    "title": "Banking, Corporate Banking, Placement Analyst Internship, Paris - France 2027"
+  },
+  "https://jobs.citi.com/job/paris/banking-corporate-banking-placement-analyst-internship-paris-france-2027/287/102161080208": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Corporate Banking, Placement Analyst Internship, Paris - France 2027"
   },
   "https://jobs.citi.com/job/paris/banking-corporate-banking-relationship-analyst-placement-analyst-internship-paris-france-2027/287/101320593040": {
@@ -1679,9 +1829,19 @@
     "first_seen": "2026-09-29",
     "title": "Banking, Corporate Banking, Relationship Analyst, Placement Analyst Internship, Paris - France 2027"
   },
+  "https://jobs.citi.com/job/paris/banking-corporate-banking-relationship-analyst-placement-analyst-internship-paris-france-2027/287/102161080272": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Corporate Banking, Relationship Analyst, Placement Analyst Internship, Paris - France 2027"
+  },
   "https://jobs.citi.com/job/paris/banking-financing-debt-capital-markets-placement-analyst-internship-paris-france-2027/287/100308124304": {
     "company": "Citibank",
     "first_seen": "2026-09-07",
+    "title": "Banking, Financing, Debt Capital Markets, Placement Analyst Internship, Paris - France 2027"
+  },
+  "https://jobs.citi.com/job/paris/banking-financing-debt-capital-markets-placement-analyst-internship-paris-france-2027/287/102161080224": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Financing, Debt Capital Markets, Placement Analyst Internship, Paris - France 2027"
   },
   "https://jobs.citi.com/job/paris/banking-financing-equity-capital-markets-placement-analyst-internship-paris-france-2027/287/100308124400": {
@@ -1689,9 +1849,19 @@
     "first_seen": "2026-09-07",
     "title": "Banking, Financing, Equity Capital Markets, Placement Analyst Internship, Paris - France 2027"
   },
+  "https://jobs.citi.com/job/paris/banking-financing-equity-capital-markets-placement-analyst-internship-paris-france-2027/287/102161079184": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Financing, Equity Capital Markets, Placement Analyst Internship, Paris - France 2027"
+  },
   "https://jobs.citi.com/job/paris/banking-investment-banking-financial-institution-group-placement-analyst-internship-paris-france-20/287/100164759248": {
     "company": "Citibank",
     "first_seen": "2026-09-04",
+    "title": "Banking, Investment Banking, Financial Institution Group, Placement Analyst Internship, Paris - France 2027"
+  },
+  "https://jobs.citi.com/job/paris/banking-investment-banking-financial-institution-group-placement-analyst-internship-paris-france-20/287/102161080192": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking, Investment Banking, Financial Institution Group, Placement Analyst Internship, Paris - France 2027"
   },
   "https://jobs.citi.com/job/paris/banking-investment-banking-placement-analyst-internship-paris-france-2027/287/100164759312": {
@@ -1704,6 +1874,11 @@
     "first_seen": "2026-09-04",
     "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
   },
+  "https://jobs.citi.com/job/paris/markets-sales-and-trading-off-cycle-internship-paris-france-2027/287/102161050912": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
+  },
   "https://jobs.citi.com/job/san-francisco/banking-corporate-banking-summer-analyst-san-francisco-us-2027/287/89623967024": {
     "company": "Citibank",
     "first_seen": "2026-09-10",
@@ -1714,14 +1889,29 @@
     "first_seen": "2026-10-09",
     "title": "Banking \u2013 Corporate Banking, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
   },
+  "https://jobs.citi.com/job/sao-paulo/banking-corporate-banking-internship-sao-paulo-brazil-2027/287/102161066512": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking \u2013 Corporate Banking, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
+  },
   "https://jobs.citi.com/job/sao-paulo/banking-debt-capital-markets-internship-sao-paulo-brazil-2027/287/101956539488": {
     "company": "Citibank",
     "first_seen": "2026-10-15",
     "title": "Banking \u2013 Debt Capital Markets, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
   },
+  "https://jobs.citi.com/job/sao-paulo/banking-debt-capital-markets-internship-sao-paulo-brazil-2027/287/102161068112": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking \u2013 Debt Capital Markets, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
+  },
   "https://jobs.citi.com/job/sao-paulo/banking-infrastructure-finance-internship-sao-paulo-brazil-2027/287/101964212192": {
     "company": "Citibank",
     "first_seen": "2026-10-15",
+    "title": "Banking \u2013 Infrastructure Finance, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
+  },
+  "https://jobs.citi.com/job/sao-paulo/banking-infrastructure-finance-internship-sao-paulo-brazil-2027/287/102161067888": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking \u2013 Infrastructure Finance, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
   },
   "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/101749513776": {
@@ -1734,9 +1924,19 @@
     "first_seen": "2026-10-09",
     "title": "Markets \u2013 Sales and Trading, Internship, S\u00e3o Paulo - Brazil, 2027"
   },
-  "https://jobs.citi.com/job/seoul/banking-commercial-banking-summer-analyst-korea-republic-of-apac-2027/287/99971586864": {
+  "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/102161065136": {
     "company": "Citibank",
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-10-19",
+    "title": "Markets \u2013 Sales and Trading, Internship, S\u00e3o Paulo - Brazil, 2027"
+  },
+  "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/102161065264": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Markets \u2013 Sales and Trading, Internship, S\u00e3o Paulo - Brazil, 2027"
+  },
+  "https://jobs.citi.com/job/seoul/banking-commercial-banking-summer-analyst-korea-republic-of-apac-2027/287/102161048256": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/101029267872": {
@@ -1744,44 +1944,49 @@
     "first_seen": "2026-09-23",
     "title": "Banking - Investment Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/99842563360": {
+  "https://jobs.citi.com/job/seoul/banking-investment-banking-summer-analyst-korea-republic-of-apac-2027/287/102161049024": {
     "company": "Citibank",
-    "first_seen": "2026-08-28",
+    "first_seen": "2026-10-19",
     "title": "Banking - Investment Banking, Summer Analyst, Korea, Republic of \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/shanghai/banking-commercial-banking-summer-analyst-china-apac-2027/287/98836109904": {
+  "https://jobs.citi.com/job/shanghai/banking-commercial-banking-summer-analyst-china-apac-2027/287/102161044512": {
     "company": "Citibank",
-    "first_seen": "2026-08-06",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, China \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/shanghai/banking-corporate-banking-summer-analyst-china-apac-2027/287/102161044448": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Banking - Corporate Banking, Summer Analyst, China \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/shanghai/banking-corporate-banking-summer-analyst-china-apac-2027/287/98836109920": {
     "company": "Citibank",
     "first_seen": "2026-09-29",
     "title": "Banking - Corporate Banking, Summer Analyst, China \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/shanghai/services-summer-analyst-china-2027/287/98171092400": {
+  "https://jobs.citi.com/job/shanghai/services-summer-analyst-china-2027/287/102161042768": {
     "company": "Citibank",
-    "first_seen": "2026-08-05",
+    "first_seen": "2026-10-19",
     "title": "Services - Summer Analyst, China, 2027"
   },
-  "https://jobs.citi.com/job/singapore/banking-commercial-banking-summer-analyst-singapore-apac-2027/287/99017365584": {
+  "https://jobs.citi.com/job/singapore/banking-commercial-banking-summer-analyst-singapore-apac-2027/287/102161045408": {
     "company": "Citibank",
-    "first_seen": "2026-08-10",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, Singapore \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/singapore/services-summer-analyst-singapore-2027/287/98171092432": {
+  "https://jobs.citi.com/job/singapore/services-summer-analyst-singapore-2027/287/102161042656": {
     "company": "Citibank",
-    "first_seen": "2026-08-05",
+    "first_seen": "2026-10-19",
     "title": "Services - Summer Analyst, Singapore, 2027"
   },
-  "https://jobs.citi.com/job/singapore/wealth-citigold-summer-analyst-singapore-2027/287/99664839040": {
+  "https://jobs.citi.com/job/singapore/wealth-citigold-summer-analyst-singapore-2027/287/102161047792": {
     "company": "Citibank",
-    "first_seen": "2026-08-24",
+    "first_seen": "2026-10-19",
     "title": "Wealth - Citigold, Summer Analyst, Singapore, 2027"
   },
-  "https://jobs.citi.com/job/singapore/wealth-private-bank-summer-analyst-singapore-2027/287/99664839104": {
+  "https://jobs.citi.com/job/singapore/wealth-private-bank-summer-analyst-singapore-2027/287/102161047840": {
     "company": "Citibank",
-    "first_seen": "2026-08-24",
+    "first_seen": "2026-10-19",
     "title": "Wealth - Private Bank, Summer Analyst,  Singapore, 2027"
   },
   "https://jobs.citi.com/job/stockholm/banking-commercial-banking-summer-analyst-stockholm-sweden-2027/287/101044063472": {
@@ -1789,25 +1994,45 @@
     "first_seen": "2026-09-23",
     "title": "Banking, Commercial Banking, Summer Analyst, Stockholm - Sweden 2027"
   },
-  "https://jobs.citi.com/job/taipei/banking-commercial-banking-summer-analyst-taiwan-apac-2027/287/99340948704": {
+  "https://jobs.citi.com/job/stockholm/banking-commercial-banking-summer-analyst-stockholm-sweden-2027/287/102161080544": {
     "company": "Citibank",
-    "first_seen": "2026-08-17",
+    "first_seen": "2026-10-19",
+    "title": "Banking, Commercial Banking, Summer Analyst, Stockholm - Sweden 2027"
+  },
+  "https://jobs.citi.com/job/sydney/2027-australia-coop-placement/287/102165113872": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "2027 Australia Coop Placement"
+  },
+  "https://jobs.citi.com/job/taipei/banking-commercial-banking-summer-analyst-taiwan-apac-2027/287/102161045632": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/taipei/banking-corporate-banking-summer-analyst-taiwan-apac-2027/287/99340948784": {
+  "https://jobs.citi.com/job/taipei/banking-corporate-banking-summer-analyst-taiwan-apac-2027/287/102161045600": {
     "company": "Citibank",
-    "first_seen": "2026-08-17",
+    "first_seen": "2026-10-19",
     "title": "Banking - Corporate Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/taipei/banking-investment-banking-summer-analyst-taiwan-apac-2027/287/99340948944": {
+  "https://jobs.citi.com/job/taipei/banking-investment-banking-summer-analyst-taiwan-apac-2027/287/102161045616": {
     "company": "Citibank",
-    "first_seen": "2026-08-17",
+    "first_seen": "2026-10-19",
     "title": "Banking - Investment Banking, Summer Analyst, Taiwan \u2013 APAC, 2027"
   },
   "https://jobs.citi.com/job/tampa/functions-finance-summer-associate-tampa-usa-2027/287/101370853136": {
     "company": "Citibank",
     "first_seen": "2026-09-30",
     "title": "Functions - Finance, Summer Associate, Tampa - USA, 2027"
+  },
+  "https://jobs.citi.com/job/tampa/functions-finance-summer-associate-tampa-usa-2027/287/102161060320": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Functions - Finance, Summer Associate, Tampa - USA, 2027"
+  },
+  "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/102161039104": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Functions - Internal Audit, Summer Analyst, Tampa - USA, 2027"
   },
   "https://jobs.citi.com/job/tampa/functions-internal-audit-summer-analyst-tampa-usa-2027/287/93639707152": {
     "company": "Citibank",
@@ -1819,9 +2044,19 @@
     "first_seen": "2026-09-23",
     "title": "Internal Audit - Summer Analyst, Warsaw, 2027"
   },
+  "https://jobs.citi.com/job/warsaw/internal-audit-summer-analyst-warsaw-2027/287/102161049968": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Internal Audit - Summer Analyst, Warsaw, 2027"
+  },
   "https://jobs.citi.com/job/warsaw/risk-full-time-analyst-warsaw-2027-applicable-for-2026-citi-summer-interns-only/287/101275130768": {
     "company": "Citibank",
     "first_seen": "2026-09-28",
+    "title": "Risk - Full-Time Analyst, Warsaw, 2027 - (Applicable for 2026 Citi Summer interns only)"
+  },
+  "https://jobs.citi.com/job/warsaw/risk-full-time-analyst-warsaw-2027-applicable-for-2026-citi-summer-interns-only/287/102161054848": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Risk - Full-Time Analyst, Warsaw, 2027 - (Applicable for 2026 Citi Summer interns only)"
   },
   "https://jobs.citi.com/job/warsaw/risk-summer-analyst-warsaw-2027/287/101860085808": {
@@ -1829,9 +2064,19 @@
     "first_seen": "2026-10-12",
     "title": "Risk - Summer Analyst, Warsaw, 2027"
   },
+  "https://jobs.citi.com/job/warsaw/risk-summer-analyst-warsaw-2027/287/102161054928": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
+    "title": "Risk - Summer Analyst, Warsaw, 2027"
+  },
   "https://jobs.citi.com/job/warsaw/technology-cyber-security-summer-analyst-warsaw-2027/287/101406692848": {
     "company": "Citibank",
     "first_seen": "2026-10-01",
+    "title": "Technology - Cyber Security, Summer Analyst, Warsaw 2027"
+  },
+  "https://jobs.citi.com/job/warsaw/technology-cyber-security-summer-analyst-warsaw-2027/287/102161061248": {
+    "company": "Citibank",
+    "first_seen": "2026-10-19",
     "title": "Technology - Cyber Security, Summer Analyst, Warsaw 2027"
   },
   "https://jobs.citi.com/job/warsaw/technology-infrastructure-summer-analyst-warsaw-2027/287/101394354736": {
@@ -1839,10 +2084,10 @@
     "first_seen": "2026-10-01",
     "title": "Technology - Infrastructure, Summer Analyst, Warsaw 2027"
   },
-  "https://jobs.citi.com/job/zurich/banking-corporate-banking-full-time-analyst-zurich-switzerland-2027-applicable-for-2026-citi-summer/287/100141204336": {
+  "https://jobs.citi.com/job/warsaw/technology-infrastructure-summer-analyst-warsaw-2027/287/102161061808": {
     "company": "Citibank",
-    "first_seen": "2026-09-03",
-    "title": "Banking, Corporate Banking, Full Time Analyst, Zurich - Switzerland, 2027 (applicable for 2026 Citi Summer Interns Only)"
+    "first_seen": "2026-10-19",
+    "title": "Technology - Infrastructure, Summer Analyst, Warsaw 2027"
   },
   "https://jobs.citizensbank.com/job/atlanta/2027-commercial-summer-intern-atlanta-ga/288/100363712304": {
     "company": "Citizens Financial Group",
@@ -2339,6 +2584,11 @@
     "first_seen": "2026-09-21",
     "title": "page mentions it: \u201c\u2026ted Date Distance Display Date 18 jobs found for intern Summer 2027: Product Manager Intern Multiple Locations Save Summer 2027\u2026\u201d"
   },
+  "https://jobs.lever.co/arcteryx.com": {
+    "company": "Arc'teryx",
+    "first_seen": "2026-10-19",
+    "title": "page mentions it: \u201c\u2026ver, BC Apply Guest Services Representative - Seasonal Contract Until March 31, 2027 Hybrid \u2014 FT Temp/Seasonal Vancouver, BC Apply Manager, Guest Services - Korea\u2026\u201d"
+  },
   "https://jobs.nscorp.com/job/Atlanta-2027-Spring-Corporate-Communications-%2B-Community-Impact-Intern-GA-30308/1429347200/": {
     "company": "Norfolk Southern",
     "first_seen": "2026-09-14",
@@ -2399,11 +2649,6 @@
     "first_seen": "2026-09-29",
     "title": "Software Engineer Intern 2026/2027"
   },
-  "https://jobs.smartrecruiters.com/servicenow/744000147287709": {
-    "company": "ServiceNow",
-    "first_seen": "2026-09-03",
-    "title": "Finance Intern - Undergrad Summer 2027"
-  },
   "https://jobs.smartrecruiters.com/servicenow/744000148334959": {
     "company": "ServiceNow",
     "first_seen": "2026-09-08",
@@ -2453,11 +2698,6 @@
     "company": "ServiceNow",
     "first_seen": "2026-10-14",
     "title": "Finance Intern - Undergrad Summer 2027"
-  },
-  "https://jobs.smartrecruiters.com/ubisoft2/744000147274629": {
-    "company": "Ubisoft",
-    "first_seen": "2026-09-03",
-    "title": "Internship 6 months - Technical Designer (F/M/NB) [AAA Project]"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000150164374": {
     "company": "Ubisoft",
@@ -2533,6 +2773,11 @@
     "company": "Ubisoft",
     "first_seen": "2026-10-16",
     "title": "Creator Strategy Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000156360539": {
+    "company": "Ubisoft",
+    "first_seen": "2026-10-19",
+    "title": "Growth Marketing Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
     "company": "Western Digital",
@@ -2629,21 +2874,6 @@
     "first_seen": "2026-08-25",
     "title": "Intern - Process Engineer"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000147322979": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-03",
-    "title": "Summer 2027 Intern - Sales & Marketing"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000147329610": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-03",
-    "title": "Summer 2027 Intern - Financial Analyst - Undergraduate & MBA"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000147344019": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-03",
-    "title": "Summer 2027 Intern - Human Resources"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000147410329": {
     "company": "Western Digital",
     "first_seen": "2026-09-04",
@@ -2734,9 +2964,34 @@
     "first_seen": "2026-10-12",
     "title": "Internship - Software Development (Embedded)"
   },
+  "https://jobs.smartrecruiters.com/westerndigital/744000156226285": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-19",
+    "title": "Intern - Data Analytics"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000156226349": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-19",
+    "title": "Intern - Manufacturing Engineer"
+  },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
     "first_seen": "2026-10-05",
+    "title": "Analytics Intern"
+  },
+  "https://jobs.smartrecruiters.com/wise/744000156265544": {
+    "company": "Wise",
+    "first_seen": "2026-10-19",
+    "title": "Data Science Intern"
+  },
+  "https://jobs.smartrecruiters.com/wise/744000156266767": {
+    "company": "Wise",
+    "first_seen": "2026-10-19",
+    "title": "Software Engineering Intern"
+  },
+  "https://jobs.smartrecruiters.com/wise/744000156355109": {
+    "company": "Wise",
+    "first_seen": "2026-10-19",
     "title": "Analytics Intern"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
@@ -3684,11 +3939,6 @@
     "first_seen": "2026-09-03",
     "title": "Operations & Logistics Internship - Gorzyczki - Start 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10528414/operations-logistics-internship-campania-talent-pool": {
-    "company": "Amazon",
-    "first_seen": "2026-09-03",
-    "title": "Operations & Logistics Internship Campania - Talent Pool"
-  },
   "https://www.amazon.jobs/en/jobs/10528443/operations-logistics-internship-liguria": {
     "company": "Amazon",
     "first_seen": "2026-09-03",
@@ -3699,11 +3949,6 @@
     "first_seen": "2026-09-03",
     "title": "Operations & Logistics Internship - Marche"
   },
-  "https://www.amazon.jobs/en/jobs/10528445/operations-logistics-internship-puglia": {
-    "company": "Amazon",
-    "first_seen": "2026-09-03",
-    "title": "Operations & Logistics Internship - Puglia"
-  },
   "https://www.amazon.jobs/en/jobs/10528500/operations-logistics-internship-umbria": {
     "company": "Amazon",
     "first_seen": "2026-09-03",
@@ -3713,11 +3958,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-03",
     "title": "Operations & Logistics Internship - Sardegna"
-  },
-  "https://www.amazon.jobs/en/jobs/10528563/operations-logistics-internship-sicilia": {
-    "company": "Amazon",
-    "first_seen": "2026-09-03",
-    "title": "Operations & Logistics Internship Sicilia "
   },
   "https://www.amazon.jobs/en/jobs/10528565/operations-logistics-internship-toscana": {
     "company": "Amazon",
@@ -5344,6 +5584,21 @@
     "first_seen": "2026-10-16",
     "title": "Data Center Technician - 2027 Internship, Data Center Operations"
   },
+  "https://www.amazon.jobs/en/jobs/10582414/ux-design-intern-luxembourg-interaction-design": {
+    "company": "Amazon",
+    "first_seen": "2026-10-19",
+    "title": "UX Design Intern Luxembourg, Interaction Design"
+  },
+  "https://www.amazon.jobs/en/jobs/10582415/business-intelligence-intern-spain": {
+    "company": "Amazon",
+    "first_seen": "2026-10-19",
+    "title": "Business Intelligence Intern Spain"
+  },
+  "https://www.amazon.jobs/en/jobs/10582540/associate-solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-19",
+    "title": "Associate Solutions Architect Internship 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5403,11 +5658,6 @@
     "company": "AT&T",
     "first_seen": "2026-09-21",
     "title": "AT&T Technology Development Program Internship"
-  },
-  "https://www.att.jobs/job/dallas/corporate-communications-internship/117/100122200224": {
-    "company": "AT&T",
-    "first_seen": "2026-09-03",
-    "title": "Corporate Communications Internship"
   },
   "https://www.att.jobs/job/dallas/marketing-excellence-program-internship/117/101855886688": {
     "company": "AT&T",
@@ -5764,11 +6014,6 @@
     "first_seen": "2026-10-12",
     "title": "Media Account Specialist BS/MS Intern, 2027 (English, Hebrew)"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/79483758440260294-data-center-technician-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Data Center Technician Intern, 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/80037545080955590-software-engineering-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-02",
@@ -5918,11 +6163,6 @@
     "company": "ING",
     "first_seen": "2026-09-05",
     "title": "CMA ECG Intern M&A"
-  },
-  "https://www.ing.jobs/en/job/luxembourg/ing-internship-finance-accounting-and-reporting/3121/43939864704": {
-    "company": "ING",
-    "first_seen": "2026-09-03",
-    "title": "ING INTERNSHIP - Finance Accounting & Reporting"
   },
   "https://www.ing.jobs/en/job/luxembourg/internship-account-manager/3121/44762283328": {
     "company": "ING",
@@ -6139,11 +6379,6 @@
     "first_seen": "2026-09-30",
     "title": "2027 Digital Product Solutions Intern"
   },
-  "https://www.schwabjobs.com/job/austin/2027-financial-service-and-support-intern-austin/33727/100027799824": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-01",
-    "title": "2027 Financial Service & Support Intern - Austin"
-  },
   "https://www.schwabjobs.com/job/austin/2027-international-client-services-intern-austin-only/33727/101274655600": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-28",
@@ -6188,6 +6423,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-21",
     "title": "2027 SOX Compliance Intern"
+  },
+  "https://www.schwabjobs.com/job/omaha/wealth-management-internship-las-vegas-cfp-event-attendees/33727/102162819232": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-10-19",
+    "title": "Wealth Management Internship - Las Vegas CFP Event Attendees"
   },
   "https://www.schwabjobs.com/job/orlando/2027-business-operations-intern-orlando/33727/100944655504": {
     "company": "Charles Schwab",
