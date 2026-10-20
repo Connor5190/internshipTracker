@@ -594,11 +594,6 @@
     "first_seen": "2026-10-16",
     "title": "Analog Design Internship - Summer 2027"
   },
-  "https://careers.synopsys.com/job/mississauga/digital-design-verification-internship-16-month-co-op/44408/100151146528": {
-    "company": "Synopsys",
-    "first_seen": "2026-09-04",
-    "title": "Digital Design Verification Internship (16-Month Co-op)"
-  },
   "https://careers.synopsys.com/job/mississauga/systems-engineering-internship-summer-2027/44408/101631905328": {
     "company": "Synopsys",
     "first_seen": "2026-10-06",
@@ -718,11 +713,6 @@
     "company": "Apple",
     "first_seen": "2026-09-11",
     "title": "Apple Vision Pro Hardware System EE Intern"
-  },
-  "https://jobs.apple.com/en-us/details/200681934": {
-    "company": "Apple",
-    "first_seen": "2026-09-04",
-    "title": "Formal Verification Intern"
   },
   "https://jobs.apple.com/en-us/details/200682229": {
     "company": "Apple",
@@ -1059,6 +1049,11 @@
     "first_seen": "2026-10-19",
     "title": "Global Supply Management Intern"
   },
+  "https://jobs.apple.com/en-us/details/200690076": {
+    "company": "Apple",
+    "first_seen": "2026-10-20",
+    "title": "GCR Intern, Client Partner - Apple Ads, Leisure"
+  },
   "https://jobs.apple.com/en-us/details/200690119": {
     "company": "Apple",
     "first_seen": "2026-10-19",
@@ -1068,6 +1063,21 @@
     "company": "Apple",
     "first_seen": "2026-10-19",
     "title": "Human-Centric Modeling Internship"
+  },
+  "https://jobs.apple.com/en-us/details/200690139": {
+    "company": "Apple",
+    "first_seen": "2026-10-20",
+    "title": "Internship - Software Engineering"
+  },
+  "https://jobs.apple.com/en-us/details/200690377": {
+    "company": "Apple",
+    "first_seen": "2026-10-20",
+    "title": "Research Scientist Intern \u2013 Human-Centric Generative AI"
+  },
+  "https://jobs.apple.com/en-us/details/200690378": {
+    "company": "Apple",
+    "first_seen": "2026-10-20",
+    "title": "Cellular Baseband Design Verification Intern"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1584,11 +1594,6 @@
     "first_seen": "2026-10-19",
     "title": "Banking, Commercial Banking, Summer Analyst, Frankfurt - Germany 2027"
   },
-  "https://jobs.citi.com/job/frankfurt-am-main/banking-corporate-banking-placement-analyst-internship-frankfurt-germany-2027/287/100164759200": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
-  },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-corporate-banking-placement-analyst-internship-frankfurt-germany-2027/287/102161080176": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1603,11 +1608,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Banking, Debt Capital Markets, Placement Analyst Internship, Frankfurt - Germany 2027"
-  },
-  "https://jobs.citi.com/job/frankfurt-am-main/banking-financing-equity-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100178760848": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Financing, Equity Capital Markets Placement Analyst Internship, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/hong-kong/services-summer-analyst-hong-kong-2027/287/102161042688": {
     "company": "Citibank",
@@ -1663,11 +1663,6 @@
     "company": "Citibank",
     "first_seen": "2026-09-15",
     "title": "Banking, Commercial Banking, Summer Analyst, London - United Kingdom 2027"
-  },
-  "https://jobs.citi.com/job/london/banking-corporate-banking-summer-analyst-london-united-kingdom-2027/287/100164759232": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Corporate Banking, Summer Analyst, London \u2013 United Kingdom, 2027"
   },
   "https://jobs.citi.com/job/london/banking-financing-full-time-analyst-london-united-kingdom-2027-applicable-for-2026-citi-summer-inte/287/100295995232": {
     "company": "Citibank",
@@ -1763,11 +1758,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Banking, Commercial Banking, Summer Analyst, Milan - Italy 2027"
-  },
-  "https://jobs.citi.com/job/milano/banking-corporate-banking-relationship-analyst-placement-analyst-internship-milan-italy-2027/287/100164759216": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Corporate Banking, Relationship Analyst, Placement Analyst Internship, Milan - Italy 2027"
   },
   "https://jobs.citi.com/job/milano/banking-investment-banking-placement-analyst-internship-milan-italy-2027/287/100479480752": {
     "company": "Citibank",
@@ -1879,25 +1869,10 @@
     "first_seen": "2026-10-19",
     "title": "Banking, Financing, Equity Capital Markets, Placement Analyst Internship, Paris - France 2027"
   },
-  "https://jobs.citi.com/job/paris/banking-investment-banking-financial-institution-group-placement-analyst-internship-paris-france-20/287/100164759248": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Investment Banking, Financial Institution Group, Placement Analyst Internship, Paris - France 2027"
-  },
   "https://jobs.citi.com/job/paris/banking-investment-banking-financial-institution-group-placement-analyst-internship-paris-france-20/287/102161080192": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Banking, Investment Banking, Financial Institution Group, Placement Analyst Internship, Paris - France 2027"
-  },
-  "https://jobs.citi.com/job/paris/banking-investment-banking-placement-analyst-internship-paris-france-2027/287/100164759312": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Banking, Investment Banking, Placement Analyst Internship, Paris - France 2027"
-  },
-  "https://jobs.citi.com/job/paris/markets-sales-and-trading-off-cycle-internship-paris-france-2027/287/100186099504": {
-    "company": "Citibank",
-    "first_seen": "2026-09-04",
-    "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
   },
   "https://jobs.citi.com/job/paris/markets-sales-and-trading-off-cycle-internship-paris-france-2027/287/102161050912": {
     "company": "Citibank",
@@ -2899,11 +2874,6 @@
     "first_seen": "2026-08-25",
     "title": "Intern - Process Engineer"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000147410329": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-04",
-    "title": "Intern - Industrial Engineer"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000148347691": {
     "company": "Western Digital",
     "first_seen": "2026-09-08",
@@ -3309,21 +3279,6 @@
     "first_seen": "2026-09-07",
     "title": "Private Bank and Wealth Management Off Cycle Internship Programme 2027 Monaco"
   },
-  "https://search.jobs.barclays/job/new-york/2027-compliance-analyst-summer-internship-program-new-york/13015/100189840368": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Compliance Analyst Summer Internship Program New York"
-  },
-  "https://search.jobs.barclays/job/new-york/2027-finance-analyst-summer-internship-program-new-york/13015/100189840336": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Finance Analyst Summer Internship Program New York"
-  },
-  "https://search.jobs.barclays/job/new-york/2027-internal-audit-analyst-summer-internship-program-new-york/13015/100189840656": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Internal Audit Analyst Summer Internship Program New York"
-  },
   "https://search.jobs.barclays/job/new-york/banking-associate-summer-internship-program-2027-new-york/13015/100032502176": {
     "company": "Barclays",
     "first_seen": "2026-09-01",
@@ -3394,40 +3349,10 @@
     "first_seen": "2026-09-01",
     "title": "Banking Off Cycle Internship Programme 2027 Tel Aviv"
   },
-  "https://search.jobs.barclays/job/whippany/2027-compliance-analyst-summer-internship-program-whippany/13015/100189840608": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Compliance Analyst Summer Internship Program Whippany"
-  },
-  "https://search.jobs.barclays/job/whippany/2027-internal-audit-analyst-summer-internship-program-whippany/13015/100189840256": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Internal Audit Analyst Summer Internship Program Whippany"
-  },
-  "https://search.jobs.barclays/job/whippany/2027-operations-analyst-summer-internship-program-whippany/13015/100189840416": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Operations Analyst Summer Internship Program Whippany"
-  },
-  "https://search.jobs.barclays/job/whippany/2027-technology-cyber-and-security-summer-internship-program-whippany/13015/100189840192": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Cyber & Security Summer Internship Program Whippany"
-  },
   "https://search.jobs.barclays/job/whippany/2027-technology-developer-summer-internship-program-whippany/13015/100189840496": {
     "company": "Barclays",
     "first_seen": "2026-09-04",
     "title": "2027 Technology Developer Summer Internship Program Whippany"
-  },
-  "https://search.jobs.barclays/job/wilmington/2027-risk-analyst-summer-internship-program-wilmington/13015/100189840448": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Risk Analyst Summer Internship Program Wilmington"
-  },
-  "https://search.jobs.barclays/job/wilmington/2027-technology-developer-summer-internship-program-wilmington/13015/100189840544": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Developer Summer Internship Program Wilmington"
   },
   "https://search.jobs.barclays/job/wilmington/us-consumer-bank-analyst-summer-internship-program-2027-wilmington/13015/100032501984": {
     "company": "Barclays",
@@ -3983,11 +3908,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-09",
     "title": "Software Development Engineer Intern/Co-Op, ROBOTICS -  2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10529525/software-development-engineer-intern-robotics-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-04",
-    "title": "Software Development Engineer Intern, ROBOTICS - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10529692/program-manager-intern-apac-data-center-delivery-operations": {
     "company": "Amazon",
@@ -5619,6 +5539,11 @@
     "first_seen": "2026-10-19",
     "title": "Associate Solutions Architect Internship 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10583818/data-center-infrastructure-engineer-internship-2027-uae-nationals": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Data Center Infrastructure Engineer Internship 2027 - UAE nationals"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5784,6 +5709,11 @@
     "first_seen": "2026-08-17",
     "title": "Software Engineering PhD Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/107665861736571590-account-executive-business-intern-2027-english": {
+    "company": "Google",
+    "first_seen": "2026-10-20",
+    "title": "Account Executive, Business Intern, 2027 (English)"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/109231596359295686-business-program-manager-mba-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-12",
@@ -5873,6 +5803,11 @@
     "company": "Google",
     "first_seen": "2026-09-03",
     "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/121790188106982086-account-executive-mba-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-20",
+    "title": "Account Executive, MBA Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/122745878459884230-mba-intern-2027": {
     "company": "Google",
@@ -6109,11 +6044,6 @@
     "first_seen": "2026-08-24",
     "title": "Software Engineering Intern, PhD, Summer 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/91641951861777094-data-center-technician-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-04",
-    "title": "Data Center Technician Intern, 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/92840449600824006-application-engineering-intern-winter-2027-english": {
     "company": "Google",
     "first_seen": "2026-09-08",
@@ -6188,11 +6118,6 @@
     "company": "ING",
     "first_seen": "2026-09-16",
     "title": "Internship - Account Manager"
-  },
-  "https://www.ing.jobs/en/job/luxembourg/internship-business-management-and-strategy-private-banking/3121/44044583424": {
-    "company": "ING",
-    "first_seen": "2026-09-04",
-    "title": "INTERNSHIP - Business Management & Strategy - Private Banking"
   },
   "https://www.ing.jobs/en/job/luxembourg/internship-financial-controller/3121/45697254464": {
     "company": "ING",
@@ -6299,6 +6224,11 @@
     "first_seen": "2026-10-14",
     "title": "Intern, Global Securities Finance (GSF) Trading, Financial Markets"
   },
+  "https://www.ing.jobs/en/job/singapore/intern-hr-operations/3121/46008155648": {
+    "company": "ING",
+    "first_seen": "2026-10-20",
+    "title": "Intern, HR Operations"
+  },
   "https://www.ing.jobs/en/job/singapore/intern-loan-distribution-group-apac/3121/44275686784": {
     "company": "ING",
     "first_seen": "2026-09-08",
@@ -6313,6 +6243,11 @@
     "company": "ING",
     "first_seen": "2026-10-16",
     "title": "Intern, Portfolio Management"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-rates-trading/3121/46162965376": {
+    "company": "ING",
+    "first_seen": "2026-10-20",
+    "title": "Intern, Rates Trading"
   },
   "https://www.ing.jobs/en/job/singapore/intern-sectors-and-sl-transaction-management/3121/45735845120": {
     "company": "ING",
@@ -6413,21 +6348,6 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-09",
     "title": "2027 Product Management Intern (thinkorswim)"
-  },
-  "https://www.schwabjobs.com/job/austin/2027-technology-intern-business-and-project-management/33727/100173607520": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Intern - Business & Project Management"
-  },
-  "https://www.schwabjobs.com/job/austin/2027-technology-intern-data-engineering/33727/99872061056": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Intern - Data Engineering"
-  },
-  "https://www.schwabjobs.com/job/austin/2027-technology-intern-site-reliability-engineering/33727/100171224224": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Intern - Site Reliability Engineering"
   },
   "https://www.schwabjobs.com/job/austin/2027-technology-intern-software-engineering/33727/99872061168": {
     "company": "Charles Schwab",
