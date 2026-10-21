@@ -2569,6 +2569,11 @@
     "first_seen": "2026-09-25",
     "title": "Winter 2027: Software Developer Co-op (4 or 8 months)"
   },
+  "https://jobs.intuit.com/job/toronto/winter-2027-software-developer-co-op-8-months/27595/102211454080": {
+    "company": "Intuit",
+    "first_seen": "2026-10-20",
+    "title": "Winter 2027: Software Developer Co-op (8 months)"
+  },
   "https://jobs.intuit.com/job/washington-d-c/spring-2027-public-affairs-intern-global-corporate-affairs-and-public-policy/27595/101130613776": {
     "company": "Intuit",
     "first_seen": "2026-09-25",
@@ -3458,11 +3463,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "Reliability, Maintenance & Engineering Intern"
-  },
-  "https://www.amazon.jobs/en/jobs/10481964/sales-rep-intern": {
-    "company": "Amazon",
-    "first_seen": "2026-07-22",
-    "title": "Sales Rep Intern"
   },
   "https://www.amazon.jobs/en/jobs/10484369/operations-logistics-internship-piemonte-talent-pool": {
     "company": "Amazon",
@@ -5544,6 +5544,36 @@
     "first_seen": "2026-10-20",
     "title": "Data Center Infrastructure Engineer Internship 2027 - UAE nationals"
   },
+  "https://www.amazon.jobs/en/jobs/10584121/hardware-development-engineer-intern-winter-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Hardware Development Engineer Intern , Winter 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10584122/industrial-design-engineer-intern-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Industrial Design Engineer Intern , Summer 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10584125/procurement-specialist-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Procurement Specialist Intern, Early Career - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10584126/procurement-specialist-intern-early-career-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Procurement Specialist Intern, Early Career - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10584130/creative-marketing-intern-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "Creative Marketing Intern \u2013 Summer 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10584152/pde-intern-summer-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-20",
+    "title": "PDE Intern (Summer),  Summer 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
     "company": "Amazon",
     "first_seen": "2026-09-08",
@@ -5603,6 +5633,11 @@
     "company": "AT&T",
     "first_seen": "2026-09-21",
     "title": "AT&T Technology Development Program Internship"
+  },
+  "https://www.att.jobs/job/dallas/corporate-communications-internship/117/100122200224": {
+    "company": "AT&T",
+    "first_seen": "2026-10-20",
+    "title": "Corporate Communications Internship"
   },
   "https://www.att.jobs/job/dallas/marketing-excellence-program-internship/117/101855886688": {
     "company": "AT&T",
@@ -6108,6 +6143,11 @@
     "company": "ING",
     "first_seen": "2026-09-17",
     "title": "Internship \u2013 Financial Institutions Coverage"
+  },
+  "https://www.ing.jobs/en/job/amsterdam/internships-equity-capital-markets/3121/46169989120": {
+    "company": "ING",
+    "first_seen": "2026-10-20",
+    "title": "Internships Equity Capital Markets"
   },
   "https://www.ing.jobs/en/job/brussels/cma-ecg-intern-m-and-a/3121/43939864640": {
     "company": "ING",
