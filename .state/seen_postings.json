@@ -779,16 +779,6 @@
     "first_seen": "2026-10-09",
     "title": "2027 Apple Internship - Information Systems and Technology"
   },
-  "https://jobs.apple.com/en-us/details/200682357": {
-    "company": "Apple",
-    "first_seen": "2026-09-08",
-    "title": "GPU Internships - Architecture Validation, Performance Modelling & Platform Architecture"
-  },
-  "https://jobs.apple.com/en-us/details/200682404": {
-    "company": "Apple",
-    "first_seen": "2026-09-08",
-    "title": "Circuit Design Intern (m/f/d)"
-  },
   "https://jobs.apple.com/en-us/details/200682641": {
     "company": "Apple",
     "first_seen": "2026-09-13",
@@ -1169,11 +1159,6 @@
     "first_seen": "2026-10-13",
     "title": "Engineering Internship"
   },
-  "https://jobs.boeing.com/job/berkeley/engineering-and-technology-innovation-graduate-researcher-program-advanced-materials-and-structures/185/100364523008": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Engineering & Technology Innovation, Graduate Researcher Program \u2013 Advanced Materials & Structures Intern"
-  },
   "https://jobs.boeing.com/job/bristol/commercial-intern-12-months-placement/185/100464592448": {
     "company": "Boeing",
     "first_seen": "2026-09-11",
@@ -1249,35 +1234,10 @@
     "first_seen": "2026-09-11",
     "title": "Commercial Intern"
   },
-  "https://jobs.boeing.com/job/hazelwood/boeing-engineering-and-technology-innovation-graduate-researcher-program-computational-fluid-dynami/185/100364523200": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Computational Fluid Dynamics (CFD) Intern"
-  },
   "https://jobs.boeing.com/job/hazelwood/boeing-summer-2027-internship-program-paid-finance-evergreen/185/99859395904": {
     "company": "Boeing",
     "first_seen": "2026-08-28",
     "title": "Boeing Summer 2027 Internship Program (PAID) \u2013 Finance (Evergreen)"
-  },
-  "https://jobs.boeing.com/job/huntington-beach/boeing-engineering-and-technology-innovation-graduate-researcher-program-aerodynamics-intern/185/100364523232": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Aerodynamics Intern"
-  },
-  "https://jobs.boeing.com/job/huntington-beach/boeing-engineering-and-technology-innovation-graduate-researcher-program-computational-fluid-dynami/185/100364523216": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation, Graduate Researcher Program \u2013  Computational Fluid Dynamics Intern"
-  },
-  "https://jobs.boeing.com/job/huntington-beach/boeing-engineering-and-technology-innovation-graduate-researcher-program-microelectronics-r-and-d-i/185/100364523056": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Microelectronics R&D Intern"
-  },
-  "https://jobs.boeing.com/job/north-charleston/boeing-engineering-and-technology-innovation-graduate-researcher-program-applied-mathematician-inte/185/100364523088": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Applied Mathematician Intern"
   },
   "https://jobs.boeing.com/job/port-melbourne/supply-chain-intern/185/100966663856": {
     "company": "Boeing",
@@ -1338,11 +1298,6 @@
     "company": "Boeing",
     "first_seen": "2026-09-22",
     "title": "Manufacturing Engineering Internship"
-  },
-  "https://jobs.boeing.com/job/tukwila/boeing-engineering-and-technology-innovation-graduate-researcher-program-software-engineering-artif/185/100364523072": {
-    "company": "Boeing",
-    "first_seen": "2026-09-08",
-    "title": "Boeing Engineering & Technology Innovation Graduate Researcher Program, Software Engineering Artificial Intelligence Intern"
   },
   "https://jobs.boeing.com/job/tulsa/boeing-tulsa-summer-2027-internship-program-paid-facilities-equipment-and-reliability-engineering/185/100378295456": {
     "company": "Boeing",
@@ -2214,25 +2169,10 @@
     "first_seen": "2026-10-19",
     "title": "Technology - Infrastructure, Summer Analyst, Warsaw 2027"
   },
-  "https://jobs.citizensbank.com/job/atlanta/2027-commercial-summer-intern-atlanta-ga/288/100363712304": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Atlanta, GA"
-  },
   "https://jobs.citizensbank.com/job/baltimore/2027-investment-banking-summer-analyst-baltimore-md/288/100948023568": {
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-21",
     "title": "2027 Investment Banking Summer Analyst (Baltimore, MD)"
-  },
-  "https://jobs.citizensbank.com/job/boston/2027-commercial-summer-intern-boston-ma/288/100363712208": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Boston, MA"
-  },
-  "https://jobs.citizensbank.com/job/boston/2027-commercial-summer-intern-global-markets-boston-ma/288/100363712256": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Global Markets, Boston, MA"
   },
   "https://jobs.citizensbank.com/job/boston/2027-summer-analyst-sales-and-trading-and-equity-research-boston-ma/288/100995739344": {
     "company": "Citizens Financial Group",
@@ -2243,16 +2183,6 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-14",
     "title": "Treasury and Balance Sheet Strategies Graduate Internship\u00a02027"
-  },
-  "https://jobs.citizensbank.com/job/chicago/2027-commercial-summer-intern-chicago-il/288/100363712400": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Chicago, IL"
-  },
-  "https://jobs.citizensbank.com/job/houston/2027-commercial-summer-intern-houston-tx/288/100363712496": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Houston, TX"
   },
   "https://jobs.citizensbank.com/job/johnston/business-insights-graduate-2027-summer-intern/288/100486082336": {
     "company": "Citizens Financial Group",
@@ -2268,11 +2198,6 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-11",
     "title": "Cloud Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/corporate-finance-and-accounting-internship-2027/288/100338751392": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "Corporate Finance & Accounting Internship 2027"
   },
   "https://jobs.citizensbank.com/job/johnston/corporate-security-and-resilience-summer-2027-intern-enterprise-technology-and-security-summer-inte/288/100486082672": {
     "company": "Citizens Financial Group",
@@ -2324,11 +2249,6 @@
     "first_seen": "2026-09-11",
     "title": "Network Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
   },
-  "https://jobs.citizensbank.com/job/johnston/property-and-procurement-internship-2027/288/100338750320": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "Property and Procurement Internship 2027"
-  },
   "https://jobs.citizensbank.com/job/johnston/software-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082496": {
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-11",
@@ -2339,11 +2259,6 @@
     "first_seen": "2026-09-11",
     "title": "Tech Risk Analyst Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
   },
-  "https://jobs.citizensbank.com/job/new-york/2027-commercial-summer-intern-new-york-ny/288/100363712352": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - New York, NY"
-  },
   "https://jobs.citizensbank.com/job/new-york/2027-summer-analyst-sales-and-trading-and-equity-research-new-york-ny/288/100995739232": {
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-22",
@@ -2353,16 +2268,6 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-21",
     "title": "2027 Investment Banking Summer Analyst (Richmond, VA)"
-  },
-  "https://jobs.citizensbank.com/job/tampa/2027-commercial-summer-intern-tampa-fl/288/100363712448": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "2027 Commercial Summer Intern - Tampa, FL"
-  },
-  "https://jobs.citizensbank.com/job/westwood/consumer-bank-enterprise-experience-cbex-internship-2027/288/100338750272": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-08",
-    "title": "Consumer Bank Enterprise Experience (CBEX) Internship 2027"
   },
   "https://jobs.citizensbank.com/search-jobs": {
     "company": "Citizens Financial Group",
@@ -2814,11 +2719,6 @@
     "first_seen": "2026-09-14",
     "title": "2027 Spring Corporate Communications + Community Impact Intern"
   },
-  "https://jobs.nscorp.com/job/Atlanta-2027-Summer-Internal-Audit-Intern-GA-30308/1427626900/": {
-    "company": "Norfolk Southern",
-    "first_seen": "2026-09-08",
-    "title": "2027 Summer Internal Audit Intern"
-  },
   "https://jobs.nucor.com/go/Interns_/9426300/": {
     "company": "Nucor",
     "first_seen": "2026-08-17",
@@ -2868,11 +2768,6 @@
     "company": "Arista Networks",
     "first_seen": "2026-09-29",
     "title": "Software Engineer Intern 2026/2027"
-  },
-  "https://jobs.smartrecruiters.com/servicenow/744000148334959": {
-    "company": "ServiceNow",
-    "first_seen": "2026-09-08",
-    "title": "Finance Intern - Undergrad Summer 2027"
   },
   "https://jobs.smartrecruiters.com/servicenow/744000148836589": {
     "company": "ServiceNow",
@@ -3584,11 +3479,6 @@
     "first_seen": "2026-10-15",
     "title": "page mentions it: \u201c\u2026Finance View role Sportradar's International Graduate Programme 2027/2028 (m/f/d) Location: Vienna, Austria Contract: Intern Se\u2026\u201d"
   },
-  "https://vercel.com/careers": {
-    "company": "Vercel",
-    "first_seen": "2026-09-08",
-    "title": "page mentions it: \u201c\u2026ineer, eve New York City, San Francisco Read more Software Engineering Intern - Summer '27 San Francisco Read more Software Engineering Intern - Winter '27 San Franci\u2026\u201d"
-  },
   "https://wise.jobs/jobs": {
     "company": "Wise",
     "first_seen": "2026-09-22",
@@ -4133,21 +4023,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-08",
     "title": "Public Policy Manager Intern - Q1 2027, EU Public Policy team "
-  },
-  "https://www.amazon.jobs/en/jobs/10531457/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
-    "company": "Amazon",
-    "first_seen": "2026-09-08",
-    "title": "Public Policy Manager Intern - Q3 2027, EU Public Policy team "
-  },
-  "https://www.amazon.jobs/en/jobs/10531744/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
-    "company": "Amazon",
-    "first_seen": "2026-09-08",
-    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
-  },
-  "https://www.amazon.jobs/en/jobs/10531748/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
-    "company": "Amazon",
-    "first_seen": "2026-09-08",
-    "title": "Public Policy Manager Intern \u2013 Q3 2027, EU Public Policy team "
   },
   "https://www.amazon.jobs/en/jobs/10532282/operations-engineering-field-execution-intern-spring-and-summer-2027-ca-ct-fl-tx": {
     "company": "Amazon",
@@ -5909,11 +5784,6 @@
     "first_seen": "2026-10-23",
     "title": "Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA)"
   },
-  "https://www.amazon.jobs/en/jobs/3117694/system-dev-engineer-i-co-op-robotics-autonomous-ai-security": {
-    "company": "Amazon",
-    "first_seen": "2026-09-08",
-    "title": "System Dev Engineer I Co-op (Robotics), Autonomous AI Security"
-  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -6214,11 +6084,6 @@
     "first_seen": "2026-10-15",
     "title": "Data Center Technician Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/127840103736189638-application-engineering-intern-summer-2027-english": {
-    "company": "Google",
-    "first_seen": "2026-09-08",
-    "title": "Application Engineering Intern, Summer 2027 (English)"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/128919086494032582-hardware-engineering-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-15",
@@ -6433,11 +6298,6 @@
     "company": "Google",
     "first_seen": "2026-08-24",
     "title": "Software Engineering Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/92840449600824006-application-engineering-intern-winter-2027-english": {
-    "company": "Google",
-    "first_seen": "2026-09-08",
-    "title": "Application Engineering Intern, Winter 2027 (English)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/93078491720753862-software-engineering-phd-intern-2027": {
     "company": "Google",
