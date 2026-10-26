@@ -99,11 +99,6 @@
     "first_seen": "2026-09-22",
     "title": "2027 Blackstone Private Equity Summer Associate / Senior Associate, Tokyo"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Tokyo/XMLNAME-2027-Blackstone-Private-Wealth-Summer-Analyst--Tokyo_40708": {
-    "company": "Blackstone",
-    "first_seen": "2026-08-05",
-    "title": "2027 Blackstone Private Wealth Summer Analyst, Tokyo"
-  },
   "https://boards.greenhouse.io/optiver": {
     "company": "Optiver",
     "first_seen": "2026-09-26",
@@ -739,11 +734,6 @@
     "first_seen": "2026-08-14",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
-  "https://jobs.apple.com/en-us/details/200617354": {
-    "company": "Apple",
-    "first_seen": "2026-09-10",
-    "title": "Expression of Interests | Career Fair Events Internship"
-  },
   "https://jobs.apple.com/en-us/details/200676908": {
     "company": "Apple",
     "first_seen": "2026-09-17",
@@ -1124,10 +1114,25 @@
     "first_seen": "2026-10-22",
     "title": "Compiler Engineering Intern"
   },
+  "https://jobs.apple.com/en-us/details/200690888": {
+    "company": "Apple",
+    "first_seen": "2026-10-26",
+    "title": "Software Engineer Intern - Core OS"
+  },
   "https://jobs.apple.com/en-us/details/200691169": {
     "company": "Apple",
     "first_seen": "2026-10-23",
     "title": "Machine Learning Research Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200691200": {
+    "company": "Apple",
+    "first_seen": "2026-10-26",
+    "title": "Apple Media Products Intern"
+  },
+  "https://jobs.apple.com/en-us/details/200691241": {
+    "company": "Apple",
+    "first_seen": "2026-10-26",
+    "title": "Engineering Program Manager (EPM) Intern"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1773,11 +1778,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
-  },
-  "https://jobs.citi.com/job/san-francisco/banking-corporate-banking-summer-analyst-san-francisco-us-2027/287/89623967024": {
-    "company": "Citibank",
-    "first_seen": "2026-09-10",
-    "title": "Banking - Corporate Banking, Summer Analyst, San Francisco - US, 2027"
   },
   "https://jobs.citi.com/job/sao-paulo/banking-commercial-banking-internship-sao-paulo-brazil-2027/287/102340905200": {
     "company": "Citibank",
@@ -2624,11 +2624,6 @@
     "first_seen": "2026-09-29",
     "title": "Software Engineer Intern 2026/2027"
   },
-  "https://jobs.smartrecruiters.com/servicenow/744000148836589": {
-    "company": "ServiceNow",
-    "first_seen": "2026-09-10",
-    "title": "Finance Intern - Undergrad Summer 2027"
-  },
   "https://jobs.smartrecruiters.com/servicenow/744000152290539": {
     "company": "ServiceNow",
     "first_seen": "2026-09-28",
@@ -2668,6 +2663,11 @@
     "company": "ServiceNow",
     "first_seen": "2026-10-14",
     "title": "Finance Intern - Undergrad Summer 2027"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000157771269": {
+    "company": "ServiceNow",
+    "first_seen": "2026-10-26",
+    "title": "Finance Intern"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000150164374": {
     "company": "Ubisoft",
@@ -2808,11 +2808,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-14",
     "title": "Intern Firmware Engineering"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000141229015": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Intern - Data Science"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000141402859": {
     "company": "Western Digital",
@@ -2968,6 +2963,11 @@
     "company": "Wise",
     "first_seen": "2026-10-19",
     "title": "Analytics Intern"
+  },
+  "https://jobs.smartrecruiters.com/wise/744000157817979": {
+    "company": "Wise",
+    "first_seen": "2026-10-26",
+    "title": "Software Engineering Intern"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
@@ -3404,21 +3404,6 @@
     "first_seen": "2026-08-06",
     "title": "Operations & Logistics Internship Piemonte - Talent Pool"
   },
-  "https://www.amazon.jobs/en/jobs/10484409/operations-logistics-internship-lombardia-talent-pool": {
-    "company": "Amazon",
-    "first_seen": "2026-08-06",
-    "title": "Operations & Logistics Internship Lombardia - Talent Pool"
-  },
-  "https://www.amazon.jobs/en/jobs/10484439/operations-logistics-internship-lazio-talent-pool": {
-    "company": "Amazon",
-    "first_seen": "2026-08-06",
-    "title": "Operations & Logistics Internship Lazio - Talent Pool"
-  },
-  "https://www.amazon.jobs/en/jobs/10484559/operations-logistics-internship-emilia-romagna-talent-pool": {
-    "company": "Amazon",
-    "first_seen": "2026-08-06",
-    "title": "Operations & Logistics Internship Emilia Romagna- Talent Pool"
-  },
   "https://www.amazon.jobs/en/jobs/10484579/operations-logistics-internship-friuli-venezia-giulia-talent-pool": {
     "company": "Amazon",
     "first_seen": "2026-08-06",
@@ -3813,11 +3798,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-03",
     "title": "Operations & Logistics Internship - Marche"
-  },
-  "https://www.amazon.jobs/en/jobs/10528500/operations-logistics-internship-umbria": {
-    "company": "Amazon",
-    "first_seen": "2026-09-03",
-    "title": "Operations & Logistics Internship - Umbria"
   },
   "https://www.amazon.jobs/en/jobs/10528501/operations-logistics-internship-sardegna": {
     "company": "Amazon",
@@ -5194,6 +5174,11 @@
     "first_seen": "2026-10-13",
     "title": "Software Development Engineer Intern, Amazon University Talent Acquisition "
   },
+  "https://www.amazon.jobs/en/jobs/10574996/2027-applied-scientist-internship-phd-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "2027 Applied Scientist Internship \u2013 PhD, Amazon University Talent Acquisition"
+  },
   "https://www.amazon.jobs/en/jobs/10575231/operations-finance-ofrp-intern-summer-2027-amazon-finance-rotational-program-afrp": {
     "company": "Amazon",
     "first_seen": "2026-10-09",
@@ -5248,6 +5233,11 @@
     "company": "Amazon",
     "first_seen": "2026-10-13",
     "title": "(Physical) Security Specialist Intern - 2027 Internship, DUB West"
+  },
+  "https://www.amazon.jobs/en/jobs/10576778/logistics-specialist-data-center-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "Logistics Specialist, Data Center - 2027 Internship"
   },
   "https://www.amazon.jobs/en/jobs/10576778/logistics-specialist-data-center-2027-internship-wblp-logistics-specialist": {
     "company": "Amazon",
@@ -5589,6 +5579,11 @@
     "first_seen": "2026-10-23",
     "title": "Software Development Engineer Intern, Amazon Leo - Summer 2027 (USA)"
   },
+  "https://www.amazon.jobs/en/jobs/10588719/program-manager-intern-6m-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "Program Manager Intern 6M- 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5699,11 +5694,6 @@
     "first_seen": "2026-07-23",
     "title": "page mentions it: \u201c\u2026estment Analysis New York icon Fundamental Research Analyst Intern (New York) \u2013 Summer 2027 : The D. E. Shaw group seeks talented individuals with unique perspectives\u2026\u201d"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/100028133205254854-software-engineering-site-reliability-engineering-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/100315940037501638-financial-analyst-bsms-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-02",
@@ -5733,11 +5723,6 @@
     "company": "Google",
     "first_seen": "2026-10-02",
     "title": "Associate Product Manager BS/MS Intern, 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/103632882076918470-parttime-software-engineering-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Part-Time Software Engineering BS/MS Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/104489346874122950-software-engineering-intern-2027-english": {
     "company": "Google",
@@ -5858,11 +5843,6 @@
     "company": "Google",
     "first_seen": "2026-10-02",
     "title": "Hardware/Electrical Engineering BS/MS Intern, 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/121543376737575622-software-engineering-site-reliability-engineering-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/121790188106982086-account-executive-mba-intern-2027": {
     "company": "Google",
@@ -5989,11 +5969,6 @@
     "first_seen": "2026-10-02",
     "title": "Data Center Technician Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/142747733357142726-software-engineering-site-reliability-engineering-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Software Engineering, Site Reliability Engineering BS/MS Intern, 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/73321728058499782-data-science-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-08-17",
@@ -6048,11 +6023,6 @@
     "company": "Google",
     "first_seen": "2026-10-02",
     "title": "Business Analyst MBA Intern, 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/83199557986329286-software-engineering-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-09-03",
-    "title": "Software Engineering BS/MS Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/84561862556820166-data-scientist-product-ms-intern-2027": {
     "company": "Google",
@@ -6163,6 +6133,11 @@
     "company": "ING",
     "first_seen": "2026-10-20",
     "title": "Internships Equity Capital Markets"
+  },
+  "https://www.ing.jobs/en/job/luxembourg/ing-internship-finance-accounting-and-reporting/3121/43939864704": {
+    "company": "ING",
+    "first_seen": "2026-10-26",
+    "title": "ING INTERNSHIP - Finance Accounting & Reporting"
   },
   "https://www.ing.jobs/en/job/luxembourg/internship-account-manager/3121/44762283328": {
     "company": "ING",
@@ -6544,21 +6519,6 @@
     "first_seen": "2026-09-11",
     "title": "Decision Science Analyst Intern"
   },
-  "https://www.usaajobs.com/job/san-antonio/digital-technical-product-management-intern/1207/100434045840": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Digital Technical Product Management Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/future-leaders-program-data-intern/1207/100442599600": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Future Leaders Program - Data Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/future-leaders-program-finance-intern/1207/100442599632": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Future Leaders Program - Finance Intern"
-  },
   "https://www.usaajobs.com/job/san-antonio/infrastructure-engineer-intern/1207/101009416896": {
     "company": "USAA",
     "first_seen": "2026-09-22",
@@ -6589,11 +6549,6 @@
     "first_seen": "2026-09-19",
     "title": "Operations \u2013 Digital/Technical Product Manager Intern"
   },
-  "https://www.usaajobs.com/job/san-antonio/operations-project-manager-intern/1207/100434045920": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Operations - Project Manager Intern"
-  },
   "https://www.usaajobs.com/job/san-antonio/p-and-c-product-management-analyst-intern/1207/100529909824": {
     "company": "USAA",
     "first_seen": "2026-09-12",
@@ -6603,16 +6558,6 @@
     "company": "USAA",
     "first_seen": "2026-10-08",
     "title": "Product Management Advisor Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/quantitative-risk-analyst-intern/1207/100434045824": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Quantitative Risk Analyst Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/risk-analyst-intern/1207/100434045856": {
-    "company": "USAA",
-    "first_seen": "2026-09-10",
-    "title": "Risk Analyst Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/visualization-engineer-intern/1207/101009416976": {
     "company": "USAA",
