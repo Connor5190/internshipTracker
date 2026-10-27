@@ -69,11 +69,6 @@
     "first_seen": "2026-10-08",
     "title": "2027 Blackstone Global Fund Finance Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/New-York/XMLNAME-2027-Blackstone-LaunchPad-Summer-Analyst_45456": {
-    "company": "Blackstone",
-    "first_seen": "2026-09-11",
-    "title": "2027 Blackstone LaunchPad Summer Analyst"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Singapore/XMLNAME-2027-Blackstone-Technology---Innovations-Analyst-Intern--Singapore_45034": {
     "company": "Blackstone",
     "first_seen": "2026-08-21",
@@ -764,11 +759,6 @@
     "first_seen": "2026-10-12",
     "title": "2027 Apple Internship - Information Systems and Technology"
   },
-  "https://jobs.apple.com/en-us/details/200681917": {
-    "company": "Apple",
-    "first_seen": "2026-09-11",
-    "title": "Apple Vision Pro Hardware System EE Intern"
-  },
   "https://jobs.apple.com/en-us/details/200682299": {
     "company": "Apple",
     "first_seen": "2026-10-09",
@@ -999,6 +989,11 @@
     "first_seen": "2026-10-19",
     "title": "Manufacturing Quality Engineer Intern"
   },
+  "https://jobs.apple.com/en-us/details/200688447": {
+    "company": "Apple",
+    "first_seen": "2026-10-27",
+    "title": "iPhone NPI OPM Intern"
+  },
   "https://jobs.apple.com/en-us/details/200688724": {
     "company": "Apple",
     "first_seen": "2026-10-15",
@@ -1033,6 +1028,11 @@
     "company": "Apple",
     "first_seen": "2026-10-15",
     "title": "GCR Intern, Client Partner - Apple Ads, Industry"
+  },
+  "https://jobs.apple.com/en-us/details/200688974": {
+    "company": "Apple",
+    "first_seen": "2026-10-27",
+    "title": "Engineering Intern (AI/ML & Automation) for Hardware - Shanghai"
   },
   "https://jobs.apple.com/en-us/details/200688992": {
     "company": "Apple",
@@ -1154,6 +1154,11 @@
     "first_seen": "2026-10-26",
     "title": "Engineering Program Manager (EPM) Intern"
   },
+  "https://jobs.apple.com/en-us/details/200691915": {
+    "company": "Apple",
+    "first_seen": "2026-10-27",
+    "title": "PMU Design Verification Intern"
+  },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
     "first_seen": "2026-09-21",
@@ -1178,11 +1183,6 @@
     "company": "Boeing",
     "first_seen": "2026-09-11",
     "title": "Commercial Intern- 12 Months Placement"
-  },
-  "https://jobs.boeing.com/job/bristol/data-analytics-intern-6-months/185/100464602640": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Data Analytics Intern - 6 Months"
   },
   "https://jobs.boeing.com/job/dublin/engineering-intern-january-2027/185/100629633696": {
     "company": "Boeing",
@@ -1679,11 +1679,6 @@
     "first_seen": "2026-10-19",
     "title": "Banking, Commercial Banking, Summer Analyst, Milan - Italy 2027"
   },
-  "https://jobs.citi.com/job/milano/banking-investment-banking-placement-analyst-internship-milan-italy-2027/287/100479480752": {
-    "company": "Citibank",
-    "first_seen": "2026-09-11",
-    "title": "Banking, Investment Banking, Placement Analyst Internship, Milan - Italy 2027"
-  },
   "https://jobs.citi.com/job/milano/banking-investment-banking-placement-analyst-internship-milan-italy-2027/287/102161080256": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -2044,80 +2039,10 @@
     "first_seen": "2026-09-14",
     "title": "Treasury and Balance Sheet Strategies Graduate Internship\u00a02027"
   },
-  "https://jobs.citizensbank.com/job/johnston/business-insights-graduate-2027-summer-intern/288/100486082336": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Business Insights Graduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/business-insights-undergraduate-2027-summer-intern/288/100486082096": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Business Insights Undergraduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/cloud-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082400": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Cloud Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/corporate-security-and-resilience-summer-2027-intern-enterprise-technology-and-security-summer-inte/288/100486082672": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Corporate Security & Resilience Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-analytics-graduate-2027-summer-intern/288/100486082256": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Analytics Graduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-analytics-undergraduate-2027-summer-intern/288/100486082032": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Analytics Undergraduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082448": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-management-graduate-2027-summer-intern/288/100486082192": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Management Graduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-management-undergraduate-2027-summer-intern/288/100486081968": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Management Undergraduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-science-graduate-2027-summer-intern/288/100486082144": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Science Graduate 2027 Summer Intern"
-  },
-  "https://jobs.citizensbank.com/job/johnston/data-science-undergraduate-2027-summer-intern/288/100486081904": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Data Science Undergraduate 2027 Summer Intern"
-  },
   "https://jobs.citizensbank.com/job/johnston/internal-audit-internship-2027/288/100674381440": {
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-16",
     "title": "Internal Audit Internship 2027"
-  },
-  "https://jobs.citizensbank.com/job/johnston/network-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082544": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Network Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/software-engineer-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082496": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Software Engineer Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
-  },
-  "https://jobs.citizensbank.com/job/johnston/tech-risk-analyst-summer-2027-intern-enterprise-technology-and-security-summer-internship-program/288/100486082592": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-11",
-    "title": "Tech Risk Analyst Summer 2027 Intern | Enterprise Technology & Security Summer Internship Program"
   },
   "https://jobs.citizensbank.com/job/new-york/2027-summer-analyst-sales-and-trading-and-equity-research-new-york-ny/288/100995739232": {
     "company": "Citizens Financial Group",
@@ -2183,6 +2108,11 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-10-23",
     "title": "Marketing Intern - Summer 2027"
+  },
+  "https://jobs.genpt.com/job/atlanta/procurement-sourcing-analytics-intern-summer-2027/505/102351459856": {
+    "company": "Genuine Parts Company",
+    "first_seen": "2026-10-27",
+    "title": "Procurement/Sourcing Analytics Intern - Summer 2027"
   },
   "https://jobs.genpt.com/job/atlanta/procurement-sourcing-intern-summer-2027/505/102351459856": {
     "company": "Genuine Parts Company",
@@ -2609,16 +2539,6 @@
     "first_seen": "2026-08-14",
     "title": "Internal Audit Intern \u2013 Accounting & Finance"
   },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000149023238": {
-    "company": "Arista Networks",
-    "first_seen": "2026-09-11",
-    "title": "Network Engineer - Test (Intern) "
-  },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000149024979": {
-    "company": "Arista Networks",
-    "first_seen": "2026-09-11",
-    "title": "Software Engineer Intern 2026/2027"
-  },
   "https://jobs.smartrecruiters.com/aristanetworks/744000149101159": {
     "company": "Arista Networks",
     "first_seen": "2026-09-11",
@@ -2688,6 +2608,11 @@
     "company": "ServiceNow",
     "first_seen": "2026-10-26",
     "title": "Finance Intern"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000157919529": {
+    "company": "ServiceNow",
+    "first_seen": "2026-10-27",
+    "title": "Experience Team \u2013 UX Research Internships \u2013 Summer 2027"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000150164374": {
     "company": "Ubisoft",
@@ -2989,6 +2914,11 @@
     "first_seen": "2026-10-26",
     "title": "Software Engineering Intern"
   },
+  "https://jobs.smartrecruiters.com/wise/744000157850139": {
+    "company": "Wise",
+    "first_seen": "2026-10-27",
+    "title": "People Operations Intern (12 month fixed-term)"
+  },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
     "company": "General Motors",
     "first_seen": "2026-08-17",
@@ -3013,6 +2943,11 @@
     "company": "Barclays",
     "first_seen": "2026-09-01",
     "title": "Banking Associate Summer Internship Program 2027 Chicago"
+  },
+  "https://search.jobs.barclays/job/dubai/banking-off-cycle-internship-programme-2027-dubai/13015/99719474960": {
+    "company": "Barclays",
+    "first_seen": "2026-10-27",
+    "title": "Banking Off Cycle Internship Programme 2027 Dubai"
   },
   "https://search.jobs.barclays/job/frankfurt-am-main/banking-off-cycle-internship-programme-2027-frankfurt/13015/100066900064": {
     "company": "Barclays",
@@ -3408,11 +3343,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "Reliability, Maintenance & Engineering Intern"
-  },
-  "https://www.amazon.jobs/en/jobs/10484369/operations-logistics-internship-piemonte-talent-pool": {
-    "company": "Amazon",
-    "first_seen": "2026-08-06",
-    "title": "Operations & Logistics Internship Piemonte - Talent Pool"
   },
   "https://www.amazon.jobs/en/jobs/10484579/operations-logistics-internship-friuli-venezia-giulia-talent-pool": {
     "company": "Amazon",
@@ -3908,11 +3838,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-10",
     "title": "Industrial Development Engineer Intern/Co-op, ROBOTICS - 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10537436/operations-engineering-intern-start-date-q1-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-11",
-    "title": "Operations Engineering Intern -  start date Q1 2027 "
   },
   "https://www.amazon.jobs/en/jobs/10537439/operations-engineering-intern-start-date-q2-2027": {
     "company": "Amazon",
@@ -5119,6 +5044,11 @@
     "first_seen": "2026-10-08",
     "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
   },
+  "https://www.amazon.jobs/en/jobs/10573267/physical-security-specialist-intern-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "(Physical) Security Specialist Intern - 2027 Internship"
+  },
   "https://www.amazon.jobs/en/jobs/10573268/data-center-technician-2027-internship": {
     "company": "Amazon",
     "first_seen": "2026-10-08",
@@ -5614,6 +5544,46 @@
     "first_seen": "2026-10-26",
     "title": "Field Engineer Intern, Fielding Engineering"
   },
+  "https://www.amazon.jobs/en/jobs/10589643/operations-logistics-internship-mxp6-agognate": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship MXP6-Agognate"
+  },
+  "https://www.amazon.jobs/en/jobs/10589645/operations-logistics-internship-mxp3-vercelli": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship MXP3-Vercelli"
+  },
+  "https://www.amazon.jobs/en/jobs/10589654/aws-commercial-sales-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": " AWS Commercial Sales Internship"
+  },
+  "https://www.amazon.jobs/en/jobs/10589658/operations-logistics-internship-fco1-passo-corese": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship FCO1-Passo Corese"
+  },
+  "https://www.amazon.jobs/en/jobs/10589677/operations-logistics-internship-dly1-cisterna-di-latina": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship DLY1-Cisterna Di Latina"
+  },
+  "https://www.amazon.jobs/en/jobs/10589682/operations-logistics-internship-fco2-colleferro": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship FCO2-Colleferro"
+  },
+  "https://www.amazon.jobs/en/jobs/10589684/operations-logistics-internship-fco5-ardea": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship FCO5-Ardea"
+  },
+  "https://www.amazon.jobs/en/jobs/10589685/operations-logistics-internship-fco8-fiano-romano": {
+    "company": "Amazon",
+    "first_seen": "2026-10-27",
+    "title": "Operations & Logistics Internship FCO8-Fiano Romano"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5964,6 +5934,11 @@
     "first_seen": "2026-10-02",
     "title": "Data Center Facilities Technician Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/136316541401473734-business-intern-2027-english-bahasa-indonesia": {
+    "company": "Google",
+    "first_seen": "2026-10-27",
+    "title": "Business Intern, 2027 (English, Bahasa Indonesia)"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/136529930677560006-silicon-engineering-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-14",
@@ -6023,6 +5998,11 @@
     "company": "Google",
     "first_seen": "2026-08-17",
     "title": "Data Science PhD Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/78620218489742022-mba-intern-2027-english-bahasa-indonesia": {
+    "company": "Google",
+    "first_seen": "2026-10-27",
+    "title": "MBA Intern, 2027 (English, Bahasa Indonesia)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/78951046130344646-media-account-specialist-bsms-intern-2027-english-hebrew": {
     "company": "Google",
@@ -6199,6 +6179,11 @@
     "first_seen": "2026-09-22",
     "title": "HRBP Intern H/F/X"
   },
+  "https://www.ing.jobs/en/job/seoul/bank-financial-markets-intern-2027-h1/3121/46391158272": {
+    "company": "ING",
+    "first_seen": "2026-10-27",
+    "title": "(Bank) Financial Markets Intern - 2027 H1"
+  },
   "https://www.ing.jobs/en/job/shanghai/intern-financial-market-sales-shanghai/3121/45061394944": {
     "company": "ING",
     "first_seen": "2026-09-22",
@@ -6243,6 +6228,11 @@
     "company": "ING",
     "first_seen": "2026-10-21",
     "title": "Intern, FI Lending"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-finance-data-and-analytics/3121/46385215744": {
+    "company": "ING",
+    "first_seen": "2026-10-27",
+    "title": "Intern, Finance Data & Analytics"
   },
   "https://www.ing.jobs/en/job/singapore/intern-finance-product-control/3121/45061394048": {
     "company": "ING",
@@ -6384,11 +6374,6 @@
     "first_seen": "2026-09-14",
     "title": "2027 Branch Financial Consulting Intern"
   },
-  "https://www.schwabjobs.com/job/austin/2027-corporate-risk-management-intern/33727/100500575712": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-11",
-    "title": "2027 Corporate Risk Management Intern"
-  },
   "https://www.schwabjobs.com/job/austin/2027-digital-product-solutions-intern/33727/101362107056": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-30",
@@ -6413,6 +6398,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-10-19",
     "title": "2027 Financial Service & Support Intern - Indianapolis"
+  },
+  "https://www.schwabjobs.com/job/lone-tree/2027-financial-service-and-support-intern-denver/33727/100027798960": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-10-27",
+    "title": "2027 Financial Service & Support Intern - Denver"
   },
   "https://www.schwabjobs.com/job/lone-tree/2027-sox-compliance-intern/33727/100959818672": {
     "company": "Charles Schwab",
@@ -6524,11 +6514,6 @@
     "first_seen": "2026-09-21",
     "title": "Life Solutions Specialist Intern"
   },
-  "https://www.usaajobs.com/job/san-antonio/actuarial-analyst-intern/1207/100507554416": {
-    "company": "USAA",
-    "first_seen": "2026-09-11",
-    "title": "Actuarial Analyst Intern"
-  },
   "https://www.usaajobs.com/job/san-antonio/actuarial-analyst-intern/1207/100529909792": {
     "company": "USAA",
     "first_seen": "2026-09-12",
@@ -6554,35 +6539,15 @@
     "first_seen": "2026-10-23",
     "title": "Bank Credit Risk Analyst Intern"
   },
-  "https://www.usaajobs.com/job/san-antonio/campaign-analyst-intern/1207/100507554448": {
-    "company": "USAA",
-    "first_seen": "2026-09-11",
-    "title": "Campaign Analyst Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/decision-science-analyst-intern/1207/100507554480": {
-    "company": "USAA",
-    "first_seen": "2026-09-11",
-    "title": "Decision Science Analyst Intern"
-  },
   "https://www.usaajobs.com/job/san-antonio/infrastructure-engineer-intern/1207/101009416896": {
     "company": "USAA",
     "first_seen": "2026-09-22",
     "title": "Infrastructure Engineer Intern"
   },
-  "https://www.usaajobs.com/job/san-antonio/investment-business-advisor-intern/1207/100507554464": {
-    "company": "USAA",
-    "first_seen": "2026-09-11",
-    "title": "Investment Business Advisor Intern"
-  },
   "https://www.usaajobs.com/job/san-antonio/life-and-health-underwriter-intern/1207/100665331152": {
     "company": "USAA",
     "first_seen": "2026-09-15",
     "title": "Life and Health Underwriter Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/marketing-campaigns-manager-intern/1207/100507554432": {
-    "company": "USAA",
-    "first_seen": "2026-09-11",
-    "title": "Marketing Campaigns Manager Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/operations-business-process-owner-intern/1207/100529909776": {
     "company": "USAA",
