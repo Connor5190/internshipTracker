@@ -114,6 +114,11 @@
     "first_seen": "2026-09-21",
     "title": "Machine Learning Intern, 2027 Summer U.S."
   },
+  "https://campus-americas.icims.com/jobs/26269/ai-research-intern-%28phd%29%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-10-26",
+    "title": "AI Research Intern (PhD), 2027 Summer U.S."
+  },
   "https://campus-americas.icims.com/jobs/26270/research-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-25",
@@ -174,6 +179,11 @@
     "first_seen": "2026-09-14",
     "title": "2027 Corporate Digital Services Internship"
   },
+  "https://careers.aflac.com/job/2027-Global-Investments-%28NY%29-Private-Credit-Intern-NY/1443294100/": {
+    "company": "Aflac",
+    "first_seen": "2026-10-26",
+    "title": "2027 Global Investments (NY) Private Credit Intern"
+  },
   "https://careers.aflac.com/job/2027-Summer-Actuarial-Intern-GA/1428137200/": {
     "company": "Aflac",
     "first_seen": "2026-09-21",
@@ -228,6 +238,11 @@
     "company": "Aflac",
     "first_seen": "2026-10-23",
     "title": "2027 Global Investments (NY) Investments & Trading Intern"
+  },
+  "https://careers.aflac.com/job/New-York-City-2027-Global-Investments-%28NY%29-Legal-Intern-NY-10005/1443294500/": {
+    "company": "Aflac",
+    "first_seen": "2026-10-26",
+    "title": "2027 Global Investments (NY) Legal Intern"
   },
   "https://careers.aflac.com/job/New-York-City-2027-Global-Investments-%28NY%29-Project-Mgmt_-Intern-NY-10005/1442424300/": {
     "company": "Aflac",
@@ -1118,6 +1133,11 @@
     "company": "Apple",
     "first_seen": "2026-10-26",
     "title": "Software Engineer Intern - Core OS"
+  },
+  "https://jobs.apple.com/en-us/details/200690892": {
+    "company": "Apple",
+    "first_seen": "2026-10-26",
+    "title": "Machine Learning and AI Safety Research Intern"
   },
   "https://jobs.apple.com/en-us/details/200691169": {
     "company": "Apple",
@@ -3244,11 +3264,6 @@
     "first_seen": "2026-09-09",
     "title": "2027 Technology Developer Summer Internship Programme Northampton"
   },
-  "https://search.jobs.barclays/job/paris/banking-off-cycle-internship-programme-2027-paris/13015/100032501488": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Banking Off Cycle Internship Programme 2027 Paris"
-  },
   "https://search.jobs.barclays/job/paris/capital-markets-off-cycle-internship-programme-2027-paris/13015/101434536688": {
     "company": "Barclays",
     "first_seen": "2026-10-02",
@@ -3283,11 +3298,6 @@
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Research Analyst Summer Internship Programme 2027 Singapore"
-  },
-  "https://search.jobs.barclays/job/stockholm/banking-off-cycle-internship-programme-2027-stockholm/13015/100032501248": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Banking Off Cycle Internship Programme 2027 Stockholm"
   },
   "https://search.jobs.barclays/job/tel-aviv/banking-off-cycle-internship-programme-2027-tel-aviv/13015/100032501216": {
     "company": "Barclays",
@@ -5584,6 +5594,26 @@
     "first_seen": "2026-10-26",
     "title": "Program Manager Intern 6M- 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10588762/2027-software-dev-engineer-intern-machine-learning-uk": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "2027 Software Dev Engineer Intern (Machine Learning) - UK"
+  },
+  "https://www.amazon.jobs/en/jobs/10588969/tech-ops-engineer-intern-2027-tech-ops-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "Tech Ops Engineer Intern, 2027 Tech Ops Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10588998/2027-software-dev-engineer-intern-embedded-systems-uk": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "2027 Software Dev Engineer Intern (Embedded Systems) - UK"
+  },
+  "https://www.amazon.jobs/en/jobs/10589523/field-engineer-intern-fielding-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-10-26",
+    "title": "Field Engineer Intern, Fielding Engineering"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -6144,6 +6174,11 @@
     "first_seen": "2026-09-16",
     "title": "Internship - Account Manager"
   },
+  "https://www.ing.jobs/en/job/luxembourg/internship-business-management-and-strategy-private-banking/3121/44044583424": {
+    "company": "ING",
+    "first_seen": "2026-10-26",
+    "title": "INTERNSHIP - Business Management & Strategy - Private Banking"
+  },
   "https://www.ing.jobs/en/job/luxembourg/internship-financial-controller/3121/45697254464": {
     "company": "ING",
     "first_seen": "2026-10-08",
@@ -6409,6 +6444,11 @@
     "first_seen": "2026-09-25",
     "title": "2027 Model Risk Governance & Validation Intern (Southlake Only)"
   },
+  "https://www.schwabjobs.com/job/southlake/2027-model-risk-software-engineering-intern-southlake-only/33727/101137965680": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-10-26",
+    "title": "2027 Model Risk Software Engineering Intern (Southlake Only)"
+  },
   "https://www.schwabjobs.com/job/westlake/2027-accounting-intern/33727/100828011536": {
     "company": "Charles Schwab",
     "first_seen": "2026-09-18",
@@ -6418,6 +6458,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-09-18",
     "title": "2027 Enterprise Finance Intern"
+  },
+  "https://www.schwabjobs.com/job/westlake/2027-human-resources-intern/33727/102478316160": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-10-26",
+    "title": "2027 Human Resources Intern"
   },
   "https://www.schwabjobs.com/job/westlake/2027-internal-audit-intern/33727/100780867504": {
     "company": "Charles Schwab",
