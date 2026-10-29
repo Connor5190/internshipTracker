@@ -3304,40 +3304,10 @@
     "first_seen": "2026-09-22",
     "title": "page mentions it: \u201c\u2026Description Program start: September 7, 2027 How You'll Make an Impact:In this role, you will:Join one of our product tea\u2026\u201d"
   },
-  "https://www.amazon.jobs/en/jobs/10402326/business-development-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Business Development Intern, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10402328/product-management-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Product Management Intern, Amazon University Talent Acquisition "
-  },
   "https://www.amazon.jobs/en/jobs/10403494/process-improvement-intern-aces-operations": {
     "company": "Amazon",
     "first_seen": "2026-09-14",
     "title": "Process Improvement Intern - ACES, Operations"
-  },
-  "https://www.amazon.jobs/en/jobs/10404487/business-analyst-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Business Analyst Intern, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10404511/finance-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Finance Intern, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10404513/instock-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Instock Intern, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10404514/project-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Project Intern, Amazon University Talent Acquisition "
   },
   "https://www.amazon.jobs/en/jobs/10418355/2027-software-dev-engineer-intern": {
     "company": "Amazon",
@@ -3363,11 +3333,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "2027 Applied Science Intern (Machine Learning, Recommender Systems), Amazon International Machine Learning"
-  },
-  "https://www.amazon.jobs/en/jobs/10456452/marketing-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Marketing Intern , Amazon University Talent Acquisition "
   },
   "https://www.amazon.jobs/en/jobs/10459543/2027-applied-science-intern-computer-vision-amazon-international-machine-learning": {
     "company": "Amazon",
@@ -5654,6 +5619,11 @@
     "first_seen": "2026-10-27",
     "title": "Customer Acquisition Representative Intern \u2013 Summer 2027 (CAN)"
   },
+  "https://www.amazon.jobs/en/jobs/10591833/2027-applied-science-internship-robotics-united-states": {
+    "company": "Amazon",
+    "first_seen": "2026-10-28",
+    "title": "2027 Applied Science Internship - Robotics - United States"
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5943,6 +5913,11 @@
     "company": "Google",
     "first_seen": "2026-10-02",
     "title": "Data Center Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/131287072689267398-research-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-10-28",
+    "title": "Research Intern, PhD, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/132296786214560454-business-intern-2027-english": {
     "company": "Google",
@@ -6543,11 +6518,6 @@
     "company": "Seale & Associates",
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026Students & Graduates Summer Internships We invite ambitious students to our exclusive su\u2026\u201d"
-  },
-  "https://www.smbcgroup.com/americas/careers": {
-    "company": "SMBC",
-    "first_seen": "2026-08-05",
-    "title": "page mentions it: \u201c\u2026s-on experience and an inside look at an exciting career in global finance. Our summer intern and analyst programs are designed for rising seniors and recent graduate\u2026\u201d"
   },
   "https://www.sports-reference.com/jobs.html": {
     "company": "Sports Reference",
