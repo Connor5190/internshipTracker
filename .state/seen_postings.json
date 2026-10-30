@@ -644,6 +644,16 @@
     "first_seen": "2026-10-21",
     "title": "Formal Verification Internship"
   },
+  "https://careers.synopsys.com/job/da-nang/technical-engineering-intern-ai-research-and-development-internship/44408/102279058288": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Technical Engineering Intern  - AI Research and Development Internship"
+  },
+  "https://careers.synopsys.com/job/da-nang/technical-engineering-intern-design-verification-internship/44408/102314761696": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Technical Engineering Intern - Design Verification Internship"
+  },
   "https://careers.synopsys.com/job/dublin/r-and-d-engineering-intern/44408/101997038224": {
     "company": "Synopsys",
     "first_seen": "2026-10-16",
@@ -654,10 +664,20 @@
     "first_seen": "2026-10-29",
     "title": "Application Engineer Internship - 19538"
   },
+  "https://careers.synopsys.com/job/ho-chi-minh-city/technical-engineering-intern-design-for-test-dft-internship/44408/102251697392": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Technical Engineering Intern - Design for Test (DFT) Internship"
+  },
   "https://careers.synopsys.com/job/hsinchu/sicada-program-support-intern/44408/101023239568": {
     "company": "Synopsys",
     "first_seen": "2026-10-06",
     "title": "SiCADA Program Support Intern"
+  },
+  "https://careers.synopsys.com/job/kanata/asic-design-verification-internship-16-month-coop-summer-2027/44408/102614183424": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "ASIC Design Verification Internship (16 Month Coop - Summer 2027)"
   },
   "https://careers.synopsys.com/job/markham/analog-and-mixed-signal-internship-16-month-co-op/44408/102314761568": {
     "company": "Synopsys",
@@ -709,6 +729,11 @@
     "first_seen": "2026-08-28",
     "title": "Software Development & Optimization Internship"
   },
+  "https://careers.synopsys.com/job/yerevan/analog-design-intern/44408/102470445696": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Analog Design Intern"
+  },
   "https://careers.synopsys.com/job/yerevan/asic-physical-design-intern/44408/102166693184": {
     "company": "Synopsys",
     "first_seen": "2026-10-19",
@@ -718,6 +743,16 @@
     "company": "Synopsys",
     "first_seen": "2026-10-16",
     "title": "CAD R&D Engineering Intern"
+  },
+  "https://careers.synopsys.com/job/yerevan/engineering-automation-intern/44408/102338082288": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Engineering Automation Intern"
+  },
+  "https://careers.synopsys.com/job/yerevan/technical-writer-intern/44408/102251697472": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-29",
+    "title": "Technical Writer Intern"
   },
   "https://careers.twosigma.com/careers/OpenRoles": {
     "company": "Two Sigma",
@@ -1164,6 +1199,11 @@
     "first_seen": "2026-10-26",
     "title": "Machine Learning and AI Safety Research Intern"
   },
+  "https://jobs.apple.com/en-us/details/200690946": {
+    "company": "Apple",
+    "first_seen": "2026-10-29",
+    "title": "Manufacturing Quality Assurance Intern"
+  },
   "https://jobs.apple.com/en-us/details/200691169": {
     "company": "Apple",
     "first_seen": "2026-10-23",
@@ -1193,6 +1233,11 @@
     "company": "Apple",
     "first_seen": "2026-10-29",
     "title": "Internship - Machine Learning Research - Speech-to-Speech Translation"
+  },
+  "https://jobs.apple.com/en-us/details/200692438": {
+    "company": "Apple",
+    "first_seen": "2026-10-29",
+    "title": "Intern - Swift Runtimes Engineer"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1363,6 +1408,11 @@
     "company": "Boeing",
     "first_seen": "2026-10-21",
     "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Environment, Health, Safety & Sustainability"
+  },
+  "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-manufacturing-engineering/185/100378295536": {
+    "company": "Boeing",
+    "first_seen": "2026-10-29",
+    "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Manufacturing Engineering"
   },
   "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-supplier-quality-assurance-and-compliance/185/100378295168": {
     "company": "Boeing",
@@ -2959,6 +3009,11 @@
     "first_seen": "2026-10-29",
     "title": "Internship - Software Engineering"
   },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158655189": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-29",
+    "title": "Internship - Data Engineering "
+  },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
     "first_seen": "2026-10-05",
@@ -3184,11 +3239,6 @@
     "first_seen": "2026-10-16",
     "title": "Client Data and Engineering Group Summer Internship Programme 2027 London"
   },
-  "https://search.jobs.barclays/job/london/global-transaction-banking-summer-internship-programme-2027-london/13015/100032500816": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Global Transaction Banking Summer Internship Programme 2027 London"
-  },
   "https://search.jobs.barclays/job/london/international-corporate-banking-summer-internship-programme-2027-london/13015/100032500768": {
     "company": "Barclays",
     "first_seen": "2026-09-01",
@@ -3309,20 +3359,10 @@
     "first_seen": "2026-09-01",
     "title": "Banking Off Cycle Internship Programme 2027 Tel Aviv"
   },
-  "https://search.jobs.barclays/job/whippany/2027-technology-developer-summer-internship-program-whippany/13015/100189840496": {
-    "company": "Barclays",
-    "first_seen": "2026-09-04",
-    "title": "2027 Technology Developer Summer Internship Program Whippany"
-  },
   "https://search.jobs.barclays/job/wilmington/us-consumer-bank-analyst-summer-internship-program-2027-wilmington/13015/100032501984": {
     "company": "Barclays",
     "first_seen": "2026-09-01",
     "title": "US Consumer Bank Analyst Summer Internship Program 2027 Wilmington"
-  },
-  "https://search.jobs.barclays/job/zurich/sales-trading-and-structuring-off-cycle-internship-programme-2027-zurich/13015/100128639456": {
-    "company": "Barclays",
-    "first_seen": "2026-09-03",
-    "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Zurich"
   },
   "https://sportradar.com/careers/": {
     "company": "Sportradar",
@@ -5673,6 +5713,21 @@
     "company": "Amazon",
     "first_seen": "2026-10-29",
     "title": "2027 Software Dev Engineer Intern - Haifa, Israel"
+  },
+  "https://www.amazon.jobs/en/jobs/10592766/ux-designer-intern-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-29",
+    "title": "UX Designer Intern \u2013 Summer 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10592767/ux-researcher-intern-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-29",
+    "title": "UX Researcher Intern \u2013 Summer 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10593054/data-center-infrastructure-engineer-intern-summer-2027-midwest-southeast": {
+    "company": "Amazon",
+    "first_seen": "2026-10-29",
+    "title": "Data Center Infrastructure Engineer Intern, Summer 2027 - Midwest / Southeast"
   },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
