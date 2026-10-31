@@ -689,11 +689,6 @@
     "first_seen": "2026-10-06",
     "title": "AI & Automation Engineering Internship - Summer 2027"
   },
-  "https://careers.synopsys.com/job/villeurbanne/software-development-and-optimization-internship/44408/99869922384": {
-    "company": "Synopsys",
-    "first_seen": "2026-08-28",
-    "title": "Software Development & Optimization Internship"
-  },
   "https://careers.synopsys.com/job/yerevan/analog-design-intern/44408/102470445696": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
@@ -783,6 +778,11 @@
     "company": "Apple",
     "first_seen": "2026-10-09",
     "title": "2027 Apple Internship - Information Systems and Technology"
+  },
+  "https://jobs.apple.com/en-us/details/200682664": {
+    "company": "Apple",
+    "first_seen": "2026-10-30",
+    "title": "Formal Verification Intern"
   },
   "https://jobs.apple.com/en-us/details/200682900": {
     "company": "Apple",
@@ -2149,6 +2149,11 @@
     "first_seen": "2026-10-23",
     "title": "Category Management Intern - Summer 2027"
   },
+  "https://jobs.genpt.com/job/atlanta/channel-sales-intern-summer-2027/505/102351459888": {
+    "company": "Genuine Parts Company",
+    "first_seen": "2026-10-30",
+    "title": "Channel Sales Intern - Summer 2027"
+  },
   "https://jobs.genpt.com/job/atlanta/commercial-sales-operations-intern-summer-2027/505/102351459776": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-10-23",
@@ -3234,6 +3239,11 @@
     "first_seen": "2026-09-01",
     "title": "Banking Associate Summer Internship Program 2027 New York"
   },
+  "https://search.jobs.barclays/job/new-york/chief-client-office-client-data-and-engineering-group-summer-internship-program-2027-new-york-city/13015/102642289024": {
+    "company": "Barclays",
+    "first_seen": "2026-10-30",
+    "title": "Chief Client Office - Client Data & Engineering Group Summer Internship Program 2027 New York City"
+  },
   "https://search.jobs.barclays/job/new-york/quantitative-finance-associate-summer-internship-program-2027-new-york/13015/99217260160": {
     "company": "Barclays",
     "first_seen": "2026-10-02",
@@ -3294,11 +3304,6 @@
     "first_seen": "2026-09-01",
     "title": "Banking Off Cycle Internship Programme 2027 Tel Aviv"
   },
-  "https://search.jobs.barclays/job/wilmington/us-consumer-bank-analyst-summer-internship-program-2027-wilmington/13015/100032501984": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "US Consumer Bank Analyst Summer Internship Program 2027 Wilmington"
-  },
   "https://sportradar.com/careers/": {
     "company": "Sportradar",
     "first_seen": "2026-10-15",
@@ -3318,16 +3323,6 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "2027 Software Dev Engineer Intern"
-  },
-  "https://www.amazon.jobs/en/jobs/10423543/business-intelligence-intern-cajamar-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Business Intelligence Intern - Cajamar, Amazon University Talent Acquisition "
-  },
-  "https://www.amazon.jobs/en/jobs/10438927/design-intern-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Design Intern , Amazon University Talent Acquisition "
   },
   "https://www.amazon.jobs/en/jobs/10452956/financial-analyst-i-intern": {
     "company": "Amazon",
@@ -3838,6 +3833,11 @@
     "company": "Amazon",
     "first_seen": "2026-09-10",
     "title": "Industrial Development Engineer Intern/Co-op, ROBOTICS - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10537436/operations-engineering-intern-start-date-q1-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Operations Engineering Intern -  start date Q1 2027 "
   },
   "https://www.amazon.jobs/en/jobs/10537439/operations-engineering-intern-start-date-q2-2027": {
     "company": "Amazon",
@@ -5404,6 +5404,11 @@
     "first_seen": "2026-10-21",
     "title": "2027 Applied Scientist Internship \u2013 Masters, Amazon University Talent Acquisition"
   },
+  "https://www.amazon.jobs/en/jobs/10585008/amazon-intern-program-2027-marketing-design": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Marketing & Design"
+  },
   "https://www.amazon.jobs/en/jobs/10585195/operations-intern": {
     "company": "Amazon",
     "first_seen": "2026-10-23",
@@ -5644,6 +5649,16 @@
     "first_seen": "2026-10-29",
     "title": "2027 Software Dev Engineer Intern - Haifa, Israel"
   },
+  "https://www.amazon.jobs/en/jobs/10592138/amazon-intern-program-2027-business-product-management": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Business & Product Management"
+  },
+  "https://www.amazon.jobs/en/jobs/10592140/amazon-intern-program-2027-data-analytics": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Data & Analytics"
+  },
   "https://www.amazon.jobs/en/jobs/10592766/ux-designer-intern-summer-2027": {
     "company": "Amazon",
     "first_seen": "2026-10-29",
@@ -5679,6 +5694,31 @@
     "first_seen": "2026-10-30",
     "title": "Graduate Pharmacist Intern, Amazon Pharmacy"
   },
+  "https://www.amazon.jobs/en/jobs/10593813/amazon-intern-program-2027-commercial-relationship-management": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Commercial & Relationship Management"
+  },
+  "https://www.amazon.jobs/en/jobs/10593820/amazon-intern-program-2027-executive-assistant": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Executive Assistant"
+  },
+  "https://www.amazon.jobs/en/jobs/10593835/amazon-intern-program-2027-human-resources-hr": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Human Resources (HR)"
+  },
+  "https://www.amazon.jobs/en/jobs/10593846/amazon-intern-program-2027-workplace-health-safety-whs": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Workplace Health & Safety (WHS)"
+  },
+  "https://www.amazon.jobs/en/jobs/10593858/amazon-intern-program-2027-human-resources-betim-mg": {
+    "company": "Amazon",
+    "first_seen": "2026-10-30",
+    "title": "Amazon Intern Program 2027 | Human Resources - BETIM, MG "
+  },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5688,11 +5728,6 @@
     "company": "Amazon",
     "first_seen": "2026-08-14",
     "title": "Software Development Engineer Internship - Vaga para mulheres, IES- LATECH"
-  },
-  "https://www.amazon.jobs/en/jobs/3175756/operations-intern-nova-santa-rita-rs-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Operations Intern - Nova Santa Rita (RS), Amazon University Talent Acquisition "
   },
   "https://www.amazon.jobs/en/jobs/3181151/operations-intern-auta": {
     "company": "Amazon",
