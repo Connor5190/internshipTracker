@@ -459,11 +459,6 @@
     "first_seen": "2026-09-21",
     "title": "2027 Mexico City Internship Program"
   },
-  "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-client-and-product-functions-research-and-markets-advisory-new-york/45831/100661849632": {
-    "company": "BlackRock",
-    "first_seen": "2026-09-15",
-    "title": "2027 MBA Internship Program - Client & Product Functions - Research & Markets Advisory - New York"
-  },
   "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-client-and-product-functions-sales-and-relationship-management-institut/45831/100661849456": {
     "company": "BlackRock",
     "first_seen": "2026-09-15",
@@ -689,6 +684,11 @@
     "first_seen": "2026-10-06",
     "title": "AI & Automation Engineering Internship - Summer 2027"
   },
+  "https://careers.synopsys.com/job/sunnyvale/physics-ai-internship-summer-2027/44408/102664345008": {
+    "company": "Synopsys",
+    "first_seen": "2026-10-31",
+    "title": "Physics AI Internship (Summer 2027)"
+  },
   "https://careers.synopsys.com/job/yerevan/analog-design-intern/44408/102470445696": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
@@ -794,11 +794,6 @@
     "first_seen": "2026-10-09",
     "title": "AI & Project Operations Intern \u2013 Managing Director Office, Greater China"
   },
-  "https://jobs.apple.com/en-us/details/200683293": {
-    "company": "Apple",
-    "first_seen": "2026-09-15",
-    "title": "PMU Design Verification Intern"
-  },
   "https://jobs.apple.com/en-us/details/200683459": {
     "company": "Apple",
     "first_seen": "2026-09-18",
@@ -838,11 +833,6 @@
     "company": "Apple",
     "first_seen": "2026-09-18",
     "title": "Product Design Engineering Intern-Watch"
-  },
-  "https://jobs.apple.com/en-us/details/200683709": {
-    "company": "Apple",
-    "first_seen": "2026-09-15",
-    "title": "Software Engineer Intern - Core OS"
   },
   "https://jobs.apple.com/en-us/details/200683720": {
     "company": "Apple",
@@ -1434,11 +1424,6 @@
     "first_seen": "2026-10-19",
     "title": "Chief Operating Office - Summer Analyst, UK - Belfast, 2027"
   },
-  "https://jobs.citi.com/job/beverly-hills/wealth-summer-analyst-los-angeles-usa-2027/287/100661745152": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth \u2013 Summer Analyst, Los Angeles\u2013 USA, 2027"
-  },
   "https://jobs.citi.com/job/beverly-hills/wealth-summer-analyst-los-angeles-usa-2027/287/102161053984": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1524,11 +1509,6 @@
     "first_seen": "2026-10-19",
     "title": "Technology - Infrastructure, Summer Analyst (Internship), Philippines, 2027"
   },
-  "https://jobs.citi.com/job/dallas/wealth-summer-analyst-dallas-usa-2027/287/100661745120": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth \u2013 Summer Analyst, Dallas \u2013 USA, 2027"
-  },
   "https://jobs.citi.com/job/dallas/wealth-summer-analyst-dallas-usa-2027/287/102161053936": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1548,11 +1528,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Services - Full-Time Analyst, Ireland - Dublin, 2027 (2026 Summer Intern Converts Only)"
-  },
-  "https://jobs.citi.com/job/frankfurt-am-main/banking-commercial-banking-summer-analyst-frankfurt-germany-2027/287/100661681296": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Banking, Commercial Banking, Summer Analyst, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-commercial-banking-summer-analyst-frankfurt-germany-2027/287/102161052496": {
     "company": "Citibank",
@@ -1644,20 +1619,10 @@
     "first_seen": "2026-10-19",
     "title": "Banking - Commercial Banking, Summer Analyst, Hong Kong \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/london/banking-commercial-banking-summer-analyst-london-united-kingdom-2027/287/100661681328": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Banking, Commercial Banking, Summer Analyst, London - United Kingdom 2027"
-  },
   "https://jobs.citi.com/job/london/banking-corporate-banking-summer-analyst-london-united-kingdom-2027/287/100164759232": {
     "company": "Citibank",
     "first_seen": "2026-10-30",
     "title": "Banking, Corporate Banking, Summer Analyst, London \u2013 United Kingdom, 2027"
-  },
-  "https://jobs.citi.com/job/london/banking-financing-full-time-analyst-london-united-kingdom-2027-applicable-for-2026-citi-summer-inte/287/100295995232": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Banking, Financing, Full Time Analyst, London - United Kingdom 2027 (Applicable for 2026 Citi Summer interns only)"
   },
   "https://jobs.citi.com/job/london/banking-investment-banking-cee-greece-and-cyprus-summer-analyst-london-united-kingdom-2027/287/102161068368": {
     "company": "Citibank",
@@ -1719,30 +1684,15 @@
     "first_seen": "2026-10-19",
     "title": "Services - Full-Time Analyst, UK - London, 2027 (2026 Summer Intern Converts Only)"
   },
-  "https://jobs.citi.com/job/miami/wealth-latam-summer-analyst-miami-usa-2027/287/100661744944": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth - LATAM, Summer Analyst, Miami - USA, 2027"
-  },
   "https://jobs.citi.com/job/miami/wealth-latam-summer-analyst-miami-usa-2027/287/102161053952": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Wealth - LATAM, Summer Analyst, Miami - USA, 2027"
   },
-  "https://jobs.citi.com/job/miami/wealth-summer-analyst-miami-usa-2027/287/100661745168": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth \u2013 Summer Analyst, Miami\u2013 USA, 2027"
-  },
   "https://jobs.citi.com/job/miami/wealth-summer-analyst-miami-usa-2027/287/102161054080": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, Miami\u2013 USA, 2027"
-  },
-  "https://jobs.citi.com/job/milano/banking-commercial-banking-summer-analyst-milan-italy-2027/287/100661681344": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Banking, Commercial Banking, Summer Analyst, Milan - Italy 2027"
   },
   "https://jobs.citi.com/job/milano/banking-commercial-banking-summer-analyst-milan-italy-2027/287/102161052288": {
     "company": "Citibank",
@@ -1799,20 +1749,10 @@
     "first_seen": "2026-10-23",
     "title": "Technology, Production Support, Summer Analyst, New York - USA, 2027"
   },
-  "https://jobs.citi.com/job/new-york/wealth-latam-summer-analyst-new-york-usa-2027/287/100661744992": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth - LATAM, Summer Analyst, New York - USA, 2027"
-  },
   "https://jobs.citi.com/job/new-york/wealth-latam-summer-analyst-new-york-usa-2027/287/102161053664": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Wealth - LATAM, Summer Analyst, New York - USA, 2027"
-  },
-  "https://jobs.citi.com/job/new-york/wealth-summer-analyst-new-york-usa-2027/287/100661745184": {
-    "company": "Citibank",
-    "first_seen": "2026-09-15",
-    "title": "Wealth \u2013 Summer Analyst, New York \u2013 USA, 2027"
   },
   "https://jobs.citi.com/job/new-york/wealth-summer-analyst-new-york-usa-2027/287/102161053776": {
     "company": "Citibank",
@@ -2789,21 +2729,6 @@
     "first_seen": "2026-08-14",
     "title": "Intern - Automation Development Engineer (Studying Master's Degree)"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000137358938": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Intern - Maintenance Engineer (Studying Master's Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000137359058": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Intern - Maintenance Engineer (Studying Master's Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000137360008": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Intern - Maintenance Engineer (Studying Master's Degree)"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000140949875": {
     "company": "Western Digital",
     "first_seen": "2026-08-01",
@@ -2854,21 +2779,6 @@
     "first_seen": "2026-09-08",
     "title": "Summer 2027 Intern - Financial Analyst - Undergraduate & MBA"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000148418653": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-09",
-    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000148418712": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-09",
-    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000148418919": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-09",
-    "title": "Intern - Maintenance Engineer (Studying Bachelor or Master's Degree)"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000148618930": {
     "company": "Western Digital",
     "first_seen": "2026-09-09",
@@ -2888,11 +2798,6 @@
     "company": "Western Digital",
     "first_seen": "2026-09-14",
     "title": "Intern - Technologist, Hardware Development Engineering (Studying Ph.D Degree)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000149637959": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-15",
-    "title": "Intern - Industrial Engineer"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000151235109": {
     "company": "Western Digital",
@@ -2963,6 +2868,36 @@
     "company": "Western Digital",
     "first_seen": "2026-10-30",
     "title": " Internship - Software Development (Embedded)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158890939": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158890989": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158891099": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158891149": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158891154": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000158891279": {
+    "company": "Western Digital",
+    "first_seen": "2026-10-31",
+    "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
   },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
@@ -3874,21 +3809,6 @@
     "first_seen": "2026-09-15",
     "title": "Operations & Logistics Internship - Dobromierz - Start 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10541452/operations-engineering-intern-12-months-start-date-q2-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Operations Engineering Intern -  12 months, start date Q2 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10541467/operations-engineering-intern-3-months-start-date-q2-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Operations Engineering Intern -  3 months, start date Q2 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10541483/operations-engineering-intern-start-date-q1-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Operations Engineering Intern -  start date Q1 2027 "
-  },
   "https://www.amazon.jobs/en/jobs/10541497/operations-engineering-intern-start-date-q1-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-15",
@@ -3898,16 +3818,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-15",
     "title": "Operations Engineering Intern -  start date Q3 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10541508/operations-engineering-intern-start-date-q2-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Operations Engineering Intern -  start date Q2 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10541637/internship-in-operations-rozenburg-start-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Internship in Operations - Rozenburg - Start 2027"
   },
   "https://www.amazon.jobs/en/jobs/10544261/software-developer-intern-field-innovation-security-search-and-observability-sso": {
     "company": "Amazon",
@@ -6583,11 +6493,6 @@
     "company": "USAA",
     "first_seen": "2026-09-22",
     "title": "Infrastructure Engineer Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/life-and-health-underwriter-intern/1207/100665331152": {
-    "company": "USAA",
-    "first_seen": "2026-09-15",
-    "title": "Life and Health Underwriter Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/operations-digital-technical-product-manager-intern/1207/100853777840": {
     "company": "USAA",
