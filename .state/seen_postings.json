@@ -124,6 +124,11 @@
     "first_seen": "2026-09-02",
     "title": "Software Engineer Intern, 2027 Canada"
   },
+  "https://campus.bankofamerica.com/": {
+    "company": "Bank of America",
+    "first_seen": "2026-11-01",
+    "title": "page mentions it: \u201c\u2026may apply to one office and one division per year. If you are declined for the summer program, you can reapply for the Full-Time program the following year.\u2026\u201d"
+  },
   "https://careers-americas.icims.com/jobs/26266/software-engineer-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-01",
@@ -654,11 +659,6 @@
     "first_seen": "2026-10-23",
     "title": "Business Operations & Process Improvement Intern"
   },
-  "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/100721402256": {
-    "company": "Synopsys",
-    "first_seen": "2026-09-16",
-    "title": "Computational Fluid Dynamics(CFD) Internship"
-  },
   "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/100930292816": {
     "company": "Synopsys",
     "first_seen": "2026-09-21",
@@ -828,11 +828,6 @@
     "company": "Apple",
     "first_seen": "2026-09-18",
     "title": "Product Design Engineering Intern-Watch"
-  },
-  "https://jobs.apple.com/en-us/details/200683720": {
-    "company": "Apple",
-    "first_seen": "2026-09-16",
-    "title": "Instrument Hardware Develop Intern"
   },
   "https://jobs.apple.com/en-us/details/200684057": {
     "company": "Apple",
@@ -1229,11 +1224,6 @@
     "first_seen": "2026-10-13",
     "title": "Engineering Internship"
   },
-  "https://jobs.boeing.com/job/bristol/commercial-intern-12-months-placement/185/100464592448": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Commercial Intern- 12 Months Placement"
-  },
   "https://jobs.boeing.com/job/bristol/finance-intern-12-months-placement/185/100464594192": {
     "company": "Boeing",
     "first_seen": "2026-10-31",
@@ -1314,11 +1304,6 @@
     "first_seen": "2026-09-21",
     "title": "Boeing Summer 2027 Internship Program (Paid) - Supply Chain"
   },
-  "https://jobs.boeing.com/job/farnborough/aerodynamics-engineering-intern-summer-2027/185/100464594160": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Aerodynamics Engineering Intern- Summer 2027"
-  },
   "https://jobs.boeing.com/job/frimley/pmo-analyst-intern-12-month-placement/185/100464600704": {
     "company": "Boeing",
     "first_seen": "2026-10-31",
@@ -1329,11 +1314,6 @@
     "first_seen": "2026-10-31",
     "title": "Program Management Intern- 12 Month Placement"
   },
-  "https://jobs.boeing.com/job/gosport/commercial-intern/185/100464597904": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Commercial Intern"
-  },
   "https://jobs.boeing.com/job/gosport/supply-chain-management-intern-vertical-lift-12-month-placement/185/100464598128": {
     "company": "Boeing",
     "first_seen": "2026-10-31",
@@ -1343,21 +1323,6 @@
     "company": "Boeing",
     "first_seen": "2026-09-22",
     "title": "Supply Chain Intern"
-  },
-  "https://jobs.boeing.com/job/prestwick/engineering-intern-summer-2027/185/100464595792": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Engineering Intern - Summer 2027"
-  },
-  "https://jobs.boeing.com/job/prestwick/project-management-intern-summer-2027/185/100464595360": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Project Management Intern- Summer 2027"
-  },
-  "https://jobs.boeing.com/job/prestwick/research-and-technology-intern-summer-2027/185/100464595744": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Research and Technology Intern- Summer 2027"
   },
   "https://jobs.boeing.com/job/richmond/analytics-business-operations-intern-commercial-services/185/101992086240": {
     "company": "Boeing",
@@ -1408,11 +1373,6 @@
     "company": "Boeing",
     "first_seen": "2026-10-31",
     "title": "Support Engineering Data Intern- 12 Month Placement"
-  },
-  "https://jobs.boeing.com/job/welwyn-garden-city/support-engineering-data-intern-summer-2027/185/100479461024": {
-    "company": "Boeing",
-    "first_seen": "2026-09-11",
-    "title": "Support Engineering Data Intern- Summer 2027"
   },
   "https://jobs.boeing.com/job/wichita/boeing-wichita-summer-2027-internship-program-paid-environment-health-safety-and-sustainability/185/102255155760": {
     "company": "Boeing",
@@ -1473,11 +1433,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, Los Angeles\u2013 USA, 2027"
-  },
-  "https://jobs.citi.com/job/bogota/banking-corporate-baking-internship-bogota-colombia-2027/287/100683557456": {
-    "company": "Citibank",
-    "first_seen": "2026-09-16",
-    "title": "Banking \u2013 Corporate Baking, Internship, Bogot\u00e1 \u2013 Colombia, 2027"
   },
   "https://jobs.citi.com/job/bogota/banking-corporate-baking-internship-bogota-colombia-2027/287/102161053584": {
     "company": "Citibank",
@@ -1583,11 +1538,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Banking, Corporate Banking, Placement Analyst Internship, Frankfurt - Germany 2027"
-  },
-  "https://jobs.citi.com/job/frankfurt-am-main/banking-debt-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/100709897024": {
-    "company": "Citibank",
-    "first_seen": "2026-09-16",
-    "title": "Banking, Debt Capital Markets, Placement Analyst Internship, Frankfurt - Germany 2027"
   },
   "https://jobs.citi.com/job/frankfurt-am-main/banking-debt-capital-markets-placement-analyst-internship-frankfurt-germany-2027/287/102161080288": {
     "company": "Citibank",
@@ -1803,11 +1753,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Wealth \u2013 Summer Analyst, New York \u2013 USA, 2027"
-  },
-  "https://jobs.citi.com/job/paris/banking-corporate-banking-financial-institutions-group-fig-placement-analyst-internship-paris-franc/287/100709896848": {
-    "company": "Citibank",
-    "first_seen": "2026-09-16",
-    "title": "Banking, Corporate Banking, Financial Institutions Group (FIG), Placement Analyst Internship, Paris - France 2027"
   },
   "https://jobs.citi.com/job/paris/banking-corporate-banking-financial-institutions-group-fig-placement-analyst-internship-paris-franc/287/102161080304": {
     "company": "Citibank",
@@ -2093,11 +2038,6 @@
     "company": "Citizens Financial Group",
     "first_seen": "2026-09-22",
     "title": "2027 Summer Analyst \u2013 Sales & Trading and Equity Research (Boston, MA)"
-  },
-  "https://jobs.citizensbank.com/job/johnston/internal-audit-internship-2027/288/100674381440": {
-    "company": "Citizens Financial Group",
-    "first_seen": "2026-09-16",
-    "title": "Internal Audit Internship 2027"
   },
   "https://jobs.citizensbank.com/job/new-york/2027-summer-analyst-sales-and-trading-and-equity-research-new-york-ny/288/100995739232": {
     "company": "Citizens Financial Group",
@@ -2499,11 +2439,6 @@
     "first_seen": "2026-09-29",
     "title": "Summer 2027: Product Marketing MBA Intern, FinTech Lending"
   },
-  "https://jobs.intuit.com/job/toronto/winter-2027-event-marketing-coordinator-co-op-4-months/27595/100738961648": {
-    "company": "Intuit",
-    "first_seen": "2026-09-16",
-    "title": "Winter 2027: Event Marketing Coordinator Co-op (4 months)"
-  },
   "https://jobs.intuit.com/job/toronto/winter-2027-marketing-and-design-research-co-op-8-months/27595/101043377760": {
     "company": "Intuit",
     "first_seen": "2026-09-23",
@@ -2573,16 +2508,6 @@
     "company": "Arista Networks",
     "first_seen": "2026-09-11",
     "title": "Intern Software Engineer - C/C++"
-  },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000149958879": {
-    "company": "Arista Networks",
-    "first_seen": "2026-09-16",
-    "title": "Software Engineer Intern 2026/2027"
-  },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000149959399": {
-    "company": "Arista Networks",
-    "first_seen": "2026-09-16",
-    "title": "Network Engineer - Test (Intern) "
   },
   "https://jobs.smartrecruiters.com/aristanetworks/744000151659973": {
     "company": "Arista Networks",
@@ -3034,45 +2959,15 @@
     "first_seen": "2026-09-03",
     "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Frankfurt"
   },
-  "https://search.jobs.barclays/job/glasgow/2027-compliance-analyst-summer-internship-programme-glasgow/13015/100411085024": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Compliance Analyst Summer Internship Programme Glasgow"
-  },
   "https://search.jobs.barclays/job/glasgow/2027-customer-and-digital-data-and-analytics-summer-internship-programme-glasgow/13015/100411086672": {
     "company": "Barclays",
     "first_seen": "2026-09-09",
     "title": "2027 Customer and Digital - Data and Analytics Summer Internship Programme Glasgow"
   },
-  "https://search.jobs.barclays/job/glasgow/2027-human-resources-analyst-summer-internship-programme-glasgow/13015/100411085248": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Human Resources Analyst Summer Internship Programme Glasgow"
-  },
   "https://search.jobs.barclays/job/glasgow/2027-operations-analyst-summer-internship-programme-glasgow/13015/101604347008": {
     "company": "Barclays",
     "first_seen": "2026-10-06",
     "title": "2027 Operations Analyst Summer Internship Programme Glasgow"
-  },
-  "https://search.jobs.barclays/job/glasgow/2027-risk-analyst-summer-internship-programme-glasgow/13015/100411084768": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Risk Analyst Summer Internship Programme Glasgow"
-  },
-  "https://search.jobs.barclays/job/glasgow/2027-technology-analyst-summer-internship-programme-glasgow/13015/100411086864": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Analyst Summer Internship Programme Glasgow"
-  },
-  "https://search.jobs.barclays/job/glasgow/2027-technology-developer-summer-internship-programme-glasgow/13015/100411087072": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Developer Summer Internship Programme Glasgow"
-  },
-  "https://search.jobs.barclays/job/greater-manchester/2027-retail-business-and-customer-banking-summer-internship-programme-manchester/13015/100411085920": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Manchester"
   },
   "https://search.jobs.barclays/job/hong-kong/electronic-trading-associate-summer-internship-programme-2027-hong-kong/13015/97173677472": {
     "company": "Barclays",
@@ -3089,80 +2984,10 @@
     "first_seen": "2026-09-01",
     "title": "Banking Associate Summer Internship Program 2027 Houston"
   },
-  "https://search.jobs.barclays/job/knutsford/2027-internal-audit-analyst-summer-internship-programme-knutsford/13015/100411086784": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Internal Audit Analyst Summer Internship Programme Knutsford"
-  },
   "https://search.jobs.barclays/job/knutsford/2027-operations-analyst-summer-internship-programme-knutsford/13015/101604346208": {
     "company": "Barclays",
     "first_seen": "2026-10-06",
     "title": "2027 Operations Analyst Summer Internship Programme Knutsford"
-  },
-  "https://search.jobs.barclays/job/knutsford/2027-retail-business-and-customer-banking-summer-internship-programme-knutsford/13015/100411085744": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Knutsford"
-  },
-  "https://search.jobs.barclays/job/knutsford/2027-technology-analyst-summer-internship-programme-knutsford/13015/100411086464": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Analyst Summer Internship Programme Knutsford"
-  },
-  "https://search.jobs.barclays/job/knutsford/2027-technology-cyber-and-security-summer-internship-programme-knutsford/13015/100411085584": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Cyber and Security Summer Internship Programme Knutsford"
-  },
-  "https://search.jobs.barclays/job/knutsford/2027-technology-developer-summer-internship-programme-knutsford/13015/100411086320": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Developer Summer Internship Programme Knutsford"
-  },
-  "https://search.jobs.barclays/job/london/2027-compliance-analyst-summer-internship-programme-london/13015/100411084912": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Compliance Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-customer-and-digital-data-and-analytics-summer-internship-programme-london/13015/100411086528": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Customer and Digital - Data and Analytics Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-finance-analyst-summer-internship-programme-london/13015/100411085872": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Finance Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-human-resources-analyst-summer-internship-programme-london/13015/100411085504": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Human Resources Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-internal-audit-analyst-summer-internship-programme-london/13015/100411087152": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Internal Audit Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-marketing-analyst-summer-internship-programme-london/13015/100411086608": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Marketing Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-operations-analyst-summer-internship-programme-london/13015/100411086240": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Operations Analyst Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-retail-business-and-customer-banking-summer-internship-programme-london/13015/100411085952": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme London"
-  },
-  "https://search.jobs.barclays/job/london/2027-technology-analyst-summer-internship-programme-london/13015/100411086752": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Analyst Summer Internship Programme London"
   },
   "https://search.jobs.barclays/job/london/client-data-and-engineering-group-summer-internship-programme-2027-london/13015/102040060528": {
     "company": "Barclays",
@@ -3228,21 +3053,6 @@
     "company": "Barclays",
     "first_seen": "2026-10-02",
     "title": "Quantitative Finance Associate Summer Internship Program 2027 New York"
-  },
-  "https://search.jobs.barclays/job/northampton/2027-retail-business-and-customer-banking-summer-internship-programme-northampton/13015/100411084960": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Northampton"
-  },
-  "https://search.jobs.barclays/job/northampton/2027-technology-analyst-summer-internship-programme-northampton/13015/100411085136": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Analyst Summer Internship Programme Northampton"
-  },
-  "https://search.jobs.barclays/job/northampton/2027-technology-developer-summer-internship-programme-northampton/13015/100411087040": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Technology Developer Summer Internship Programme Northampton"
   },
   "https://search.jobs.barclays/job/paris/capital-markets-off-cycle-internship-programme-2027-paris/13015/101434536688": {
     "company": "Barclays",
@@ -3868,11 +3678,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-16",
     "title": "2027 Area Manager Intern, Amazon Operations"
-  },
-  "https://www.amazon.jobs/en/jobs/10544726/business-developer-intern-2027-6-months": {
-    "company": "Amazon",
-    "first_seen": "2026-09-16",
-    "title": "Business Developer Intern - 2027 - 6 months"
   },
   "https://www.amazon.jobs/en/jobs/10550494/solutions-architect-intern-awsi-2027": {
     "company": "Amazon",
@@ -6513,11 +6318,6 @@
     "company": "USAA",
     "first_seen": "2026-10-09",
     "title": "Actuarial Analyst Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/associate-attorney-intern-legal-and-advisory-services/1207/100641665184": {
-    "company": "USAA",
-    "first_seen": "2026-09-16",
-    "title": "Associate Attorney Intern - Legal & Advisory Services"
   },
   "https://www.usaajobs.com/job/san-antonio/bank-credit-risk-analyst-intern/1207/102331284224": {
     "company": "USAA",
