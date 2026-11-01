@@ -124,11 +124,6 @@
     "first_seen": "2026-09-02",
     "title": "Software Engineer Intern, 2027 Canada"
   },
-  "https://campus.bankofamerica.com/": {
-    "company": "Bank of America",
-    "first_seen": "2026-07-12",
-    "title": "page mentions it: \u201c\u2026may apply to one office and one division per year. If you are declined for the summer program, you can reapply for the Full-Time program the following year.\u2026\u201d"
-  },
   "https://careers-americas.icims.com/jobs/26266/software-engineer-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-01",
@@ -1239,6 +1234,36 @@
     "first_seen": "2026-09-11",
     "title": "Commercial Intern- 12 Months Placement"
   },
+  "https://jobs.boeing.com/job/bristol/finance-intern-12-months-placement/185/100464594192": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Finance Intern - 12 Months Placement"
+  },
+  "https://jobs.boeing.com/job/bristol/finance-intern-accounting-12-month-placement/185/100464595120": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Finance Intern (Accounting) - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/bristol/human-resources-services-specialist-intern-12-months-placement/185/100464600672": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Human Resources Services Specialist Intern - 12 Months Placement"
+  },
+  "https://jobs.boeing.com/job/bristol/supply-chain-management-intern-fixed-wing-12-month-placement/185/100464598192": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Supply Chain Management Intern (Fixed Wing) - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/bristol/talent-acquisition-intern-12-month-placement/185/100485360496": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Talent Acquisition Intern - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/crawley/simulator-engineering-intern-12-month-placement/185/100464597232": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Simulator Engineering Intern - 12 Month Placement"
+  },
   "https://jobs.boeing.com/job/england/facilities-management-intern-summer-2027/185/101620587296": {
     "company": "Boeing",
     "first_seen": "2026-10-06",
@@ -1294,10 +1319,25 @@
     "first_seen": "2026-09-11",
     "title": "Aerodynamics Engineering Intern- Summer 2027"
   },
+  "https://jobs.boeing.com/job/frimley/pmo-analyst-intern-12-month-placement/185/100464600704": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "PMO Analyst Intern - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/frimley/program-management-intern-12-month-placement/185/100464594288": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Program Management Intern- 12 Month Placement"
+  },
   "https://jobs.boeing.com/job/gosport/commercial-intern/185/100464597904": {
     "company": "Boeing",
     "first_seen": "2026-09-11",
     "title": "Commercial Intern"
+  },
+  "https://jobs.boeing.com/job/gosport/supply-chain-management-intern-vertical-lift-12-month-placement/185/100464598128": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Supply Chain Management Intern (Vertical Lift) - 12 Month Placement"
   },
   "https://jobs.boeing.com/job/port-melbourne/supply-chain-intern/185/100966663856": {
     "company": "Boeing",
@@ -1363,6 +1403,11 @@
     "company": "Boeing",
     "first_seen": "2026-10-08",
     "title": "Boeing - Tulsa Summer 2027 Internship Program (Paid) - Facilities Project Management"
+  },
+  "https://jobs.boeing.com/job/welwyn-garden-city/support-engineering-data-intern-12-month-placement/185/100464596464": {
+    "company": "Boeing",
+    "first_seen": "2026-10-31",
+    "title": "Support Engineering Data Intern- 12 Month Placement"
   },
   "https://jobs.boeing.com/job/welwyn-garden-city/support-engineering-data-intern-summer-2027/185/100479461024": {
     "company": "Boeing",
@@ -3219,20 +3264,10 @@
     "first_seen": "2026-09-01",
     "title": "Banking Associate Summer Internship Program 2027 San Francisco"
   },
-  "https://search.jobs.barclays/job/singapore/private-bank-and-wealth-management-summer-internship-programme-2027-singapore/13015/97173677712": {
-    "company": "Barclays",
-    "first_seen": "2026-08-05",
-    "title": "Private Bank and Wealth Management Summer Internship Programme 2027 Singapore"
-  },
   "https://search.jobs.barclays/job/singapore/quantitative-analytics-associate-off-cycle-internship-2027-singapore/13015/97173677440": {
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Quantitative Analytics Associate Off Cycle Internship 2027 Singapore"
-  },
-  "https://search.jobs.barclays/job/singapore/research-analyst-summer-internship-programme-2027-singapore/13015/97173678304": {
-    "company": "Barclays",
-    "first_seen": "2026-08-05",
-    "title": "Research Analyst Summer Internship Programme 2027 Singapore"
   },
   "https://search.jobs.barclays/job/tel-aviv/banking-off-cycle-internship-programme-2027-tel-aviv/13015/100032501216": {
     "company": "Barclays",
