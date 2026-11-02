@@ -604,6 +604,11 @@
     "first_seen": "2026-10-21",
     "title": "Formal Verification Internship"
   },
+  "https://careers.synopsys.com/job/bengaluru/formal-verification-internship/44408/102756615200": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-02",
+    "title": "Formal Verification Internship"
+  },
   "https://careers.synopsys.com/job/da-nang/technical-engineering-intern-ai-research-and-development-internship/44408/102279058288": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
@@ -754,11 +759,6 @@
     "first_seen": "2026-08-14",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
-  "https://jobs.apple.com/en-us/details/200676908": {
-    "company": "Apple",
-    "first_seen": "2026-09-17",
-    "title": "PhD Intern, Machine Learning: MSI, Product Operations Team"
-  },
   "https://jobs.apple.com/en-us/details/200681391": {
     "company": "Apple",
     "first_seen": "2026-09-19",
@@ -828,16 +828,6 @@
     "company": "Apple",
     "first_seen": "2026-09-18",
     "title": "Product Design Engineering Intern-Watch"
-  },
-  "https://jobs.apple.com/en-us/details/200684057": {
-    "company": "Apple",
-    "first_seen": "2026-09-17",
-    "title": "Apple Pay Business Development Intern, eCommerce, Japan"
-  },
-  "https://jobs.apple.com/en-us/details/200684438": {
-    "company": "Apple",
-    "first_seen": "2026-09-17",
-    "title": "SoC Physical Design Intern (m/f/d)"
   },
   "https://jobs.apple.com/en-us/details/200684585": {
     "company": "Apple",
@@ -1169,6 +1159,11 @@
     "first_seen": "2026-10-26",
     "title": "Engineering Program Manager (EPM) Intern"
   },
+  "https://jobs.apple.com/en-us/details/200691801": {
+    "company": "Apple",
+    "first_seen": "2026-11-02",
+    "title": "Generative AI Research Intern - Image-to-Video Diffusion"
+  },
   "https://jobs.apple.com/en-us/details/200691892": {
     "company": "Apple",
     "first_seen": "2026-10-30",
@@ -1199,6 +1194,11 @@
     "first_seen": "2026-10-30",
     "title": "GCR Intern, Client Strategist, Apple Ads Sales"
   },
+  "https://jobs.apple.com/en-us/details/200692415": {
+    "company": "Apple",
+    "first_seen": "2026-11-02",
+    "title": "Finance Data Analyst Intern (6-month Full-time)"
+  },
   "https://jobs.apple.com/en-us/details/200692438": {
     "company": "Apple",
     "first_seen": "2026-10-29",
@@ -1208,6 +1208,16 @@
     "company": "Apple",
     "first_seen": "2026-10-30",
     "title": "Technical Internship - Apple Wallet, Payments & Commerce "
+  },
+  "https://jobs.apple.com/en-us/details/200692642": {
+    "company": "Apple",
+    "first_seen": "2026-11-02",
+    "title": " Internship -  Machine Learning Research (recurrent models | generative models |  interpretability)"
+  },
+  "https://jobs.apple.com/en-us/details/200692868": {
+    "company": "Apple",
+    "first_seen": "2026-11-02",
+    "title": "AI Research Intern - Foundation Models & Multimodal Intelligence"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -1524,11 +1534,6 @@
     "first_seen": "2026-10-22",
     "title": "Banking, Corporate Banking, Summer Analyst, Dublin - Ireland, 2027"
   },
-  "https://jobs.citi.com/job/dublin/services-full-time-analyst-ireland-dublin-2027-2026-summer-intern-converts-only/287/100771374000": {
-    "company": "Citibank",
-    "first_seen": "2026-09-17",
-    "title": "Services - Full-Time Analyst, Ireland - Dublin, 2027 (2026 Summer Intern Converts Only)"
-  },
   "https://jobs.citi.com/job/dublin/services-full-time-analyst-ireland-dublin-2027-2026-summer-intern-converts-only/287/102161055120": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1654,6 +1659,11 @@
     "first_seen": "2026-10-19",
     "title": "Banking, Investment Banking, Real Estate, Summer Analyst, London, United Kingdom 2027"
   },
+  "https://jobs.citi.com/job/london/banking-investment-banking-summer-analyst-london-united-kingdom-2027/287/100315643136": {
+    "company": "Citibank",
+    "first_seen": "2026-11-02",
+    "title": "Banking, Investment Banking, Summer Analyst, London \u2013 United Kingdom 2027"
+  },
   "https://jobs.citi.com/job/london/client-citi-research-summer-analyst-london-united-kingdom-2027/287/101749496560": {
     "company": "Citibank",
     "first_seen": "2026-10-09",
@@ -1673,11 +1683,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Markets \u2013 Sales and Trading, Summer Analyst, London \u2013 United Kingdom, 2027"
-  },
-  "https://jobs.citi.com/job/london/services-full-time-analyst-uk-london-2027-2026-summer-intern-converts-only/287/100771374032": {
-    "company": "Citibank",
-    "first_seen": "2026-09-17",
-    "title": "Services - Full-Time Analyst, UK - London, 2027 (2026 Summer Intern Converts Only)"
   },
   "https://jobs.citi.com/job/london/services-full-time-analyst-uk-london-2027-2026-summer-intern-converts-only/287/102161054944": {
     "company": "Citibank",
@@ -2164,80 +2169,40 @@
     "first_seen": "2026-10-23",
     "title": "U.S. Strategy Intern - Summer 2027"
   },
-  "https://jobs.genpt.com/job/birmingham/agile-pmo-intern/505/100757496160": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Agile PMO Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/agile-pmo-intern/505/101313139776": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Agile PMO Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/cloud-developer-intern/505/100757496224": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Cloud Developer Intern"
   },
   "https://jobs.genpt.com/job/birmingham/cloud-developer-intern/505/101313139840": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Cloud Developer Intern"
   },
-  "https://jobs.genpt.com/job/birmingham/customer-software-development-intern/505/100757496320": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Customer Software Development Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/customer-software-development-intern/505/101313139936": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Customer Software Development Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/enterprise-intelligence-intern/505/100757496256": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Enterprise Intelligence Intern"
   },
   "https://jobs.genpt.com/job/birmingham/enterprise-intelligence-intern/505/101313139872": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Enterprise Intelligence Intern"
   },
-  "https://jobs.genpt.com/job/birmingham/grc-cybersecurity-analyst-intern/505/100757496240": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "GRC/Cybersecurity Analyst Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/grc-cybersecurity-analyst-intern/505/101313139856": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "GRC/Cybersecurity Analyst Intern"
-  },
-  "https://jobs.genpt.com/job/birmingham/software-developer-intern/505/100757496176": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Software Developer Intern"
   },
   "https://jobs.genpt.com/job/birmingham/software-developer-intern/505/101313139792": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Software Developer Intern"
   },
-  "https://jobs.genpt.com/job/birmingham/web-developer-intern/505/100757496288": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Web Developer Intern"
-  },
   "https://jobs.genpt.com/job/birmingham/web-developer-intern/505/101313139904": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-09-29",
     "title": "Web Developer Intern"
-  },
-  "https://jobs.genpt.com/job/houston/sales-intern/505/100757496352": {
-    "company": "Genuine Parts Company",
-    "first_seen": "2026-09-17",
-    "title": "Sales Intern"
   },
   "https://jobs.genpt.com/job/houston/sales-intern/505/101313139968": {
     "company": "Genuine Parts Company",
@@ -2588,11 +2553,6 @@
     "company": "ServiceNow",
     "first_seen": "2026-10-29",
     "title": "Intern \u2013 Business Development Representative (German, Dutch, Arabic OR Nordic Languages)"
-  },
-  "https://jobs.smartrecruiters.com/ubisoft2/744000150164374": {
-    "company": "Ubisoft",
-    "first_seen": "2026-09-17",
-    "title": "Esports Communication Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000150318681": {
     "company": "Ubisoft",
@@ -2964,15 +2924,35 @@
     "first_seen": "2026-09-03",
     "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Frankfurt"
   },
+  "https://search.jobs.barclays/job/glasgow/2027-compliance-analyst-summer-internship-programme-glasgow/13015/100411085024": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Compliance Analyst Summer Internship Programme Glasgow"
+  },
   "https://search.jobs.barclays/job/glasgow/2027-customer-and-digital-data-and-analytics-summer-internship-programme-glasgow/13015/100411086672": {
     "company": "Barclays",
     "first_seen": "2026-09-09",
     "title": "2027 Customer and Digital - Data and Analytics Summer Internship Programme Glasgow"
   },
+  "https://search.jobs.barclays/job/glasgow/2027-human-resources-analyst-summer-internship-programme-glasgow/13015/100411085248": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Human Resources Analyst Summer Internship Programme Glasgow"
+  },
   "https://search.jobs.barclays/job/glasgow/2027-operations-analyst-summer-internship-programme-glasgow/13015/101604347008": {
     "company": "Barclays",
     "first_seen": "2026-10-06",
     "title": "2027 Operations Analyst Summer Internship Programme Glasgow"
+  },
+  "https://search.jobs.barclays/job/glasgow/2027-technology-developer-summer-internship-programme-glasgow/13015/100411087072": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Developer Summer Internship Programme Glasgow"
+  },
+  "https://search.jobs.barclays/job/greater-manchester/2027-retail-business-and-customer-banking-summer-internship-programme-manchester/13015/100411085920": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Manchester"
   },
   "https://search.jobs.barclays/job/hong-kong/electronic-trading-associate-summer-internship-programme-2027-hong-kong/13015/97173677472": {
     "company": "Barclays",
@@ -2994,6 +2974,51 @@
     "first_seen": "2026-10-06",
     "title": "2027 Operations Analyst Summer Internship Programme Knutsford"
   },
+  "https://search.jobs.barclays/job/knutsford/2027-retail-business-and-customer-banking-summer-internship-programme-knutsford/13015/100411085744": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Knutsford"
+  },
+  "https://search.jobs.barclays/job/knutsford/2027-technology-analyst-summer-internship-programme-knutsford/13015/100411086464": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Analyst Summer Internship Programme Knutsford"
+  },
+  "https://search.jobs.barclays/job/knutsford/2027-technology-cyber-and-security-summer-internship-programme-knutsford/13015/100411085584": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Cyber and Security Summer Internship Programme Knutsford"
+  },
+  "https://search.jobs.barclays/job/knutsford/2027-technology-developer-summer-internship-programme-knutsford/13015/100411086320": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Developer Summer Internship Programme Knutsford"
+  },
+  "https://search.jobs.barclays/job/london/2027-compliance-analyst-summer-internship-programme-london/13015/100411084912": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Compliance Analyst Summer Internship Programme London"
+  },
+  "https://search.jobs.barclays/job/london/2027-customer-and-digital-data-and-analytics-summer-internship-programme-london/13015/100411086528": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Customer and Digital - Data and Analytics Summer Internship Programme London"
+  },
+  "https://search.jobs.barclays/job/london/2027-operations-analyst-summer-internship-programme-london/13015/100411086240": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Operations Analyst Summer Internship Programme London"
+  },
+  "https://search.jobs.barclays/job/london/2027-technology-analyst-summer-internship-programme-london/13015/100411086752": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Analyst Summer Internship Programme London"
+  },
+  "https://search.jobs.barclays/job/london/2027-technology-developer-summer-internship-programme-london/13015/100411086928": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Developer Summer Internship Programme London"
+  },
   "https://search.jobs.barclays/job/london/client-data-and-engineering-group-summer-internship-programme-2027-london/13015/102040060528": {
     "company": "Barclays",
     "first_seen": "2026-10-16",
@@ -3004,11 +3029,6 @@
     "first_seen": "2026-09-01",
     "title": "International Corporate Banking Summer Internship Programme 2027 London"
   },
-  "https://search.jobs.barclays/job/london/investing-and-lending-summer-internship-programme-2027-london/13015/100032500496": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "Investing and Lending Summer Internship Programme 2027 London"
-  },
   "https://search.jobs.barclays/job/london/quantitative-finance-associate-off-cycle-internship-programme-2027-london/13015/100174976080": {
     "company": "Barclays",
     "first_seen": "2026-09-04",
@@ -3018,6 +3038,11 @@
     "company": "Barclays",
     "first_seen": "2026-09-09",
     "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 London"
+  },
+  "https://search.jobs.barclays/job/london/sustainable-finance-summer-internship-programme-2027-london/13015/102759066416": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "Sustainable Finance Summer Internship Programme 2027 London"
   },
   "https://search.jobs.barclays/job/london/uk-corporate-banking-summer-internship-programme-2027-london/13015/100032501088": {
     "company": "Barclays",
@@ -3058,6 +3083,21 @@
     "company": "Barclays",
     "first_seen": "2026-10-02",
     "title": "Quantitative Finance Associate Summer Internship Program 2027 New York"
+  },
+  "https://search.jobs.barclays/job/northampton/2027-retail-business-and-customer-banking-summer-internship-programme-northampton/13015/100411084960": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Retail, Business and Customer Banking Summer Internship Programme Northampton"
+  },
+  "https://search.jobs.barclays/job/northampton/2027-technology-analyst-summer-internship-programme-northampton/13015/100411085136": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Analyst Summer Internship Programme Northampton"
+  },
+  "https://search.jobs.barclays/job/northampton/2027-technology-developer-summer-internship-programme-northampton/13015/100411087040": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "2027 Technology Developer Summer Internship Programme Northampton"
   },
   "https://search.jobs.barclays/job/paris/capital-markets-off-cycle-internship-programme-2027-paris/13015/101434536688": {
     "company": "Barclays",
@@ -3569,6 +3609,11 @@
     "first_seen": "2026-09-08",
     "title": "Business Strategy & Execution Operations Engineering Intern Spring and Summer 2027 (Bellevue, WA )"
   },
+  "https://www.amazon.jobs/en/jobs/10532883/data-center-infrastructure-engineer-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "Data Center Infrastructure Engineer Internship 2027"
+  },
   "https://www.amazon.jobs/en/jobs/10533938/public-policy-manager-intern-q3-2027-eu-public-policy-team": {
     "company": "Amazon",
     "first_seen": "2026-09-09",
@@ -3719,16 +3764,6 @@
     "first_seen": "2026-09-17",
     "title": "Account Representative Intern 6 months - French Speaker"
   },
-  "https://www.amazon.jobs/en/jobs/10552012/construction-manager-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-17",
-    "title": " Construction Manager Intern (6 months) - 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10552039/business-developer-intern-2027-12-months-amazon-university-talent-acquisition": {
-    "company": "Amazon",
-    "first_seen": "2026-09-17",
-    "title": "Business Developer Intern - 2027 - 12 Months, Amazon University Talent Acquisition"
-  },
   "https://www.amazon.jobs/en/jobs/10552511/operations-intern-merida-auta": {
     "company": "Amazon",
     "first_seen": "2026-09-17",
@@ -3744,11 +3779,6 @@
     "first_seen": "2026-09-17",
     "title": "Operations Intern - NLE, AUTA"
   },
-  "https://www.amazon.jobs/en/jobs/10552634/construction-manager-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-17",
-    "title": " Construction Manager Intern (6 months) - 2027"
-  },
   "https://www.amazon.jobs/en/jobs/10552930/2027-applied-science-internship-automated-reasoning-united-states-phd-student-science-recruiting-automated-reasoning": {
     "company": "Amazon",
     "first_seen": "2026-09-17",
@@ -3758,11 +3788,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-18",
     "title": "Software Development Engineer Intern - Summer 2027 (USA)"
-  },
-  "https://www.amazon.jobs/en/jobs/10552937/software-development-engineer-internship-summer-2027-usa": {
-    "company": "Amazon",
-    "first_seen": "2026-09-17",
-    "title": "Software Development Engineer Internship - Summer -2027 (USA)"
   },
   "https://www.amazon.jobs/en/jobs/10553313/construction-manager-intern-6-months-2027": {
     "company": "Amazon",
@@ -4619,6 +4644,11 @@
     "first_seen": "2026-10-05",
     "title": "Data Center Technician - 2027 Internship"
   },
+  "https://www.amazon.jobs/en/jobs/10570135/deu-program-manager-intern-6-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "DEU Program Manager Intern 6 Months - 2027 "
+  },
   "https://www.amazon.jobs/en/jobs/10570135/program-manager-intern-6-months-2027": {
     "company": "Amazon",
     "first_seen": "2026-10-06",
@@ -5119,6 +5149,11 @@
     "first_seen": "2026-10-19",
     "title": "Associate Solutions Architect Internship 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10583592/sales-ops-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "Sales Ops Intern"
+  },
   "https://www.amazon.jobs/en/jobs/10583818/data-center-infrastructure-engineer-internship-2027-uae-nationals": {
     "company": "Amazon",
     "first_seen": "2026-10-20",
@@ -5473,6 +5508,21 @@
     "company": "Amazon",
     "first_seen": "2026-10-30",
     "title": "Amazon Intern Program 2027 | Human Resources - BETIM, MG "
+  },
+  "https://www.amazon.jobs/en/jobs/10594713/associate-engagement-manager-intern-aws-professional-services": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "Associate Engagement Manager Intern, AWS Professional Services"
+  },
+  "https://www.amazon.jobs/en/jobs/10594714/associate-engagement-manager-intern-national-security-aws-professional-services": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "Associate Engagement Manager Intern- National Security, AWS Professional Services "
+  },
+  "https://www.amazon.jobs/en/jobs/10594729/amazon-finance-rotational-program-afrp-accounting-intern-summer-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-02",
+    "title": "Amazon Finance Rotational Program (AFRP) Accounting Intern \u2013 Summer 2027"
   },
   "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
     "company": "Amazon",
@@ -5954,11 +6004,6 @@
     "first_seen": "2026-10-09",
     "title": "page mentions it: \u201c\u2026a, Washington, D.C., Jacksonville, and Los Angeles: Spring (16 weeks, Jan\u2013Apr), Summer (12 weeks, May\u2013Aug), and Fall (16 weeks, Sept\u2013Dec). Learn More \u2192 06 Benefits Ex\u2026\u201d"
   },
-  "https://www.ing.jobs/en/job/amsterdam/internship-financial-institutions-coverage/3121/44736283264": {
-    "company": "ING",
-    "first_seen": "2026-09-17",
-    "title": "Internship \u2013 Financial Institutions Coverage"
-  },
   "https://www.ing.jobs/en/job/amsterdam/internships-equity-capital-markets/3121/46169989120": {
     "company": "ING",
     "first_seen": "2026-10-20",
@@ -6269,25 +6314,20 @@
     "first_seen": "2026-10-26",
     "title": "2027 Human Resources Intern"
   },
-  "https://www.schwabjobs.com/job/westlake/2027-internal-audit-intern/33727/100780867504": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-17",
-    "title": "2027 Internal Audit Intern"
-  },
   "https://www.schwabjobs.com/job/westlake/2027-international-client-services-intern-westlake-only/33727/101274655600": {
     "company": "Charles Schwab",
     "first_seen": "2026-10-13",
     "title": "2027 International Client Services Intern - Westlake Only"
   },
-  "https://www.schwabjobs.com/job/westlake/2027-trading-solutions-intern/33727/100776298656": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-17",
-    "title": "2027 Trading Solutions Intern"
-  },
   "https://www.sealeassociates.com/careers": {
     "company": "Seale & Associates",
     "first_seen": "2026-07-12",
     "title": "page mentions it: \u201c\u2026Students & Graduates Summer Internships We invite ambitious students to our exclusive su\u2026\u201d"
+  },
+  "https://www.shopify.com/careers": {
+    "company": "Shopify",
+    "first_seen": "2026-11-02",
+    "title": "page mentions it: \u201c\u2026ering - GenAI, AI Agent Remote - Americas Apprentice Product Manager - Spring 2027 Remote - Americas Associate General Counsel, Privacy Remote - Americas Associat\u2026\u201d"
   },
   "https://www.smbcgroup.com/americas/careers": {
     "company": "SMBC",
