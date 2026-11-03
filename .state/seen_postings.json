@@ -2469,11 +2469,6 @@
     "first_seen": "2026-08-05",
     "title": "page mentions it: \u201c\u2026\"My Summer Internship showed me that I had the talent to thrive and that I was able to app\u2026\u201d"
   },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000128256979": {
-    "company": "Arista Networks",
-    "first_seen": "2026-08-14",
-    "title": "Internal Audit Intern \u2013 Accounting & Finance"
-  },
   "https://jobs.smartrecruiters.com/aristanetworks/744000149101159": {
     "company": "Arista Networks",
     "first_seen": "2026-09-11",
@@ -2553,6 +2548,11 @@
     "company": "ServiceNow",
     "first_seen": "2026-10-29",
     "title": "Intern \u2013 Business Development Representative (German, Dutch, Arabic OR Nordic Languages)"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000159255618": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-02",
+    "title": "Finance Intern - Undergrad Summer 2027"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000150318681": {
     "company": "Ubisoft",
@@ -2638,11 +2638,6 @@
     "company": "Ubisoft",
     "first_seen": "2026-10-28",
     "title": "Intern IT Technician (6-months contract)"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000134410659": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-14",
-    "title": "Internship - Software Development (Embedded)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134646509": {
     "company": "Western Digital",
@@ -2963,6 +2958,11 @@
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Quantitative Analytics Associate Off Cycle Internship 2027 Hong Kong"
+  },
+  "https://search.jobs.barclays/job/houston/banking-analyst-summer-internship-program-2028-houston/13015/102785736256": {
+    "company": "Barclays",
+    "first_seen": "2026-11-02",
+    "title": "Banking Analyst Summer Internship Program 2028 Houston"
   },
   "https://search.jobs.barclays/job/houston/banking-associate-summer-internship-program-2027-houston/13015/100032502160": {
     "company": "Barclays",
@@ -3728,16 +3728,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-16",
     "title": "2027 Area Manager Intern, Amazon Operations"
-  },
-  "https://www.amazon.jobs/en/jobs/10550494/solutions-architect-intern-awsi-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-16",
-    "title": "Solutions Architect Intern, AWSI - 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10550549/customer-solutions-manager-intern-awsi-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-16",
-    "title": "Customer Solutions Manager Intern, AWSI - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10551506/dc-security-specialist-intern-dc-security": {
     "company": "Amazon",
