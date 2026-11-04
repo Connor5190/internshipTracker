@@ -769,10 +769,10 @@
     "first_seen": "2026-08-14",
     "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
-  "https://jobs.apple.com/en-us/details/200681391": {
+  "https://jobs.apple.com/en-us/details/200675982": {
     "company": "Apple",
-    "first_seen": "2026-09-19",
-    "title": "Engineering Project Manager Intern - Shanghai or Shenzhen"
+    "first_seen": "2026-11-04",
+    "title": "2027 Apple Internship - Information Systems and Technology"
   },
   "https://jobs.apple.com/en-us/details/200681910": {
     "company": "Apple",
@@ -1189,6 +1189,11 @@
     "first_seen": "2026-11-02",
     "title": "AI Research Intern - Foundation Models & Multimodal Intelligence"
   },
+  "https://jobs.apple.com/en-us/details/200692892": {
+    "company": "Apple",
+    "first_seen": "2026-11-04",
+    "title": " Internship - Research Intern, Speech & Language Processing"
+  },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
     "first_seen": "2026-09-21",
@@ -1458,6 +1463,16 @@
     "company": "Citibank",
     "first_seen": "2026-09-23",
     "title": "Finance, Full-Time Analyst, Budapest - Hungary, 2027 - (Applicable for 2026 Citi Summer interns only)"
+  },
+  "https://jobs.citi.com/job/budapest/technology-cybersecurity-summer-analyst-hungary-budapest-2027/287/102849942800": {
+    "company": "Citibank",
+    "first_seen": "2026-11-04",
+    "title": "Technology - Cybersecurity, Summer Analyst, Hungary - Budapest, 2027"
+  },
+  "https://jobs.citi.com/job/budapest/technology-infrastructure-summer-analyst-hungary-budapest-2027/287/102849942720": {
+    "company": "Citibank",
+    "first_seen": "2026-11-04",
+    "title": "Technology - Infrastructure, Summer Analyst, Hungary - Budapest, 2027"
   },
   "https://jobs.citi.com/job/chiyoda/corporate-banking-summer-internship-program-tokyo-japan-2027/287/102161044016": {
     "company": "Citibank",
@@ -1883,6 +1898,11 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Services - Summer Analyst, Singapore, 2027"
+  },
+  "https://jobs.citi.com/job/singapore/technology-application-development-summer-analyst-singapore-2027/287/102841893216": {
+    "company": "Citibank",
+    "first_seen": "2026-11-04",
+    "title": "Technology- Application Development, Summer Analyst, Singapore 2027"
   },
   "https://jobs.citi.com/job/singapore/wealth-citigold-summer-analyst-singapore-2027/287/102161047792": {
     "company": "Citibank",
@@ -2614,6 +2634,11 @@
     "first_seen": "2026-10-28",
     "title": "Intern IT Technician (6-months contract)"
   },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000159636388": {
+    "company": "Ubisoft",
+    "first_seen": "2026-11-04",
+    "title": "Customer Experience Program Manager Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
+  },
   "https://jobs.smartrecruiters.com/westerndigital/744000134646509": {
     "company": "Western Digital",
     "first_seen": "2026-07-12",
@@ -2663,11 +2688,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-12",
     "title": "Summer 2027 Intern - Software Engineering"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000145156358": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-24",
-    "title": "Intern - AI Information Technology (Studying Master's and Bachelor Degree) "
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000145431699": {
     "company": "Western Digital",
@@ -2803,6 +2823,11 @@
     "company": "Western Digital",
     "first_seen": "2026-10-31",
     "title": "Intern \u2013 Manufacturing Engineer (Studying Bachelor or Master's Degree)"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000159562109": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-04",
+    "title": "Internship - Software Development (Embedded)"
   },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
@@ -2993,11 +3018,6 @@
     "company": "Barclays",
     "first_seen": "2026-10-16",
     "title": "Client Data and Engineering Group Summer Internship Programme 2027 London"
-  },
-  "https://search.jobs.barclays/job/london/international-corporate-banking-summer-internship-programme-2027-london/13015/100032500768": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "International Corporate Banking Summer Internship Programme 2027 London"
   },
   "https://search.jobs.barclays/job/london/quantitative-finance-associate-off-cycle-internship-programme-2027-london/13015/100174976080": {
     "company": "Barclays",
@@ -3713,6 +3733,11 @@
     "company": "Amazon",
     "first_seen": "2026-09-17",
     "title": "Account Representative Intern 6 months - French Speaker"
+  },
+  "https://www.amazon.jobs/en/jobs/10551936/solutions-architect-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-04",
+    "title": "Solutions Architect Internship 2027"
   },
   "https://www.amazon.jobs/en/jobs/10552511/operations-intern-merida-auta": {
     "company": "Amazon",
@@ -5364,6 +5389,11 @@
     "first_seen": "2026-10-29",
     "title": "HW Commodity Specialist Intern, Data Center Sourcing and Procurement"
   },
+  "https://www.amazon.jobs/en/jobs/10592018/2028-2029-graduates-non-tech-program-manager-internship-amazon-japan": {
+    "company": "Amazon",
+    "first_seen": "2026-11-04",
+    "title": "\u30102028 & 2029 Graduates\uff0fNon-Tech\u3011Program Manager Internship - Amazon Japan "
+  },
   "https://www.amazon.jobs/en/jobs/10592089/public-policy-manager-intern-q2-2027-eu-public-policy-team": {
     "company": "Amazon",
     "first_seen": "2026-10-29",
@@ -5469,10 +5499,20 @@
     "first_seen": "2026-11-03",
     "title": "SLAM / Computer Vision Intern, RIVR"
   },
-  "https://www.amazon.jobs/en/jobs/3120598/software-development-intern-intech": {
+  "https://www.amazon.jobs/en/jobs/10596307/program-manager-intern-aws-cloud-logistics": {
     "company": "Amazon",
-    "first_seen": "2026-08-14",
-    "title": "Software Development Intern, Intech"
+    "first_seen": "2026-11-04",
+    "title": "Program Manager Intern, AWS Cloud Logistics"
+  },
+  "https://www.amazon.jobs/en/jobs/10596377/2027-applied-scientist-internship-masters-amazon-university-talent-acquisition": {
+    "company": "Amazon",
+    "first_seen": "2026-11-04",
+    "title": "2027 Applied Scientist Internship \u2013 Masters, Amazon University Talent Acquisition"
+  },
+  "https://www.amazon.jobs/en/jobs/10596552/mba-pathways-mexico-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-04",
+    "title": "MBA Pathways Mexico Intern 2027"
   },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
@@ -5578,6 +5618,11 @@
     "company": "Google",
     "first_seen": "2026-10-02",
     "title": "Data Center Facilities Technician Intern, 2027"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/102906012280726214-silicon-manufacturing-intern-2027": {
+    "company": "Google",
+    "first_seen": "2026-11-04",
+    "title": "Silicon Manufacturing Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/103082311292986054-data-center-technician-intern-2027": {
     "company": "Google",
@@ -6283,11 +6328,6 @@
     "company": "USAA",
     "first_seen": "2026-09-22",
     "title": "Infrastructure Engineer Intern"
-  },
-  "https://www.usaajobs.com/job/san-antonio/operations-digital-technical-product-manager-intern/1207/100853777840": {
-    "company": "USAA",
-    "first_seen": "2026-09-19",
-    "title": "Operations \u2013 Digital/Technical Product Manager Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/product-management-advisor-intern/1207/101717926432": {
     "company": "USAA",
