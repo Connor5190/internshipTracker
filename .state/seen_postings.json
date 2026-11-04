@@ -159,6 +159,16 @@
     "first_seen": "2026-09-22",
     "title": "Customer Engagement Marketing Intern, 2027 Summer U.S."
   },
+  "https://careers-americas.icims.com/jobs/27223/social-media-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-11-03",
+    "title": "Social Media Intern, 2027 Summer U.S."
+  },
+  "https://careers-americas.icims.com/jobs/27474/digital-asset-management-%28dam%29-operations-intern%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-11-03",
+    "title": "Digital Asset Management (DAM) Operations Intern, 2027 Summer U.S."
+  },
   "https://careers.aflac.com/job/2027-Global-Investments-%28NY%29-Private-Credit-Intern-NY/1443294100/": {
     "company": "Aflac",
     "first_seen": "2026-10-26",
@@ -1024,6 +1034,11 @@
     "first_seen": "2026-10-19",
     "title": "Hardware Technology Intern, Singapore"
   },
+  "https://jobs.apple.com/en-us/details/200690042": {
+    "company": "Apple",
+    "first_seen": "2026-11-03",
+    "title": "Software Engineer Intern (Full-Stack & AI Agents) - Shanghai"
+  },
   "https://jobs.apple.com/en-us/details/200690044": {
     "company": "Apple",
     "first_seen": "2026-10-22",
@@ -1223,6 +1238,11 @@
     "company": "Boeing",
     "first_seen": "2026-10-31",
     "title": "Simulator Engineering Intern - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/dublin/engineering-intern-january-2027/185/100629633696": {
+    "company": "Boeing",
+    "first_seen": "2026-11-03",
+    "title": "Engineering Intern - January 2027"
   },
   "https://jobs.boeing.com/job/england/facilities-management-intern-summer-2027/185/101620587296": {
     "company": "Boeing",
@@ -2033,6 +2053,11 @@
     "company": "Genuine Parts Company",
     "first_seen": "2026-10-23",
     "title": "Assorment Planning Intern - Summer 2027"
+  },
+  "https://jobs.genpt.com/job/atlanta/assortment-planning-intern-summer-2027/505/102351460016": {
+    "company": "Genuine Parts Company",
+    "first_seen": "2026-11-03",
+    "title": "Assortment Planning Intern - Summer 2027"
   },
   "https://jobs.genpt.com/job/atlanta/category-management-intern-summer-2027/505/102344761888": {
     "company": "Genuine Parts Company",
@@ -4434,6 +4459,11 @@
     "first_seen": "2026-09-30",
     "title": "Business Analyst Intern (3, 6 and 12 months) - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10565421/business-analyst-intern-6-and-12-months-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-03",
+    "title": "Business Analyst Intern (6 and 12 months) - 2027"
+  },
   "https://www.amazon.jobs/en/jobs/10565667/software-development-engineer-intern-aws-database-2027-us": {
     "company": "Amazon",
     "first_seen": "2026-09-30",
@@ -5944,11 +5974,6 @@
     "first_seen": "2026-10-08",
     "title": "Internship - Financial Controller"
   },
-  "https://www.ing.jobs/en/job/luxembourg/internship-fund-and-portfolio-oversight/3121/44044584192": {
-    "company": "ING",
-    "first_seen": "2026-09-04",
-    "title": "INTERNSHIP - Fund & Portfolio Oversight"
-  },
   "https://www.ing.jobs/en/job/luxembourg/internship-fund-operation-oversight/3121/45386465152": {
     "company": "ING",
     "first_seen": "2026-09-30",
@@ -5969,16 +5994,6 @@
     "first_seen": "2026-09-22",
     "title": "Intern, Financial Market Sales Shanghai"
   },
-  "https://www.ing.jobs/en/job/singapore/intern-acquisition-finance/3121/43882417408": {
-    "company": "ING",
-    "first_seen": "2026-09-08",
-    "title": "Intern, Acquisition Finance"
-  },
-  "https://www.ing.jobs/en/job/singapore/intern-asset-securitisation-global-capital-markets/3121/43435290944": {
-    "company": "ING",
-    "first_seen": "2026-08-24",
-    "title": "Intern, Asset Securitisation (Global Capital Markets)"
-  },
   "https://www.ing.jobs/en/job/singapore/intern-compliance-regional/3121/45954098816": {
     "company": "ING",
     "first_seen": "2026-10-15",
@@ -5989,20 +6004,10 @@
     "first_seen": "2026-10-15",
     "title": "Intern, Compliance Singapore"
   },
-  "https://www.ing.jobs/en/job/singapore/intern-corporate-sector-lending/3121/43882417024": {
-    "company": "ING",
-    "first_seen": "2026-09-01",
-    "title": "Intern, Corporate Sector Lending"
-  },
   "https://www.ing.jobs/en/job/singapore/intern-corporates-sales/3121/45174747200": {
     "company": "ING",
     "first_seen": "2026-09-25",
     "title": "Intern, Corporates Sales"
-  },
-  "https://www.ing.jobs/en/job/singapore/intern-debt-capital-markets-apac/3121/44454604608": {
-    "company": "ING",
-    "first_seen": "2026-09-11",
-    "title": "Intern, Debt Capital Markets APAC"
   },
   "https://www.ing.jobs/en/job/singapore/intern-fi-lending/3121/46185946432": {
     "company": "ING",
