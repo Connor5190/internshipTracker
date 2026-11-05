@@ -799,11 +799,6 @@
     "first_seen": "2026-10-09",
     "title": "AI & Project Operations Intern \u2013 Managing Director Office, Greater China"
   },
-  "https://jobs.apple.com/en-us/details/200684719": {
-    "company": "Apple",
-    "first_seen": "2026-09-20",
-    "title": "PhD Intern, Apple Ads (Machine Learning)"
-  },
   "https://jobs.apple.com/en-us/details/200685016": {
     "company": "Apple",
     "first_seen": "2026-09-24",
@@ -1193,6 +1188,11 @@
     "company": "Apple",
     "first_seen": "2026-11-04",
     "title": " Internship - Research Intern, Speech & Language Processing"
+  },
+  "https://jobs.apple.com/en-us/details/200693660": {
+    "company": "Apple",
+    "first_seen": "2026-11-05",
+    "title": "Cellular Baseband Security Research Intern"
   },
   "https://jobs.boeing.com/job/arlington/boeing-summer-2027-internship-program-paid-government-operations-and-sustainability/185/98720778000": {
     "company": "Boeing",
@@ -5549,6 +5549,11 @@
     "first_seen": "2026-11-04",
     "title": "Senior Program Manager Intern 2027, Amazon University Talent Acquisition"
   },
+  "https://www.amazon.jobs/en/jobs/10597425/project-engineer-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-05",
+    "title": "Project Engineer Intern"
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5558,11 +5563,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-18",
     "title": "Operations Intern, AUTA"
-  },
-  "https://www.amazon.jobs/en/jobs/3198451/financial-analyst-intern": {
-    "company": "Amazon",
-    "first_seen": "2026-07-12",
-    "title": "Financial Analyst Intern"
   },
   "https://www.amazon.jobs/en/jobs/3201714/network-development-engineer-intern-core-networking": {
     "company": "Amazon",
@@ -5789,6 +5789,11 @@
     "first_seen": "2026-10-15",
     "title": "Data Center Technician Intern, 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/127174656267297478-hardware-engineer-intern-optoelectronics-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-11-05",
+    "title": "Hardware Engineer Intern, Optoelectronics, PhD, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/128919086494032582-hardware-engineering-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-15",
@@ -6009,6 +6014,11 @@
     "first_seen": "2026-09-14",
     "title": "Hardware Engineering Intern, PhD, Summer 2027"
   },
+  "https://www.google.com/about/careers/applications/jobs/results/98194553416098502-mechanical-engineer-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-11-05",
+    "title": "Mechanical Engineer Intern, PhD, Summer 2027"
+  },
   "https://www.google.com/about/careers/applications/jobs/results/99330502741107398-data-center-facilities-technician-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-02",
@@ -6058,6 +6068,11 @@
     "company": "ING",
     "first_seen": "2026-09-30",
     "title": "Internship - Fund Operation Oversight"
+  },
+  "https://www.ing.jobs/en/job/luxembourg/internship-legal/3121/46651023872": {
+    "company": "ING",
+    "first_seen": "2026-11-05",
+    "title": "INTERNSHIP - Legal"
   },
   "https://www.ing.jobs/en/job/paris/hrbp-intern-h-f-x/3121/44350719360": {
     "company": "ING",
