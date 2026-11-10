@@ -764,11 +764,6 @@
     "first_seen": "2026-10-09",
     "title": "AI & Project Operations Intern \u2013 Managing Director Office, Greater China"
   },
-  "https://jobs.apple.com/en-us/details/200685852": {
-    "company": "Apple",
-    "first_seen": "2026-09-25",
-    "title": "Analog IC Design Intern"
-  },
   "https://jobs.apple.com/en-us/details/200686019": {
     "company": "Apple",
     "first_seen": "2026-09-27",
@@ -1099,10 +1094,20 @@
     "first_seen": "2026-11-02",
     "title": "Generative AI Research Intern - Image-to-Video Diffusion"
   },
+  "https://jobs.apple.com/en-us/details/200691891": {
+    "company": "Apple",
+    "first_seen": "2026-11-10",
+    "title": "Global Sourcing and Supply Manager, Intern"
+  },
   "https://jobs.apple.com/en-us/details/200691892": {
     "company": "Apple",
     "first_seen": "2026-10-30",
     "title": "Intern, Site Reliability Engineer, iCloud"
+  },
+  "https://jobs.apple.com/en-us/details/200691894": {
+    "company": "Apple",
+    "first_seen": "2026-11-10",
+    "title": "Global Sourcing and Supply Manager, Intern"
   },
   "https://jobs.apple.com/en-us/details/200691912": {
     "company": "Apple",
@@ -1173,6 +1178,16 @@
     "company": "Apple",
     "first_seen": "2026-11-09",
     "title": "RFHW Systems Engineer Intern - Shanghai or Shenzhen"
+  },
+  "https://jobs.apple.com/en-us/details/200694244": {
+    "company": "Apple",
+    "first_seen": "2026-11-10",
+    "title": "Apple Sales Internship - Korea"
+  },
+  "https://jobs.apple.com/en-us/details/200694316": {
+    "company": "Apple",
+    "first_seen": "2026-11-10",
+    "title": "Virtualisation Software Engineering Internship, CoreOS"
   },
   "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
     "company": "Boeing",
@@ -2304,11 +2319,6 @@
     "first_seen": "2026-09-29",
     "title": "Winter 2027: Product Research Co-op (8 months)"
   },
-  "https://jobs.intuit.com/job/toronto/winter-2027-software-developer-co-op-4-or-8-months/27595/101130613680": {
-    "company": "Intuit",
-    "first_seen": "2026-09-25",
-    "title": "Winter 2027: Software Developer Co-op (4 or 8 months)"
-  },
   "https://jobs.intuit.com/job/toronto/winter-2027-software-developer-co-op-8-months/27595/102211454080": {
     "company": "Intuit",
     "first_seen": "2026-10-20",
@@ -2318,16 +2328,6 @@
     "company": "Intuit",
     "first_seen": "2026-10-25",
     "title": "Winter 2027: Software Developer Co-op, Front End (8 months)"
-  },
-  "https://jobs.intuit.com/job/washington-d-c/spring-2027-public-affairs-intern-global-corporate-affairs-and-public-policy/27595/101130613776": {
-    "company": "Intuit",
-    "first_seen": "2026-09-25",
-    "title": "Spring 2027: Public Affairs Intern, Global Corporate Affairs and Public Policy"
-  },
-  "https://jobs.intuit.com/job/washington-d-c/spring-2027-public-policy-intern-global-corporate-affairs-and-public-policy/27595/101130613760": {
-    "company": "Intuit",
-    "first_seen": "2026-09-25",
-    "title": "Spring 2027: Public Policy Intern, Global Corporate Affairs and Public Policy"
   },
   "https://jobs.lever.co/arcteryx.com": {
     "company": "Arc'teryx",
@@ -2594,11 +2594,6 @@
     "first_seen": "2026-09-14",
     "title": "Intern - Technologist, Hardware Development Engineering (Studying Ph.D Degree)"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000151754639": {
-    "company": "Western Digital",
-    "first_seen": "2026-09-25",
-    "title": "Internship - Software Development (Embedded)"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000152261929": {
     "company": "Western Digital",
     "first_seen": "2026-09-28",
@@ -2753,6 +2748,11 @@
     "company": "Barclays",
     "first_seen": "2026-10-27",
     "title": "Banking Off Cycle Internship Programme 2027 Dubai"
+  },
+  "https://search.jobs.barclays/job/dubai/sales-trading-and-structuring-off-cycle-internship-programme-2027-dubai/13015/103122420832": {
+    "company": "Barclays",
+    "first_seen": "2026-11-10",
+    "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Dubai"
   },
   "https://search.jobs.barclays/job/frankfurt-am-main/banking-off-cycle-internship-programme-2027-frankfurt/13015/100066900064": {
     "company": "Barclays",
@@ -3078,6 +3078,11 @@
     "company": "Amazon",
     "first_seen": "2026-08-13",
     "title": "Operations & Logistics Internship, Amazon Logistics"
+  },
+  "https://www.amazon.jobs/en/jobs/10489527/software-dev-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "Software Dev Intern"
   },
   "https://www.amazon.jobs/en/jobs/10491075/pathways-operations-manager-intern-summer-2027-nationwide-opportunities": {
     "company": "Amazon",
@@ -3944,11 +3949,6 @@
     "first_seen": "2026-09-24",
     "title": "Operations Human Resources Partner Intern (3 - 12 Months) - 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10558935/operations-human-resources-partner-intern-3-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-24",
-    "title": "Operations Human Resources Partner Intern (3 Months) - 2027"
-  },
   "https://www.amazon.jobs/en/jobs/10558943/operations-human-resources-partner-intern-3-months-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-24",
@@ -4014,11 +4014,6 @@
     "first_seen": "2026-09-25",
     "title": "Program Manager Intern ESP 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10560289/operations-human-resources-partner-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-25",
-    "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
-  },
   "https://www.amazon.jobs/en/jobs/10560298/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-25",
@@ -4038,11 +4033,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-25",
     "title": "Retail Vendor Manager Intern GBR"
-  },
-  "https://www.amazon.jobs/en/jobs/10560679/associate-solutions-architect-agi-tech-intern-cohort-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-25",
-    "title": "Associate Solutions Architect, AGI-Tech, Intern Cohort - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10560679/solutions-architect-intern-cohort-ags-tech-2027": {
     "company": "Amazon",
@@ -5344,6 +5334,36 @@
     "first_seen": "2026-11-09",
     "title": "Account Mgr Intern"
   },
+  "https://www.amazon.jobs/en/jobs/10600865/2027-facilities-coordinator-intern-reliability-maintenance-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "2027 Facilities Coordinator Intern, Reliability Maintenance Engineering"
+  },
+  "https://www.amazon.jobs/en/jobs/10600866/2027-facilities-coordinator-intern-reliability-maintenance-engineering": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "2027 Facilities Coordinator Intern, Reliability Maintenance Engineering"
+  },
+  "https://www.amazon.jobs/en/jobs/10600868/2027-retail-vendor-manager-intern-mena-retail-consumer-electronics": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "2027 Retail Vendor Manager Intern, MENA Retail - Consumer Electronics"
+  },
+  "https://www.amazon.jobs/en/jobs/10600880/associate-solutions-architect-intern-shenzhen-shenzhen": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "Associate Solutions Architect Intern - Shenzhen, Shenzhen"
+  },
+  "https://www.amazon.jobs/en/jobs/10600886/associate-solutions-architect-intern-beijing-beijing": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "Associate Solutions Architect Intern - Beijing, Beijing"
+  },
+  "https://www.amazon.jobs/en/jobs/10601090/pathways-operations-manager-intern-summer-2027-canada-wide-opportunities": {
+    "company": "Amazon",
+    "first_seen": "2026-11-10",
+    "title": "Pathways Operations Manager Intern \u2013 Summer 2027 (Canada-Wide Opportunities)"
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5934,11 +5954,6 @@
     "first_seen": "2026-10-08",
     "title": "Intern, Food, Beverage & Agribusiness"
   },
-  "https://www.ing.jobs/en/job/singapore/intern-fund-finance/3121/45167336384": {
-    "company": "ING",
-    "first_seen": "2026-09-25",
-    "title": "Intern, Fund Finance"
-  },
   "https://www.ing.jobs/en/job/singapore/intern-global-research/3121/45954099776": {
     "company": "ING",
     "first_seen": "2026-10-15",
@@ -6064,6 +6079,11 @@
     "first_seen": "2026-10-27",
     "title": "2027 Financial Service & Support Intern - Denver"
   },
+  "https://www.schwabjobs.com/job/omaha/2027-charles-schwab-workplace-services-internship-omaha-1/33727/103118055248": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-11-10",
+    "title": "2027 Charles Schwab Workplace Services Internship - Omaha 1"
+  },
   "https://www.schwabjobs.com/job/omaha/2027-financial-service-and-support-intern-omaha/33727/100034999040": {
     "company": "Charles Schwab",
     "first_seen": "2026-10-19",
@@ -6073,11 +6093,6 @@
     "company": "Charles Schwab",
     "first_seen": "2026-10-19",
     "title": "Wealth Management Internship - Las Vegas CFP Event Attendees"
-  },
-  "https://www.schwabjobs.com/job/southlake/2027-model-risk-governance-and-validation-intern-southlake-only/33727/101137965680": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-09-25",
-    "title": "2027 Model Risk Governance & Validation Intern (Southlake Only)"
   },
   "https://www.schwabjobs.com/job/southlake/2027-model-risk-software-engineering-intern-southlake-only/33727/101137965680": {
     "company": "Charles Schwab",
