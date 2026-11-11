@@ -409,11 +409,6 @@
     "first_seen": "2026-09-14",
     "title": "Graphics Software Intern, Vulkan"
   },
-  "https://careers.arm.com/job/trondheim/performance-analysis-intern/33099/100604944144": {
-    "company": "ARM",
-    "first_seen": "2026-09-14",
-    "title": "Performance Analysis Intern"
-  },
   "https://careers.blackrock.com/job/atlanta/2027-quantitative-masters-internship-program-investments-portfolio-management-atlanta/45831/100661849696": {
     "company": "BlackRock",
     "first_seen": "2026-09-15",
@@ -648,6 +643,11 @@
     "company": "Synopsys",
     "first_seen": "2026-10-06",
     "title": "Systems Engineering Internship - Summer 2027"
+  },
+  "https://careers.synopsys.com/job/nepean/engineering-documentation-and-ai-automation-internship-16-month-co-op/44408/103136134960": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-10",
+    "title": "Engineering Documentation and AI Automation Internship (16-Month Co-op)"
   },
   "https://careers.synopsys.com/job/porto-salvo/business-operations-and-process-improvement-intern/44408/102338082336": {
     "company": "Synopsys",
@@ -1178,6 +1178,11 @@
     "company": "Apple",
     "first_seen": "2026-11-09",
     "title": "RFHW Systems Engineer Intern - Shanghai or Shenzhen"
+  },
+  "https://jobs.apple.com/en-us/details/200694037": {
+    "company": "Apple",
+    "first_seen": "2026-11-10",
+    "title": "Machine Learning Engineering Intern, Personal Agentic Search"
   },
   "https://jobs.apple.com/en-us/details/200694244": {
     "company": "Apple",
@@ -2349,11 +2354,6 @@
     "first_seen": "2026-08-05",
     "title": "page mentions it: \u201c\u2026\"My Summer Internship showed me that I had the talent to thrive and that I was able to app\u2026\u201d"
   },
-  "https://jobs.smartrecruiters.com/aristanetworks/744000149101159": {
-    "company": "Arista Networks",
-    "first_seen": "2026-09-11",
-    "title": "Intern Software Engineer - C/C++"
-  },
   "https://jobs.smartrecruiters.com/aristanetworks/744000151659973": {
     "company": "Arista Networks",
     "first_seen": "2026-09-24",
@@ -2363,6 +2363,11 @@
     "company": "Arista Networks",
     "first_seen": "2026-09-29",
     "title": "Software Engineer Intern 2026/2027"
+  },
+  "https://jobs.smartrecruiters.com/aristanetworks/744000160961018": {
+    "company": "Arista Networks",
+    "first_seen": "2026-11-10",
+    "title": "Data Analytics Intern"
   },
   "https://jobs.smartrecruiters.com/servicenow/744000152290539": {
     "company": "ServiceNow",
@@ -2534,11 +2539,6 @@
     "first_seen": "2026-08-14",
     "title": "Intern - Automation Development Engineer (Studying Master's Degree)"
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000140949875": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-01",
-    "title": "Summer 2027 Intern - Hardware Engineering"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000141175090": {
     "company": "Western Digital",
     "first_seen": "2026-08-14",
@@ -2558,11 +2558,6 @@
     "company": "Western Digital",
     "first_seen": "2026-08-14",
     "title": "Intern, Firmware Engineering"
-  },
-  "https://jobs.smartrecruiters.com/westerndigital/744000143171017": {
-    "company": "Western Digital",
-    "first_seen": "2026-08-12",
-    "title": "Summer 2027 Intern - Software Engineering"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000145431699": {
     "company": "Western Digital",
@@ -2688,6 +2683,16 @@
     "company": "Western Digital",
     "first_seen": "2026-11-04",
     "title": "Intern - Manufacturing & Logistics Engineering"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000160975819": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-10",
+    "title": "Summer 2027 Intern - Software Engineering"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000160975864": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-10",
+    "title": "Summer 2027 Intern - Hardware Engineering"
   },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
