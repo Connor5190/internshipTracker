@@ -299,6 +299,11 @@
     "first_seen": "2026-10-09",
     "title": "Software Engineering Intern"
   },
+  "https://careers.arm.com/job/seattle/intern-research-scientist-ai/33099/103208989872": {
+    "company": "ARM",
+    "first_seen": "2026-11-12",
+    "title": "Intern, Research Scientist, AI"
+  },
   "https://careers.arm.com/job/seoul/gpu-software-applications-engineer-intern-3-months/33099/102148485392": {
     "company": "ARM",
     "first_seen": "2026-10-19",
@@ -624,6 +629,11 @@
     "first_seen": "2026-10-29",
     "title": "Technical Engineering Intern - Design for Test (DFT) Internship"
   },
+  "https://careers.synopsys.com/job/ho-chi-minh-city/technical-engineering-intern-memory-design-engineering-internship-19750/44408/103213378000": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-12",
+    "title": "Technical Engineering Intern - Memory Design Engineering Internship (19750)"
+  },
   "https://careers.synopsys.com/job/hsinchu/sicada-program-support-intern/44408/101023239568": {
     "company": "Synopsys",
     "first_seen": "2026-10-06",
@@ -768,11 +778,6 @@
     "company": "Apple",
     "first_seen": "2026-10-09",
     "title": "AI & Project Operations Intern \u2013 Managing Director Office, Greater China"
-  },
-  "https://jobs.apple.com/en-us/details/200686019": {
-    "company": "Apple",
-    "first_seen": "2026-09-27",
-    "title": "Apple WTE - AI/ML PhD Intern"
   },
   "https://jobs.apple.com/en-us/details/200686080": {
     "company": "Apple",
@@ -1208,6 +1213,31 @@
     "company": "Apple",
     "first_seen": "2026-11-10",
     "title": "Virtualisation Software Engineering Internship, CoreOS"
+  },
+  "https://jobs.apple.com/en-us/details/200694476": {
+    "company": "Apple",
+    "first_seen": "2026-11-12",
+    "title": "Internship - Software Development Intern - Core OS"
+  },
+  "https://jobs.apple.com/en-us/details/200694477": {
+    "company": "Apple",
+    "first_seen": "2026-11-12",
+    "title": "Camera Software (Intern)"
+  },
+  "https://jobs.apple.com/en-us/details/200694489": {
+    "company": "Apple",
+    "first_seen": "2026-11-12",
+    "title": "Internship - Framebuffer Driver Engineer"
+  },
+  "https://jobs.apple.com/en-us/details/200694490": {
+    "company": "Apple",
+    "first_seen": "2026-11-12",
+    "title": "Internship - Pro Apps Machine Learning Ecosystem Engineer"
+  },
+  "https://jobs.apple.com/en-us/details/200694502": {
+    "company": "Apple",
+    "first_seen": "2026-11-12",
+    "title": "MS.c/Ph.D Process Engineering Intern, Camera Modules"
   },
   "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
     "company": "Boeing",
@@ -1649,6 +1679,26 @@
     "first_seen": "2026-10-23",
     "title": "Technology,  Production Support, Summer Analyst, Mississauga, Canada, 2027"
   },
+  "https://jobs.citi.com/job/mumbai/banking-commercial-banking-summer-analyst-india-apac-2027/287/103200931584": {
+    "company": "Citibank",
+    "first_seen": "2026-11-12",
+    "title": "Banking - Commercial Banking, Summer Analyst, India \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/mumbai/banking-investment-banking-summer-analyst-india-apac-2027/287/103200933328": {
+    "company": "Citibank",
+    "first_seen": "2026-11-12",
+    "title": "Banking - Investment Banking, Summer Analyst, India \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/mumbai/citi-internal-audit-summer-analyst-india-apac-2027/287/103200928048": {
+    "company": "Citibank",
+    "first_seen": "2026-11-12",
+    "title": "Citi - Internal Audit, Summer Analyst, India \u2013 APAC, 2027"
+  },
+  "https://jobs.citi.com/job/mumbai/citi-markets-summer-analyst-india-apac-2027/287/103200908560": {
+    "company": "Citibank",
+    "first_seen": "2026-11-12",
+    "title": "Citi - Markets, Summer Analyst, India \u2013 APAC, 2027"
+  },
   "https://jobs.citi.com/job/mumbai/services-summer-analyst-india-2027/287/99751203328": {
     "company": "Citibank",
     "first_seen": "2026-10-12",
@@ -1988,6 +2038,11 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Technology - Infrastructure, Summer Analyst, Warsaw 2027"
+  },
+  "https://jobs.citizensbank.com/job/houston/2027-commercial-summer-intern-houston-tx/288/100363712496": {
+    "company": "Citizens Financial Group",
+    "first_seen": "2026-11-12",
+    "title": "2027 Commercial Summer Intern - Houston, TX"
   },
   "https://jobs.citizensbank.com/search-jobs": {
     "company": "Citizens Financial Group",
@@ -2399,6 +2454,11 @@
     "first_seen": "2026-11-10",
     "title": "Data Analytics Intern"
   },
+  "https://jobs.smartrecruiters.com/aristanetworks/744000161218939": {
+    "company": "Arista Networks",
+    "first_seen": "2026-11-12",
+    "title": "Internal Auditor Intern"
+  },
   "https://jobs.smartrecruiters.com/servicenow/744000152290539": {
     "company": "ServiceNow",
     "first_seen": "2026-09-28",
@@ -2488,6 +2548,16 @@
     "company": "ServiceNow",
     "first_seen": "2026-11-11",
     "title": "Assoc Detection Engineering Intern "
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000161362293": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-12",
+    "title": "Sr Outbound Product Manager Intern (MBA Summer 2028)"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000161364329": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-12",
+    "title": "Intern - Sr Inbound Product Manager"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000151663459": {
     "company": "Ubisoft",
@@ -5119,6 +5189,11 @@
     "first_seen": "2026-10-27",
     "title": "Operations & Logistics Internship FCO1-Passo Corese"
   },
+  "https://www.amazon.jobs/en/jobs/10589659/aws-commercial-sales-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-11-12",
+    "title": " AWS Commercial Sales Internship"
+  },
   "https://www.amazon.jobs/en/jobs/10589677/operations-logistics-internship-dly1-cisterna-di-latina": {
     "company": "Amazon",
     "first_seen": "2026-10-27",
@@ -6083,11 +6158,6 @@
     "company": "Millennium",
     "first_seen": "2026-07-23",
     "title": "page mentions it: \u201c\u2026nd fellow interns ahead of your start date. What does the summer internship look like? Throughout your internship, you can expect to\u2026\u201d"
-  },
-  "https://www.mongodb.com/company/careers/students-and-graduates": {
-    "company": "MongoDB",
-    "first_seen": "2026-09-27",
-    "title": "page mentions it: \u201c\u2026DB mentors are truly passionate about helping you grow and develop your skills. Summer Internship Program Hear from summer interns to learn how our program fosters a\u2026\u201d"
   },
   "https://www.pdtpartners.com/careers": {
     "company": "PDT Partners",
