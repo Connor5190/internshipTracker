@@ -234,6 +234,11 @@
     "first_seen": "2026-10-16",
     "title": "2027 Global Investments (NY) Sustainability Intern"
   },
+  "https://careers.arm.com/job/austin/intern-technical-writer/33099/103218662960": {
+    "company": "ARM",
+    "first_seen": "2026-11-12",
+    "title": "Intern Technical Writer"
+  },
   "https://careers.arm.com/job/budapest/agile-project-management-intern/33099/101856114656": {
     "company": "ARM",
     "first_seen": "2026-10-12",
@@ -404,11 +409,6 @@
     "first_seen": "2026-10-02",
     "title": "FPGA Intern"
   },
-  "https://careers.arm.com/job/trondheim/gpu-hardware-intern/33099/100604944160": {
-    "company": "ARM",
-    "first_seen": "2026-09-14",
-    "title": "GPU Hardware Intern"
-  },
   "https://careers.arm.com/job/trondheim/gpu-modelling-intern/33099/100604944192": {
     "company": "ARM",
     "first_seen": "2026-09-14",
@@ -443,11 +443,6 @@
     "company": "BlackRock",
     "first_seen": "2026-09-21",
     "title": "2027 Off-cycle Internship Program - EMEA"
-  },
-  "https://careers.blackrock.com/job/london/2027-quantitative-masters-internship-programme-investments-quantitative-investing-london/45831/100661849296": {
-    "company": "BlackRock",
-    "first_seen": "2026-09-15",
-    "title": "2027 Quantitative Masters Internship Programme - Investments - Quantitative Investing - London"
   },
   "https://careers.blackrock.com/job/london/2027-summer-internship-program-emea/45831/97150826672": {
     "company": "BlackRock",
@@ -738,11 +733,6 @@
     "company": "ADP",
     "first_seen": "2026-08-03",
     "title": "page mentions it: \u201c\u2026and EMEA. US 8-week, 32-hour per week, project-based summer sales internships. An online and formal classroom training program is provided\u2026\u201d"
-  },
-  "https://jobs.apple.com/en-us/details/114438030": {
-    "company": "Apple",
-    "first_seen": "2026-08-14",
-    "title": "CN-Specialist: Seasonal, Full-Time or Part-Time or Intern "
   },
   "https://jobs.apple.com/en-us/details/200663491": {
     "company": "Apple",
@@ -1343,16 +1333,6 @@
     "company": "Boeing",
     "first_seen": "2026-09-09",
     "title": "Boeing - Wichita Summer 2027 Internship Program (Paid) - Supplier Quality Assurance & Compliance"
-  },
-  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-information-digital-technology-and-security-idt-/185/100378295744": {
-    "company": "Boeing",
-    "first_seen": "2026-09-09",
-    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Information Digital Technology & Security (IDT&S)"
-  },
-  "https://jobs.boeing.com/job/wichita/spirit-defense-summer-2027-internship-program-paid-operations-engineering-manufacturing-and-industr/185/100378295696": {
-    "company": "Boeing",
-    "first_seen": "2026-09-09",
-    "title": "Spirit Defense - Summer 2027 Internship Program (Paid) - Operations Engineering - Manufacturing & Industrial Engineering"
   },
   "https://jobs.citi.com/job/amsterdam/banking-commercial-banking-summer-analyst-amsterdam-the-netherlands-2027/287/101258664464": {
     "company": "Citibank",
@@ -2559,6 +2539,16 @@
     "first_seen": "2026-11-12",
     "title": "Intern - Sr Inbound Product Manager"
   },
+  "https://jobs.smartrecruiters.com/servicenow/744000161364609": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-12",
+    "title": "Sr Inbound Product Manager Intern (MBA Summer 2028) "
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000161385779": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-12",
+    "title": "Product Security Intern"
+  },
   "https://jobs.smartrecruiters.com/ubisoft2/744000151663459": {
     "company": "Ubisoft",
     "first_seen": "2026-09-24",
@@ -2853,11 +2843,6 @@
     "company": "Barclays",
     "first_seen": "2026-09-22",
     "title": "Banking Off Cycle Internship Programme 2027 Amsterdam"
-  },
-  "https://search.jobs.barclays/job/birmingham/uk-corporate-banking-summer-internship-programme-2027-birmingham/13015/100032501056": {
-    "company": "Barclays",
-    "first_seen": "2026-09-01",
-    "title": "UK Corporate Banking Summer Internship Programme 2027 Birmingham"
   },
   "https://search.jobs.barclays/job/chicago/banking-associate-summer-internship-program-2027-chicago/13015/100032502144": {
     "company": "Barclays",
@@ -3963,6 +3948,11 @@
     "company": "Amazon",
     "first_seen": "2026-09-22",
     "title": "Program Manager Intern, AWS Cloud Logistics"
+  },
+  "https://www.amazon.jobs/en/jobs/10557133/security-engineer-internship-2027-us": {
+    "company": "Amazon",
+    "first_seen": "2026-11-12",
+    "title": "Security Engineer Internship \u2013 2027 (US)"
   },
   "https://www.amazon.jobs/en/jobs/10557414/program-manager-intern-12-months-fy27": {
     "company": "Amazon",
@@ -5489,6 +5479,16 @@
     "first_seen": "2026-11-11",
     "title": "Data Engineer Internship "
   },
+  "https://www.amazon.jobs/en/jobs/10603649/2027-software-dev-engineer-intern-finland": {
+    "company": "Amazon",
+    "first_seen": "2026-11-12",
+    "title": "2027 Software Dev Engineer Intern - Finland"
+  },
+  "https://www.amazon.jobs/en/jobs/10603937/associate-solutions-architect-intern-shanghai-shanghai": {
+    "company": "Amazon",
+    "first_seen": "2026-11-12",
+    "title": "Associate Solutions Architect Intern - Shanghai, Shanghai"
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -6218,6 +6218,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-10-26",
     "title": "2027 Model Risk Software Engineering Intern (Southlake Only)"
+  },
+  "https://www.schwabjobs.com/job/westlake/2027-corporate-development-and-products-intern/33727/103221565648": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-11-12",
+    "title": "2027 Corporate Development & Products Intern"
   },
   "https://www.schwabjobs.com/job/westlake/2027-human-resources-intern/33727/102478316160": {
     "company": "Charles Schwab",
