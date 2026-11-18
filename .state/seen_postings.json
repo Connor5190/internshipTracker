@@ -129,6 +129,11 @@
     "first_seen": "2026-09-22",
     "title": "AI Demand Intelligence Intern, 2027 Summer U.S."
   },
+  "https://careers-americas.icims.com/jobs/26845/mba-product-marketing-manager-intern--enterprise%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-11-17",
+    "title": "MBA Product Marketing Manager Intern- Enterprise, 2027 Summer U.S."
+  },
   "https://careers-americas.icims.com/jobs/26846/marketing-business-operations-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-22",
@@ -143,6 +148,16 @@
     "company": "Atlassian",
     "first_seen": "2026-11-03",
     "title": "Social Media Intern, 2027 Summer U.S."
+  },
+  "https://careers-americas.icims.com/jobs/27434/mba-product-marketing-manager-intern--marketplace%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-11-17",
+    "title": "MBA Product Marketing Manager Intern- Marketplace, 2027 Summer U.S."
+  },
+  "https://careers-americas.icims.com/jobs/27435/ai-buyer-journey-marketing-intern-%28gdc-ai-lab%29%2c-2027-summer-u.s./job": {
+    "company": "Atlassian",
+    "first_seen": "2026-11-17",
+    "title": "AI Buyer Journey Marketing Intern (GDC AI Lab), 2027 Summer U.S."
   },
   "https://careers-americas.icims.com/jobs/27474/digital-asset-management-%28dam%29-operations-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
@@ -1604,11 +1619,6 @@
     "first_seen": "2026-10-19",
     "title": "Functions - Finance, Summer Associate, New York - USA, 2027"
   },
-  "https://jobs.citi.com/job/new-york/functions-internal-audit-summer-analyst-new-york-usa-2027/287/98836136896": {
-    "company": "Citibank",
-    "first_seen": "2026-09-21",
-    "title": "Functions - Internal Audit, Summer Analyst, New York - USA, 2027"
-  },
   "https://jobs.citi.com/job/new-york/technology-production-support-summer-analyst-new-york-usa-2027/287/102340905328": {
     "company": "Citibank",
     "first_seen": "2026-10-23",
@@ -2278,6 +2288,11 @@
     "company": "Prudential Financial",
     "first_seen": "2026-08-05",
     "title": "page mentions it: \u201c\u2026\"My Summer Internship showed me that I had the talent to thrive and that I was able to app\u2026\u201d"
+  },
+  "https://jobs.sap.com/": {
+    "company": "SAP",
+    "first_seen": "2026-11-17",
+    "title": "page mentions it: \u201c\u2026Work Pattern Hybrid - Contract Type Full-time SAP iXp Intern - Value Advisory - SUMMER 2027 Teams : Information Technology Locations : Toronto, Canada Display Date :\u2026\u201d"
   },
   "https://jobs.smartrecruiters.com/aristanetworks/744000151659973": {
     "company": "Arista Networks",
@@ -3409,10 +3424,25 @@
     "first_seen": "2026-09-14",
     "title": "Operations Engineering Field (Execution) Intern Spring and Summer 2027 (CA, CT, FL, TX)"
   },
-  "https://www.amazon.jobs/en/jobs/10532290/business-strategy-execution-operations-engineering-intern-spring-and-summer-2027-bellevue-wa": {
+  "https://www.amazon.jobs/en/jobs/10532290/operations-engineering-business-strategy-execution-intern-spring-and-summer-2027-bellevue-wa": {
     "company": "Amazon",
-    "first_seen": "2026-09-08",
-    "title": "Business Strategy & Execution Operations Engineering Intern Spring and Summer 2027 (Bellevue, WA )"
+    "first_seen": "2026-11-17",
+    "title": "Operations Engineering (Business Strategy & Execution) Intern Spring and Summer 2027 (Bellevue, WA)"
+  },
+  "https://www.amazon.jobs/en/jobs/10532293/construction-manager-intern-spring-and-summer-2027-bellevue-wa": {
+    "company": "Amazon",
+    "first_seen": "2026-11-17",
+    "title": "Construction Manager Intern Spring and Summer 2027 (Bellevue, WA)"
+  },
+  "https://www.amazon.jobs/en/jobs/10532296/operations-engineering-mhe-lifecycle-intern-spring-and-summer-2027-bellevue-wa": {
+    "company": "Amazon",
+    "first_seen": "2026-11-17",
+    "title": "Operations Engineering MHE Lifecycle Intern Spring and Summer 2027 (Bellevue, WA)"
+  },
+  "https://www.amazon.jobs/en/jobs/10532299/pre-construction-manager-lifecycle-intern-spring-and-summer-2027-bellevue-wa": {
+    "company": "Amazon",
+    "first_seen": "2026-11-17",
+    "title": "Pre-Construction Manager Lifecycle Intern Spring and Summer 2027 (Bellevue, WA)"
   },
   "https://www.amazon.jobs/en/jobs/10532883/data-center-infrastructure-engineer-internship-2027": {
     "company": "Amazon",
@@ -3523,6 +3553,16 @@
     "company": "Amazon",
     "first_seen": "2026-09-16",
     "title": "2027 Area Manager Intern, Amazon Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10550494/solutions-architect-intern-awsi-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-17",
+    "title": "Solutions Architect Intern, AWSI - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10550549/customer-solutions-manager-intern-awsi-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-17",
+    "title": "Customer Solutions Manager Intern, AWSI - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10551506/dc-security-specialist-intern-dc-security": {
     "company": "Amazon",
