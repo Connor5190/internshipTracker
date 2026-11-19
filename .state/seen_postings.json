@@ -474,6 +474,11 @@
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Program - Investments - Portfolio Management - New York"
   },
+  "https://careers.blackrock.com/job/new-york/2027-quantitative-masters-internship-program-technology-analytics-and-modeling-new-york/45831/100661849952": {
+    "company": "BlackRock",
+    "first_seen": "2026-11-19",
+    "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - New York"
+  },
   "https://careers.blackrock.com/job/new-york/2027-summer-internship-program-amers/45831/90628276544": {
     "company": "BlackRock",
     "first_seen": "2026-11-17",
@@ -483,6 +488,11 @@
     "company": "BlackRock",
     "first_seen": "2026-09-15",
     "title": "2027 Quantitative Masters Internship Program - Investments - Global Capital Markets - San Francisco"
+  },
+  "https://careers.blackrock.com/job/san-francisco/2027-quantitative-masters-internship-program-technology-analytics-and-modeling-san-francisco/45831/100661849584": {
+    "company": "BlackRock",
+    "first_seen": "2026-11-19",
+    "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - San Francisco"
   },
   "https://careers.expediagroup.com/jobs/?query=intern": {
     "company": "Expedia Group",
@@ -572,6 +582,11 @@
   "https://careers.synopsys.com/job/bengaluru/formal-verification-internship/44408/103473196624": {
     "company": "Synopsys",
     "first_seen": "2026-11-18",
+    "title": "Formal Verification Internship"
+  },
+  "https://careers.synopsys.com/job/bengaluru/formal-verification-internship/44408/103518934544": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-19",
     "title": "Formal Verification Internship"
   },
   "https://careers.synopsys.com/job/da-nang/technical-engineering-intern-ai-research-and-development-internship/44408/102279058288": {
@@ -2099,11 +2114,6 @@
     "first_seen": "2026-10-14",
     "title": "Summer 2027: Cybersecurity Compliance Intern"
   },
-  "https://jobs.intuit.com/job/mountain-view/summer-2027-finance-transformation-and-analytics-intern/27595/101444103184": {
-    "company": "Intuit",
-    "first_seen": "2026-10-02",
-    "title": "Summer 2027: Finance Transformation & Analytics Intern"
-  },
   "https://jobs.intuit.com/job/mountain-view/summer-2027-marketing-intern-ai-tooling-for-marketing-efficiency/27595/101444103552": {
     "company": "Intuit",
     "first_seen": "2026-10-02",
@@ -2223,11 +2233,6 @@
     "company": "Intuit",
     "first_seen": "2026-10-22",
     "title": "Summer 2027: Marketing Intern, AI Tooling for Marketing Efficiency"
-  },
-  "https://jobs.intuit.com/job/san-diego/summer-2027-digital-procurement-and-ai-solutions-intern/27595/101362216576": {
-    "company": "Intuit",
-    "first_seen": "2026-09-30",
-    "title": "Summer 2027: Digital Procurement & AI Solutions Intern"
   },
   "https://jobs.intuit.com/job/san-diego/summer-2027-intelligent-automation-business-systems-analyst-intern/27595/101313096144": {
     "company": "Intuit",
@@ -3879,11 +3884,6 @@
     "first_seen": "2026-09-23",
     "title": "Account Representative Intern 6 months"
   },
-  "https://www.amazon.jobs/en/jobs/10557454/business-intelligence-intern-luxembourg": {
-    "company": "Amazon",
-    "first_seen": "2026-09-23",
-    "title": "Business Intelligence Intern Luxembourg"
-  },
   "https://www.amazon.jobs/en/jobs/10557497/account-representative-intern-6-months": {
     "company": "Amazon",
     "first_seen": "2026-09-23",
@@ -5399,10 +5399,20 @@
     "first_seen": "2026-11-17",
     "title": "Account Representative Intern, Early Career - 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10608081/associate-delivery-consultant-intern-professional-services-a2c-delivery-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-19",
+    "title": "Associate Delivery Consultant Intern, Professional Services A2C Delivery 2027"
+  },
   "https://www.amazon.jobs/en/jobs/10608081/professional-services-cloud-consultant-intern": {
     "company": "Amazon",
     "first_seen": "2026-11-18",
     "title": "Professional Services Cloud Consultant Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10609138/business-intelligence-intern-luxembourg": {
+    "company": "Amazon",
+    "first_seen": "2026-11-19",
+    "title": "Business Intelligence Intern Luxembourg"
   },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
@@ -5819,10 +5829,20 @@
     "first_seen": "2026-10-09",
     "title": "page mentions it: \u201c\u2026a, Washington, D.C., Jacksonville, and Los Angeles: Spring (16 weeks, Jan\u2013Apr), Summer (12 weeks, May\u2013Aug), and Fall (16 weeks, Sept\u2013Dec). Learn More \u2192 06 Benefits Ex\u2026\u201d"
   },
+  "https://www.ing.jobs/en/job/amsterdam/internship-campus-events/3121/47055129600": {
+    "company": "ING",
+    "first_seen": "2026-11-19",
+    "title": "Internship Campus Events"
+  },
   "https://www.ing.jobs/en/job/amsterdam/internships-equity-capital-markets/3121/46169989120": {
     "company": "ING",
     "first_seen": "2026-10-20",
     "title": "Internships Equity Capital Markets"
+  },
+  "https://www.ing.jobs/en/job/beijing-municipality/intern-finance-beijing/3121/47050048768": {
+    "company": "ING",
+    "first_seen": "2026-11-19",
+    "title": "Intern, Finance Beijing"
   },
   "https://www.ing.jobs/en/job/luxembourg/ing-internship-finance-accounting-and-reporting/3121/43939864704": {
     "company": "ING",
@@ -5858,6 +5878,11 @@
     "company": "ING",
     "first_seen": "2026-11-05",
     "title": "INTERNSHIP - Legal"
+  },
+  "https://www.ing.jobs/en/job/luxembourg/internship-process-automation-and-ai-analyst/3121/47055129984": {
+    "company": "ING",
+    "first_seen": "2026-11-19",
+    "title": "INTERNSHIP - Process Automation & AI Analyst"
   },
   "https://www.ing.jobs/en/job/paris/hrbp-intern-h-f-x/3121/44350719360": {
     "company": "ING",
