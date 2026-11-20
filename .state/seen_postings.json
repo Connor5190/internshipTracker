@@ -459,11 +459,6 @@
     "first_seen": "2026-09-21",
     "title": "2027 Mexico City Internship Program"
   },
-  "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-client-and-product-functions-sales-and-relationship-management-institut/45831/100661849456": {
-    "company": "BlackRock",
-    "first_seen": "2026-09-15",
-    "title": "2027 MBA Internship Program - Client & Product Functions - Sales & Relationship Management - Institutional & Wealth - New York"
-  },
   "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-investments-direct-private-opportunities-portfolio-management-new-york/45831/103537962480": {
     "company": "BlackRock",
     "first_seen": "2026-11-19",
@@ -518,11 +513,6 @@
     "company": "L3Harris",
     "first_seen": "2026-10-06",
     "title": "Intern, Mechanical Engineer"
-  },
-  "https://careers.l3harris.com/en/job/greenville/intern-facilities-planning-spring-2027/4832/99372978576": {
-    "company": "L3Harris",
-    "first_seen": "2026-09-10",
-    "title": "Intern, Facilities Planning -Spring 2027"
   },
   "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648400": {
     "company": "L3Harris",
@@ -659,15 +649,25 @@
     "first_seen": "2026-10-23",
     "title": "Business Operations & Process Improvement Intern"
   },
-  "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/101580799728": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-05",
-    "title": "Computational Fluid Dynamics(CFD) Internship"
-  },
   "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/101746583168": {
     "company": "Synopsys",
     "first_seen": "2026-10-09",
     "title": "Computational Fluid Dynamics(CFD) Internship"
+  },
+  "https://careers.synopsys.com/job/seongnam-si/technical-engineering-internship-19779/44408/103542649344": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-20",
+    "title": "Technical Engineering Internship - 19779"
+  },
+  "https://careers.synopsys.com/job/shanghai/intern-technical-engineering/44408/103553863824": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-20",
+    "title": "Intern (Technical-Engineering)"
+  },
+  "https://careers.synopsys.com/job/shanghai/intern-technical-engineering/44408/103553863856": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-20",
+    "title": "Intern (Technical-Engineering)"
   },
   "https://careers.synopsys.com/job/sunnyvale/ai-and-automation-engineering-internship-summer-2027/44408/101631905360": {
     "company": "Synopsys",
@@ -1174,6 +1174,11 @@
     "first_seen": "2026-11-12",
     "title": "Camera Software (Intern)"
   },
+  "https://jobs.apple.com/en-us/details/200694482": {
+    "company": "Apple",
+    "first_seen": "2026-11-20",
+    "title": "Graphics Tooling and Rendering Engineering Intern"
+  },
   "https://jobs.apple.com/en-us/details/200694489": {
     "company": "Apple",
     "first_seen": "2026-11-12",
@@ -1203,6 +1208,11 @@
     "company": "Apple",
     "first_seen": "2026-11-18",
     "title": "Software Engineering Intern (Full-Stack & AI Integration) - Shanghai"
+  },
+  "https://jobs.apple.com/en-us/details/200695453": {
+    "company": "Apple",
+    "first_seen": "2026-11-20",
+    "title": "Intern - Software Development Engineer"
   },
   "https://jobs.apple.com/en-us/details/200695601": {
     "company": "Apple",
@@ -2334,11 +2344,6 @@
     "first_seen": "2026-11-12",
     "title": "Internal Auditor Intern"
   },
-  "https://jobs.smartrecruiters.com/servicenow/744000153476180": {
-    "company": "ServiceNow",
-    "first_seen": "2026-10-05",
-    "title": "Intern \u2013 Business Development Representative (German, Spanish, Italian, French, Dutch, Arabic OR Nordic Languages)"
-  },
   "https://jobs.smartrecruiters.com/servicenow/744000155345689": {
     "company": "ServiceNow",
     "first_seen": "2026-10-13",
@@ -2494,10 +2499,10 @@
     "first_seen": "2026-11-19",
     "title": "Corporate Strategy Manager Intern - MBA"
   },
-  "https://jobs.smartrecruiters.com/ubisoft2/744000151663459": {
-    "company": "Ubisoft",
-    "first_seen": "2026-09-24",
-    "title": "Strategic Marketing Research Assistant \u2013 Internship (6-month) Janvier 2027 (W/M/NB)"
+  "https://jobs.smartrecruiters.com/servicenow/744000162748649": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-20",
+    "title": "Outbound Product Manager Intern"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000153550172": {
     "company": "Ubisoft",
@@ -2568,6 +2573,11 @@
     "company": "Ubisoft",
     "first_seen": "2026-11-16",
     "title": "R&D Assistant - Neural Compositing for Real-Time Graphics - INTERNSHIP (F/M/NB)"
+  },
+  "https://jobs.smartrecruiters.com/ubisoft2/744000162746419": {
+    "company": "Ubisoft",
+    "first_seen": "2026-11-20",
+    "title": "Data Governance Project Manager Assistant \u2013 Internship (6-month) March 2027 (W/M/NB)"
   },
   "https://jobs.smartrecruiters.com/westerndigital/744000134646509": {
     "company": "Western Digital",
@@ -2758,11 +2768,6 @@
     "company": "Western Digital",
     "first_seen": "2026-11-19",
     "title": "Intern - Manufacturing Engineer"
-  },
-  "https://jobs.smartrecruiters.com/wise/744000153502789": {
-    "company": "Wise",
-    "first_seen": "2026-10-05",
-    "title": "Analytics Intern"
   },
   "https://jobs.smartrecruiters.com/wise/744000156265544": {
     "company": "Wise",
@@ -2968,11 +2973,6 @@
     "company": "Barclays",
     "first_seen": "2026-09-03",
     "title": "Sales, Trading and Structuring Off Cycle Internship Programme 2027 Milan"
-  },
-  "https://search.jobs.barclays/job/monaco/private-bank-and-wealth-management-off-cycle-internship-programme-2027-monaco/13015/100305156896": {
-    "company": "Barclays",
-    "first_seen": "2026-09-07",
-    "title": "Private Bank and Wealth Management Off Cycle Internship Programme 2027 Monaco"
   },
   "https://search.jobs.barclays/job/new-york/banking-associate-summer-internship-program-2027-new-york/13015/100032502176": {
     "company": "Barclays",
@@ -4338,11 +4338,6 @@
     "company": "Amazon",
     "first_seen": "2026-10-07",
     "title": "2027 Software Dev Engineer Intern - Netherlands"
-  },
-  "https://www.amazon.jobs/en/jobs/10568636/data-center-technician-2027-internship": {
-    "company": "Amazon",
-    "first_seen": "2026-10-05",
-    "title": "Data Center Technician - 2027 Internship"
   },
   "https://www.amazon.jobs/en/jobs/10570135/deu-program-manager-intern-6-months-2027": {
     "company": "Amazon",
@@ -6058,11 +6053,6 @@
     "company": "Millennium",
     "first_seen": "2026-07-23",
     "title": "page mentions it: \u201c\u2026nd fellow interns ahead of your start date. What does the summer internship look like? Throughout your internship, you can expect to\u2026\u201d"
-  },
-  "https://www.revolut.com/careers/": {
-    "company": "Revolut",
-    "first_seen": "2026-10-05",
-    "title": "page mentions it: \u201c\u2026to \u00b7 Portugal \u00b7 Romania \u00b7 Spain \u00b7 UAE \u00b7 UK Internship Programme 2027: Software Engineer (Java) Office : Barcelona \u00b7 Dubai \u00b7 Krakow \u00b7 Lisbon\u2026\u201d"
   },
   "https://www.riotgames.com/en/student-internships": {
     "company": "Riot Games",
