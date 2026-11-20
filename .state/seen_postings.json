@@ -119,11 +119,6 @@
     "first_seen": "2026-09-08",
     "title": "Product Design Intern, 2027 Summer U.S."
   },
-  "https://careers-americas.icims.com/jobs/26274/product-management-intern%2c-2027-summer-u.s./job": {
-    "company": "Atlassian",
-    "first_seen": "2026-09-02",
-    "title": "Product Management Intern, 2027 Summer U.S."
-  },
   "https://careers-americas.icims.com/jobs/26843/ai-demand-intelligence-intern%2c-2027-summer-u.s./job": {
     "company": "Atlassian",
     "first_seen": "2026-09-22",
@@ -369,6 +364,11 @@
     "first_seen": "2026-10-09",
     "title": "Dependability Intern"
   },
+  "https://careers.arm.com/job/sophia-antipolis/fpga-engineer-intern/33099/103526571328": {
+    "company": "ARM",
+    "first_seen": "2026-11-19",
+    "title": "FPGA Engineer Intern"
+  },
   "https://careers.arm.com/job/sophia-antipolis/media-systems-architecture-intern/33099/101751692544": {
     "company": "ARM",
     "first_seen": "2026-10-09",
@@ -463,6 +463,11 @@
     "company": "BlackRock",
     "first_seen": "2026-09-15",
     "title": "2027 MBA Internship Program - Client & Product Functions - Sales & Relationship Management - Institutional & Wealth - New York"
+  },
+  "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-investments-direct-private-opportunities-portfolio-management-new-york/45831/103537962480": {
+    "company": "BlackRock",
+    "first_seen": "2026-11-19",
+    "title": "2027 MBA Internship Program - Investments - Direct Private Opportunities - Portfolio Management - New York"
   },
   "https://careers.blackrock.com/job/new-york/2027-quantitative-masters-internship-program-investments-global-capital-markets-new-york/45831/100661849536": {
     "company": "BlackRock",
@@ -1199,6 +1204,11 @@
     "first_seen": "2026-11-18",
     "title": "Software Engineering Intern (Full-Stack & AI Integration) - Shanghai"
   },
+  "https://jobs.apple.com/en-us/details/200695601": {
+    "company": "Apple",
+    "first_seen": "2026-11-19",
+    "title": "iPad Product Design Intern"
+  },
   "https://jobs.apple.com/en-us/details/200695667": {
     "company": "Apple",
     "first_seen": "2026-11-18",
@@ -1698,6 +1708,11 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Markets \u2013 Sales and Trading, Off-Cycle Internship, Paris \u2013 France, 2027"
+  },
+  "https://jobs.citi.com/job/san-francisco/banking-commercial-banking-summer-analyst-san-francisco-us-2027/287/89631582096": {
+    "company": "Citibank",
+    "first_seen": "2026-11-19",
+    "title": "Banking - Commercial Banking, Summer Analyst, San Francisco - US, 2027"
   },
   "https://jobs.citi.com/job/sao-paulo/banking-commercial-banking-internship-sao-paulo-brazil-2027/287/102340905200": {
     "company": "Citibank",
@@ -2299,11 +2314,6 @@
     "first_seen": "2026-08-17",
     "title": "page mentions it: \u201c\u2026Markets Analyst Intern (Summer 2027) Commodity Markets Analyst Intern (Summer 2027) Cincinnati, OH, US, 45202 The\u2026\u201d"
   },
-  "https://jobs.prudential.com/": {
-    "company": "Prudential Financial",
-    "first_seen": "2026-08-05",
-    "title": "page mentions it: \u201c\u2026\"My Summer Internship showed me that I had the talent to thrive and that I was able to app\u2026\u201d"
-  },
   "https://jobs.sap.com/": {
     "company": "SAP",
     "first_seen": "2026-11-17",
@@ -2473,6 +2483,16 @@
     "company": "ServiceNow",
     "first_seen": "2026-11-16",
     "title": "Associate Forward Deployed Solution Engineer Intern (Bachelors Summer 2027)"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000162586889": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-19",
+    "title": "Associate Accessibility Engineer Intern"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000162629690": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-19",
+    "title": "Corporate Strategy Manager Intern - MBA"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000151663459": {
     "company": "Ubisoft",
@@ -2729,6 +2749,16 @@
     "first_seen": "2026-11-18",
     "title": "Spring 2027 Intern - Software Engineering"
   },
+  "https://jobs.smartrecruiters.com/westerndigital/744000162620199": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-19",
+    "title": "Intern - Data Analytics"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000162620259": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-19",
+    "title": "Intern - Manufacturing Engineer"
+  },
   "https://jobs.smartrecruiters.com/wise/744000153502789": {
     "company": "Wise",
     "first_seen": "2026-10-05",
@@ -2934,11 +2964,6 @@
     "first_seen": "2026-09-01",
     "title": "Banking Analyst Summer Internship Program 2027 Mexico City"
   },
-  "https://search.jobs.barclays/job/mexico-city/trading-analyst-summer-internship-program-2027-mexico-city/13015/101462770784": {
-    "company": "Barclays",
-    "first_seen": "2026-10-02",
-    "title": "Trading Analyst Summer Internship Program 2027 Mexico City"
-  },
   "https://search.jobs.barclays/job/milan/sales-trading-and-structuring-off-cycle-internship-programme-2027-milan/13015/100128639424": {
     "company": "Barclays",
     "first_seen": "2026-09-03",
@@ -2998,6 +3023,11 @@
     "company": "Barclays",
     "first_seen": "2026-08-05",
     "title": "Quantitative Analytics Associate Off Cycle Internship 2027 Singapore"
+  },
+  "https://search.jobs.barclays/job/toronto/banking-associate-summer-internship-program-2027-toronto/13015/103535701360": {
+    "company": "Barclays",
+    "first_seen": "2026-11-19",
+    "title": "Banking Associate Summer Internship Program 2027 Toronto"
   },
   "https://sportradar.com/careers/": {
     "company": "Sportradar",
@@ -3313,11 +3343,6 @@
     "company": "Amazon",
     "first_seen": "2026-08-20",
     "title": "Product Manager Technical (PMT) Intern - Summer 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10510053/operations-internship-bilbao-start-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-08-21",
-    "title": "Operations Internship - Bilbao - Start 2027"
   },
   "https://www.amazon.jobs/en/jobs/10510811/workplace-health-and-safety-specialist-intern-summer-2027-nationwide": {
     "company": "Amazon",
@@ -6058,6 +6083,11 @@
     "company": "Charles Schwab",
     "first_seen": "2026-10-27",
     "title": "2027 Financial Service & Support Intern - Denver"
+  },
+  "https://www.schwabjobs.com/job/lone-tree/2027-sox-compliance-intern/33727/100959818672": {
+    "company": "Charles Schwab",
+    "first_seen": "2026-11-19",
+    "title": "2027 SOX Compliance Intern"
   },
   "https://www.schwabjobs.com/job/omaha/2027-charles-schwab-workplace-services-internship-omaha-1/33727/103118055248": {
     "company": "Charles Schwab",
