@@ -509,26 +509,6 @@
     "first_seen": "2026-10-08",
     "title": "Project & Component Engineering Intern"
   },
-  "https://careers.l3harris.com/en/job/carlsbad/intern-mechanical-engineer/4832/101618648480": {
-    "company": "L3Harris",
-    "first_seen": "2026-10-06",
-    "title": "Intern, Mechanical Engineer"
-  },
-  "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648400": {
-    "company": "L3Harris",
-    "first_seen": "2026-10-06",
-    "title": "Intern, Mechanical Engineer"
-  },
-  "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648448": {
-    "company": "L3Harris",
-    "first_seen": "2026-10-06",
-    "title": "Intern, Mechanical Engineer"
-  },
-  "https://careers.l3harris.com/en/job/palm-bay/intern-mechanical-engineer/4832/101618648464": {
-    "company": "L3Harris",
-    "first_seen": "2026-10-06",
-    "title": "Intern, Mechanical Engineer"
-  },
   "https://careers.l3harris.com/en/job/waco/contracts-intern/4832/101691509344": {
     "company": "L3Harris",
     "first_seen": "2026-10-08",
@@ -614,11 +594,6 @@
     "first_seen": "2026-11-12",
     "title": "Technical Engineering Intern - Memory Design Engineering Internship (19750)"
   },
-  "https://careers.synopsys.com/job/hsinchu/sicada-program-support-intern/44408/101023239568": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-06",
-    "title": "SiCADA Program Support Intern"
-  },
   "https://careers.synopsys.com/job/kanata/asic-design-verification-internship-16-month-coop-summer-2027/44408/102614183424": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
@@ -633,11 +608,6 @@
     "company": "Synopsys",
     "first_seen": "2026-10-16",
     "title": "Analog Design Internship - Summer 2027"
-  },
-  "https://careers.synopsys.com/job/mississauga/systems-engineering-internship-summer-2027/44408/101631905328": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-06",
-    "title": "Systems Engineering Internship - Summer 2027"
   },
   "https://careers.synopsys.com/job/nepean/engineering-documentation-and-ai-automation-internship-16-month-co-op/44408/103136134960": {
     "company": "Synopsys",
@@ -668,11 +638,6 @@
     "company": "Synopsys",
     "first_seen": "2026-11-20",
     "title": "Intern (Technical-Engineering)"
-  },
-  "https://careers.synopsys.com/job/sunnyvale/ai-and-automation-engineering-internship-summer-2027/44408/101631905360": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-06",
-    "title": "AI & Automation Engineering Internship - Summer 2027"
   },
   "https://careers.synopsys.com/job/sunnyvale/physics-ai-internship-summer-2027/44408/102664345008": {
     "company": "Synopsys",
@@ -764,20 +729,10 @@
     "first_seen": "2026-10-12",
     "title": "Manufacturing Design Program Manager - Intern"
   },
-  "https://jobs.apple.com/en-us/details/200686088": {
-    "company": "Apple",
-    "first_seen": "2026-10-06",
-    "title": "Manufacturing Design Engineer - Intern"
-  },
   "https://jobs.apple.com/en-us/details/200686707": {
     "company": "Apple",
     "first_seen": "2026-10-08",
     "title": "Mac Hardware System Design Engineer Intern (AI Tools for Hardware Engineering)"
-  },
-  "https://jobs.apple.com/en-us/details/200686958": {
-    "company": "Apple",
-    "first_seen": "2026-10-06",
-    "title": "Internship - Software Engineering - Wireless Data Science "
   },
   "https://jobs.apple.com/en-us/details/200687159": {
     "company": "Apple",
@@ -788,11 +743,6 @@
     "company": "Apple",
     "first_seen": "2026-10-19",
     "title": "Information Security Internship"
-  },
-  "https://jobs.apple.com/en-us/details/200687209": {
-    "company": "Apple",
-    "first_seen": "2026-10-06",
-    "title": "Internship - Software Engineering - AI-Augmented Static Code Analysis"
   },
   "https://jobs.apple.com/en-us/details/200687446": {
     "company": "Apple",
@@ -1268,11 +1218,6 @@
     "company": "Boeing",
     "first_seen": "2026-11-03",
     "title": "Engineering Intern - January 2027"
-  },
-  "https://jobs.boeing.com/job/england/facilities-management-intern-summer-2027/185/101620587296": {
-    "company": "Boeing",
-    "first_seen": "2026-10-06",
-    "title": "Facilities Management Intern - Summer 2027"
   },
   "https://jobs.boeing.com/job/frimley/pmo-analyst-intern-12-month-placement/185/100464600704": {
     "company": "Boeing",
@@ -2019,6 +1964,11 @@
     "first_seen": "2026-11-16",
     "title": "Finance and Accounting Internship - Summer 2027"
   },
+  "https://jobs.genpt.com/job/atlanta/human-resources-intern-summer-2027/505/103595992512": {
+    "company": "Genuine Parts Company",
+    "first_seen": "2026-11-21",
+    "title": "Human Resources Intern-Summer 2027"
+  },
   "https://jobs.genpt.com/job/atlanta/ibs-supply-chain-intern-summer-2027/505/102351459792": {
     "company": "Genuine Parts Company",
     "first_seen": "2026-10-23",
@@ -2674,11 +2624,6 @@
     "first_seen": "2026-09-28",
     "title": "Winter 2027 Intern/Co-op Development Engineer "
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000153666512": {
-    "company": "Western Digital",
-    "first_seen": "2026-10-06",
-    "title": "Intern - People Development Assistant"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000155157429": {
     "company": "Western Digital",
     "first_seen": "2026-10-12",
@@ -2888,11 +2833,6 @@
     "company": "Barclays",
     "first_seen": "2026-11-02",
     "title": "2027 Human Resources Analyst Summer Internship Programme Glasgow"
-  },
-  "https://search.jobs.barclays/job/glasgow/2027-operations-analyst-summer-internship-programme-glasgow/13015/101604347008": {
-    "company": "Barclays",
-    "first_seen": "2026-10-06",
-    "title": "2027 Operations Analyst Summer Internship Programme Glasgow"
   },
   "https://search.jobs.barclays/job/glasgow/2027-technology-developer-summer-internship-programme-glasgow/13015/100411087072": {
     "company": "Barclays",
@@ -3854,11 +3794,6 @@
     "first_seen": "2026-09-22",
     "title": "2027 Software Dev Engineer Intern - Luxembourg"
   },
-  "https://www.amazon.jobs/en/jobs/10554717/2027-software-dev-engineer-intern-germany": {
-    "company": "Amazon",
-    "first_seen": "2026-10-06",
-    "title": "2027 Software Dev Engineer Intern - Germany"
-  },
   "https://www.amazon.jobs/en/jobs/10555788/manufacturing-test-engr-intern-advanced-manufacturing-engineering": {
     "company": "Amazon",
     "first_seen": "2026-09-22",
@@ -4369,11 +4304,6 @@
     "first_seen": "2026-11-02",
     "title": "DEU Program Manager Intern 6 Months - 2027 "
   },
-  "https://www.amazon.jobs/en/jobs/10570135/program-manager-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-10-06",
-    "title": "Program Manager Intern 6 Months - 2027 "
-  },
   "https://www.amazon.jobs/en/jobs/10570158/retail-vendor-manager-intern-ita": {
     "company": "Amazon",
     "first_seen": "2026-10-06",
@@ -4383,16 +4313,6 @@
     "company": "Amazon",
     "first_seen": "2026-10-06",
     "title": "Data Center Engineering Operations Technician - 2027 Internship, DCEO"
-  },
-  "https://www.amazon.jobs/en/jobs/10570301/public-policy-manager-intern-q1-2027-eu-public-policy-team": {
-    "company": "Amazon",
-    "first_seen": "2026-10-06",
-    "title": "Public Policy Manager Intern \u2013 Q1 2027, EU Public Policy team "
-  },
-  "https://www.amazon.jobs/en/jobs/10571004/software-development-engineer-intern-mobile-ios-android-summer-2027-usa": {
-    "company": "Amazon",
-    "first_seen": "2026-10-06",
-    "title": "Software Development Engineer Intern - Mobile(iOS/Android) - Summer 2027 (USA)"
   },
   "https://www.amazon.jobs/en/jobs/10571025/network-development-engineer-intern": {
     "company": "Amazon",
@@ -5514,11 +5434,6 @@
     "first_seen": "2026-10-12",
     "title": "Marketing Excellence Program - Internship"
   },
-  "https://www.att.jobs/job/dallas/sales-development-program-internship/117/101632950432": {
-    "company": "AT&T",
-    "first_seen": "2026-10-06",
-    "title": "Sales Development Program - Internship"
-  },
   "https://www.att.jobs/job/dallas/transformation-supply-chain-leadership-program-internship/117/100122200416": {
     "company": "AT&T",
     "first_seen": "2026-09-03",
@@ -5988,11 +5903,6 @@
     "company": "ING",
     "first_seen": "2026-09-22",
     "title": "Intern, Finance - Product Control"
-  },
-  "https://www.ing.jobs/en/job/singapore/intern-financial-markets-business-management/3121/45609017984": {
-    "company": "ING",
-    "first_seen": "2026-10-06",
-    "title": "Intern, Financial Markets Business Management"
   },
   "https://www.ing.jobs/en/job/singapore/intern-financial-markets-client-solutions-group-csg/3121/46577324416": {
     "company": "ING",
