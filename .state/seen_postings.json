@@ -1224,6 +1224,11 @@
     "first_seen": "2026-11-18",
     "title": "Software Engineering Intern, Apple Services - Dublin, Ireland"
   },
+  "https://jobs.apple.com/en-us/details/200696199": {
+    "company": "Apple",
+    "first_seen": "2026-11-20",
+    "title": "Software Engineering Intern, App Intelligence Experience"
+  },
   "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
     "company": "Boeing",
     "first_seen": "2026-10-13",
@@ -1519,6 +1524,11 @@
     "first_seen": "2026-10-23",
     "title": "Technology, Application Development, Summer Analyst, Jacksonville - USA, 2027"
   },
+  "https://jobs.citi.com/job/jacksonville/u-s-consumer-cards-summer-analyst-jacksonville-fl-usa-2027/287/103579436800": {
+    "company": "Citibank",
+    "first_seen": "2026-11-20",
+    "title": "U.S. Consumer Cards Summer Analyst, Jacksonville, FL - USA 2027"
+  },
   "https://jobs.citi.com/job/jersey-city/technology-application-development-summer-analyst-new-york-or-new-jersey-usa-2027/287/102340905456": {
     "company": "Citibank",
     "first_seen": "2026-10-23",
@@ -1673,6 +1683,11 @@
     "company": "Citibank",
     "first_seen": "2026-10-23",
     "title": "Technology, Production Support, Summer Analyst, New York - USA, 2027"
+  },
+  "https://jobs.citi.com/job/new-york/u-s-consumer-cards-summer-analyst-new-york-usa-2027/287/103579436672": {
+    "company": "Citibank",
+    "first_seen": "2026-11-20",
+    "title": "U.S. Consumer Cards Summer Analyst, New York - USA 2027"
   },
   "https://jobs.citi.com/job/new-york/wealth-latam-summer-analyst-new-york-usa-2027/287/102161053664": {
     "company": "Citibank",
@@ -2503,6 +2518,16 @@
     "company": "ServiceNow",
     "first_seen": "2026-11-20",
     "title": "Outbound Product Manager Intern"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000162808049": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-20",
+    "title": "Corporate Business Development Intern - MBA"
+  },
+  "https://jobs.smartrecruiters.com/servicenow/744000162827365": {
+    "company": "ServiceNow",
+    "first_seen": "2026-11-20",
+    "title": "Security Software Engineer Intern"
   },
   "https://jobs.smartrecruiters.com/ubisoft2/744000153550172": {
     "company": "Ubisoft",
@@ -5433,6 +5458,11 @@
     "company": "Amazon",
     "first_seen": "2026-11-19",
     "title": "Business Intelligence Intern Luxembourg"
+  },
+  "https://www.amazon.jobs/en/jobs/10610836/design-technologist-intern-fy2027-summer": {
+    "company": "Amazon",
+    "first_seen": "2026-11-20",
+    "title": "Design Technologist Intern FY2027 (Summer)"
   },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
