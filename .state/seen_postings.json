@@ -49,11 +49,6 @@
     "first_seen": "2026-11-09",
     "title": "2027 Blackstone Technology & Innovations - Software Engineer Summer Analyst"
   },
-  "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Miami/XMLNAME-2027-Blackstone-Finance---Portfolio-Management-Summer-Analyst_45868": {
-    "company": "Blackstone",
-    "first_seen": "2026-10-09",
-    "title": "2027 Blackstone Finance \u2013 Portfolio Management Summer Analyst"
-  },
   "https://blackstone.wd1.myworkdayjobs.com/en-US/Blackstone_Campus_Careers/job/Singapore/XMLNAME-2027-Blackstone-Technology---Innovations-Analyst-Intern--Singapore_45034": {
     "company": "Blackstone",
     "first_seen": "2026-11-09",
@@ -304,11 +299,6 @@
     "first_seen": "2026-10-28",
     "title": "ML Software Engineering Intern"
   },
-  "https://careers.arm.com/job/munich/software-engineering-intern/33099/101742818288": {
-    "company": "ARM",
-    "first_seen": "2026-10-09",
-    "title": "Software Engineering Intern"
-  },
   "https://careers.arm.com/job/seattle/intern-research-scientist-ai/33099/103208989872": {
     "company": "ARM",
     "first_seen": "2026-11-12",
@@ -388,16 +378,6 @@
     "company": "ARM",
     "first_seen": "2026-10-09",
     "title": "SE - Chip Methodology & Automation Intern"
-  },
-  "https://careers.arm.com/job/sophia-antipolis/soc-architect-intern/33099/101751692512": {
-    "company": "ARM",
-    "first_seen": "2026-10-09",
-    "title": "SoC Architect Intern"
-  },
-  "https://careers.arm.com/job/sophia-antipolis/software-engineer-intern/33099/101742818304": {
-    "company": "ARM",
-    "first_seen": "2026-10-09",
-    "title": "Software Engineer Intern"
   },
   "https://careers.arm.com/job/sophia-antipolis/software-engineering-intern-workflow-monitoring-and-analytics/33099/102035670144": {
     "company": "ARM",
@@ -509,11 +489,6 @@
     "first_seen": "2026-10-09",
     "title": "page mentions it: \u201c\u2026ing 1 - 50 of 334 jobs Sort By Job Title Date Job Title 2027 Madison Co-Op Program Job Location USA-Remote Based Apply Now 3D\u30a2\u30fc\u30c6\u30a3\u30b9\u30c8\u30fb3D Artis\u2026\u201d"
   },
-  "https://careers.slb.com/early-careers": {
-    "company": "SLB",
-    "first_seen": "2026-10-09",
-    "title": "page mentions it: \u201c\u2026Digital Technology Technology Summer Intern (3 months) Norway, Oslo\u2026\u201d"
-  },
   "https://careers.snap.com/jobs": {
     "company": "Snap Inc.",
     "first_seen": "2026-10-14",
@@ -598,11 +573,6 @@
     "company": "Synopsys",
     "first_seen": "2026-10-23",
     "title": "Business Operations & Process Improvement Intern"
-  },
-  "https://careers.synopsys.com/job/pune/computational-fluid-dynamics-cfd-internship/44408/101746583168": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-09",
-    "title": "Computational Fluid Dynamics(CFD) Internship"
   },
   "https://careers.synopsys.com/job/seongnam-si/technical-engineering-internship-19779/44408/103542649344": {
     "company": "Synopsys",
@@ -689,20 +659,10 @@
     "first_seen": "2026-10-12",
     "title": "2027 Apple Internship - Information Systems and Technology"
   },
-  "https://jobs.apple.com/en-us/details/200682299": {
-    "company": "Apple",
-    "first_seen": "2026-10-09",
-    "title": "2027 Apple Internship - Information Systems and Technology"
-  },
   "https://jobs.apple.com/en-us/details/200682664": {
     "company": "Apple",
     "first_seen": "2026-10-30",
     "title": "Formal Verification Intern"
-  },
-  "https://jobs.apple.com/en-us/details/200682902": {
-    "company": "Apple",
-    "first_seen": "2026-10-09",
-    "title": "AI & Project Operations Intern \u2013 Managing Director Office, Greater China"
   },
   "https://jobs.apple.com/en-us/details/200686080": {
     "company": "Apple",
@@ -1134,6 +1094,11 @@
     "first_seen": "2026-11-20",
     "title": "Software Engineering Intern, App Intelligence Experience"
   },
+  "https://jobs.apple.com/en-us/details/200696580": {
+    "company": "Apple",
+    "first_seen": "2026-11-24",
+    "title": "Intern for Channel Partner, Ad Platforms"
+  },
   "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
     "company": "Boeing",
     "first_seen": "2026-10-13",
@@ -1399,11 +1364,6 @@
     "first_seen": "2026-10-23",
     "title": "Technology, Cyber Security, Summer Analyst, Irving - USA, 2027"
   },
-  "https://jobs.citi.com/job/istanbul/long-term-internship-investment-banking-turkey-istanbul-2027/287/101749512800": {
-    "company": "Citibank",
-    "first_seen": "2026-10-09",
-    "title": "Long Term Internship \u2013 Investment Banking, Turkey \u2013 Istanbul, 2027"
-  },
   "https://jobs.citi.com/job/istanbul/long-term-internship-investment-banking-turkey-istanbul-2027/287/102165112096": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1458,11 +1418,6 @@
     "company": "Citibank",
     "first_seen": "2026-11-02",
     "title": "Banking, Investment Banking, Summer Analyst, London \u2013 United Kingdom 2027"
-  },
-  "https://jobs.citi.com/job/london/client-citi-research-summer-analyst-london-united-kingdom-2027/287/101749496560": {
-    "company": "Citibank",
-    "first_seen": "2026-10-09",
-    "title": "Client - Citi Research, Summer Analyst, London - United Kingdom, 2027"
   },
   "https://jobs.citi.com/job/london/client-citi-research-summer-analyst-london-united-kingdom-2027/287/102161055920": {
     "company": "Citibank",
@@ -1639,11 +1594,6 @@
     "first_seen": "2026-11-17",
     "title": "Banking \u2013 Commercial Banking, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
   },
-  "https://jobs.citi.com/job/sao-paulo/banking-corporate-banking-internship-sao-paulo-brazil-2027/287/101749492720": {
-    "company": "Citibank",
-    "first_seen": "2026-10-09",
-    "title": "Banking \u2013 Corporate Banking, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
-  },
   "https://jobs.citi.com/job/sao-paulo/banking-corporate-banking-internship-sao-paulo-brazil-2027/287/102161066512": {
     "company": "Citibank",
     "first_seen": "2026-10-19",
@@ -1678,16 +1628,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-21",
     "title": "Banking \u2013 Investment Banking, Internship, S\u00e3o Paulo \u2013 Brazil, 2027"
-  },
-  "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/101749513776": {
-    "company": "Citibank",
-    "first_seen": "2026-10-09",
-    "title": "Markets \u2013 Sales and Trading, Internship, S\u00e3o Paulo - Brazil, 2027"
-  },
-  "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/101749513792": {
-    "company": "Citibank",
-    "first_seen": "2026-10-09",
-    "title": "Markets \u2013 Sales and Trading, Internship, S\u00e3o Paulo - Brazil, 2027"
   },
   "https://jobs.citi.com/job/sao-paulo/markets-sales-and-trading-internship-sao-paulo-brazil-2027/287/102161065136": {
     "company": "Citibank",
@@ -2939,6 +2879,11 @@
     "first_seen": "2026-11-02",
     "title": "2027 Technology Developer Summer Internship Programme Northampton"
   },
+  "https://search.jobs.barclays/job/paris/banking-off-cycle-internship-programme-2027-paris/13015/100032501488": {
+    "company": "Barclays",
+    "first_seen": "2026-11-24",
+    "title": "Banking Off Cycle Internship Programme 2027 Paris"
+  },
   "https://search.jobs.barclays/job/paris/quantitative-analytics-associate-off-cycle-internship-programme-2027-paris/13015/100305156992": {
     "company": "Barclays",
     "first_seen": "2026-09-07",
@@ -2993,6 +2938,11 @@
     "company": "Amazon",
     "first_seen": "2026-07-12",
     "title": "2027 Software Dev Engineer Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10443572/data-scientist-i-6m-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-24",
+    "title": "Data Scientist I 6M Intern"
   },
   "https://www.amazon.jobs/en/jobs/10456239/2027-applied-science-intern-machine-learning-recommender-systems-amazon-international-machine-learning": {
     "company": "Amazon",
@@ -5724,11 +5674,6 @@
     "first_seen": "2026-10-12",
     "title": "Media Account Specialist BS/MS Intern, 2027"
   },
-  "https://www.hermeus.com/careers": {
-    "company": "Hermeus",
-    "first_seen": "2026-10-09",
-    "title": "page mentions it: \u201c\u2026a, Washington, D.C., Jacksonville, and Los Angeles: Spring (16 weeks, Jan\u2013Apr), Summer (12 weeks, May\u2013Aug), and Fall (16 weeks, Sept\u2013Dec). Learn More \u2192 06 Benefits Ex\u2026\u201d"
-  },
   "https://www.ing.jobs/en/job/amsterdam/internship-campus-events/3121/47055129600": {
     "company": "ING",
     "first_seen": "2026-11-19",
@@ -5884,11 +5829,6 @@
     "first_seen": "2026-10-20",
     "title": "Intern, Rates Trading"
   },
-  "https://www.ing.jobs/en/job/singapore/intern-sectors-and-sl-transaction-management/3121/45735845120": {
-    "company": "ING",
-    "first_seen": "2026-10-09",
-    "title": "Intern, Sectors & SL Transaction Management"
-  },
   "https://www.ing.jobs/en/job/singapore/intern-trade-finance-product-management/3121/45174747072": {
     "company": "ING",
     "first_seen": "2026-09-25",
@@ -5898,11 +5838,6 @@
     "company": "ING",
     "first_seen": "2026-10-05",
     "title": "Intern, Transaction Services Sales"
-  },
-  "https://www.ing.jobs/en/job/singapore/intern-working-capital-solutions/3121/45727888704": {
-    "company": "ING",
-    "first_seen": "2026-10-09",
-    "title": "Intern, Working Capital Solutions"
   },
   "https://www.ing.jobs/en/job/wan-chai/intern-corporate-finance-hong-kong/3121/45930008704": {
     "company": "ING",
@@ -6013,11 +5948,6 @@
     "company": "Synchrony Financial",
     "first_seen": "2026-11-23",
     "title": "page mentions it: \u201c\u2026hip Program Get set as a future leader with our full-time rotational program, summer internship or externship. Wellness & Benefits Personal well-b\u2026\u201d"
-  },
-  "https://www.usaajobs.com/job/san-antonio/actuarial-analyst-intern/1207/101740266112": {
-    "company": "USAA",
-    "first_seen": "2026-10-09",
-    "title": "Actuarial Analyst Intern"
   },
   "https://www.usaajobs.com/job/san-antonio/bank-credit-risk-analyst-intern/1207/102331284224": {
     "company": "USAA",
