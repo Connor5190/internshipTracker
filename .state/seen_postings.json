@@ -404,11 +404,6 @@
     "first_seen": "2026-09-14",
     "title": "GPU Modelling Intern"
   },
-  "https://careers.arm.com/job/trondheim/graphics-software-intern-vulkan/33099/100604944240": {
-    "company": "ARM",
-    "first_seen": "2026-09-14",
-    "title": "Graphics Software Intern, Vulkan"
-  },
   "https://careers.blackrock.com/job/hong-kong-sar/2027-summer-internship-program-apac/45831/90599500992": {
     "company": "BlackRock",
     "first_seen": "2026-09-21",
@@ -438,6 +433,11 @@
     "company": "BlackRock",
     "first_seen": "2026-11-19",
     "title": "2027 MBA Internship Program - Investments - Direct Private Opportunities - Portfolio Management - New York"
+  },
+  "https://careers.blackrock.com/job/new-york/2027-mba-internship-program-investments-portfolio-management-new-york/45831/103537962480": {
+    "company": "BlackRock",
+    "first_seen": "2026-11-24",
+    "title": "2027 MBA Internship Program - Investments - Portfolio Management - New York"
   },
   "https://careers.blackrock.com/job/new-york/2027-quantitative-masters-internship-program-investments-global-capital-markets-new-york/45831/100661849536": {
     "company": "BlackRock",
@@ -593,6 +593,11 @@
     "company": "Synopsys",
     "first_seen": "2026-10-31",
     "title": "Physics AI Internship (Summer 2027)"
+  },
+  "https://careers.synopsys.com/job/villeurbanne/r-and-d-fracture-mechanics-internship/44408/103734431552": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-24",
+    "title": "R&D Fracture Mechanics Internship"
   },
   "https://careers.synopsys.com/job/yerevan/analog-design-intern/44408/102470445696": {
     "company": "Synopsys",
@@ -989,6 +994,11 @@
     "first_seen": "2026-11-11",
     "title": "CAD Virtuoso Engineering Intern"
   },
+  "https://jobs.apple.com/en-us/details/200693402": {
+    "company": "Apple",
+    "first_seen": "2026-11-24",
+    "title": "Creative Apps, Colour and Imaging Science Engineering Intern - Copenhagen, Denmark"
+  },
   "https://jobs.apple.com/en-us/details/200693660": {
     "company": "Apple",
     "first_seen": "2026-11-05",
@@ -1153,6 +1163,11 @@
     "company": "Boeing",
     "first_seen": "2026-10-31",
     "title": "Supply Chain Management Intern (Vertical Lift) - 12 Month Placement"
+  },
+  "https://jobs.boeing.com/job/lossiemouth/test-and-evaluation-intern-2027-12-month-placement/185/103739522960": {
+    "company": "Boeing",
+    "first_seen": "2026-11-24",
+    "title": "Test & Evaluation Intern 2027 - 12 Month Placement"
   },
   "https://jobs.boeing.com/job/richmond/analytics-business-operations-intern-commercial-services/185/101992086240": {
     "company": "Boeing",
@@ -1788,6 +1803,11 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Risk - Summer Analyst, Warsaw, 2027"
+  },
+  "https://jobs.citi.com/job/warsaw/technology-application-development-summer-analyst-warsaw-2027/287/103737493264": {
+    "company": "Citibank",
+    "first_seen": "2026-11-24",
+    "title": "Technology - Application Development, Summer Analyst, Warsaw 2027"
   },
   "https://jobs.citi.com/job/warsaw/technology-cyber-security-summer-analyst-warsaw-2027/287/102161061248": {
     "company": "Citibank",
@@ -2608,6 +2628,11 @@
     "company": "Western Digital",
     "first_seen": "2026-11-19",
     "title": "Intern - Manufacturing Engineer"
+  },
+  "https://jobs.smartrecruiters.com/westerndigital/744000163411285": {
+    "company": "Western Digital",
+    "first_seen": "2026-11-24",
+    "title": "Intern - Manufacturing & Logistics Engineering (Studying Master's Degree)"
   },
   "https://jobs.smartrecruiters.com/wise/744000156265544": {
     "company": "Wise",
@@ -3449,16 +3474,6 @@
     "first_seen": "2026-10-30",
     "title": "Operations Engineering Intern -  start date Q1 2027 "
   },
-  "https://www.amazon.jobs/en/jobs/10537441/operations-engineering-intern-start-date-q1-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-11",
-    "title": "Operations Engineering Intern -  start date Q1 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10537442/operations-engineering-intern-start-date-q3-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-11",
-    "title": "Operations Engineering Intern -  start date Q3 2027 "
-  },
   "https://www.amazon.jobs/en/jobs/10537736/technical-program-manager-intern-2027": {
     "company": "Amazon",
     "first_seen": "2026-10-22",
@@ -3643,11 +3658,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-21",
     "title": "Process Improvement Specialist Intern - 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10554440/construction-manager-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-21",
-    "title": "Construction Manager Intern (6 months) - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10554485/financial-analyst-intern-2027": {
     "company": "Amazon",
@@ -3998,11 +4008,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-28",
     "title": "Program Manager Intern 6M- 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10562382/program-manager-intern-3-months-fy27": {
-    "company": "Amazon",
-    "first_seen": "2026-09-28",
-    "title": "Program Manager Intern (3 months) - FY27"
   },
   "https://www.amazon.jobs/en/jobs/10563228/commissioning-program-analyst-intern-data-center-capacity-delivery-apjc": {
     "company": "Amazon",
@@ -5269,6 +5274,16 @@
     "first_seen": "2026-11-23",
     "title": "Human Resources Partner Intern, (Nationwide) - Summer 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10612415/software-development-engineer-intern-2027-beijing": {
+    "company": "Amazon",
+    "first_seen": "2026-11-24",
+    "title": "Software Development Engineer Intern - 2027, Beijing"
+  },
+  "https://www.amazon.jobs/en/jobs/10612531/data-center-infra-engineer-2027-internship": {
+    "company": "Amazon",
+    "first_seen": "2026-11-24",
+    "title": "Data Center Infra Engineer  - 2027 Internship "
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5448,6 +5463,11 @@
     "company": "Google",
     "first_seen": "2026-10-12",
     "title": "Product Deployment Engineer BS/MS, Intern - 2027 (English)"
+  },
+  "https://www.google.com/about/careers/applications/jobs/results/119242841661547206-thermal-engineering-intern-phd-summer-2027": {
+    "company": "Google",
+    "first_seen": "2026-11-24",
+    "title": "Thermal Engineering Intern, PhD, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/121103710599160518-mba-intern-summer-2027": {
     "company": "Google",
@@ -5674,6 +5694,11 @@
     "first_seen": "2026-10-12",
     "title": "Media Account Specialist BS/MS Intern, 2027"
   },
+  "https://www.ing.jobs/en/job/amsterdam/internship-at-global-fraud-prevention/3121/47196459072": {
+    "company": "ING",
+    "first_seen": "2026-11-24",
+    "title": "Internship at Global Fraud Prevention"
+  },
   "https://www.ing.jobs/en/job/amsterdam/internship-campus-events/3121/47055129600": {
     "company": "ING",
     "first_seen": "2026-11-19",
@@ -5743,6 +5768,11 @@
     "company": "ING",
     "first_seen": "2026-10-27",
     "title": "(Bank) Financial Markets Intern - 2027 H1"
+  },
+  "https://www.ing.jobs/en/job/seoul/sec-debt-capital-markets-intern-2027-1h/3121/47196459136": {
+    "company": "ING",
+    "first_seen": "2026-11-24",
+    "title": "(Sec) Debt Capital Markets Intern \u2013 2027 1H"
   },
   "https://www.ing.jobs/en/job/seoul/sec-financial-markets-sales-intern-2027-1h/3121/46667073984": {
     "company": "ING",
