@@ -339,11 +339,6 @@
     "first_seen": "2026-10-19",
     "title": "CPU Software Intern for Verification"
   },
-  "https://careers.arm.com/job/sophia-antipolis/cpu-technology-intern/33099/101751692592": {
-    "company": "ARM",
-    "first_seen": "2026-10-09",
-    "title": "CPU Technology Intern"
-  },
   "https://careers.arm.com/job/sophia-antipolis/cpu-verification-intern/33099/101949968944": {
     "company": "ARM",
     "first_seen": "2026-10-14",
@@ -398,11 +393,6 @@
     "company": "ARM",
     "first_seen": "2026-10-09",
     "title": "Verification Intern - Solutions Engineering"
-  },
-  "https://careers.arm.com/job/trondheim/fpga-intern/33099/101434822768": {
-    "company": "ARM",
-    "first_seen": "2026-10-02",
-    "title": "FPGA Intern"
   },
   "https://careers.arm.com/job/trondheim/gpu-modelling-intern/33099/100604944192": {
     "company": "ARM",
@@ -1118,6 +1108,11 @@
     "company": "Apple",
     "first_seen": "2026-11-24",
     "title": "Intern for Channel Partner, Ad Platforms"
+  },
+  "https://jobs.apple.com/en-us/details/200696618": {
+    "company": "Apple",
+    "first_seen": "2026-11-26",
+    "title": "Internship - 3D Scene Reconstruction Engineer"
   },
   "https://jobs.apple.com/en-us/details/200696740": {
     "company": "Apple",
@@ -2874,6 +2869,11 @@
     "first_seen": "2026-09-01",
     "title": "Banking Analyst Summer Internship Program 2027 Mexico City"
   },
+  "https://search.jobs.barclays/job/milan/banking-off-cycle-internship-programme-2027-milan/13015/100609870560": {
+    "company": "Barclays",
+    "first_seen": "2026-11-26",
+    "title": "Banking Off Cycle Internship Programme 2027 Milan"
+  },
   "https://search.jobs.barclays/job/milan/sales-trading-and-structuring-off-cycle-internship-programme-2027-milan/13015/100128639424": {
     "company": "Barclays",
     "first_seen": "2026-09-03",
@@ -3473,6 +3473,11 @@
     "company": "Amazon",
     "first_seen": "2026-11-25",
     "title": "Startup Project Manager (Execution) Intern Spring and Summer 2027 (CA, CT, FL,TX) "
+  },
+  "https://www.amazon.jobs/en/jobs/10535149/system-dev-engineer-internship-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "System Dev Engineer Internship 2027"
   },
   "https://www.amazon.jobs/en/jobs/10535280/software-development-engineer-intern-robotics-2027": {
     "company": "Amazon",
@@ -4383,11 +4388,6 @@
     "company": "Amazon",
     "first_seen": "2026-10-08",
     "title": "Operations & Logistics Internship BGY1- Cividate Al Piano"
-  },
-  "https://www.amazon.jobs/en/jobs/10573143/operations-logistics-internship-lin8-casirate-d-adda": {
-    "company": "Amazon",
-    "first_seen": "2026-10-08",
-    "title": "Operations & Logistics Internship LIN8-Casirate D'Adda"
   },
   "https://www.amazon.jobs/en/jobs/10573249/operations-logistics-internship-trn3-alessandria": {
     "company": "Amazon",
@@ -5339,6 +5339,41 @@
     "first_seen": "2026-11-25",
     "title": "Area Manager Intern - Summer 2027 (Colorado), University Recruiting "
   },
+  "https://www.amazon.jobs/en/jobs/10615306/2027-financial-analyst-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "2027 Financial Analyst Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10615307/2027-financial-analyst-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "2027 Financial Analyst Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10615308/2027-whs-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "2027 WHS Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10615310/amazon-internship-program-2027-operations": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "Amazon Internship Program 2027 | Operations"
+  },
+  "https://www.amazon.jobs/en/jobs/10615428/2027-software-dev-engineer-internship-aws-ec2": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "2027 Software Dev Engineer Internship, AWS EC2"
+  },
+  "https://www.amazon.jobs/en/jobs/10615564/account-mgr-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "Account Mgr Intern 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10615568/account-mgr-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
+    "title": "Account Mgr Intern 2027"
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5759,6 +5794,21 @@
     "first_seen": "2026-10-12",
     "title": "Media Account Specialist BS/MS Intern, 2027"
   },
+  "https://www.ing.jobs/en/job/amsterdam/creative-design-intern-1/3121/47261425216": {
+    "company": "ING",
+    "first_seen": "2026-11-26",
+    "title": "Creative Design Intern-1"
+  },
+  "https://www.ing.jobs/en/job/amsterdam/creative-producer-intern/3121/47261425664": {
+    "company": "ING",
+    "first_seen": "2026-11-26",
+    "title": "Creative Producer Intern"
+  },
+  "https://www.ing.jobs/en/job/amsterdam/creative-videographer-internship/3121/47261425280": {
+    "company": "ING",
+    "first_seen": "2026-11-26",
+    "title": "Creative Videographer Internship"
+  },
   "https://www.ing.jobs/en/job/amsterdam/internship-at-global-fraud-prevention/3121/47196459072": {
     "company": "ING",
     "first_seen": "2026-11-24",
@@ -5848,6 +5898,11 @@
     "company": "ING",
     "first_seen": "2026-09-22",
     "title": "Intern, Financial Market Sales Shanghai"
+  },
+  "https://www.ing.jobs/en/job/singapore/intern-communications-and-brand-experience-apac/3121/47248181888": {
+    "company": "ING",
+    "first_seen": "2026-11-26",
+    "title": "Intern, Communications and Brand Experience APAC"
   },
   "https://www.ing.jobs/en/job/singapore/intern-compliance-regional/3121/45954098816": {
     "company": "ING",
