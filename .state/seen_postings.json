@@ -244,11 +244,6 @@
     "first_seen": "2026-11-12",
     "title": "Intern Technical Writer"
   },
-  "https://careers.arm.com/job/budapest/agile-project-management-intern/33099/101856114656": {
-    "company": "ARM",
-    "first_seen": "2026-10-12",
-    "title": "Agile Project Management Intern"
-  },
   "https://careers.arm.com/job/budapest/ai-applications-team-internship/33099/102906971312": {
     "company": "ARM",
     "first_seen": "2026-11-05",
@@ -489,11 +484,6 @@
     "first_seen": "2026-10-14",
     "title": "page mentions it: \u201c\u2026gy & Operations Operations Regular Los Angeles Research ROLE TEAM TYPE LOCATION 2027 Generative Media Research Intern Research Intern Los Angeles Research Engineer\u2026\u201d"
   },
-  "https://careers.synopsys.com/job/austin/rtl-design-and-verification-internship/44408/101884580864": {
-    "company": "Synopsys",
-    "first_seen": "2026-10-12",
-    "title": "RTL Design and Verification Internship"
-  },
   "https://careers.synopsys.com/job/bengaluru/formal-verification-internship/44408/102236641120": {
     "company": "Synopsys",
     "first_seen": "2026-10-21",
@@ -684,20 +674,10 @@
     "first_seen": "2026-11-04",
     "title": "2027 Apple Internship - Information Systems and Technology"
   },
-  "https://jobs.apple.com/en-us/details/200681910": {
-    "company": "Apple",
-    "first_seen": "2026-10-12",
-    "title": "2027 Apple Internship - Information Systems and Technology"
-  },
   "https://jobs.apple.com/en-us/details/200682664": {
     "company": "Apple",
     "first_seen": "2026-10-30",
     "title": "Formal Verification Intern"
-  },
-  "https://jobs.apple.com/en-us/details/200686080": {
-    "company": "Apple",
-    "first_seen": "2026-10-12",
-    "title": "Manufacturing Design Program Manager - Intern"
   },
   "https://jobs.apple.com/en-us/details/200687159": {
     "company": "Apple",
@@ -723,11 +703,6 @@
     "company": "Apple",
     "first_seen": "2026-11-09",
     "title": "Global Navigation Satellite System Evaluation & Field Test Intern - Shanghai"
-  },
-  "https://jobs.apple.com/en-us/details/200688136": {
-    "company": "Apple",
-    "first_seen": "2026-10-12",
-    "title": "Internship - Modem Functional Test - Wireless Technologies & Ecosystems"
   },
   "https://jobs.apple.com/en-us/details/200688346": {
     "company": "Apple",
@@ -1574,11 +1549,6 @@
     "first_seen": "2026-11-12",
     "title": "Citi - Markets, Summer Analyst, India \u2013 APAC, 2027"
   },
-  "https://jobs.citi.com/job/mumbai/services-summer-analyst-india-2027/287/99751203328": {
-    "company": "Citibank",
-    "first_seen": "2026-10-12",
-    "title": "Services \u2013 Summer Analyst, India, 2027"
-  },
   "https://jobs.citi.com/job/new-york/banking-corporate-banking-summer-analyst-new-york-city-us-2027/287/102860958896": {
     "company": "Citibank",
     "first_seen": "2026-11-04",
@@ -1848,11 +1818,6 @@
     "company": "Citibank",
     "first_seen": "2026-10-19",
     "title": "Risk - Full-Time Analyst, Warsaw, 2027 - (Applicable for 2026 Citi Summer interns only)"
-  },
-  "https://jobs.citi.com/job/warsaw/risk-summer-analyst-warsaw-2027/287/101860085808": {
-    "company": "Citibank",
-    "first_seen": "2026-10-12",
-    "title": "Risk - Summer Analyst, Warsaw, 2027"
   },
   "https://jobs.citi.com/job/warsaw/risk-summer-analyst-warsaw-2027/287/102161054928": {
     "company": "Citibank",
@@ -2574,11 +2539,6 @@
     "first_seen": "2026-09-28",
     "title": "Winter 2027 Intern/Co-op Development Engineer "
   },
-  "https://jobs.smartrecruiters.com/westerndigital/744000155157429": {
-    "company": "Western Digital",
-    "first_seen": "2026-10-12",
-    "title": "Internship - Software Development (Embedded)"
-  },
   "https://jobs.smartrecruiters.com/westerndigital/744000156226285": {
     "company": "Western Digital",
     "first_seen": "2026-10-19",
@@ -2727,6 +2687,11 @@
   "https://jobs.smartrecruiters.com/wise/744000162358919": {
     "company": "Wise",
     "first_seen": "2026-11-18",
+    "title": "People Operations Intern"
+  },
+  "https://jobs.smartrecruiters.com/wise/744000164082329": {
+    "company": "Wise",
+    "first_seen": "2026-11-27",
     "title": "People Operations Intern"
   },
   "https://search-careers.gm.com/en/jobs/?search=intern": {
@@ -3354,6 +3319,16 @@
     "first_seen": "2026-08-24",
     "title": "Operations Internship - Illescas - Start 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10512549/solution-architect-intern": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Solution Architect Intern"
+  },
+  "https://www.amazon.jobs/en/jobs/10512594/solution-architect-intern-arg": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Solution Architect Intern ARG"
+  },
   "https://www.amazon.jobs/en/jobs/10512638/solution-architect-intern": {
     "company": "Amazon",
     "first_seen": "2026-08-24",
@@ -3563,11 +3538,6 @@
     "company": "Amazon",
     "first_seen": "2026-11-25",
     "title": "Operations Engineering Intern -  12 months, start date Q2 2027 "
-  },
-  "https://www.amazon.jobs/en/jobs/10541498/operations-engineering-intern-start-date-q3-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-09-15",
-    "title": "Operations Engineering Intern -  start date Q3 2027 "
   },
   "https://www.amazon.jobs/en/jobs/10541508/operations-engineering-intern-start-date-q2-2027": {
     "company": "Amazon",
@@ -4529,11 +4499,6 @@
     "first_seen": "2026-10-09",
     "title": "Supply Chain Manager Intern - Summer 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10575672/corporate-human-resources-partner-intern-6-months-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-10-12",
-    "title": "Corporate Human Resources Partner Intern (6 Months) - 2027"
-  },
   "https://www.amazon.jobs/en/jobs/10575772/2027-whs-intern": {
     "company": "Amazon",
     "first_seen": "2026-10-12",
@@ -5244,6 +5209,11 @@
     "first_seen": "2026-11-10",
     "title": "Pathways Operations Manager Intern \u2013 Summer 2027 (Canada-Wide Opportunities)"
   },
+  "https://www.amazon.jobs/en/jobs/10601560/associate-delivery-consultant-intern-aiml-aws-professional-services": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Associate Delivery Consultant Intern \u2013 AIML, AWS Professional Services"
+  },
   "https://www.amazon.jobs/en/jobs/10602204/data-engineer-internship": {
     "company": "Amazon",
     "first_seen": "2026-11-11",
@@ -5253,6 +5223,11 @@
     "company": "Amazon",
     "first_seen": "2026-11-11",
     "title": "Data Engineer Internship "
+  },
+  "https://www.amazon.jobs/en/jobs/10602927/stagiaire-consultant-associe-en-livraison-aiml-associate-delivery-consultant-intern-aiml-aws-professional-services": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Stagiaire consultant associ\u00e9 en livraison \u2013 AIML, Associate Delivery Consultant Intern \u2013 AIML, AWS Professional Services"
   },
   "https://www.amazon.jobs/en/jobs/10603649/2027-software-dev-engineer-intern-finland": {
     "company": "Amazon",
@@ -5404,6 +5379,21 @@
     "first_seen": "2026-11-26",
     "title": "Account Mgr Intern 2027"
   },
+  "https://www.amazon.jobs/en/jobs/10615655/logistics-internship-program-aws-data-center": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Logistics Internship program, AWS Data Center "
+  },
+  "https://www.amazon.jobs/en/jobs/10615966/construction-manager-intern-2027-ges-ops-construction-site": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Construction Manager Intern - 2027, GES Ops Construction-Site"
+  },
+  "https://www.amazon.jobs/en/jobs/10615991/tech-business-dev-intern-ges-ops-construction-site": {
+    "company": "Amazon",
+    "first_seen": "2026-11-27",
+    "title": "Tech Business Dev Intern, GES Ops Construction-Site"
+  },
   "https://www.amazon.jobs/en/jobs/3139827/software-development-engineer-internship-vaga-para-mulheres-ies-latech": {
     "company": "Amazon",
     "first_seen": "2026-08-14",
@@ -5438,6 +5428,11 @@
     "company": "AT&T",
     "first_seen": "2026-10-20",
     "title": "Corporate Communications Internship"
+  },
+  "https://www.att.jobs/job/dallas/corporate-development-summer-associate/117/103856417616": {
+    "company": "AT&T",
+    "first_seen": "2026-11-27",
+    "title": "Corporate Development Summer Associate"
   },
   "https://www.att.jobs/job/dallas/external-and-legislative-affairs-undergraduate-internships-state-policy-and-community-affairs/117/102266805856": {
     "company": "AT&T",
@@ -5529,11 +5524,6 @@
     "first_seen": "2026-10-20",
     "title": "Account Executive, Business Intern, 2027 (English)"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/109231596359295686-business-program-manager-mba-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Business Program Manager MBA Intern, 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/109375266236572358-silicon-engineering-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-09-07",
@@ -5569,11 +5559,6 @@
     "first_seen": "2026-08-24",
     "title": "Software Developer Intern, PhD, Summer 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/112940936274551494-product-deployment-engineer-bsms-intern-2027-english": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Product Deployment Engineer BS/MS, Intern - 2027 (English)"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/115691171337904838-forward-deployed-engineer-intern-2027": {
     "company": "Google",
     "first_seen": "2026-10-13",
@@ -5584,20 +5569,10 @@
     "first_seen": "2026-09-14",
     "title": "User Experience Engineer Intern, PhD, Summer 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/118991686201156294-product-deployment-engineer-bsms-intern-2027-english": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Product Deployment Engineer BS/MS, Intern - 2027 (English)"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/119242841661547206-thermal-engineering-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-11-24",
     "title": "Thermal Engineering Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/121103710599160518-mba-intern-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "MBA Intern, Summer 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/121790188106982086-account-executive-mba-intern-2027": {
     "company": "Google",
@@ -5633,11 +5608,6 @@
     "company": "Google",
     "first_seen": "2026-10-15",
     "title": "Business Intern, 2027 (English)"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/132324639077475014-media-account-specialist-bsms-intern-2027-german-french-spanish": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Media Account Specialist BS/MS Intern, 2027 (German, French, Spanish)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/133355062935069382-hardwaresilicon-engineering-phd-intern-2027": {
     "company": "Google",
@@ -5699,11 +5669,6 @@
     "first_seen": "2026-08-17",
     "title": "Part-Time Software Engineering PhD Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/75665705386549958-forward-deployed-engineering-intern-bsms-summer-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Forward Deployed Engineering Intern, BS/MS, Summer 2027"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/77684590197514950-data-science-phd-intern-2027": {
     "company": "Google",
     "first_seen": "2026-08-17",
@@ -5718,11 +5683,6 @@
     "company": "Google",
     "first_seen": "2026-10-27",
     "title": "MBA Intern, 2027 (English, Bahasa Indonesia)"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/78951046130344646-media-account-specialist-bsms-intern-2027-english-hebrew": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Media Account Specialist BS/MS Intern, 2027 (English, Hebrew)"
   },
   "https://www.google.com/about/careers/applications/jobs/results/80037545080955590-software-engineering-phd-intern-2027": {
     "company": "Google",
@@ -5818,11 +5778,6 @@
     "company": "Google",
     "first_seen": "2026-11-05",
     "title": "Mechanical Engineer Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/99661447151133382-media-account-specialist-bsms-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-12",
-    "title": "Media Account Specialist BS/MS Intern, 2027"
   },
   "https://www.ing.jobs/en/job/amsterdam/creative-design-intern-1/3121/47261425216": {
     "company": "ING",
