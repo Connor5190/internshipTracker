@@ -514,6 +514,11 @@
     "first_seen": "2026-11-19",
     "title": "Formal Verification Internship"
   },
+  "https://careers.synopsys.com/job/cambridge/materials-data-intern-year-in-industry/44408/103724937968": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "Materials Data Intern \u2013 Year in Industry"
+  },
   "https://careers.synopsys.com/job/da-nang/technical-engineering-intern-ai-research-and-development-internship/44408/102279058288": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
@@ -529,10 +534,20 @@
     "first_seen": "2026-10-16",
     "title": "R&D Engineering Intern"
   },
+  "https://careers.synopsys.com/job/hanoi/technical-engineering-intern-design-verification-internship/44408/102314761696": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "Technical Engineering Intern - Design Verification Internship"
+  },
   "https://careers.synopsys.com/job/ho-chi-minh-city/application-engineer-internship-19538/44408/102584673280": {
     "company": "Synopsys",
     "first_seen": "2026-10-29",
     "title": "Application Engineer Internship - 19538"
+  },
+  "https://careers.synopsys.com/job/ho-chi-minh-city/technical-engineering-intern-ai-research-and-development-internship/44408/102279058288": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "Technical Engineering Intern  - AI Research and Development Internship"
   },
   "https://careers.synopsys.com/job/ho-chi-minh-city/technical-engineering-intern-design-for-test-dft-internship/44408/102251697392": {
     "company": "Synopsys",
@@ -558,6 +573,11 @@
     "company": "Synopsys",
     "first_seen": "2026-10-16",
     "title": "Analog Design Internship - Summer 2027"
+  },
+  "https://careers.synopsys.com/job/mississauga/summer-2027-electronics-engineering-internship-16-month-co-op/44408/103833808160": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "Summer 2027: Electronics Engineering Internship (16-Month Co-op)"
   },
   "https://careers.synopsys.com/job/nepean/engineering-documentation-and-ai-automation-internship-16-month-co-op/44408/103136134960": {
     "company": "Synopsys",
@@ -593,6 +613,16 @@
     "company": "Synopsys",
     "first_seen": "2026-11-24",
     "title": "R&D Fracture Mechanics Internship"
+  },
+  "https://careers.synopsys.com/job/villeurbanne/r-and-d-validation-structural-vibrations-internship/44408/103690426688": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "R&D Validation Structural Vibrations Internship"
+  },
+  "https://careers.synopsys.com/job/waterloo/summer-2027-computational-fluid-dynamics-cfd-testing-internship/44408/103833808176": {
+    "company": "Synopsys",
+    "first_seen": "2026-11-26",
+    "title": "Summer 2027: Computational Fluid Dynamics (CFD) Testing Internship"
   },
   "https://careers.synopsys.com/job/yerevan/analog-design-intern/44408/102470445696": {
     "company": "Synopsys",
@@ -3599,11 +3629,6 @@
     "first_seen": "2026-11-04",
     "title": "Solutions Architect Internship 2027"
   },
-  "https://www.amazon.jobs/en/jobs/10552511/operations-intern-merida-auta": {
-    "company": "Amazon",
-    "first_seen": "2026-09-17",
-    "title": "Operations Intern - M\u00e9rida , AUTA"
-  },
   "https://www.amazon.jobs/en/jobs/10552612/operations-intern-leon-auta": {
     "company": "Amazon",
     "first_seen": "2026-09-17",
@@ -3702,6 +3727,11 @@
   "https://www.amazon.jobs/en/jobs/10554427/process-improvement-specialist-intern-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-21",
+    "title": "Process Improvement Specialist Intern - 2027"
+  },
+  "https://www.amazon.jobs/en/jobs/10554429/process-improvement-specialist-intern-2027": {
+    "company": "Amazon",
+    "first_seen": "2026-11-26",
     "title": "Process Improvement Specialist Intern - 2027"
   },
   "https://www.amazon.jobs/en/jobs/10554485/financial-analyst-intern-2027": {
