@@ -259,25 +259,10 @@
     "first_seen": "2026-10-01",
     "title": "Intern, System IP Engineering"
   },
-  "https://careers.arm.com/job/cambridge/data-analytics-intern/33099/101898105744": {
-    "company": "ARM",
-    "first_seen": "2026-10-13",
-    "title": "Data Analytics Intern"
-  },
   "https://careers.arm.com/job/cambridge/physical-ai-quality-intern/33099/101898108368": {
     "company": "ARM",
     "first_seen": "2026-10-28",
     "title": "Physical AI Quality Intern"
-  },
-  "https://careers.arm.com/job/cambridge/quality-and-compliance-intern/33099/101898108368": {
-    "company": "ARM",
-    "first_seen": "2026-10-13",
-    "title": "Quality & Compliance Intern"
-  },
-  "https://careers.arm.com/job/cambridge/quality-and-reliability-engineering-intern/33099/101898105792": {
-    "company": "ARM",
-    "first_seen": "2026-10-13",
-    "title": "Quality & Reliability Engineering Intern"
   },
   "https://careers.arm.com/job/lund/gpu-compiler-intern/33099/102539121920": {
     "company": "ARM",
@@ -458,6 +443,11 @@
     "company": "BlackRock",
     "first_seen": "2026-11-19",
     "title": "2027 Quantitative Masters Internship Program - Technology - Analytics & Modeling - San Francisco"
+  },
+  "https://careers.expediagroup.com/jobs/?query=intern": {
+    "company": "Expedia Group",
+    "first_seen": "2026-11-28",
+    "title": "page mentions it: \u201c\u2026View Job Applied Science Intern - PhD - 2027 - Austin, San Jose, Seattle United States - Texas - Austin\u2026\u201d"
   },
   "https://careers.nba.com": {
     "company": "NBA",
@@ -723,11 +713,6 @@
     "company": "Apple",
     "first_seen": "2026-10-15",
     "title": "App Store Marketing Intern"
-  },
-  "https://jobs.apple.com/en-us/details/200688776": {
-    "company": "Apple",
-    "first_seen": "2026-10-13",
-    "title": "Intern - Full Stack Engineer"
   },
   "https://jobs.apple.com/en-us/details/200688936": {
     "company": "Apple",
@@ -1123,11 +1108,6 @@
     "company": "Apple",
     "first_seen": "2026-11-25",
     "title": "Internship - Agentic Data Generation for High-Fidelity Personal Data, Global Siri"
-  },
-  "https://jobs.boeing.com/job/belfast/engineering-internship/185/101902457776": {
-    "company": "Boeing",
-    "first_seen": "2026-10-13",
-    "title": "Engineering Internship"
   },
   "https://jobs.boeing.com/job/bristol/finance-intern-12-months-placement/185/100464594192": {
     "company": "Boeing",
@@ -2404,11 +2384,6 @@
     "first_seen": "2026-10-08",
     "title": "VFX Artist Intern"
   },
-  "https://jobs.smartrecruiters.com/ubisoft2/744000155221189": {
-    "company": "Ubisoft",
-    "first_seen": "2026-10-13",
-    "title": "Data Business Analyst Assistant \u2013 Internship (6-month) January 2027 (W/M/NB)"
-  },
   "https://jobs.smartrecruiters.com/ubisoft2/744000155802649": {
     "company": "Ubisoft",
     "first_seen": "2026-10-15",
@@ -2749,11 +2724,6 @@
     "first_seen": "2026-11-02",
     "title": "2027 Compliance Analyst Summer Internship Programme Glasgow"
   },
-  "https://search.jobs.barclays/job/glasgow/2027-customer-and-digital-data-and-analytics-summer-internship-programme-glasgow/13015/100411086672": {
-    "company": "Barclays",
-    "first_seen": "2026-09-09",
-    "title": "2027 Customer and Digital - Data and Analytics Summer Internship Programme Glasgow"
-  },
   "https://search.jobs.barclays/job/glasgow/2027-human-resources-analyst-summer-internship-programme-glasgow/13015/100411085248": {
     "company": "Barclays",
     "first_seen": "2026-11-02",
@@ -2783,11 +2753,6 @@
     "company": "Barclays",
     "first_seen": "2026-11-02",
     "title": "Banking Analyst Summer Internship Program 2028 Houston"
-  },
-  "https://search.jobs.barclays/job/knutsford/2027-operations-analyst-summer-internship-programme-knutsford/13015/101604346208": {
-    "company": "Barclays",
-    "first_seen": "2026-10-06",
-    "title": "2027 Operations Analyst Summer Internship Programme Knutsford"
   },
   "https://search.jobs.barclays/job/knutsford/2027-retail-business-and-customer-banking-summer-internship-programme-knutsford/13015/100411085744": {
     "company": "Barclays",
@@ -3999,11 +3964,6 @@
     "first_seen": "2026-09-25",
     "title": "Retail Vendor Manager Intern GBR"
   },
-  "https://www.amazon.jobs/en/jobs/10561382/process-improvement-specialist-intern-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "Process Improvement Specialist Intern - 2027 "
-  },
   "https://www.amazon.jobs/en/jobs/10561398/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
     "first_seen": "2026-09-28",
@@ -4018,11 +3978,6 @@
     "company": "Amazon",
     "first_seen": "2026-09-28",
     "title": "Operations Human Resources Partner Intern (6 Months) - 2027"
-  },
-  "https://www.amazon.jobs/en/jobs/10561404/process-improvement-specialist-intern-2027": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "Process Improvement Specialist Intern - 2027 "
   },
   "https://www.amazon.jobs/en/jobs/10561439/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
@@ -4514,21 +4469,6 @@
     "first_seen": "2026-10-26",
     "title": "Logistics Specialist, Data Center - 2027 Internship"
   },
-  "https://www.amazon.jobs/en/jobs/10576778/logistics-specialist-data-center-2027-internship-wblp-logistics-specialist": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "Logistics Specialist, Data Center - 2027 Internship, WBLP Logistics Specialist "
-  },
-  "https://www.amazon.jobs/en/jobs/10576779/data-center-infra-engineer-2027-internship": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "Data Center Infra Engineer  - 2027 Internship "
-  },
-  "https://www.amazon.jobs/en/jobs/10576784/2027-it-support-engineering-intern-amazon-operations-technology-solutions": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "2027 IT Support Engineering Intern, Amazon Operations Technology Solutions"
-  },
   "https://www.amazon.jobs/en/jobs/10576785/2027-business-developer-intern-amazon-payments": {
     "company": "Amazon",
     "first_seen": "2026-10-13",
@@ -4543,11 +4483,6 @@
     "company": "Amazon",
     "first_seen": "2026-10-13",
     "title": "Data Center Infra Engineer - 2027 Internship, Logistics Team"
-  },
-  "https://www.amazon.jobs/en/jobs/10576936/marketing-intern": {
-    "company": "Amazon",
-    "first_seen": "2026-10-13",
-    "title": "Marketing Intern"
   },
   "https://www.amazon.jobs/en/jobs/10576937/operations-human-resources-partner-intern-6-months-2027": {
     "company": "Amazon",
@@ -5494,11 +5429,6 @@
     "first_seen": "2026-11-04",
     "title": "Silicon Manufacturing Intern, 2027"
   },
-  "https://www.google.com/about/careers/applications/jobs/results/104489346874122950-software-engineering-intern-2027-english": {
-    "company": "Google",
-    "first_seen": "2026-10-13",
-    "title": "Software Engineering Intern, 2027 (English)"
-  },
   "https://www.google.com/about/careers/applications/jobs/results/104496653687235270-research-intern-phd-summer-2027": {
     "company": "Google",
     "first_seen": "2026-08-24",
@@ -5553,11 +5483,6 @@
     "company": "Google",
     "first_seen": "2026-08-24",
     "title": "Software Developer Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/115691171337904838-forward-deployed-engineer-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-13",
-    "title": "Forward Deployed Engineer Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/117572151191446214-user-experience-engineer-intern-phd-summer-2027": {
     "company": "Google",
@@ -5638,11 +5563,6 @@
     "company": "Google",
     "first_seen": "2026-09-14",
     "title": "User Experience Research Intern, PhD, Summer 2027"
-  },
-  "https://www.google.com/about/careers/applications/jobs/results/140518143893086918-data-center-technician-intern-2027": {
-    "company": "Google",
-    "first_seen": "2026-10-13",
-    "title": "Data Center Technician Intern, 2027"
   },
   "https://www.google.com/about/careers/applications/jobs/results/73308226560369350-hardware-engineering-intern-2027": {
     "company": "Google",
@@ -6043,11 +5963,6 @@
     "company": "Charles Schwab",
     "first_seen": "2026-10-26",
     "title": "2027 Human Resources Intern"
-  },
-  "https://www.schwabjobs.com/job/westlake/2027-international-client-services-intern-westlake-only/33727/101274655600": {
-    "company": "Charles Schwab",
-    "first_seen": "2026-10-13",
-    "title": "2027 International Client Services Intern - Westlake Only"
   },
   "https://www.schwabjobs.com/job/westlake/2027-ria-intern/33727/102865866832": {
     "company": "Charles Schwab",
